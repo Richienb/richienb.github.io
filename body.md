@@ -1,2 +1,4 @@
-# Richie Bendall's [Github Page](https://github.com/Richienb/richienb.github.io)
-### Welcome To [Richie Bendall](www.richie-bendall.ml)'s [Github](github.com) Page
+# Richie Bendall's Github Page
+### Welcome To Richie Bendall's Github Page
+___
+[Website](https://www.richie-bendall.ml) [Github Page](https://github.com/Richienb)
