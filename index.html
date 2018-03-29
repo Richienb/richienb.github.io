@@ -58,14 +58,16 @@
     <main class="mdl-layout__content">
     </main>
   </div>
-  <script>
-    var notification = document.querySelector('.mdl-js-snackbar');
-    notification.MaterialSnackbar.showSnackbar(
-      {
-        message: 'Image Uploaded'
-     }
-  );
-  </script>
+      <script>
+        // I used the modern & official onready way, but I guess you can replace it with more compatible (aka: funky) versions
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var snackbarContainer = document.querySelector('#demo-toast-example');
+                var data = {message: 'Example Message !'};
+                snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            }, 0);
+        });
+	</script>
 </head>
 
 <body>
