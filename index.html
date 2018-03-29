@@ -68,25 +68,27 @@
       </nav>
     </div>
     <main class="mdl-layout__content">
-      <!-- Square card -->
+      <!-- Wide card with share menu button -->
 <style>
-.demo-card-square.mdl-card {
-  width: 500px;
-  height: 400px;
+.demo-card-wide.mdl-card {
+  width: 512px;
 }
-.demo-card-square > .mdl-card__title {
+.demo-card-wide > .mdl-card__title {
   color: #fff;
-  background:
-    url('images/youtube-splash.png') center 15% no-repeat #363636;
+  height: 176px;
+  background: url('images/youtube-splash') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #363636;
 }
 </style>
 
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Youtube Channel</h2>
   </div>
   <div class="mdl-card__supporting-text">
-    Richie Bendall Has A Youtube Channel
+    I have a Youtube Channel.
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
