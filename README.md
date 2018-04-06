@@ -1,5 +1,4 @@
-# Richie Bendall's Hub Page
-### Welcome To Richie Bendall's Hub Page
+# Richie Bendall's Official Website
 ___
 ## Youtube:
 ### [View Most Recent Video](https://goo.gl/KDVU0S) | [View Most Popular (Recommended) Video](https://goo.gl/2jEjHI) | [View Channel](https://goo.gl/vgnmqx) | [Subscribe](https://goo.gl/PFIMfe)
