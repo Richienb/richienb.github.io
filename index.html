@@ -56,7 +56,7 @@
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
         <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
         <a href="#scroll-tab-2" class="mdl-layout__tab">Send</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+        <a href="#scroll-tab-3" class="mdl-layout__tab">App</a>
         <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
         <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
         <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
@@ -136,6 +136,7 @@
 </button>
             </div>
           </div>
+              
           <!-- Send A File -->
           <style>
             .demo-card-square.mdl-card {
@@ -168,7 +169,32 @@
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-3">
         <div class="page-content">
-          <!-- Your content goes here -->
+          <!-- Square card -->
+<style>
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('') bottom right 15% no-repeat #46B6AC;
+}
+</style>
+
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">Android</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Download My App For Android
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick"androiddownload()">
+      Download Now
+    </a>
+  </div>
+</div>
         </div>
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-4">
