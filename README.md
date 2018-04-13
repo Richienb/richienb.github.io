@@ -1,4 +1,4 @@
-# Richie Bendall's Official Website
+# Richie Bendall's Official Website [![CodeFactor](https://www.codefactor.io/repository/github/richienb/richienb.github.io/badge)](https://www.codefactor.io/repository/github/richienb/richienb.github.io)
 ___
 ## Youtube:
 ### [View Most Recent Video](https://goo.gl/KDVU0S) | [View Most Popular (Recommended) Video](https://goo.gl/2jEjHI) | [View Channel](https://goo.gl/vgnmqx) | [Subscribe](https://goo.gl/PFIMfe)
