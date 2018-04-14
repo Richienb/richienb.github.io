@@ -20,4 +20,4 @@ color: #fff;
 background: url('') bottom right 15% no-repeat #46B6AC;
 }
 
-.card-square-assistant.mdl-card__title { background: url('images/assistant.png') bottom right 15% no-repeat #46B6AC; }
+.card-square-assistant.mdl-card__title { background: url('images/assistant.png') center 15% no-repeat #46B6AC; }
