@@ -12,8 +12,3 @@ function buildString() {
   !subject && body ? (message += "body=" + body) : false;
   window.open(message);
 }
-function androiddownload() {
-  window.open(
-    "http://www.mediafire.com/file/574gbn99mvn2yj0/Richie_Bendall%27s_Website_App.apk"
-  );
-}
