@@ -1,4 +1,4 @@
-{
+ {
   margin: 0;
   padding: 0;
 }
@@ -9,4 +9,17 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+
+.card-square > .mdl-card__title {
+  color: #fff;
+  background: url("") bottom right 15% no-repeat #5C6BC0;
+}
+.card-square-assistant > mdl-card__title {
+  background: url("images/assistant.png") center 15% no-repeat #BDBDBD;
 }
