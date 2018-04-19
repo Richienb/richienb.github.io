@@ -21,6 +21,6 @@
    background: url("") bottom right 15% no-repeat #5C6BC0;
  }
 
- .card-square-assistant>mdl-card__title {
+ .card-square-assistant>.mdl-card__title {
    background: url("images/assistant.png") center 15% no-repeat #BDBDBD;
  }
