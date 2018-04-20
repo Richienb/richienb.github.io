@@ -13,7 +13,7 @@
 
  .card-square.mdl-card, .card-square-ros-assistant.mdl-card{
    width: 320px;
-   height: 320px;
+   min-height: 150px;
  }
 
  .card-square>.mdl-card__title {
