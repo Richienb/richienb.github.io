@@ -20,15 +20,3 @@
    color: #fff;
    background: url("") bottom right 15% no-repeat #5C6BC0;
  }
-
- .card-square-ros-assistant>.mdl-card__title {
-   background: url("../images/assistant-min.png") center 100% no-repeat #BDBDBD;
- }
-
- .card-square-ros-skype>.mdl-card__title {
-   background: url("../images/skype-min.jpg") center 100% no-repeat #BDBDBD;
- }
-
-.card-square-ros-assistant.mdl-card, .card-square-ros-skype>.mdl-card__title {
-  height: 150px;
-}
