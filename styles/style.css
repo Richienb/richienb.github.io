@@ -11,7 +11,7 @@
    background-size: cover;
  }
 
- .card-square.mdl-card, .card-square-ros-assistant.mdl-card{
+ .card-square.mdl-card{
    width: 320px;
    min-height: 150px;
  }
@@ -22,9 +22,13 @@
  }
 
  .card-square-ros-assistant>.mdl-card__title {
-   background: url("../images/assistant.png") center 15% no-repeat #BDBDBD;
+   background: url("../images/assistant-min.png") center 100% no-repeat #BDBDBD;
  }
 
  .card-square-ros-skype>.mdl-card__title {
-   background: url("../images/skype.jpg") center 15% no-repeat #BDBDBD;
+   background: url("../images/skype-min.jpg") center 100% no-repeat #BDBDBD;
  }
+
+.card-square-ros-assistant.mdl-card, .card-square-ros-skype>.mdl-card__title {
+  height: 150px;
+}
