@@ -24,3 +24,7 @@
  .card-square-ros-assistant>.mdl-card__title {
    background: url("../images/assistant.png") center 15% no-repeat #BDBDBD;
  }
+
+ .card-square-ros-skype>.mdl-card__title {
+   background: url("../images/skype.jpg") center 15% no-repeat #BDBDBD;
+ }
