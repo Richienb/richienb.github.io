@@ -1,0 +1,38 @@
+{
+  "short_name": "Richie Bendall's Website",
+  "name": "Richie Bendall's Website",
+  "background_color": "#FAFAFA",
+  "display": "standalone",
+  "theme_color": "#3F51B5",
+  "icons": [{
+      "src": "/images/android-desktop-small.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/android-desktop-medium.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/android-desktop.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    } {
+      "src": "/images/favicon.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/images/ios-desktop.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/images/rich-preview.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+  ],
+  "start_url": "/?utm_source=homescreen"
+}
