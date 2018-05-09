@@ -6,6 +6,7 @@
   "background_color": "#FAFAFA",
   "display": "standalone",
   "theme_color": "#3F51B5",
+  "start_url": "/?utm_source=homescreen",
   "icons": [{
       "src": "/images/android-desktop-small.png",
       "type": "image/png",
@@ -36,6 +37,5 @@
       "type": "image/png",
       "sizes": "100x100"
     },
-  ],
-  "start_url": "/?utm_source=homescreen"
+  ]
 }
