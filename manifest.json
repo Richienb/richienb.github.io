@@ -20,7 +20,8 @@
       "src": "/images/android-desktop.png",
       "type": "image/png",
       "sizes": "192x192"
-    } {
+    },
+    {
       "src": "/images/favicon.png",
       "type": "image/png",
       "sizes": "32x32"
