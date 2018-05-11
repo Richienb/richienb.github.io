@@ -1,4 +1,4 @@
-### Issue Fixed (If any): #
+### Issue Fixed (If any):
 
 Changes:
 - 
