@@ -36,10 +36,9 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
 
     <!-- Onesignal Integration -->
-    {% for path in normal %}
-    <link rel="stylesheet" href="{{path}}">
-    {% endfor %}
-
+    <script>
+        {% include_relative test_header.md %}
+    </script>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/resources/site.webmanifest">
