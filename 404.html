@@ -41,8 +41,31 @@
     <!-- Set Favicon -->
     <link rel="shortcut icon" href="/resources/favicon.ico">
 
-    <!-- Load critical CSS -->
+    <!-- IE6 Compatiblity Script -->
+    <script src='https://cdn.rawgit.com/aFarkas/html5shiv/master/dist/html5shiv-printshiv.min.js'></script>
+
+    <!-- Run critical CSS -->
     <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-display: swap;
+            src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+        }
+
+        html,
+        div,
+        map,
+        dt,
+        isindex,
+        form,
+        header,
+        nav,
+        article,
+        footer,
+        address {
+            display: block;
+        }
+
         html,
         body {
             height: 100%;

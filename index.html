@@ -36,15 +36,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
 
     <!-- Onesignal Integration -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
-            });
-        });
-    </script>
+    {% include onesignal.js %}
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/resources/site.webmanifest">
@@ -71,6 +63,12 @@
 
     <!-- Run critical CSS -->
     <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-display: swap;
+            src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+        }
+
         html,
         div,
         map,

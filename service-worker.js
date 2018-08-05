@@ -1,77 +1,60 @@
-var CACHE_NAME = 'my-site-cache-v1';
-var urlsToCache = [
-    '/',
-    '/resources/favicon.ico',
-    'https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en',
-    'https://code.getmdl.io/1.3.0/material.min.js',
-    'https://code.getmdl.io/1.3.0/material.indigo-red.min.css',
-    'https://cdn.rawgit.com/aFarkas/html5shiv/master/dist/html5shiv-printshiv.min.js'
+// Names of the two caches used in this version of the service worker.
+// Change to v2, etc. when you update any of the local resources, which will
+// in turn trigger the install event again.
+const PRECACHE = 'precache-v1';
+const RUNTIME = 'runtime';
+
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [
+  './'
+  'https://code.getmdl.io/1.3.0/material.min.js',
+  'https://code.getmdl.io/1.3.0/material.indigo-red.min.css'
 ];
 
-self.addEventListener('install', function(event) {
-    // Perform install steps
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-        .then(function(cache) {
-            console.log('Opened cache');
-            return cache.addAll(urlsToCache);
-        })
-    );
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
+  );
 });
 
-self.addEventListener('fetch', function(event) {
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener('activate', event => {
+  const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(cachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
+      }));
+    }).then(() => self.clients.claim())
+  );
+});
+
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+self.addEventListener('fetch', event => {
+  // Skip cross-origin requests, like those for Google Analytics.
+  if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            // Cache hit - return response
-            if (response) {
-                return response;
-            }
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
 
-            // IMPORTANT: Clone the request. A request is a stream and
-            // can only be consumed once. Since we are consuming this
-            // once by cache and once by the browser for fetch, we need
-            // to clone the response.
-            var fetchRequest = event.request.clone();
-
-            return fetch(fetchRequest).then(
-                function(response) {
-                    // Check if we received a valid response
-                    if (!response || response.status !== 200 || response.type !== 'basic') {
-                        return response;
-                    }
-
-                    // IMPORTANT: Clone the response. A response is a stream
-                    // and because we want the browser to consume the response
-                    // as well as the cache consuming the response, we need
-                    // to clone it so we have two streams.
-                    var responseToCache = response.clone();
-
-                    caches.open(CACHE_NAME)
-                        .then(function(cache) {
-                            cache.put(event.request, responseToCache);
-                        });
-
-                    return response;
-                }
-            );
-        })
+        return caches.open(RUNTIME).then(cache => {
+          return fetch(event.request).then(response => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
+          });
+        });
+      })
     );
-});
-
-self.addEventListener('activate', function(event) {
-
-    var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
-
-    event.waitUntil(
-        caches.keys().then(function(cacheNames) {
-            return Promise.all(
-                cacheNames.map(function(cacheName) {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
-    );
+  }
 });
