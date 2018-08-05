@@ -6,9 +6,8 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  './'
-  'https://code.getmdl.io/1.3.0/material.min.js',
-  'https://code.getmdl.io/1.3.0/material.indigo-red.min.css'
+  'index.html',
+  './', // Alias for index.html
 ];
 
 // The install handler takes care of precaching the resources we always need.
