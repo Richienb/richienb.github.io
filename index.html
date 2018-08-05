@@ -35,17 +35,6 @@
     <link rel="stylesheet" type="text/css" href="/material.indigo-red.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 
-    <!-- Onesignal Integration -->
-    <script async defer src="//cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
-    <script async defer>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
-            });
-        });
-    </script>
-
     <!-- Web App Manifest -->
     <link rel="manifest" href="/resources/site.webmanifest">
     <meta name="msapplication-config" content="/resources/browserconfig.xml">
@@ -266,7 +255,44 @@
             background-size: cover;
         }
     </style>
+    
+    <!-- Onesignal Integration -->
+    <script async defer src="//cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
+    <script async defer>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
+            });
+        });
+    </script>
 
+    <!-- Set Chatra Colours -->
+    <script async defer>
+        window.ChatraSetup = {
+        colors: {
+            buttonText: '#fafafa', // chat button text/icon color
+            buttonBg: '#f44336', // chat button background color
+            clientBubbleBg: '#90CAF9', // visitor’s message bubble color
+            agentBubbleBg: '#ef9a9a' // agent’s message bubble color
+        }
+    };
+    </script>
+    
+    <!-- Chatra Integration -->
+    <script async defer>
+        (function(d, w, c) {
+            w.ChatraID = '7X2dT6uFCcqXqDziK';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+    -        };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+    
 </head>
 
 <body>
