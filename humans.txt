@@ -1,0 +1,9 @@
+/* TEAM */
+
+Richie Bemdall
+
+/* SITE */
+
+Standards: HTML, CSS, JS
+
+Components: MDL, Google Fonts
