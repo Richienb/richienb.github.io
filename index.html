@@ -36,7 +36,12 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
 
     <!-- Onesignal Integration -->
-    {% include onesignal.js %}
+    {% for js in page.normal %}
+     <script type="text/javascript">
+     {% include {{ js }} %}
+     </script>
+    {% endfor %}
+
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/resources/site.webmanifest">

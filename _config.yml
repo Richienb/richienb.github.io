@@ -1,2 +1,2 @@
-includes:
-  - tools
+normal:
+     - tools/onesignal.js
