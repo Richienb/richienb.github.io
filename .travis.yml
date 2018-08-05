@@ -20,7 +20,17 @@ install:
   - pip install pyspelling
 
 script:
+  # Check for spelling errors
   - pyspelling
+  
+after_script:
+  # Clear CloudFlare cache
+  - |
+    curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
+     -H "X-Auth-Email: ${email}" \
+     -H "X-Auth-Key: ${cf_api_key}" \
+     -H "Content-Type: application/json" \
+     --data '{"purge_everything":true}'
 
 notifications:
   # Disable emails for build status notifications
