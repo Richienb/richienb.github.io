@@ -4,8 +4,6 @@ Richie Bemdall
 
 /* SITE */
 
-Last update: YYYY/MM/DD
-
 Standards: HTML, CSS, JS
 
 Components: MDL, Google Fonts
