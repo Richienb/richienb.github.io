@@ -1,0 +1,15 @@
+plugins:
+  # Automatically generate sitemap
+  - jekyll-sitemap
+
+  # Automatically generate RSS feed
+  - jekyll-feed
+
+  # Automatically redirect to pages from URLs
+  - jekyll-redirect-from
+
+  # Enable usage of emojis
+  - jemoji
+
+  # Enable usage of GitHub mentions
+  - jekyll-mentions
