@@ -1,262 +1,475 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Development Message -->
-  <script>
-    console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
-  </script>
+    <!-- Common declarations -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-          console.log('ServiceWorker registration failed: ', err);
+    <!-- Development Message -->
+    <script>
+        console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
+    </script>
+
+    <!-- Initialise Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+    <!-- SEO -->
+    <title>Richie Bendall's Website</title>
+    <meta name="description" content="Welcome to Richie Bendall's Official Website">
+
+    <!-- Import External Resources -->
+    <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-red.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
+
+    <!-- Onesignal Integration -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
+            });
         });
-      });
-    }
-  </script>
+    </script>
 
-  <!-- SEO -->
-  <meta name="description" content="Hello, My Name Is Richie Bendall And I Am The Official Owner Of This Website. I Do Lots Of Fun Things And Collaborate On A Number Of Projects. Hope You All Enjoy.">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <meta name="msapplication-config" content="/resources/browserconfig.xml">
 
-  <!-- Rich Link -->
-  <meta property="og:title" content="Richie Bendall's Website" />
-  <meta property="og:description" content="Hello, My Name Is Richie Bendall And I Am The Official Owner Of This Website. I Do Lots Of Fun Things And Collaborate On A Number Of Projects. Hope You All Enjoy." />
-  <meta property="og:image" content="images/rich-preview.png" />
+    <!-- Web App Manifest Tags -->
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-TileImage" content="/resources/mstile-144x144.png">
+    <meta name="theme-color" content="#3f51b5">
 
-  <!-- Website Stuff -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <title>Richie Bendall's Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#3F51B5">
+    <!-- Homescreen Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/resources/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#f44336">
 
-  <!-- Import Resources -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <!-- Set Favicon -->
+    <link rel="shortcut icon" href="/resources/favicon.ico">
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <!-- IE6 Compatiblity Script -->
+    <script src='https://cdn.rawgit.com/aFarkas/html5shiv/master/dist/html5shiv-printshiv.min.js'></script>
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Richie Bendall's Website">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <!-- Run critical CSS -->
+    <style>
+        html,
+        div,
+        map,
+        dt,
+        isindex,
+        form,
+        header,
+        nav,
+        article,
+        footer,
+        address {
+            display: block;
+        }
 
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#00ffffff">
+        * {
+            font-family: "Roboto", sans-serif;
+        }
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
+        html {
+            background: #7986cb;
+        }
 
-  <!-- Onesignal Integration -->
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script>
-    var OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
-      });
-    });
-  </script>
+        .mdl-layout-title {
+            padding: 16px;
+        }
 
-  <!-- Web App Manifest -->
-  <link rel="manifest" href="/manifest.json">
+        .portfolio-header {
+            position: relative;
+        }
+
+        .portfolio-header .mdl-layout__header-row {
+            padding: 0;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .mdl-layout__title {
+            font-size: 14px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .is-compact .mdl-layout__title span {
+            display: none;
+        }
+
+        .portfolio-logo-row {
+            min-height: 200px;
+        }
+
+        .is-compact .portfolio-logo-row {
+            min-height: auto;
+        }
+
+        .portfolio-logo {
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            margin: auto auto 10px;
+        }
+
+        .is-compact .portfolio-logo {
+            height: 50px;
+            width: 50px;
+            margin-top: 7px;
+        }
+
+        .portfolio-navigation-row {
+            background-color: rgba(0, 0, 0, 0.08);
+            text-transform: uppercase;
+            height: 45px;
+        }
+
+        .portfolio-navigation-row .mdl-navigation {
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .portfolio-navigation-row .mdl-navigation__link {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            line-height: 42px;
+        }
+
+        .portfolio-header .mdl-layout__drawer-button {
+            background-color: rgba(197, 197, 197, 0.44);
+        }
+
+        .portfolio-navigation-row .is-active {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .portfolio-navigation-row .is-active:after {
+            content: "";
+            width: 70%;
+            height: 2px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(255, 64, 129);
+            left: 15%;
+        }
+
+        .portfolio-card .mdl-card__title {
+            padding-bottom: 0;
+        }
+
+        .portfolio-blog-card-compact .mdl-card__title {
+            padding-bottom: 0;
+        }
+
+        .portfolio-blog-card-bg>.mdl-card__actions {
+            height: 52px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        img.article-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .portfolio-max-width {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .portfolio-copy {
+            max-width: 700px;
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .no-left-padding {
+            padding-left: 0;
+        }
+
+        .no-bottom-padding {
+            padding-bottom: 0;
+        }
+
+        .padding-top {
+            padding: 10px 0 0;
+        }
+
+        .portfolio-share-btn {
+            position: relative;
+            float: right;
+            top: -4px;
+        }
+
+        .demo-card-event>.mdl-card__actions {
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .portfolio-contact .mdl-textfield {
+            width: 100%;
+        }
+
+        .portfolio-contact form {
+            max-width: 550px;
+            margin: auto;
+        }
+
+        footer {
+            background-size: cover;
+        }
+    </style>
+
 </head>
 
 <body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Richie Bendall's Website</span>
-      </div>
-      <!-- Tabs -->
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
-        <a href="#scroll-tab-2" class="mdl-layout__tab">Send</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">App</a>
-        <a href="#scroll-tab-4" class="mdl-layout__tab">ROS Chat</a>
-        <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
-        <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Websites</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw"><i class="material-icons">&#xE04B;</i> Youtube Channel</a>
-        <a class="mdl-navigation__link" href="https://plus.google.com/104023294057020158565"><i class="material-icons">&#xE7FD;</i> Google+</a>
-        <a class="mdl-navigation__link" href="https://www.richie-bendall-blog.ml"><i class="material-icons">&#xE86D;</i> Blog</a>
-        <a class="mdl-navigation__link" href="https://github.com/Richienb"><i class="material-icons">&#xE86F;</i> Github</a>
-        <a class="mdl-navigation__link" href="https://stackoverflow.com/users/8384910/richie-bendall"><i class="material-icons">&#xE8AF;</i> Stack Overflow</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-        <div class="page-content">
-          <!-- Who I Am -->
-          <div class="card-square mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text">Who I Am</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Hello, My Name Is Richie Bendall And I Am The Official Owner Of This Website. I Do Lots Of Fun Things And Collaborate On A Number Of Projects. Hope You All Enjoy. To Get In Touch With Me, Email&nbsp;<a href="mailto:richiebendall@gmail.com">richiebendall@gmail.com</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-        <div class="page-content">
-          <!-- Send An Email -->
-          <!-- Send Message -->
-          <div class="card-square mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text">Send An Email</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <!-- Subject Field -->
-              <form action="#">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="subject" required>
-                  <label class="mdl-textfield__label" for="subject">Subject</label>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <!-- Always shows a header, even in smaller screens. -->
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">Richie Bendall's Website</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+                        <!-- Navigation. We hide it in small screens. -->
+                        <nav class="mdl-navigation mdl-layout--large-screen-only">
+                            <a class="mdl-navigation__link" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw">Youtube</a>
+                            <a class="mdl-navigation__link" href="https://github.com/Richienb">GitHub</a>
+                            <a class="mdl-navigation__link" href="https://stackoverflow.com/users/8384910/richie-bendall">Stack Overflow</a>
+                            <a class="mdl-navigation__link" href="https://plus.google.com/104023294057020158565">Google+</a>
+                            <a class="mdl-navigation__link" href="https://blog.richie-bendall.ml/">Blog</a>
+                        </nav>
+                    </div>
+                </header>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <!-- ROS Code -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">ROS Code</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ROS Code is a revolutionary, modern and pleasing programming language to code in featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is provided as a Python 3 library.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Code">Read more</a>
+                    </div>
                 </div>
-                <!-- Message Field -->
-                <form action="#">
-                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="body" required>
-                    <label class="mdl-textfield__label" for="body">Message</label>
-                  </div>
-                  <!-- Send Button -->
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick=buildString()>
-  <i class="material-icons">&#xE163;</i> Send
-</button>
-            </div>
-          </div>
 
-          <!-- Send A File -->
-          <div class="card-square mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text">Send A File</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <script defer async type="text/javascript">
-                var mf_dropbox_width = -1;
-                var mf_dropbox_id = "19e4ff298bcd013d87d8ea77a2cef80a233dbfbce73bc256d560aed3722edb1f";
-              </script>
-              <script defer async type="text/javascript" src="//www.mediafire.com/dropbox/dropbox.js"></script>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
+                <!-- richienb.github.io -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">richienb.github.io</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        It's the website you're viewing this content in right now. It's also open source on GitHub.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/richienb.github.io">Read more</a>
+                    </div>
+                </div>
 
+                <!-- Cursor Sheme Previewer -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Cursor Scheme Previewer</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        This is a Windows 98+ (.NET 2.0+) application which allows your to preview your cursor scheme in a couple of clicks.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/cursor-scheme-previewer">Read more</a>
+                    </div>
+                </div>
+
+                <!-- ReadSettings for Python -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">ReadSettings for Python</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Easily create, edit and remove a customized settings file which you can use for storing all of the settings for your application. At the moment, ReadSettings is compatible with Python 3 but support to more programming langauages may come in the future.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/readsettings-python">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Background Music Greenscreen -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Background Music Greenscreen</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Allows you to embed a url in your videos which will automatically play music from <a href="https://youtu.be/sKIbH-gXmX0">this Youtube video</a>. This also changes the background colour of the website to be the green screen colour
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/background-music-greenscreen">Read more</a>
+                    </div>
+                </div>
+
+                <!-- ROS Filesystem Watcher -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">ROS FileSystem Watcher</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ROS FileSystem Watcher is a VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-FileSystem-Watcher">Read more</a>
+                    </div>
+                </div>
+
+                <!-- ROS Encryption -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">ROS Encryption</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ROS Encryption is a VB.NET text encryption tool supporting encryption of any string including passwords and features Material Design.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Encryption">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Git Files -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Git Files</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/git-files">Read more</a>
+                    </div>
+                </div>
+
+                <!-- VirusShare Hashes -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">VirusShare Hashes</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Every single <a href="https://virusshare.com/hashes.4n6">VirusShare</a> MD5 hash in a single file, ready for distribution and CI integrations.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/virusshare-hashes">Read more</a>
+                    </div>
+                </div>
+
+                <!-- ROS QuickScan -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">ROS QuickScan</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ROS QuickScan is a tool for checking single files against a list of hashes provided by <a href="https://github.com/Richienb/virusshare-hashes">VirusShare Hashes</a>.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Quick-Scan">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Jython Builds -->
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Jython Builds</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/jython-builds">Read more</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-        <div class="page-content">
-          <!-- Square card -->
-          <div class="card-square mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text">Android</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              Download My App For Android
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="https://www.mediafire.com/file/574gbn99mvn2yj0/Richie_Bendall%27s_Website_App.apk" target="_blank" rel="noopener" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Download Now
-    </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel " id="scroll-tab-4 ">
-        <div class="page-content ">
-          <!-- Square card -->
-          <div class="card-square mdl-card mdl-shadow--2dp ">
-            <div class="mdl-card__title mdl-card--expand ">
-              <h2 class="mdl-card__title-text ">Speak To ROS Chat Now</h2>
-            </div>
-            <div class="mdl-card__supporting-text ">
-            </div>
-            <div class="mdl-card__actions mdl-card--border ">
-              <a href="https://webchat.botframework.com/embed/ros?s=ZnWY_-bArLY.cwA.7nM.H_kSYakXA5HppMfWwAb-PEZB4bWBu4xgKNy921W3YMw " target="_blank " class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect ">
-      View Full Screen (Embedable URL)
-    </a>
-            </div>
-          </div>
-          <!-- Square card -->
-          <div class="card-square mdl-card mdl-shadow--2dp ">
-            <div class="mdl-card__title mdl-card--expand ">
-              <h2 class="mdl-card__title-text ">Google Assistant</h2>
-            </div>
-            <div class="mdl-card__supporting-text ">
-              Use ROS Chat In The Google Assistant
-            </div>
-            <div class="mdl-card__actions mdl-card--border ">
-              <a href="https://assistant.google.com/services/a/uid/0000005c31b29faa?hl=en-GB " target="_blank " rel="noopener class=" mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect "> View In Directory
-              </a>
-            </div>
-          </div>
-          <!-- Square card -->
-          <div class="card-square mdl-card mdl-shadow--2dp ">
-            <div class="mdl-card__title mdl-card--expand ">
-              <h2 class="mdl-card__title-text ">Skype</h2>
-            </div>
-            <div class="mdl-card__supporting-text ">
-              Use ROS Chat In Skype
-            </div>
-            <div class="mdl-card__actions mdl-card--border ">
-              <a href="https://join.skype.com/bot/9b72825c-c1e7-4223-9ab3-ba17ecfba551 " target="_blank " rel="noopener class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> Add To Contacts
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel " id="scroll-tab-5 ">
-        <div class="page-content ">
-          <!-- Your content goes here -->
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel " id="scroll-tab-6 ">
-        <div class="page-content ">
-          <!-- Your content goes here -->
-        </div>
-      </section>
-    </main>
-    <footer class="mdl-mini-footer ">
-      <div class="mdl-mini-footer__left-section ">
-        <div class="mdl-logo ">Richie Bendall's Website</div>
-        <ul class="mdl-mini-footer__link-list ">
-          <li><a href="privacy ">Privacy Policy</a></li>
-          <li><a href="terms ">Terms And Conditions</a></li>
-        </ul>
-      </div>
-      <!-- Import Resource -->
-      <script defer async src="https://code.getmdl.io/1.3.0/material.min.js "></script>
-      <!-- Import Script And Style -->
-      <link rel="stylesheet " href="styles/style.css ">
-      <script src="scripts/script.js "></script>
-      <!-- Google Translate -->
-      <div id="google_translate_element"></div>
-      <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT
-          }, 'google_translate_element');
-        }
-      </script>
-      <script type="text/javascript " src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit "></script>
-    </footer>
-  </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Richie Bendall's Website</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing">Terms and Conditions</a></li>
+                        <li><a href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+
+        <script src='https://code.getmdl.io/1.3.0/material.min.js'></script>
+
 </body>
 
 </html>

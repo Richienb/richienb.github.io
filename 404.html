@@ -1,57 +1,226 @@
----
-permalink: /404.html
----
+--- permalink: /404.html ---
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <!-- Website Stuff -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <title>404 Not Found | Richie Bendall's Website</title>
+    <!-- Common declarations -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Import Resources -->
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Development Message -->
+    <script>
+        console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
+    </script>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
+    <!-- SEO -->
+    <title>404 Not Found | Richie Bendall's Website</title>
+    <meta name="description" content="You shouldn't be seeing this.">
+
+    <!-- Import Resources -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <meta name="msapplication-config" content="/resources/browserconfig.xml">
+
+    <!-- Web App Manifest Tags -->
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-TileImage" content="/resources/mstile-144x144.png">
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Homescreen Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/resources/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#f44336">
+
+    <!-- Set Favicon -->
+    <link rel="shortcut icon" href="/resources/favicon.ico">
+
+    <!-- Load critical CSS -->
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            color: #424242;
+            font: 300 1em/1.5em "Roboto", sans-serif, sans-serif;
+            margin: 0;
+            position: relative;
+        }
+
+        h1 {
+            font-siez: 2em;
+            font-weight: 900;
+            line-height: 1.1em;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            line-height: 1.1em;
+            margin: 0;
+        }
+
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .container {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .display-table {
+            display: table;
+            width: 100%;
+        }
+
+        .display-table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .icons {
+            display: none;
+        }
+
+        .icon {
+            display: inline-block;
+            height: 3em;
+            width: 3em;
+        }
+
+        .icon-left,
+        .icon-right {
+            margin-right: 1em;
+        }
+
+        .icon-x {
+            background-color: #f44336;
+            border-radius: 50%;
+            fill: #fff;
+            padding: 0.5em;
+        }
+
+        .page-404 {
+            background: radial-gradient( ellipse farthest-side at right top,
+            #f44336 0%,
+            #f44336 100%) no-repeat;
+        }
+
+        .message {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 1em 2em;
+            text-transform: uppercase;
+        }
+
+        .message h1 {
+            font-weight: 900;
+        }
+
+        .message h2 {
+            font-weight: 300;
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .bounceIn {
+            -webkit-animation-name: bounceIn;
+            animation-name: bounceIn;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+        }
+
+        @-webkit-keyframes bounceIn,
+        @keyframes bounceIn {
+            0%,
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
+            20% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            40% {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                transform: scale3d(0.9, 0.9, 0.9);
+            }
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+            80% {
+                -webkit-transform: scale3d(0.97, 0.97, 0.97);
+                transform: scale3d(0.97, 0.97, 0.97);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    </style>
 </head>
 
 <body class="page-404">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="message animated bounceIn">
+        <div class="message animated bounceIn">
 
-      <div class="display-table">
+            <div class="display-table">
 
-        <div class="display-table-cell">
+                <div class="display-table-cell">
 
-          <svg class="icon icon-left icon-x"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-x"></use></svg>
+                    <svg class="icon icon-left icon-x"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-x"></use></svg>
+
+                </div>
+
+                <div class="display-table-cell">
+
+                    <h1>Error 404</h1>
+
+                    <h2>Page Not Found!</h2>
+
+                </div>
+
+            </div>
 
         </div>
-
-        <div class="display-table-cell">
-
-          <h1>Error 404</h1>
-
-          <h2>Page Not Found!</h2>
-
-        </div>
-
-      </div>
 
     </div>
 
-  </div>
-
-  <svg class="icons" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg"><symbol viewBox="0 0 512 512" id="icon-x"><title>x</title><path d="M438.393 374.595L319.757 255.977l118.62-118.63-63.782-63.74-118.6 118.618-118.62-118.603-63.768 63.73 118.64 118.63L73.62 374.626l63.73 63.768 118.65-118.66 118.65 118.645z"/></symbol></svg>
+    <svg class="icons" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg"><symbol viewBox="0 0 512 512" id="icon-x"><title>x</title><path d="M438.393 374.595L319.757 255.977l118.62-118.63-63.782-63.74-118.6 118.618-118.62-118.603-63.768 63.73 118.64 118.63L73.62 374.626l63.73 63.768 118.65-118.66 118.65 118.645z"/></symbol></svg>
 
 </body>
 
-<footer>
-  <!-- Import Style -->
-  <link rel="stylesheet" href="styles/404style.css">
-</footer>
+</html
