@@ -36,10 +36,8 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
 
     <!-- Onesignal Integration -->
-    {% for js in page.normal %}
-     <script type="text/javascript">
-     {% include {{ js }} %}
-     </script>
+    {% for path in normal %}
+    <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
 
 
