@@ -1,4 +1,6 @@
+User-agent: Browsershots
+Allow: / 
+
 User-agent: *
 Disallow: /404.html
-User-agent: Browsershots
-Disallow:
+Allow: / 
