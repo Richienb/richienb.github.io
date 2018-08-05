@@ -36,9 +36,14 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'>
 
     <!-- Onesignal Integration -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
-        { % include_relative onesignal.js %
-        }
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
+            });
+        });
     </script>
 
     <!-- Web App Manifest -->
