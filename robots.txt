@@ -1,6 +1,5 @@
 User-agent: Browsershots
-Allow: / 
+Disallow:
 
 User-agent: *
 Disallow: /404.html
-Allow: / 
