@@ -16,6 +16,12 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll(PRECACHE_URLS))
       .then(self.skipWaiting())
   );
+  r(function(){
+    var snackbarContainer = document.querySelector('#toast-object');
+    var data = { message: 'Richie Bendall\'s Website is now available offline.'};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+  function r(f){ /in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
 });
 
 // The activate handler takes care of cleaning up old caches.
