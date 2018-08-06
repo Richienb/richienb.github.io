@@ -16,6 +16,7 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll(PRECACHE_URLS))
       .then(self.skipWaiting())
   );
+  // Show toast on installation success
   r(function(){
     var snackbarContainer = document.querySelector('#toast-object');
     var data = { message: 'Richie Bendall\'s Website is now available offline.'};
