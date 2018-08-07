@@ -17,7 +17,7 @@
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
     </div>
-    
+
     <!-- Initialise Service Worker -->
     <script async defer>
         if ('serviceWorker' in navigator) {
@@ -38,8 +38,8 @@
     <meta name="description" content="Welcome to Richie Bendall's Official Website">
 
     <!-- Import External Resources -->
-    <link rel="stylesheet" type="text/css" href="/material.indigo-red.min.css">
-    <link rel="stylesheet" type="text/css" href="/roboto.css">
+    <link rel="stylesheet" type="text/css" href="/hosted/material.indigo-red.min.css">
+    <link rel="stylesheet" type="text/css" href="/hosted/roboto.css">
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/resources/site.webmanifest">
@@ -261,7 +261,7 @@
             background-size: cover;
         }
     </style>
-    
+
     <!-- Onesignal Integration -->
     <script async defer src="//cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
     <script async defer>
@@ -276,29 +276,29 @@
     <!-- Set Chatra Colours -->
     <script async defer>
         window.ChatraSetup = {
-        colors: {
-            buttonText: '#fafafa', // chat button text/icon color
-            buttonBg: '#f44336', // chat button background color
-            clientBubbleBg: '#90CAF9', // visitor’s message bubble color
-            agentBubbleBg: '#ef9a9a' // agent’s message bubble color
-        }
-    };
+            colors: {
+                buttonText: '#fafafa', // chat button text/icon color
+                buttonBg: '#f44336', // chat button background color
+                clientBubbleBg: '#90CAF9', // visitor’s message bubble color
+                agentBubbleBg: '#ef9a9a' // agent’s message bubble color
+            }
+        };
     </script>
-    
+
     <!-- Chatra Integration -->
     <script async defer>
         (function(d, w, c) {
             w.ChatraID = '7X2dT6uFCcqXqDziK';
             var s = d.createElement('script');
             w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-    -        };
+                (w[c].q = w[c].q || []).push(arguments); -
+            };
             s.async = true;
             s.src = 'https://call.chatra.io/chatra.js';
             if (d.head) d.head.appendChild(s);
         })(document, window, 'Chatra');
     </script>
-    
+
 </head>
 
 <body>
@@ -510,12 +510,13 @@
                         <li><a href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing">Terms and Conditions</a></li>
                         <li><a href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing">Privacy Policy</a></li>
                         <li><a href="https://richie-bendall.mit-license.org">MIT License</a></li>
+                        <li><a href="/humans.txt">Humans.txt</a></li>
                     </ul>
                 </div>
             </footer>
         </main>
 
-        <script async defer src="/material.min.js"></script>
+        <script async defer src="/hosted/material.min.js"></script>
 
 </body>
 

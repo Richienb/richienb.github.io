@@ -1,14 +1,14 @@
 # Disable sudo to speed up build
-sudo:             false
+sudo:              false
 
 # Set the build language
-language:         python
+language:          python
 
 # Set the build language version
-python:           3.6.6
+python:            3.6.6
 
 # Set build branch
-branches:         master
+branches:          master
 
 cache:
   directories:
@@ -34,4 +34,4 @@ after_script:
 
 notifications:
   # Disable emails for build status notifications
-  email:          false
+  email:           false
