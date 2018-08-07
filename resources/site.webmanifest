@@ -1,6 +1,11 @@
 {
     "name": "Richie Bendall's Website",
     "short_name": "Richie Web",
+    "theme_color": "#3f51b5",
+    "background_color": "#3f51b5",
+    "start_url": "/?utm_source=homescreen",
+    "display": "standalone",
+    "scope": "/",
     "icons": [{
             "src": "/resources/android-chrome-36x36.png",
             "sizes": "36x36",
@@ -47,10 +52,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#3f51b5",
-    "background_color": "#3f51b5",
-    "start_url": "/?utm_source=homescreen",
-    "display": "standalone",
     "gcm_sender_id": "482941778795",
     "gcm_sender_id_comment": "Do not change the GCM Sender ID"
 }
