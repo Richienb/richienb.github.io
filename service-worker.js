@@ -7,7 +7,7 @@ self.addEventListener('install', function(event) {
 var preLoad = function() {
     console.log('Install Event processing');
     return caches.open('pwabuilder-offline').then(function(cache) {
-        console.log('[PWA Builder] Cached index and offline page during Install');
+        console.log('Cached index and offline page during Install');
         return cache.addAll(['/offline.html', '/index.html']);
     });
 }
