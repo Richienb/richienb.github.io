@@ -11,3 +11,6 @@ material-design-lite - Material Design Components in CSS, JS and HTML | version 
 
 roboto.css:
 Christian Robertson
+
+offline.min.js & offline-theme-slide.css & offline-language-english.css:
+offline-js 0.7.13
