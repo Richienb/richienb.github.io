@@ -1,54 +1,51 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-// Install stage sets up the offline page in the cache and opens a new cache
+var CACHE_NAME = 'static-cache';
+var urlsToCache = [
+    '/index.html',
+    '/hosted/material.indigo-red.min.css',
+    '/hosted/material.min.js',
+    '/offline.html'
+];
 self.addEventListener('install', function(event) {
-    event.waitUntil(preLoad());
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+        .then(function(cache) {
+            return cache.addAll(urlsToCache);
+            // Show toast on installation success
+            r(function() {
+                var snackbarContainer = document.querySelector('#toast-object');
+                var data = {
+                    message: 'This page is now available offline.'
+                };
+                snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            })
+        })
+    );
 });
-
-var preLoad = function() {
-    console.log('Install Event processing');
-    return caches.open('pwabuilder-offline').then(function(cache) {
-        console.log('Cached index and offline page during Install');
-        return cache.addAll(['/offline.html', '/index.html']);
-    });
-}
 
 self.addEventListener('fetch', function(event) {
-    console.log('The service worker is serving the asset.');
-    event.respondWith(checkResponse(event.request).catch(function() {
-        return returnFromCache(event.request)
-    }));
-    event.waitUntil(addToCache(event.request));
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            return response || fetchAndCache(event.request);
+        })
+    );
 });
 
-var checkResponse = function(request) {
-    return new Promise(function(fulfill, reject) {
-        fetch(request).then(function(response) {
-            if (response.status !== 404) {
-                fulfill(response)
-            } else {
-                reject()
+function fetchAndCache(url) {
+    return fetch(url)
+        .then(function(response) {
+            // Check if we received a valid response
+            if (!response.ok) {
+                throw Error(response.statusText);
             }
-        }, reject)
-    });
-};
-
-var addToCache = function(request) {
-    return caches.open('pwabuilder-offline').then(function(cache) {
-        return fetch(request).then(function(response) {
-            console.log('Add page to offline' + response.url)
-            return cache.put(request, response);
+            return caches.open(CACHE_NAME)
+                .then(function(cache) {
+                    cache.put(url, response.clone());
+                    return response;
+                });
+        })
+        .catch(function(error) {
+            console.log('Request failed:', error);
+            return cache.match('offline.html')
         });
-    });
-};
-
-var returnFromCache = function(request) {
-    return caches.open('pwabuilder-offline').then(function(cache) {
-        return cache.match(request).then(function(matching) {
-            if (!matching || matching.status == 404) {
-                return cache.match('offline.html')
-            } else {
-                return matching
-            }
-        });
-    });
-};
+}
