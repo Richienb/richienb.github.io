@@ -18,31 +18,6 @@
         <button class="mdl-snackbar__action" type="button"></button>
     </div>
 
-    <!-- Initialise Service Worker -->
-    <script async defer>
-        // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-        if (navigator.serviceWorker.controller) {
-            console.log('[PWA Builder] active service worker found, no need to register')
-        } else {
-
-            // Register the ServiceWorker
-            navigator.serviceWorker.register('service-worker.js', {
-                scope: './'
-            }).then(function(reg) {
-                console.log('Service worker has been registered for scope:' + reg.scope);
-                // Show toast on installation success
-                r(function() {
-                    var snackbarContainer = document.querySelector('#toast-object');
-                    var data = {
-                        message: 'This page is now available offline.'
-                    };
-                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
-                })
-            });
-        }
-</script>
-
     <!-- SEO -->
     <title>Richie Bendall's Website</title>
     <meta name="description" content="Welcome to Richie Bendall's Official Website">
@@ -272,7 +247,7 @@
         }
     </style>
 
-    <!-- Onesignal Integration -->
+    <!-- Onesignal Integration & Specify Manifest -->
     <script async defer src="//cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
     <script async defer>
         var OneSignal = window.OneSignal || [];
