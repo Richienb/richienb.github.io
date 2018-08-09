@@ -56,11 +56,6 @@
 
     <!-- IE6 Compatiblity Script -->
     <script async defer src='hosted/html5shiv-printshiv.min.js'></script>
-    
-    <!-- Start Offline.js -->
-    <script async defer src='hosted/offline.min.js'></script>
-    <link rel="stylesheet" type="text/css" href="hosted/offline-theme-slide.css">
-    <link rel="stylesheet" type="text/css" href="hosted/offline-language-english.css">
 
     <!-- Run critical CSS -->
     <style>
@@ -252,25 +247,27 @@
         }
     </style>
 
-    <!-- Onesignal Integration & Specify Manifest -->
-    <script async defer src="//cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
+    <!-- Specify Service Worker Cacher -->
     <script async defer>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "f568bf3a-1ed7-40a8-908d-8a3f40c2adc7",
-            });
-        });
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Registered:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Registration failed: ', error);
+                });
+        }
     </script>
 
     <!-- Set Chatra Colours -->
     <script async defer>
         window.ChatraSetup = {
             colors: {
-                buttonText: '#fafafa', // chat button text/icon color
-                buttonBg: '#f44336', // chat button background color
-                clientBubbleBg: '#90CAF9', // visitor’s message bubble color
-                agentBubbleBg: '#ef9a9a' // agent’s message bubble color
+                buttonText: '#fafafa', // Chat button text/icon color
+                buttonBg: '#f44336', // Chat button background color
+                clientBubbleBg: '#90CAF9', // Visitor’s message bubble color
+                agentBubbleBg: '#ef9a9a' // Agent’s message bubble color
             }
         };
     </script>
