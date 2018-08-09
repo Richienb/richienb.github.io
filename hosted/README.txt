@@ -1,8 +1,5 @@
 CREDITS:
 
-loadcss.js:
-loadCSS. [c]2017 Filament Group, Inc. MIT License
-
 html5shiv-printshiv.min.js:
 HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 
@@ -11,6 +8,3 @@ material-design-lite - Material Design Components in CSS, JS and HTML | version 
 
 roboto.css:
 Christian Robertson
-
-offline.min.js & offline-theme-slide.css & offline-language-english.css:
-offline-js 0.7.13

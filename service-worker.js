@@ -1,10 +1,14 @@
 var CACHE_NAME = 'static-cache';
+
 var urlsToCache = [
     '/index.html',
     '/hosted/material.indigo-red.min.css',
     '/hosted/material.min.js',
-    '/offline.html'
+    '/offline.html',
+    '/favicon.ico',
+    '/service-worker.js'
 ];
+
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -46,6 +50,17 @@ function fetchAndCache(url) {
         })
         .catch(function(error) {
             console.log('Request failed:', error);
-            return cache.match('offline.html')
+            return fetch('offline.html')
+                .then(function(response) {
+                    // Check if we received a valid response
+                    if (!response.ok) {
+                        throw Error(response.statusText);
+                    }
+                    return caches.open(CACHE_NAME)
+                        .then(function(cache) {
+                            cache.put(url, response.clone());
+                            return response;
+                        });
+                })
         });
 }
