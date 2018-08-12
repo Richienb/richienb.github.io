@@ -62,7 +62,7 @@
             font-display: swap;
             src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
         }
-
+        
         html,
         div,
         map,
@@ -76,89 +76,89 @@
         address {
             display: block;
         }
-
+        
         * {
             font-family: "Roboto", sans-serif;
         }
-
+        
         html {
             background: #7986cb;
         }
-
+        
         .mdl-layout-title {
             padding: 16px;
         }
-
+        
         .portfolio-header {
             position: relative;
         }
-
+        
         .portfolio-header .mdl-layout__header-row {
             padding: 0;
             -webkit-justify-content: center;
             -ms-flex-pack: center;
             justify-content: center;
         }
-
+        
         .mdl-layout__title {
             font-size: 14px;
             text-align: center;
             font-weight: 300;
         }
-
+        
         .is-compact .mdl-layout__title span {
             display: none;
         }
-
+        
         .portfolio-logo-row {
             min-height: 200px;
         }
-
+        
         .is-compact .portfolio-logo-row {
             min-height: auto;
         }
-
+        
         .portfolio-logo {
             background-size: cover;
             height: 150px;
             width: 150px;
             margin: auto auto 10px;
         }
-
+        
         .is-compact .portfolio-logo {
             height: 50px;
             width: 50px;
             margin-top: 7px;
         }
-
+        
         .portfolio-navigation-row {
             background-color: rgba(0, 0, 0, 0.08);
             text-transform: uppercase;
             height: 45px;
         }
-
+        
         .portfolio-navigation-row .mdl-navigation {
             text-align: center;
             max-width: 900px;
             width: 100%;
         }
-
+        
         .portfolio-navigation-row .mdl-navigation__link {
             -webkit-flex: 1;
             -ms-flex: 1;
             flex: 1;
             line-height: 42px;
         }
-
+        
         .portfolio-header .mdl-layout__drawer-button {
             background-color: rgba(197, 197, 197, 0.44);
         }
-
+        
         .portfolio-navigation-row .is-active {
             position: relative;
             font-weight: bold;
         }
-
+        
         .portfolio-navigation-row .is-active:after {
             content: "";
             width: 70%;
@@ -170,57 +170,57 @@
             background-color: rgb(255, 64, 129);
             left: 15%;
         }
-
+        
         .portfolio-card .mdl-card__title {
             padding-bottom: 0;
         }
-
+        
         .portfolio-blog-card-compact .mdl-card__title {
             padding-bottom: 0;
         }
-
+        
         .portfolio-blog-card-bg>.mdl-card__actions {
             height: 52px;
             padding: 16px;
             background: rgba(0, 0, 0, 0.2);
         }
-
+        
         img.article-image {
             width: 100%;
             height: auto;
         }
-
+        
         .portfolio-max-width {
             max-width: 900px;
             margin: auto;
         }
-
+        
         .portfolio-copy {
             max-width: 700px;
         }
-
+        
         .no-padding {
             padding: 0;
         }
-
+        
         .no-left-padding {
             padding-left: 0;
         }
-
+        
         .no-bottom-padding {
             padding-bottom: 0;
         }
-
+        
         .padding-top {
             padding: 10px 0 0;
         }
-
+        
         .portfolio-share-btn {
             position: relative;
             float: right;
             top: -4px;
         }
-
+        
         .demo-card-event>.mdl-card__actions {
             -webkit-align-items: center;
             -ms-flex-align: center;
@@ -230,18 +230,33 @@
             display: -ms-flexbox;
             display: flex;
         }
-
+        
         .portfolio-contact .mdl-textfield {
             width: 100%;
         }
-
+        
         .portfolio-contact form {
             max-width: 550px;
             margin: auto;
         }
-
+        
         footer {
             background-size: cover;
+        }
+        
+        .bottom-right {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+        }
+        
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(hosted/MaterialIcons-Regular.eot);
+            /* For IE6-8 */
+            src: local('Material Icons'), local('MaterialIcons-Regular'), url(hosted/MaterialIcons-Regular.woff2) format('woff2'), url(hosted/MaterialIcons-Regular.woff) format('woff'), url(hosted/MaterialIcons-Regular.ttf) format('truetype');
         }
     </style>
 
@@ -488,7 +503,8 @@
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo"><noscript style="color: #9e9e9e;">Enable Javascript for the best experience when using </noscript> Richie Bendall's Website</div>
+                    <div class="mdl-logo">
+                        <noscript style="color: #9e9e9e;">Enable Javascript for the best experience when using </noscript> Richie Bendall's Website</div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
@@ -499,6 +515,11 @@
                     </ul>
                 </div>
             </footer>
+
+            <!-- Share Button -->
+            <a href="http://www.addthis.com/bookmark.php" class="bottom-right mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">share</i>
+            </a>
         </main>
 
         <!-- Import External Resources -->
