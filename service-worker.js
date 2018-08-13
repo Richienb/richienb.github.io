@@ -14,14 +14,6 @@ self.addEventListener('install', function(event) {
         caches.open(CACHE_NAME)
         .then(function(cache) {
             return cache.addAll(urlsToCache);
-            // Show toast on installation success
-            r(function() {
-                var snackbarContainer = document.querySelector('#toast-object');
-                var data = {
-                    message: 'This page is now available offline.'
-                };
-                snackbarContainer.MaterialSnackbar.showSnackbar(data);
-            })
         })
     );
 });
