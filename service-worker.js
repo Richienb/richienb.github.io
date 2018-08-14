@@ -28,6 +28,10 @@ self.__precacheManifest = [
     "revision": "ee8c8698feb40bba72ec17b02a9ffa78"
   },
   {
+    "url": "config.txt",
+    "revision": "b0eee78989b2e84093f5080802103273"
+  },
+  {
     "url": "favicon.ico",
     "revision": "6e869db8dda60da878658f162ac78773"
   },
