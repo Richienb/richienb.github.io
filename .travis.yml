@@ -1,15 +1,11 @@
 # Disable sudo to speed up build
-sudo:                     false
+sudo:                   false
 
 # Set the build language
-language:                 generic
+language:               generic
 
 # Set build branch
-branches:                 master
-
-cache:
-    # Ensure pip is cached
-    - pip
+branches:               master
 
 before_install:
   # Configure access token to enable pushing to the repository
@@ -23,13 +19,17 @@ before_install:
 
 jobs:
   include:
-    - stage: Spelling Check & Deployment # Check spelling
+    - stage:            Spelling Check & Deployment # Check spelling
+
+      cache:
+        # Ensure pip is cached
+        - pip
 
       # Set the build language
-      language:                 python
+      language:         python
 
       # Set the build language version
-      python:                   3.6.6
+      python:           3.6.6
 
       install:
         # Install the required dependency
@@ -41,6 +41,11 @@ jobs:
 
     - # Deploy site
 
+      cache:
+          # Ensure npm is cached
+          directories:
+            - node_modules # NPM packages
+
       install:
         # Install the required dependency
         - npm install workbox-cli --global
@@ -50,7 +55,7 @@ jobs:
         - workbox generateSW workbox-config.js
 
         # Check, commit and push
-        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Updated Service Worker Caching [skip ci]" && git push
+        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Updated Service Worker Caching [skip ci]" && git push origin HEAD:master
 
       after_script:
         # Clear CloudFlare cache
@@ -63,4 +68,4 @@ jobs:
 
 notifications:
   # Disable emails for build status notifications
-  email:           false
+  email:                false
