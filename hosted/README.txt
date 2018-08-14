@@ -8,3 +8,6 @@ material-design-lite - Material Design Components in CSS, JS and HTML | version 
 
 roboto.css:
 Christian Robertson
+
+MaterialIcons-Regular.eot & MaterialIcons-Regular.ttf & MaterialIcons-Regular.woff & MaterialIcons-Regular.woff2:
+Copyright Google - Apache license version 2.0.
