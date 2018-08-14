@@ -25,19 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "9dba523f2f7e074e00ffcb2c390426fa"
-  },
-  {
-    "url": "app/icon.icns",
-    "revision": "e1d1d60a1389eeb4da4c81f9cac6d5ce"
-  },
-  {
-    "url": "app/icon.png",
-    "revision": "2ab2da22d68525713dace7caf1bc5a66"
-  },
-  {
-    "url": "app/README.md",
-    "revision": "659b488fa48831faaf586db4c489a0da"
+    "revision": "e293f00d93e4ab1fa4858865a4aa2f63"
   },
   {
     "url": "favicon.ico",
@@ -73,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "hosted/README.txt",
-    "revision": "931eeacea333a4a7abd36ac96442ac8b"
+    "revision": "a1b076cbef92ad9a8bc9271c32188b88"
   },
   {
     "url": "hosted/roboto.css",
@@ -85,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e3611f25763c46e5a5ecabe1902a1461"
+    "revision": "a5d960d731488f4a62eae7a5d6591d64"
   },
   {
     "url": "LICENSE.md",
@@ -101,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "f38530ed8a685fdc8e983552ebad85e6"
+    "revision": "db770a1e64167b875e7271930120dba7"
   },
   {
     "url": "README.md",
