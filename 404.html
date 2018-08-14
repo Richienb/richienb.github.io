@@ -24,16 +24,22 @@ permalink: /404.html
     <!-- Import Resources -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
 
-    <!-- Web App Manifest -->
+    <!-- Define web app manifests -->
     <link rel="manifest" href="manifests/site.webmanifest">
     <meta name="msapplication-config" content="manifests/browserconfig.xml">
 
-    <!-- Web App Manifest Tags -->
+    <!-- Baseline Edge manifest tags -->
     <meta name="msapplication-TileColor" content="#3f51b5">
     <meta name="msapplication-TileImage" content="resources/mstile-144x144.png">
-    <meta name="theme-color" content="#3f51b5">
 
-    <!-- Homescreen Icons -->
+    <!-- Baseline Android manifest tags -->
+    <meta name="theme-color" content="#3f51b5">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- IOS manifest tag -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Setup homescreen icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="194x194" href="resources/favicon-194x194.png">
@@ -41,8 +47,19 @@ permalink: /404.html
     <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
     <link rel="mask-icon" href="resources/safari-pinned-tab.svg" color="#f44336">
 
-    <!-- Set Favicon -->
+    <!-- Setup rich link metadata -->
+    <meta property="og:image:width" content="279">
+    <meta property="og:image:height" content="279">
+    <meta property="og:title" content="Richie Bendall's Website">
+    <meta property="og:description" content="Welcome to Richie Bendall's Official Website">
+    <meta property="og:url" content="https://www.richie-bendall.ml">
+    <meta property="og:image" content="https://www.richie-bendall.ml/resources/og-image.jpg">
+
+    <!-- Set favicon -->
     <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- IE6 compatiblity script -->
+    <script async defer src="hosted/html5shiv-printshiv.min.js"></script>
 
     <!-- IE6 Compatiblity Script -->
     <script async defer src="hosted/html5shiv-printshiv.min.js"></script>
