@@ -25,7 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "91b35588d1d833cc0d4f981acbc84e2b"
+    "revision": "ee8c8698feb40bba72ec17b02a9ffa78"
   },
   {
     "url": "favicon.ico",
@@ -73,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b32c1a3509dd0e492c78076f753a1500"
+    "revision": "e0c0209457933d106145a9e7b85a8d16"
   },
   {
     "url": "LICENSE.md",
@@ -89,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "a2bde399148fc7719a55072692447751"
+    "revision": "38a9c216599c9939d5ea41861d51aba2"
   },
   {
     "url": "README.md",
