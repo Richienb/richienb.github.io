@@ -1,36 +1,65 @@
 # Disable sudo to speed up build
-sudo:              false
+sudo:                     false
 
 # Set the build language
-language:          python
-
-# Set the build language version
-python:            3.6.6
+language:                 generic
 
 # Set build branch
-branches:          master
+branches:                 master
 
 cache:
-  directories:
-    # Cache the .cache directory
-    - $HOME/.cache
+    # Ensure pip is cached
+    - pip
 
-install:
-  # Install the required dependency
-  - pip install pyspelling
+before_install:
+  # Configure access token to enable pushing to the repository
+  - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/richienb.github.io.git
 
-script:
-  # Check for spelling errors
-  - pyspelling
-  
-after_script:
-  # Clear CloudFlare cache
-  - |
-    curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
-     -H "X-Auth-Email: ${email}" \
-     -H "X-Auth-Key: ${cf_api_key}" \
-     -H "Content-Type: application/json" \
-     --data '{"purge_everything":true}'
+  # Set commit username
+  - git config --global user.name "ROS Bot"
+
+  # Set commit email
+  - git config --global user.email "richiebendall@gmail.com"
+
+jobs:
+  include:
+    - stage: Spelling Check & Deployment # Check spelling
+
+      # Set the build language
+      language:                 python
+
+      # Set the build language version
+      python:                   3.6.6
+
+      install:
+        # Install the required dependency
+        - pip install pyspelling
+
+      script:
+        # Check for spelling errors
+        - pyspelling
+
+    - # Deploy site
+
+      install:
+        # Install the required dependency
+        - npm install workbox-cli --global
+
+      script:
+        # Generate service worker cacher
+        - workbox generateSW workbox-config.js
+
+        # Check, commit and push
+        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Updated Service Worker Caching [skip ci]" && git push
+
+      after_script:
+        # Clear CloudFlare cache
+        - |
+          curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
+          -H "X-Auth-Email: ${email}" \
+          -H "X-Auth-Key: ${cf_api_key}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
 
 notifications:
   # Disable emails for build status notifications
