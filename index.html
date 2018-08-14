@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Print out a message in the console -->
-    <script async defer>
-        console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
-    </script>
-
     <!-- SEO -->
     <title>Richie Bendall's Website</title>
     <meta name="description" content="Welcome To Richie Bendall's Official Website.">
@@ -28,6 +23,20 @@
     <!-- Set favicon -->
     <link rel="shortcut icon" href="favicon.ico">
 
+    <!-- Run critical JavaScript -->
+    <script async defer>
+        // Print out a message in the console
+        console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
+
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+    
     <!-- Run critical CSS -->
     <style>
         @font-face {
@@ -226,43 +235,6 @@
             src: local('Material Icons'), local('MaterialIcons-Regular'), url(hosted/MaterialIcons-Regular.woff2) format('woff2'), url(hosted/MaterialIcons-Regular.woff) format('woff'), url(hosted/MaterialIcons-Regular.ttf) format('truetype');
         }
     </style>
-
-    <!-- Specify Service Worker Cacher -->
-    <script async defer>
-        // Check that service workers are registered
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
-    </script>
-
-    <!-- Set Chatra Colours -->
-    <script async defer>
-        window.ChatraSetup = {
-            colors: {
-                buttonText: '#fafafa', // Chat button text/icon color
-                buttonBg: '#f44336', // Chat button background color
-                clientBubbleBg: '#90CAF9', // Visitor’s message bubble color
-                agentBubbleBg: '#ef9a9a' // Agent’s message bubble color
-            }
-        };
-    </script>
-
-    <!-- Chatra Integration -->
-    <script async defer>
-        (function(d, w, c) {
-            w.ChatraID = '7X2dT6uFCcqXqDziK';
-            var s = d.createElement('script');
-            w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://call.chatra.io/chatra.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'Chatra');
-    </script>
 
 </head>
 
@@ -493,6 +465,31 @@
         <!-- Initialise MDL -->
         <link rel="stylesheet" type="text/css" href="hosted/material.indigo-red.min.css">
         <script async defer src="hosted/material.min.js"></script>
+            
+        <!-- Setup Chatra -->
+        <script async defer>
+        // Set Chatra colours
+        window.ChatraSetup = {
+            colors: {
+                buttonText: '#fafafa', // Chat button text/icon color
+                buttonBg: '#f44336', // Chat button background color
+                clientBubbleBg: '#90CAF9', // Visitor’s message bubble color
+                agentBubbleBg: '#ef9a9a' // Agent’s message bubble color
+            }
+        };
+        
+        // Integrate Chatra
+        (function(d, w, c) {
+            w.ChatraID = '7X2dT6uFCcqXqDziK';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+        </script>
 
 </body>
 
