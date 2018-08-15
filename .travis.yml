@@ -76,7 +76,7 @@ jobs:
 
       script:
         # Perform optimisations
-        - find  -type f  -name "*.html" -exec tidy -o "{}" "{}" \;
+        - find  -type f  -name "*.html" -exec tidy -config config.txt -o "{}" "{}" \;
         
         # Check, commit and push
         - git add . && git diff-index --quiet HEAD || git commit -m "CI | Tidy HTML Code [skip ci]" && git push origin HEAD:master
