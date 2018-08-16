@@ -12,11 +12,6 @@ permalink: /404.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Development Message -->
-    <script>
-        console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
-    </script>
-
     <!-- SEO -->
     <title>Error 404 - Page Not Found</title>
     <meta name="description" content="You shouldn't be seeing this.">
@@ -33,7 +28,20 @@ permalink: /404.html
 
     <!-- Set favicon -->
     <link rel="shortcut icon" href="favicon.ico">
-    
+
+    <!-- Run critical JavaScript -->
+    <script async defer>
+        // Print out a message in the console
+        console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
+
+        // Enable passive scrolling mode if supported
+        if ('ontouchstart' in document.documentElement) {
+            document.addEventListener('touchstart', onTouchStart, {
+                passive: true
+            });
+        }
+    </script>
+
     <!-- Run critical CSS -->
     <style>
         @font-face {
