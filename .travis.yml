@@ -19,7 +19,7 @@ before_install:
 
 jobs:
   include:
-    - stage:            Spelling Check & Deployment # Check spelling
+    - stage:            Check spelling
 
       cache:
         # Ensure pip is cached
@@ -39,7 +39,7 @@ jobs:
         # Check for spelling errors
         - pyspelling
 
-    - # Deploy site
+    - stage:            Generate service worker
 
       cache:
           # Ensure npm is cached
@@ -65,9 +65,9 @@ jobs:
           -H "X-Auth-Key: ${cf_api_key}" \
           -H "Content-Type: application/json" \
           --data '{"purge_everything":true}'
-      
-    - # Beautify code
-    
+
+    - stage:            Beautify code
+
       addons:
         apt:
           packages:
@@ -77,7 +77,7 @@ jobs:
       script:
         # Perform optimisations
         - find  -type f  -name "*.html" -exec tidy -config config.txt -o "{}" "{}" \;
-        
+
         # Check, commit and push
         - git add . && git diff-index --quiet HEAD || git commit -m "CI | Tidy HTML Code [skip ci]" && git push origin HEAD:master
 
