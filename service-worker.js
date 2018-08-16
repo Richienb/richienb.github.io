@@ -37,15 +37,15 @@ self.__precacheManifest = [
   },
   {
     "url": "hosted/html5shiv-printshiv.min.js",
-    "revision": "6b82202181264d00d71a23055e0586cd"
+    "revision": "78a8563b9b85d0b668db47a3d6482ac4"
   },
   {
     "url": "hosted/material.indigo-red.min.css",
-    "revision": "5bbc0c2a05208ffb84d398201d103c30"
+    "revision": "f177106257afeb8bcd3628027cf54f02"
   },
   {
     "url": "hosted/material.min.js",
-    "revision": "1e51dd4b143b8a53911bcf7df5306292"
+    "revision": "6b40f3f652f6ff2c4026a10a857b059a"
   },
   {
     "url": "hosted/MaterialIcons-Regular.eot",
@@ -69,7 +69,7 @@ self.__precacheManifest = [
   },
   {
     "url": "hosted/roboto.css",
-    "revision": "f2fe07245ae56a47e71cc06a547273b4"
+    "revision": "676c9023fff253e2bea4e3f0920c4ea2"
   },
   {
     "url": "humans.txt",
@@ -136,98 +136,6 @@ self.__precacheManifest = [
     "revision": "9e0d4d10aea7d6ee4537e788ca0e64e5"
   },
   {
-    "url": "resources/apple-touch-icon-114x114-precomposed.png",
-    "revision": "6a578429491daf45cdf301d356054e92"
-  },
-  {
-    "url": "resources/apple-touch-icon-114x114.png",
-    "revision": "4d0715e9c66d4d19f27aea049cdcbde7"
-  },
-  {
-    "url": "resources/apple-touch-icon-120x120-precomposed.png",
-    "revision": "512be5449be6c85ad0c09c7354eca0c3"
-  },
-  {
-    "url": "resources/apple-touch-icon-120x120.png",
-    "revision": "325f9ac7c81a3970332f59e8e507b844"
-  },
-  {
-    "url": "resources/apple-touch-icon-144x144-precomposed.png",
-    "revision": "8fe9313b4344157382542c414b715620"
-  },
-  {
-    "url": "resources/apple-touch-icon-144x144.png",
-    "revision": "0a9df7c7a0a8f376be7997e60525f57f"
-  },
-  {
-    "url": "resources/apple-touch-icon-152x152-precomposed.png",
-    "revision": "7420da70f9f75827a4a665806fee5409"
-  },
-  {
-    "url": "resources/apple-touch-icon-152x152.png",
-    "revision": "1868be0b4eda6d98c41870a739f9ef2f"
-  },
-  {
-    "url": "resources/apple-touch-icon-180x180-precomposed.png",
-    "revision": "08f8948657114954dc709bc529526ccf"
-  },
-  {
-    "url": "resources/apple-touch-icon-180x180.png",
-    "revision": "57610515d913669f2a4dda2388d23e08"
-  },
-  {
-    "url": "resources/apple-touch-icon-57x57-precomposed.png",
-    "revision": "0c174a1e3b9624b38e56d34df05734a8"
-  },
-  {
-    "url": "resources/apple-touch-icon-57x57.png",
-    "revision": "843d8927faa10a208c9c11746269c450"
-  },
-  {
-    "url": "resources/apple-touch-icon-60x60-precomposed.png",
-    "revision": "a381efb81282572c260ff17fe97dcffe"
-  },
-  {
-    "url": "resources/apple-touch-icon-60x60.png",
-    "revision": "fc9f8117ef4ae80d7c4404cc62dd86f0"
-  },
-  {
-    "url": "resources/apple-touch-icon-72x72-precomposed.png",
-    "revision": "55f82ddc7690546557d2c6479a575bed"
-  },
-  {
-    "url": "resources/apple-touch-icon-72x72.png",
-    "revision": "7e3ceda06762f34d5731b99904af9a11"
-  },
-  {
-    "url": "resources/apple-touch-icon-76x76-precomposed.png",
-    "revision": "8086bd8a5cfa29b0dd2f1022f1c40207"
-  },
-  {
-    "url": "resources/apple-touch-icon-76x76.png",
-    "revision": "936c1d2d2093735832be80d257a7a170"
-  },
-  {
-    "url": "resources/apple-touch-icon-precomposed.png",
-    "revision": "08f8948657114954dc709bc529526ccf"
-  },
-  {
-    "url": "resources/apple-touch-icon.png",
-    "revision": "57610515d913669f2a4dda2388d23e08"
-  },
-  {
-    "url": "resources/favicon-16x16.png",
-    "revision": "880bbc19bc0f4c30985486f02a8085c0"
-  },
-  {
-    "url": "resources/favicon-194x194.png",
-    "revision": "9bcd7a67c1e97225b9754a1a89f66777"
-  },
-  {
-    "url": "resources/favicon-32x32.png",
-    "revision": "f6e47e981147c51c3aa1aa4f328c06b2"
-  },
-  {
     "url": "resources/mstile-144x144.png",
     "revision": "bed8803d8727886a074849b8cbfd8288"
   },
@@ -246,14 +154,6 @@ self.__precacheManifest = [
   {
     "url": "resources/mstile-70x70.png",
     "revision": "75280d32b89cff69b5a083013ec39635"
-  },
-  {
-    "url": "resources/og-image.jpg",
-    "revision": "ca2842f333da01c7da6587aa24c2ca51"
-  },
-  {
-    "url": "resources/safari-pinned-tab.svg",
-    "revision": "b86662dc352a4ebce96b4dc428149e99"
   },
   {
     "url": "robots.txt",
