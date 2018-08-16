@@ -25,7 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "ee8c8698feb40bba72ec17b02a9ffa78"
+    "revision": "99ea946f6e8c903081ec9bf0f9c29aa1"
   },
   {
     "url": "config.txt",
@@ -77,7 +77,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "ef20c379346a834b3a8108f93b5dad31"
+    "revision": "700a680292d34bcc1d2fa29c957ddd64"
   },
   {
     "url": "LICENSE.md",
@@ -93,7 +93,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "38a9c216599c9939d5ea41861d51aba2"
+    "revision": "49af799157bfb829bef7a52d4d99adef"
   },
   {
     "url": "README.md",
