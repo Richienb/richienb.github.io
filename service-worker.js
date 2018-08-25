@@ -21,15 +21,15 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "_config.yml",
-    "revision": "59b51fb8a00902b963f2ccd668f85599"
+    "revision": "474f14a024e368440e2f95769cff7bb4"
   },
   {
     "url": "404.html",
-    "revision": "8b654a87aed74fa2c2b5ab960a055ded"
+    "revision": "acfce7513acd574ca77e807ea26b80ca"
   },
   {
     "url": "config.txt",
-    "revision": "0190de28a860f94d0d66ebff99b5fa33"
+    "revision": "b0eee78989b2e84093f5080802103273"
   },
   {
     "url": "favicon.ico",
@@ -37,19 +37,15 @@ self.__precacheManifest = [
   },
   {
     "url": "hosted/material.indigo-red.min.css",
-    "revision": "5c74be021c1cc26962b0f7f3326125c8"
+    "revision": "bbc3685f6da2f09b8b709157d811b93b"
   },
   {
     "url": "humans.txt",
-    "revision": "95b490265640cca4ece415cfa71bdd90"
+    "revision": "cc89b1f994c0fb11bc7b6a5040755b72"
   },
   {
     "url": "index.html",
-<<<<<<< HEAD
-    "revision": "5db2d6ef9acc33a6fe871240f187ab26"
-=======
-    "revision": "6b869372fe0993de1ac9739819d92d76"
->>>>>>> 8b314b535e3164a497d2bf7ecc568412834c0bad
+    "revision": "2a1c00e5bcaa2ebad3610ba54f6a20f0"
   },
   {
     "url": "LICENSE.md",
@@ -57,7 +53,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifests/browserconfig.xml",
-    "revision": "2e3d95804d27c5fe770974d14fe00203"
+    "revision": "d8fb5d96b437e9ae6879cf649d3bbfc8"
   },
   {
     "url": "manifests/site.webmanifest",
@@ -65,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "8b00d61394eccf394f18c59d56d364f8"
+    "revision": "1cc2d7cf647a667822babcee7c9b7bce"
   },
   {
     "url": "README.md",
@@ -129,7 +125,7 @@ self.__precacheManifest = [
   },
   {
     "url": "robots.txt",
-    "revision": "8ca42d63cff3e44c6085add78dd27a94"
+    "revision": "dc83ab140719c527aed07f88a942b78f"
   },
   {
     "url": "workbox-config.js",
