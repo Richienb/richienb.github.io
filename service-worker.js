@@ -21,63 +21,31 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "_config.yml",
-    "revision": "474f14a024e368440e2f95769cff7bb4"
+    "revision": "59b51fb8a00902b963f2ccd668f85599"
   },
   {
     "url": "404.html",
-    "revision": "99ea946f6e8c903081ec9bf0f9c29aa1"
+    "revision": "8b654a87aed74fa2c2b5ab960a055ded"
   },
   {
     "url": "config.txt",
-    "revision": "b0eee78989b2e84093f5080802103273"
+    "revision": "0190de28a860f94d0d66ebff99b5fa33"
   },
   {
     "url": "favicon.ico",
     "revision": "6e869db8dda60da878658f162ac78773"
   },
   {
-    "url": "hosted/html5shiv-printshiv.min.js",
-    "revision": "78a8563b9b85d0b668db47a3d6482ac4"
-  },
-  {
     "url": "hosted/material.indigo-red.min.css",
-    "revision": "f177106257afeb8bcd3628027cf54f02"
-  },
-  {
-    "url": "hosted/material.min.js",
-    "revision": "6b40f3f652f6ff2c4026a10a857b059a"
-  },
-  {
-    "url": "hosted/MaterialIcons-Regular.eot",
-    "revision": "e79bfd88537def476913f3ed52f4f4b3"
-  },
-  {
-    "url": "hosted/MaterialIcons-Regular.ttf",
-    "revision": "a37b0c01c0baf1888ca812cc0508f6e2"
-  },
-  {
-    "url": "hosted/MaterialIcons-Regular.woff",
-    "revision": "012cf6a10129e2275d79d6adac7f3b02"
-  },
-  {
-    "url": "hosted/MaterialIcons-Regular.woff2",
-    "revision": "570eb83859dc23dd0eec423a49e147fe"
-  },
-  {
-    "url": "hosted/README.txt",
-    "revision": "a1b076cbef92ad9a8bc9271c32188b88"
-  },
-  {
-    "url": "hosted/roboto.css",
-    "revision": "676c9023fff253e2bea4e3f0920c4ea2"
+    "revision": "5c74be021c1cc26962b0f7f3326125c8"
   },
   {
     "url": "humans.txt",
-    "revision": "cc89b1f994c0fb11bc7b6a5040755b72"
+    "revision": "95b490265640cca4ece415cfa71bdd90"
   },
   {
     "url": "index.html",
-    "revision": "d5202e95cb190a1e785dece8d2fc4b89"
+    "revision": "5db2d6ef9acc33a6fe871240f187ab26"
   },
   {
     "url": "LICENSE.md",
@@ -85,7 +53,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifests/browserconfig.xml",
-    "revision": "d8fb5d96b437e9ae6879cf649d3bbfc8"
+    "revision": "2e3d95804d27c5fe770974d14fe00203"
   },
   {
     "url": "manifests/site.webmanifest",
@@ -93,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "49af799157bfb829bef7a52d4d99adef"
+    "revision": "8b00d61394eccf394f18c59d56d364f8"
   },
   {
     "url": "README.md",
@@ -157,11 +125,11 @@ self.__precacheManifest = [
   },
   {
     "url": "robots.txt",
-    "revision": "dc83ab140719c527aed07f88a942b78f"
+    "revision": "8ca42d63cff3e44c6085add78dd27a94"
   },
   {
     "url": "workbox-config.js",
-    "revision": "1667d76c538bdf070575a34a89885767"
+    "revision": "5fee5a9cf219335a8f572478b432f31f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
