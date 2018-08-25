@@ -25,7 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "99ea946f6e8c903081ec9bf0f9c29aa1"
+    "revision": "8b654a87aed74fa2c2b5ab960a055ded"
   },
   {
     "url": "config.txt",
@@ -34,10 +34,6 @@ self.__precacheManifest = [
   {
     "url": "favicon.ico",
     "revision": "6e869db8dda60da878658f162ac78773"
-  },
-  {
-    "url": "hosted/html5shiv-printshiv.min.js",
-    "revision": "78a8563b9b85d0b668db47a3d6482ac4"
   },
   {
     "url": "hosted/material.indigo-red.min.css",
@@ -77,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "d5202e95cb190a1e785dece8d2fc4b89"
+    "revision": "6b869372fe0993de1ac9739819d92d76"
   },
   {
     "url": "LICENSE.md",
@@ -93,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "49af799157bfb829bef7a52d4d99adef"
+    "revision": "8b00d61394eccf394f18c59d56d364f8"
   },
   {
     "url": "README.md",
