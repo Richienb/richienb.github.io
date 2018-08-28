@@ -25,7 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "acfce7513acd574ca77e807ea26b80ca"
+    "revision": "417377185e4cd998b8cd9edd8e0f13be"
   },
   {
     "url": "config.txt",
@@ -36,16 +36,12 @@ self.__precacheManifest = [
     "revision": "6e869db8dda60da878658f162ac78773"
   },
   {
-    "url": "hosted/material.indigo-red.min.css",
-    "revision": "bbc3685f6da2f09b8b709157d811b93b"
-  },
-  {
     "url": "humans.txt",
     "revision": "cc89b1f994c0fb11bc7b6a5040755b72"
   },
   {
     "url": "index.html",
-    "revision": "2a1c00e5bcaa2ebad3610ba54f6a20f0"
+    "revision": "45f038522b55d38e2cbb170907dff45e"
   },
   {
     "url": "LICENSE.md",
@@ -61,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline.html",
-    "revision": "1cc2d7cf647a667822babcee7c9b7bce"
+    "revision": "2bdce29eba5b0615d17beae69e77b4e0"
   },
   {
     "url": "README.md",
