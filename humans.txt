@@ -1,9 +1,13 @@
 /* TEAM */
 
-Richie Bemdall
+Richie Bendall
 
 /* SITE */
 
 Standards: HTML, CSS, JS
 
-Components: MDL, Roboto and Material Icons via Google Fonts, Service Worker via Workbox
+Components:
+MDL,
+Roboto and Material Icons via Google Fonts,
+Service Worker via Workbox,
+HTML5shiv for IE6 and below support
