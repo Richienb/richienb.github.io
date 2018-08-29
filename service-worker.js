@@ -37,11 +37,11 @@ self.__precacheManifest = [
   },
   {
     "url": "humans.txt",
-    "revision": "cc89b1f994c0fb11bc7b6a5040755b72"
+    "revision": "f2785f9e18e79de6a8bc239984d57846"
   },
   {
     "url": "index.html",
-    "revision": "45f038522b55d38e2cbb170907dff45e"
+    "revision": "d1a2c9f85abb14bd53973022da5a9867"
   },
   {
     "url": "LICENSE.md",
