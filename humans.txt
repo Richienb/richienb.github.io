@@ -6,4 +6,4 @@ Richie Bemdall
 
 Standards: HTML, CSS, JS
 
-Components: MDL, Google Fonts
+Components: MDL, Roboto and Material Icons via Google Fonts, Service Worker via Workbox
