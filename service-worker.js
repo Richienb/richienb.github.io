@@ -41,7 +41,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "a9cbec3188b7f9613f33a4be21f45138"
+    "revision": "99d305cbafb444e9b238acdbfcada790"
   },
   {
     "url": "LICENSE.md",
