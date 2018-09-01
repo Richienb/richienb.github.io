@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.richie-bendall.ml</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://blog.richie-bendall.ml</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://calculator.richie-bendall.ml</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://music-greenscreen.richie-bendall.ml</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://online-editor.richie-bendall.ml</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://readsettings.richie-bendall.ml</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ros-code.richie-bendall.ml</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://status.richie-bendall.ml</loc>
+    <priority>0.85</priority>
+  </url>
+</urlset>
