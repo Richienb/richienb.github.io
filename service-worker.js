@@ -124,6 +124,10 @@ self.__precacheManifest = [
     "revision": "dc83ab140719c527aed07f88a942b78f"
   },
   {
+    "url": "sitemap.xml",
+    "revision": "a5ed46ddad2effb7550ca9c5bbfdc6b4"
+  },
+  {
     "url": "workbox-config.js",
     "revision": "5fee5a9cf219335a8f572478b432f31f"
   }
