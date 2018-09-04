@@ -10,4 +10,5 @@ Components:
 MDL,
 Roboto and Material Icons via Google Fonts,
 Service Worker via Workbox,
-HTML5shiv for IE6 and below support
+HTML5shiv for IE6 and below support,
+JQuery
