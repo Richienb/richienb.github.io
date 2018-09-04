@@ -256,7 +256,6 @@
                         <div class="mdl-layout-spacer"></div>
                         <!-- Navigation. We hide it in small screens. -->
                         <nav class="mdl-navigation mdl-layout--large-screen-only">
-                            <a class="mdl-navigation__link" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw"><i class="material-icons" title="YouTube">play_arrow</i></a>
                             <a class="mdl-navigation__link" href="https://github.com/Richienb"><i class="material-icons" title="GitHub">code</i></a>
                             <a class="mdl-navigation__link" href="https://stackoverflow.com/users/8384910/richie-bendall"><i class="material-icons" title="Stack Overflow">question_answer</i></a>
                             <a class="mdl-navigation__link" href="https://plus.google.com/104023294057020158565"><i class="material-icons" title="Google+">plus_one</i></a>
@@ -318,6 +317,23 @@
                     <div class="mdl-card__actions mdl-card--border">
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/cursor-scheme-previewer" target="_blank">Source code</a>
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/cursor-scheme-previewer/blob/master/README.md" target="_blank">Readme</a>
+                    </div>
+                </section>
+
+                <!--YouTube Channel -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">YouTube Channel</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <iframe id="youtube_video" width="-1" height="-1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw" target="_blank">Channel</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://goo.gl/KDVU0S" target="_blank">Latest Video</a>
                     </div>
                 </section>
 
@@ -548,6 +564,17 @@
 
     <!-- Initialise Font -->
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fetch latest YouTube video -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3/dist/jquery.min.js"></script>
+    <script async defer>
+    var channelID = "UCxOiLzcbFeW-Ayz_MbgWIXw";
+    $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
+       var link = data.items[0].link;
+       var id = link.substr(link.indexOf("=")+1);
+        $("#youtube_video").attr("src","https://www.youtube-nocookie.com/embed/"+id + "?showinfo=0&rel=0");
+    });
+    </script>
 
     <!-- Initialise MDL -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css">
