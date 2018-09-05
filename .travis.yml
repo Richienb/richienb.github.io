@@ -67,9 +67,9 @@ jobs:
 
       install:
         # Install the required dependencies
-        - npm -i workbox --save-dev
-        - npm -i workbox-cli --save-dev
-        - npm -i style-loader --save-dev
+        - npm install workbox --save-dev
+        - npm install workbox-cli --save-dev
+        - npm install style-loader --save-dev
 
       script:
         # Generate bundle.js file
