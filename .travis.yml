@@ -72,6 +72,7 @@ jobs:
         # Install the required dependencies
         - npm install workbox --save-dev
         - npm install workbox-cli --save-dev
+        - npm install css
         - npm install style-loader --save-dev
         - npm install uglify-es
 
