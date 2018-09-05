@@ -2,7 +2,7 @@
 	"name": "richienb.github.io",
 	"version": "1.0.0",
 	"description": "This repository hosts [Richie Bendall's Website](https://richienb.github.io)",
-	"main": "index.js",
+	"private": true,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"bundle": "webpack ./index.js bundle.js",
