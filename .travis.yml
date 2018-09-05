@@ -56,7 +56,7 @@ jobs:
 
       script:
         # Generate service worker cacher
-        - npm sw
+        - npm run-script sw
 
       after_script:
         # Commit and push
@@ -81,7 +81,7 @@ jobs:
 
       script:
         # Generate bundle.js file
-        - npm bundle
+        - npm run-script bundle
 
       after_script:
         # Commit and push
