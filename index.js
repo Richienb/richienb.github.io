@@ -22,8 +22,8 @@ $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
     $("#youtube_video").attr("src", "https://www.youtube-nocookie.com/embed/" + id + "?showinfo=0&rel=0");
 });
 
-require('./index.css')
-require('https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css');
+require('style!css!./index.css')
+require('style!css!https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css');
 require('https://cdn.jsdelivr.net/gh/google/material-design-lite@1.3/material.min.js');
-require('https://fonts.googleapis.com/css?family=Material+Icons|Roboto')
+require('style!css!https://fonts.googleapis.com/css?family=Material+Icons|Roboto')
 require('https://cdn.jsdelivr.net/npm/html5shiv@3.7/dist/html5shiv-printshiv.min.js')
