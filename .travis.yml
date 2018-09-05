@@ -19,7 +19,7 @@ before_install:
 
 jobs:
   include:
-    - stage:            Check spelling
+    - stage:            Optimisation & Generating
 
       cache:
         # Ensure pip is cached
@@ -39,7 +39,7 @@ jobs:
         # Check for spelling errors
         - pyspelling
 
-    - stage:            Generate service worker
+    - # Generate service worker
 
       cache:
           # Ensure npm is cached
@@ -52,12 +52,36 @@ jobs:
 
       script:
         # Generate service worker cacher
-        - workbox generateSW workbox-config.js
-
-        # Check, commit and push
-        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Updated Service Worker Caching [skip ci]" && git push origin HEAD:master
+        - npm sw
 
       after_script:
+        # Commit and push
+        - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
+        
+    - # Generate bundle.js
+
+      cache:
+          # Ensure npm is cached
+          directories:
+            - node_modules # NPM packages
+
+      install:
+        # Install the required dependencies
+        - npm -i workbox --save-dev
+        - npm -i workbox-cli --save-dev
+        - npm -i css-loader --save-dev
+
+      script:
+        # Generate bundle.js file
+        - npm bundle
+
+      after_script:
+        # Commit and push
+        - git add . && ./ci/commitpush.sh "CI | Update bundle file [skip ci]"
+
+    - # Clear CloudFlare cache
+    
+      script:
         # Clear CloudFlare cache
         - |
           curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
