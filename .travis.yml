@@ -1,8 +1,11 @@
 # Disable sudo to speed up build
 sudo:                   false
 
-# Set the build language
-language:               generic
+# Set build language to Node JS
+language: node_js
+
+# Set the version of Node JS to use
+node_js: "node"
 
 # Set build branch
 branches:               master
@@ -41,10 +44,6 @@ jobs:
 
     - # Generate service worker
 
-      # Set build language to Node JS
-      language: node_js
-      node_js: "node"
-
       cache:
           # Ensure npm is cached
           directories:
@@ -63,10 +62,6 @@ jobs:
         - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
         
     - # Generate bundle.js
-
-      # Set build language to Node JS
-      language: node_js
-      node_js: "node"
 
       cache:
           # Ensure npm is cached
@@ -89,6 +84,9 @@ jobs:
 
     - # Clear CloudFlare cache
     
+      # Set the build language
+      language:               generic
+
       script:
         # Clear CloudFlare cache
         - |
