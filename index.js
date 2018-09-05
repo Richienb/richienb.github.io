@@ -25,5 +25,4 @@ $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtub
 require('style!css!./index.css')
 require('style!css!https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css');
 require('https://cdn.jsdelivr.net/gh/google/material-design-lite@1.3/material.min.js');
-require('style!css!https://fonts.googleapis.com/css?family=Material+Icons|Roboto')
 require('https://cdn.jsdelivr.net/npm/html5shiv@3.7/dist/html5shiv-printshiv.min.js')
