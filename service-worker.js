@@ -20,10 +20,6 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
  */
 self.__precacheManifest = [
   {
-    "url": "_config.yml",
-    "revision": "474f14a024e368440e2f95769cff7bb4"
-  },
-  {
     "url": "404.html",
     "revision": "417377185e4cd998b8cd9edd8e0f13be"
   },
@@ -44,10 +40,6 @@ self.__precacheManifest = [
     "revision": "1d50a699d41b67b462ebc1e04c544258"
   },
   {
-    "url": "LICENSE.md",
-    "revision": "4a92d25f7942a8a90872528acf37c014"
-  },
-  {
     "url": "manifests/browserconfig.xml",
     "revision": "d8fb5d96b437e9ae6879cf649d3bbfc8"
   },
@@ -58,18 +50,6 @@ self.__precacheManifest = [
   {
     "url": "offline.html",
     "revision": "2bdce29eba5b0615d17beae69e77b4e0"
-  },
-  {
-    "url": "package-lock.json",
-    "revision": "c375e71483ea1119f3f44593cc1c129b"
-  },
-  {
-    "url": "package.json",
-    "revision": "cfd2fc282fffa1b19fd65a7968ec961d"
-  },
-  {
-    "url": "README.md",
-    "revision": "2778b14f8cd411415dda5870d73a6e7e"
   },
   {
     "url": "resources/android-chrome-144x144.png",
@@ -137,7 +117,7 @@ self.__precacheManifest = [
   },
   {
     "url": "workbox-config.js",
-    "revision": "5fee5a9cf219335a8f572478b432f31f"
+    "revision": "0beb24dbad1be73bab664946e27e416c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
