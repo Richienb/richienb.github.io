@@ -60,6 +60,14 @@ self.__precacheManifest = [
     "revision": "2bdce29eba5b0615d17beae69e77b4e0"
   },
   {
+    "url": "package-lock.json",
+    "revision": "c375e71483ea1119f3f44593cc1c129b"
+  },
+  {
+    "url": "package.json",
+    "revision": "cfd2fc282fffa1b19fd65a7968ec961d"
+  },
+  {
     "url": "README.md",
     "revision": "2778b14f8cd411415dda5870d73a6e7e"
   },
