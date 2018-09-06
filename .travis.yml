@@ -25,20 +25,7 @@ before_install:
 
 jobs:
   include:
-    - stage: temp
-    
-      cache:
-      # Ensure npm is cached
-          directories:
-              - node_modules # NPM packages
-    
-      script:
-        - npm init -y
-        
-      after_script:
-        - git add . && ./ci/commitpush.sh "CI | Add Config [skip ci]"
-    
-    - stage:            Optimisation & Generating
+      - stage:            Optimisation & Generating
 
       cache:
         # Ensure pip is cached
