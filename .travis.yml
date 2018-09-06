@@ -55,9 +55,8 @@ jobs:
       install:
         # Install the service worker generator
         - npm install workbox-cli --global
-        # Install GULP
-        - npm install gulp -D
-        - npm install gulp-cli -g
+        # Install tools
+        - npm install
 
       script:
         # Generate service worker cacher
