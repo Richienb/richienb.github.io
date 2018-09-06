@@ -25,7 +25,7 @@ before_install:
 
 jobs:
   include:
-      - stage:            Optimisation & Generating
+    - stage:            Optimisation & Generating
 
       cache:
         # Ensure pip is cached
@@ -55,11 +55,11 @@ jobs:
       install:
         # Install required packages
         - npm install
-
+      
       script:
         # Generate service worker cacher
         - npm run cli
-        
+    
       deploy:
         provider: pages
         skip-cleanup: true
