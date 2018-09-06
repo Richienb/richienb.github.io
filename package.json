@@ -12,7 +12,8 @@
 		"gulp-imagemin": "latest",
 		"gulp-svgmin": "latest",
 		"workbox-cli": "latest",
-		"pump": "latest"
+		"pump": "latest",
+		"gulp-connect": "latest"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
