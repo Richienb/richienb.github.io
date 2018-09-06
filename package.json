@@ -5,12 +5,13 @@
 	"private": true,
 	"devDependencies": {
 		"gulp": "latest",
-		"gulp-util": "latest",
-		"gulp-sass": "latest",
-		"gulp-coffee": "latest",
+		"gulp-cssmin": "latest",
 		"gulp-uglify": "latest",
 		"gulp-concat": "latest",
-		"gulp-connect": "latest"
+		"gulp-htmlmin": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-svgmin": "latest",
+		"workbox-build": "latest"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
