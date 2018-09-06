@@ -11,10 +11,11 @@
 		"gulp-htmlmin": "latest",
 		"gulp-imagemin": "latest",
 		"gulp-svgmin": "latest",
-		"workbox-build": "latest"
+		"workbox-cli": "latest"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
+		"ci": "workbox generateSW workbox-config.js && gulp ci"
 	},
 	"repository": {
 		"type": "git",
