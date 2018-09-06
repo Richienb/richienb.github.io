@@ -58,7 +58,7 @@ jobs:
       
       script:
         # Generate service worker cacher
-        - npm run cli
+        - npm run ci
     
       deploy:
         provider: pages
