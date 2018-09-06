@@ -54,7 +54,7 @@ jobs:
 
       install:
         # Install required packages
-        - npm install
+        - npm install && npm audit fix
       
       script:
         # Generate service worker cacher
