@@ -19,6 +19,9 @@ before_install:
 
   # Set commit email
   - git config --global user.email "richiebendall@gmail.com"
+  
+  # Make all the shell files in the ci folder executable
+  - find $TRAVIS_BUILD_DIR/ci -type f -iname "*.sh" -exec chmod +x {} \;
 
 jobs:
   include:
