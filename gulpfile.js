@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-const gulp = require('gulp');
 var pump = require('pump');
 var uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
