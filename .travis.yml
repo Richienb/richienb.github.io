@@ -53,19 +53,23 @@ jobs:
             - node_modules # NPM packages
 
       install:
-        # Install the service worker generator
-        - npm install workbox-cli --global
-        # Install tools
+        # Install required packages
         - npm install
 
       script:
         # Generate service worker cacher
-        - npm run-script sw
+        - npm run cli
+        
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $github_token
+        local-dir: "dist"
+        fqdn: "www.richie-bendall.ml"
+        on:
+          branch: master
 
-      after_script:
-        # Commit and push
-        - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
-
+      after_success:
         # Clear CloudFlare cache
         - |
           curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
