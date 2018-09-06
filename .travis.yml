@@ -60,28 +60,9 @@ jobs:
       after_script:
         # Commit and push
         - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
-        
-    - # Generate bundle.js
-
-      cache:
-          # Ensure npm is cached
-          directories:
-            - node_modules # NPM packages
-
-      install:
-        # Install the required dependencies
-        - npm install webpack webpack-cli --save-dev
-
-      script:
-        # Generate bundle.js file
-        - npm run-script bundle
-
-      after_script:
-        # Commit and push
-        - git add . && ./ci/commitpush.sh "CI | Update bundle file [skip ci]"
 
     - # Clear CloudFlare cache
-    
+
       # Set the build language
       language:               generic
 
