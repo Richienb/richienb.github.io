@@ -9,6 +9,10 @@
         <priority>0.90</priority>
     </url>
     <url>
+        <loc>https://www.richie-bendall.ml/social</loc>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://calculator.richie-bendall.ml</loc>
         <priority>0.80</priority>
     </url>

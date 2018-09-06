@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html amp lang="en">
+
+<head>
+    <!-- Common declarations -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Social | Richie Bendall's Website</title>
+    <meta name="description" content="Welcome To Richie Bendall's Official Website.">
+    <meta name="keywords" content="Richie Bendall, Website, HTML, CSS, JS">
+    <meta name="author" content="Richie Bendall">
+
+    <!-- Define web app manifests -->
+    <link rel="manifest" href="manifests/site.webmanifest">
+    <meta name="msapplication-config" content="manifests/browserconfig.xml">
+
+    <!-- Set theme colour -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Set favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Run critical JavaScript -->
+    <script async defer>
+        // Print out a message in the console
+        console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
+
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+
+        // Enable passive scrolling mode if supported
+        if ('ontouchstart' in document.documentElement) {
+            document.addEventListener('touchstart', onTouchStart, {
+                passive: true
+            });
+        }
+    </script>
+
+    <!-- IE6 compatiblity script -->
+    <!--[if lt IE 9]>
+    <script async defer src="https://cdn.jsdelivr.net/npm/html5shiv@3.7/dist/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+</head>

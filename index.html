@@ -210,22 +210,6 @@
                     </div>
                 </section>
 
-                <!-- Google+ -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Google+</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        This is my official Google+ page.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://plus.google.com/104023294057020158565" target="_blank" rel="noopener">Website</a>
-                    </div>
-                </section>
-
                 <!-- ROS Filesystem Watcher -->
                 <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
@@ -435,8 +419,7 @@
             var title = data.items[0].title;
             var id = link.substr(link.indexOf("=") + 1);
             $("#youtube_video").attr("src", "https://www.youtube-nocookie.com/embed/" + id + "?showinfo=0&rel=0");
-            $("#youtube_video").attr("title", "Latest YouTube video: "
-                title);
+            $("#youtube_video").attr("title", "Latest YouTube video: " + title);
         });
     </script>
 
