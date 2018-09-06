@@ -1,0 +1,27 @@
+{
+  "name": "richienb.github.io",
+  "version": "1.0.0",
+  "description": "This repository hosts [Richie Bendall's Website](https://richienb.github.io)",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "uglify-es": "^3.3.9",
+    "webpack-cli": "^3.1.0",
+    "webpack": "^4.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Richienb:077b75ce369d71490c3cb11f35cbe32d53eb29cd@github.com/Richienb/richienb.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richienb/richienb.github.io/issues"
+  },
+  "homepage": "https://github.com/Richienb/richienb.github.io#readme"
+}
