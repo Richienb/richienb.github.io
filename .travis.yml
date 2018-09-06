@@ -22,6 +22,19 @@ before_install:
 
 jobs:
   include:
+    - stage: temp
+    
+          cache:
+          # Ensure npm is cached
+          directories:
+            - node_modules # NPM packages
+    
+      script:
+        - npm init -y
+        
+      after_script:
+        - git add . && ./ci/commitpush.sh "CI | Add Config [skip ci]"
+    
     - stage:            Optimisation & Generating
 
       cache:
@@ -50,8 +63,11 @@ jobs:
             - node_modules # NPM packages
 
       install:
-        # Install the required dependency
+        # Install the service worker generator
         - npm install workbox-cli --global
+        # Install GULP
+        - npm install gulp -D
+        - npm install gulp-cli -g
 
       script:
         # Generate service worker cacher
@@ -61,12 +77,6 @@ jobs:
         # Commit and push
         - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
 
-    - # Clear CloudFlare cache
-
-      # Set the build language
-      language:               generic
-
-      script:
         # Clear CloudFlare cache
         - |
           curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
@@ -74,21 +84,6 @@ jobs:
           -H "X-Auth-Key: ${cf_api_key}" \
           -H "Content-Type: application/json" \
           --data '{"purge_everything":true}'
-
-    - stage:            Beautify code
-
-      addons:
-        apt:
-          packages:
-            # Install code beautifier
-            - tidy
-
-      script:
-        # Perform optimisations
-        - find  -type f  -name "*.html" -exec tidy -config config.txt -o "{}" "{}" \;
-
-        # Check, commit and push
-        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Tidy HTML Code [skip ci]" && git push origin HEAD:master
 
 notifications:
   # Disable emails for build status notifications
