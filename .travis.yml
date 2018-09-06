@@ -24,10 +24,10 @@ jobs:
   include:
     - stage: temp
     
-          cache:
-          # Ensure npm is cached
+      cache:
+      # Ensure npm is cached
           directories:
-            - node_modules # NPM packages
+              - node_modules # NPM packages
     
       script:
         - npm init -y
