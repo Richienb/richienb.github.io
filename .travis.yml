@@ -2,10 +2,10 @@
 sudo:                   false
 
 # Set build language to Node JS
-language: node_js
+language:               node_js
 
 # Set the version of Node JS to use
-node_js: "node"
+node_js:                "node"
 
 # Set build branch
 branches:               master
@@ -61,13 +61,13 @@ jobs:
         - npm run ci
     
       deploy:
-        provider: pages
-        skip-cleanup: true
-        github-token: $github_token
-        local-dir: "dist"
-        fqdn: "www.richie-bendall.ml"
+        provider:       pages
+        skip-cleanup:   true
+        github-token:   $github_token
+        local-dir:      "dist"
+        fqdn:           "www.richie-bendall.ml"
         on:
-          branch: master
+          branch:       master
 
       after_success:
         # Clear CloudFlare cache
