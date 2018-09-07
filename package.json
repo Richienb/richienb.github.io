@@ -1,0 +1,33 @@
+{
+	"name": "richienb.github.io",
+	"version": "1.0.0",
+	"description": "This repository hosts [Richie Bendall's Website](https://richienb.github.io)",
+	"private": true,
+	"devDependencies": {
+		"gulp": "latest",
+		"gulp-cssmin": "latest",
+		"gulp-uglify": "latest",
+		"gulp-concat": "latest",
+		"gulp-htmlmin": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-svgmin": "latest",
+		"workbox-cli": "latest",
+		"pump": "latest",
+		"gulp-connect": "latest"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"ci": "workbox generateSW workbox-config.js && gulp ci"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Richienb/richienb.github.io.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Richienb/richienb.github.io/issues"
+	},
+	"homepage": "https://github.com/Richienb/richienb.github.io#readme"
+}

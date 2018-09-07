@@ -19,6 +19,9 @@ before_install:
 
   # Set commit email
   - git config --global user.email "richiebendall@gmail.com"
+  
+  # Make all the shell files in the ci folder executable
+  - find $TRAVIS_BUILD_DIR/ci -type f -iname "*.sh" -exec chmod +x {} \;
 
 jobs:
   include:
@@ -50,23 +53,23 @@ jobs:
             - node_modules # NPM packages
 
       install:
-        # Install the required dependency
-        - npm install workbox-cli --global
-
+        # Install required packages
+        - npm install && npm audit fix
+      
       script:
         # Generate service worker cacher
-        - npm run-script sw
+        - npm run ci
+    
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $github_token
+        local-dir: "dist"
+        fqdn: "www.richie-bendall.ml"
+        on:
+          branch: master
 
-      after_script:
-        # Commit and push
-        - git add . && ./ci/commitpush.sh "CI | Update service worker caching configuration [skip ci]"
-
-    - # Clear CloudFlare cache
-
-      # Set the build language
-      language:               generic
-
-      script:
+      after_success:
         # Clear CloudFlare cache
         - |
           curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
@@ -74,21 +77,6 @@ jobs:
           -H "X-Auth-Key: ${cf_api_key}" \
           -H "Content-Type: application/json" \
           --data '{"purge_everything":true}'
-
-    - stage:            Beautify code
-
-      addons:
-        apt:
-          packages:
-            # Install code beautifier
-            - tidy
-
-      script:
-        # Perform optimisations
-        - find  -type f  -name "*.html" -exec tidy -config config.txt -o "{}" "{}" \;
-
-        # Check, commit and push
-        - git add . && git diff-index --quiet HEAD || git commit -m "CI | Tidy HTML Code [skip ci]" && git push origin HEAD:master
 
 notifications:
   # Disable emails for build status notifications
