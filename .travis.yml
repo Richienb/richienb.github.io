@@ -19,7 +19,7 @@ before_install:
 
   # Set commit email
   - git config --global user.email "richiebendall@gmail.com"
-  
+
   # Make all the shell files in the ci folder executable
   - find $TRAVIS_BUILD_DIR/ci -type f -iname "*.sh" -exec chmod +x {} \;
 
@@ -53,23 +53,16 @@ jobs:
             - node_modules # NPM packages
 
       install:
-        # Install required packages
-        - npm install && npm audit fix
-      
+        # Install required package
+        - npm install workbox-cli
+
       script:
         # Generate service worker cacher
-        - npm run ci
-    
-      deploy:
-        provider:       pages
-        skip-cleanup:   true
-        github-token:   $github_token
-        local-dir:      "dist"
-        fqdn:           "www.richie-bendall.ml"
-        on:
-          branch:       master
+        - workbox generateSW workbox-config.js
 
       after_success:
+        # Check and push
+        - git add * && ./commitpush "Updated service worker"
         # Clear CloudFlare cache
         - |
           curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
