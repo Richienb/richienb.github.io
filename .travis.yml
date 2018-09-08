@@ -1,76 +1,80 @@
 # Disable sudo to speed up build
-sudo:                   false
+sudo:                        false
 
 # Set build language to Node JS
-language:               node_js
+language:                    node_js
 
 # Set the version of Node JS to use
-node_js:                "node"
+node_js:                     "node"
 
 # Set build branch
-branches:               master
+branches:                    master
 
 before_install:
-  # Configure access token to enable pushing to the repository
-  - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/richienb.github.io.git
+    # Configure access token to enable pushing to the repository
+    - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/richienb.github.io.git
 
-  # Set commit username
-  - git config --global user.name "ROS Bot"
+    # Set commit username
+    - git config --global user.name "ROS Bot"
 
-  # Set commit email
-  - git config --global user.email "richiebendall@gmail.com"
-
-  # Make all the shell files in the ci folder executable
-  - find $TRAVIS_BUILD_DIR/ci -type f -iname "*.sh" -exec chmod +x {} \;
+    # Set commit email
+    - git config --global user.email "richiebendall@gmail.com"
 
 jobs:
-  include:
-    - stage:            Optimisation & Generating
+    include:
+        - stage:             Optimisation & Generating
 
-      cache:
-        # Ensure pip is cached
-        - pip
+          cache:
+              # Ensure pip is cached
+              - pip
 
-      # Set the build language
-      language:         python
+          # Set the build language
+          language:          python
 
-      # Set the build language version
-      python:           3.6.6
+          # Set the build language version
+          python:            3.6.6
 
-      install:
-        # Install the required dependency
-        - pip install pyspelling
+          install:
+              # Install the required dependency
+              - pip install pyspelling
 
-      script:
-        # Check for spelling errors
-        - pyspelling
+          script:
+              # Check for spelling errors
+              - pyspelling
 
-    - # Generate service worker
+        - # Generate service worker
 
-      cache:
-          # Ensure npm is cached
-          directories:
-            - node_modules # NPM packages
+          cache:
+              # Ensure npm is cached
+              directories:
+                  - node_modules # NPM packages
 
-      install:
-        # Install required package
-        - npm install workbox-cli
+          install:
+              # Install required package
+              - npm install
 
-      script:
-        # Generate service worker cacher
-        - workbox generateSW workbox-config.js
+          script:
+              # Generate service worker cacher
+              - npm run build
 
-      after_success:
-        # Check and push
-        - git add * && ./commitpush "Updated service worker"
-        # Clear CloudFlare cache
-        - |
-          curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
-          -H "X-Auth-Email: richiebendall@gmail.com" \
-          -H "X-Auth-Key: ${cf_api_key}" \
-          -H "Content-Type: application/json" \
-          --data '{"purge_everything":true}'
+          deploy:
+              provider:      pages
+              skip-cleanup:  true
+              github-token:  $github_token
+              local-dir:     $TRAVIS_BUILD_DIR/dist
+              keep-history:  true
+              on:
+                  branch:    master
+
+          after_deploy:
+              # Clear CloudFlare cache
+              - |
+                curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
+                -H "X-Auth-Email: richiebendall@gmail.com" \
+                -H "X-Auth-Key: ${cf_api_key}" \
+                -H "Content-Type: application/json" \
+                --data '{"purge_everything":true}'
 
 notifications:
-  # Disable emails for build status notifications
-  email:                false
+    # Disable emails for build status notifications
+    email:                   false

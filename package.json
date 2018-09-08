@@ -4,19 +4,17 @@
     "description": "This repository hosts [Richie Bendall's Website](https://richienb.github.io)",
     "private": true,
     "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-concat": "latest",
-        "gulp-connect": "latest",
-        "gulp-cssmin": "latest",
-        "gulp-htmlmin": "latest",
-        "gulp-uglify": "latest",
-        "pump": "latest",
-        "workbox-cli": "latest"
+        "copyfiles": "^1.2.0",
+        "workbox-cli": "^3.4.1"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "ci": "workbox generateSW workbox-config.js && gulp ci",
-        "live": "gulp live"
+        "copy": "copyfiles -u 1 src/**/* src/* dist",
+        "build": "npm run copy && workbox injectManifest workbox-config.js",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.3"
     },
     "repository": {
         "type": "git",

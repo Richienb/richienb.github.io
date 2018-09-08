@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Common declarations -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Richie Bendall's Website</title>
+    <meta name="description" content="Welcome To Richie Bendall's Official Website.">
+    <meta name="keywords" content="Richie Bendall, Website, HTML, CSS, JS">
+    <meta name="author" content="Richie Bendall">
+
+    <!-- Define web app manifests -->
+    <link rel="manifest" href="manifests/site.webmanifest">
+    <meta name="msapplication-config" content="manifests/browserconfig.xml">
+
+    <!-- Set theme colour -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Set favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Run critical JavaScript -->
+    <script async defer>
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+
+        // Enable passive scrolling mode if supported
+        if ('ontouchstart' in document.documentElement) {
+            document.addEventListener('touchstart', onTouchStart, {
+                passive: true
+            });
+        }
+    </script>
+
+    <!-- IE6 compatiblity script -->
+    <!--[if lt IE 9]>
+    <script async defer src="https://cdn.jsdelivr.net/npm/html5shiv@3.7/dist/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header article-header">
+            <!-- Always shows a header, even in smaller screens. -->
+            <div class="mdl-lFayout mdl-js-layout mdl-layout--fixed-header">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">Richie Bendall's Website</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+                        <!-- Navigation. We hide it in small screens. -->
+                        <nav class="mdl-navigation mdl-layout--large-screen-only">
+                            <a class="mdl-navigation__link" href="https://github.com/Richienb"><i class="material-icons" title="GitHub">code</i></a>
+                            <a class="mdl-navigation__link" href="https://stackoverflow.com/users/8384910/richie-bendall"><i class="material-icons" title="Stack Overflow">question_answer</i></a>
+                            <a class="mdl-navigation__link" href="https://blog.richie-bendall.ml/"><i class="material-icons" title="Blog">library_books</i></a>
+                            <a class="mdl-navigation__link" href="https://www.addthis.com/bookmark.php"><i class="material-icons" title="Share">share</i></a>
+                            <a class="mdl-navigation__link" href="mailto:richiebendall@gmail.com"><i class="material-icons" title="Contact">email</i></a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content article">
+            <div class="mdl-grid portfolio-max-width">
+                <!-- ROS Code -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS Code</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A revolutionary, modern and pleasing programming languag a streamlined and speedy installation, a very straightforward and simplistic syntax and is provided as a Python 3 library.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Code" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Code" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- richienb.github.io -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">richienb.github.io</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            It's the website you're viewing this content in right now. It's also open source on GitHub.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/richienb.github.io" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- Cursor Sheme Previewer -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Cursor Scheme Previewer</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            This is a Windows 98+ (.NET 2.0+) application which allows your to preview your cursor scheme in a couple of clicks.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/cursor-scheme-previewer" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/cursor-scheme-previewer/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!--YouTube Channel -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">YouTube Channel</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <iframe id="youtube_video" title="Latest YouTube video: Loading" width="-1" height="-1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw" target="_blank" rel="noopener">Channel</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://goo.gl/KDVU0S" target="_blank" rel="noopener">Latest Video</a>
+                        </div>
+                </section>
+
+                <!-- ROS Calculator -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS Calculator</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            An advanced calculator for the web featuring material design and allows scientific equations.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Calculator" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Calculator" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- ReadSettings for Python -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ReadSettings for Python</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Easily create, edit and remove a customized settings file which you can use for storing all of the settings for your application. At the moment, ReadSettings is compatible with Python 3 but support to more programming
+                            langauages may come in the future.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/readsettings-python" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/readsettings-python" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- Background Music Greenscreen -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Background Music Greenscreen</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Allows you to embed a url in your videos which will automatically play music from <a href="https://youtu.be/sKIbH-gXmX0">this Youtube video</a>. This also changes the background colour of the website to be the green
+                            screen colour
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/background-music-greenscreen" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/background-music-greenscreen" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- ROS Filesystem Watcher -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS FileSystem Watcher</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-FileSystem-Watcher" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-FileSystem-Watcher/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- ROS Encryption -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS Encryption</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A VB.NET text encryption tool supporting encryption of any string including passwords and features Material Design.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Encryption" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Encryption/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- ROS Online Text Editor -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS Online Text Editor</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A simple text editor for the web featuring Material Design and a few customisation options.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Text-Editor-Online" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Text-Editor-Online" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- Git Files -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Git Files</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/git-files" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/git-files/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- VirusShare Hashes -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">VirusShare Hashes</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Every single <a href="https://virusshare.com/hashes.4n6">VirusShare</a> MD5 hash in a single file, ready for distribution and CI integrations.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/virusshare-hashes" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/virusshare-hashes/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- ROS QuickScan -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">ROS QuickScan</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            ROS QuickScan is a tool for checking single files against a list of hashes provided by <a href="https://github.com/Richienb/virusshare-hashes">VirusShare Hashes</a>.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Quick-Scan" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Quick-Scan/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- Jython Builds -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Jython Builds</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/jython-builds" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/jython-builds/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
+                        </div>
+                </section>
+
+                <!-- Web Example -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Web Example</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            An example website with simple boilerplate code for starting out with building for the web.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/example-web" target="_blank" rel="noopener" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/example-web" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+                <!-- Captcha Example -->
+                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="//:0" border="0" alt="">
+                    </div>
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Captcha Example</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a href="https://developers.google.com/recaptcha/docs/display">Recaptcha 2.0</a> and <a href="https://developers.google.com/recaptcha/docs/invisible">Invisible Recaptcha</a>.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/example-captcha" target="_blank" rel="noopener">Source code</a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/example-captcha" target="_blank" rel="noopener">Website</a>
+                        </div>
+                </section>
+
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">
+                        <noscript style="color: #9e9e9e;">Enable Javascript for the best experience when using </noscript> Richie Bendall's Website</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing"><i class="material-icons" title="Terms and Conditions">supervisor_account</i></a></li>
+                        <li><a href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing"><i class="material-icons" title="Privacy Policy">lock</i></a></li>
+                        <li><a href="https://creativecommons.org/licenses/by/4.0/"><i class="material-icons" title="Creative Commons Attribution 4.0 International">copyright</i></a></li>
+                    </ul>
+                </div>
+
+            </footer>
+        </main>
+    </div>
+
+    <!-- Initialise Critical CSS -->
+    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Initialise MDL -->
+    <script async defer src="https://cdn.jsdelivr.net/gh/google/material-design-lite@1.3/material.min.js"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/material-design-lite@1/dist/material.indigo-red.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Initialise Font -->
+    <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fetch latest YouTube video -->
+    <script async defer>
+        var el = document.body;
+
+        function fadeIn(el) {
+            el.style.opacity = 0;
+
+            var tick = function() {
+                el.style.opacity = +el.style.opacity + 0.01;
+
+                if (+el.style.opacity < 1) {
+                    (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
+                    setTimeout(tick, 16);
+                }
+            };
+
+            tick();
+        }
+
+        fadeIn(el);
+
+        var channelID = "UCxOiLzcbFeW-Ayz_MbgWIXw";
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D' + channelID, true);
+
+        request.onreadystatechange = function() {
+            if (this.readyState === 4) {
+                if (this.status >= 200 && this.status < 400) {
+                    // Success!
+                    var data = JSON.parse(this.responseText);
+                    var link = data.items[0].link;
+                    var title = data.items[0].title;
+                    var id = link.substr(link.indexOf("=") + 1);
+                    document.getElementById("youtube_video").setAttribute('src', "https://www.youtube-nocookie.com/embed/" + id + "?showinfo=0&rel=0");
+                    document.getElementById("youtube_video").setAttribute('title', "Latest YouTube video: " + title);
+                } else {
+                    // Error :(
+                }
+            }
+        };
+
+        request.send();
+        request = null;
+
+        // Print out a message in the console
+        console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
+    </script>
+
+</body>
+
+</html>
