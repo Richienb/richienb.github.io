@@ -58,13 +58,11 @@ jobs:
               - npm run build
 
           deploy:
-              - provider:       pages
-                github_commit:  "CI | Deployed the website [skip ci]"
-                skip_cleanup:   true
-                github_token:   $github_token
-                local_dir:      dist
+              - provider: script
+                script: bash cp dist/* . && git commit -a -m "CI | Updated the website [skip ci]" && git push origin HEAD:master
                 on:
-                    branch:     master
+                    tags: true
+                    all_branches: true
 
           after_deploy:
               # Clear CloudFlare cache
