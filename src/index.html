@@ -22,6 +22,9 @@
 
     <!-- Set favicon -->
     <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Tell the browser about www.youtube-nocookie.com -->
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
 
     <!-- Run critical JavaScript -->
     <script async defer>
@@ -384,7 +387,7 @@
             el.style.opacity = 0;
 
             var tick = function() {
-                el.style.opacity = +el.style.opacity + 0.05;
+                el.style.opacity = +el.style.opacity + 0.1;
 
                 if (+el.style.opacity < 1) {
                     (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
