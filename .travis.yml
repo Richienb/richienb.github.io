@@ -61,8 +61,7 @@ jobs:
               - provider: script
                 script: bash cp dist/* . && git commit -a -m "CI | Updated the website [skip ci]" && git push origin HEAD:master
                 on:
-                    tags: true
-                    all_branches: true
+                    branch: master
 
           after_deploy:
               # Clear CloudFlare cache
