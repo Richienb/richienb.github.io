@@ -1,14 +1,14 @@
 # Disable sudo to speed up build
-sudo:                        false
+sudo:                           false
 
 # Set build language to Node JS
-language:                    node_js
+language:                       node_js
 
 # Set the version of Node JS to use
-node_js:                     "node"
+node_js:                        "node"
 
 # Set build branch
-branches:                    master
+branches:                       master
 
 before_install:
     # Configure access token to enable pushing to the repository
@@ -22,17 +22,17 @@ before_install:
 
 jobs:
     include:
-        - stage:             Optimisation & Generating
+        - stage:                Optimisation & Generating
 
           cache:
               # Ensure pip is cached
               - pip
 
           # Set the build language
-          language:          python
+          language:             python
 
           # Set the build language version
-          python:            3.6.6
+          python:               3.6.6
 
           install:
               # Install the required dependency
@@ -58,13 +58,13 @@ jobs:
               - npm run build
 
           deploy:
-              provider:      pages
-              skip-cleanup:  true
-              github-token:  $github_token
-              local-dir:     $TRAVIS_BUILD_DIR/dist
-              keep-history:  true
-              on:
-                  branch:    master
+              - provider:       pages
+                github_commit:  "CI | Deployed the website [skip ci]"
+                skip_cleanup:   true
+                github_token:   $github_token
+                local_dir:      dist
+                on:
+                    branch:     master
 
           after_deploy:
               # Clear CloudFlare cache
@@ -77,4 +77,4 @@ jobs:
 
 notifications:
     # Disable emails for build status notifications
-    email:                   false
+    email:                      false
