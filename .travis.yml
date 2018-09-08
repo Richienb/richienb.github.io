@@ -59,7 +59,7 @@ jobs:
 
           deploy:
               - provider: script
-                script: cp dist/* . && git commit -a -m "CI | Updated the website [skip ci]" && git push origin HEAD:master
+                script: bash ./deploy.sh
                 skip_cleanup: true
                 on:
                     branch: master
