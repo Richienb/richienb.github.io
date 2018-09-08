@@ -130,7 +130,7 @@ if (workbox) {
   }
 ]);
 
-    workbox.routing.registerRoute(*.html, args => {
+    workbox.routing.registerRoute(\*.html, args => {
         return articleHandler.handle(args).then(response => {
             if (!response) {
                 return caches.match('offline.html');
