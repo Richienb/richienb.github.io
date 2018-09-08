@@ -25,6 +25,10 @@ if (workbox) {
     "revision": "9695c2693d23c507b96af1da4d9bdde4"
   },
   {
+    "url": "error.html",
+    "revision": "ffcf6b94b0b3170810170faf37244e9a"
+  },
+  {
     "url": "favicon.ico",
     "revision": "6e869db8dda60da878658f162ac78773"
   },
