@@ -22,11 +22,11 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "404.html",
-    "revision": "9695c2693d23c507b96af1da4d9bdde4"
+    "revision": "4712b588c7d120c8896938462529b33a"
   },
   {
     "url": "error.html",
-    "revision": "ffcf6b94b0b3170810170faf37244e9a"
+    "revision": "c5b958aaaf7a72a2918483f97a71913c"
   },
   {
     "url": "favicon.ico",
@@ -42,7 +42,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "d687c39684b15a5c2eb44cad213e16b5"
+    "revision": "ef992d9c52f281c83a013c4d0aa2de61"
   },
   {
     "url": "index.js",
@@ -58,7 +58,7 @@ if (workbox) {
   },
   {
     "url": "offline.html",
-    "revision": "a526b0ad2ed13a9f0b950d0650d40112"
+    "revision": "d181fb77768e7892d84792c9138e80d8"
   },
   {
     "url": "resources/android-chrome-144x144.png",
@@ -136,6 +136,8 @@ if (workbox) {
                 return caches.match('offline.html');
             } else if (response.status === 404) {
                 return caches.match('404.html');
+            } else if (response.status >= 400) {
+                return caches.match('error.html');
             }
             return response;
         });

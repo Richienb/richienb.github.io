@@ -266,44 +266,19 @@
                 </div>
                 <div class="display-table-cell">
                     <h1 id="error-header">Error</h1>
-                    <h2 id="error-message">An error occurred</h2>
+                    <h2 id="error-message">An unexpected error occurred</h2>
                 </div>
             </div>
         </div>
     </div>
 
     <svg class="icons" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <symbol viewBox="0 0 512 512" id="icon-x">
+            <symbol viewBox="0 0 24 24" id="icon-x">
                 <title>x</title>
-                <path d="M438.393 374.595L319.757 255.977l118.62-118.63-63.782-63.74-118.6 118.618-118.62-118.603-63.768 63.73 118.64 118.63L73.62 374.626l63.73 63.768 118.65-118.66 118.65 118.645z"/>
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+<path d="M0 0h24v24H0z" fill="none"/>
             </symbol>
         </svg>
-    <script async defer>
-        if ("onhashchange" in window) {
-            //no alert
-            console.log("The browser supports the hashchange event! Changes to the hash will affect the text immediately");
-            window.onhashchange = changetext;
-        } else {
-            console.log("The browser doesn't support the hashchange event! You will need to manually reload after changing the hash.");
-        }
-
-
-        function changetext() {
-            if (!(location.hash.split("#")[1] === undefined)) {
-                document.getElementById("error-header").innerHTML = location.hash.split("#")[1].replace(/%20/g, " ");
-            };
-            if (!(location.hash.split("#")[2] === undefined)) {
-                document.getElementById("error-message").innerHTML = location.hash.split("#")[2].replace(/%20/g, " ");
-            };
-            if (!(location.hash.split("#")[3] === undefined)) {
-                document.title = location.hash.split("#")[3].replace(/%20/g, " ");
-            } else {
-                document.title = document.getElementById("error-header").innerHTML + " | " + document.getElementById("error-message").innerHTML;
-            }
-        }
-
-        changetext();
-    </script>
 
 </body>
 
