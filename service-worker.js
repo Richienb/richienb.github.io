@@ -122,7 +122,7 @@ if (workbox) {
   },
   {
     "url": "social.html",
-    "revision": "fba7486eace308a903ac0e77069b6086"
+    "revision": "f471915b97943060b11679303eba080c"
   }
 ]);
 
