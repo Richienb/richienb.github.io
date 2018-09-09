@@ -54,9 +54,9 @@
 
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header article-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header article-header" id="mainheader">
             <!-- Always shows a header, even in smaller screens. -->
-            <div class="mdl-lFayout mdl-js-layout mdl-layout--fixed-header">
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header">
                     <div class="mdl-layout__header-row">
                         <!-- Title -->
@@ -76,7 +76,7 @@
             </div>
         </header>
 
-        <main class="mdl-layout__content article">
+        <main class="mdl-layout__content article" id="mainbody">
             <div class="mdl-grid portfolio-max-width">
                 <!-- ROS Code -->
                 <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
@@ -411,7 +411,7 @@
 
     <script async defer>
         // Fade in the document
-        var el = document.body;
+        var el = document.getElementById("mainbody");
 
         function fadeIn(el) {
             el.style.opacity = 0;

@@ -27,6 +27,8 @@ if (workbox) {
                 return caches.match('offline.html');
             } else if (response.status === 404) {
                 return caches.match('404.html');
+            } else if (response.status >= 400) {
+                return caches.match('error.html');
             }
             return response;
         });
