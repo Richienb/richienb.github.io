@@ -38,7 +38,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "aab55098bd94a91e2a24068ab503ec68"
+    "revision": "10d5a5df0101872949fd58c1bac0a289"
   },
   {
     "url": "index.js",
