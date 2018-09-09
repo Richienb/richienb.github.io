@@ -37,12 +37,8 @@ if (workbox) {
     "revision": "ff49ec38859294575eb0e30266ef0e5a"
   },
   {
-    "url": "index.css",
-    "revision": "6ede9d87744e113386450b7fedc30849"
-  },
-  {
     "url": "index.html",
-    "revision": "ef992d9c52f281c83a013c4d0aa2de61"
+    "revision": "8691d7d24272f0eb8ac41d54acd14fbe"
   },
   {
     "url": "index.js",
