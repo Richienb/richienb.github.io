@@ -488,45 +488,32 @@
 
     <!-- Fetch latest YouTube video -->
     <script async defer>
-        function ready(fn) {
-            if (document.readyState != 'loading') {
-                fn();
-            } else if (document.addEventListener) {
-                document.addEventListener('DOMContentLoaded', fn);
-            } else {
-                document.attachEvent('onreadystatechange', function() {
-                    if (document.readyState != 'loading')
-                        fn();
-                });
-            }
-        }
-
-        ready(function() { // Fetch latest YouTUbe video
-            var channelID = "UCxOiLzcbFeW-Ayz_MbgWIXw";
-            var request = new XMLHttpRequest();
-            request.open('GET', 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D' + channelID, true);
-            request.onreadystatechange = function() {
-                if (this.readyState === 4) {
-                    if (this.status >= 200 && this.status < 400) {
-                        // Success!
-                        var data = JSON.parse(this.responseText);
-                        var link = data.items[0].link;
-                        var title = data.items[0].title;
-                        var id = link.substr(link.indexOf("=") + 1);
-                        document.getElementById("youtube_video").setAttribute('src', "https://www.youtube-nocookie.com/embed/" + id + "?showinfo=0&rel=0");
-                        document.getElementById("youtube_video").setAttribute('title', "Latest YouTube video: " + title);
-                    } else {
-                        // Error :(
-                    }
+        // Fetch latest YouTUbe video
+        var channelID = "UCxOiLzcbFeW-Ayz_MbgWIXw";
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D' + channelID, true);
+        request.onreadystatechange = function() {
+            if (this.readyState === 4) {
+                if (this.status >= 200 && this.status < 400) {
+                    // Success!
+                    var data = JSON.parse(this.responseText);
+                    var link = data.items[0].link;
+                    var title = data.items[0].title;
+                    var id = link.substr(link.indexOf("=") + 1);
+                    document.getElementById("youtube_video").setAttribute('src', "https://www.youtube-nocookie.com/embed/" + id + "?showinfo=0&rel=0");
+                    document.getElementById("youtube_video").setAttribute('title', "Latest YouTube video: " + title);
+                } else {
+                    // Error :(
                 }
-            };
-            request.send();
-            request = null;
+            }
+        };
+        request.send();
+        request = null;
+        // Print out a message in the console
+        console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
+    </script>
 
-            // Print out a message in the console
-            console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
-        });
-
+    <script async defer>
         // Fade in the document
         var el = document.getElementById("mainbody");
 
