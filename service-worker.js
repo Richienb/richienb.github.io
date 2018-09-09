@@ -126,7 +126,7 @@ if (workbox) {
   },
   {
     "url": "social.html",
-    "revision": "4845c884252f3f42f3d6352e042a0a42"
+    "revision": "dc8664c7a37439ee39599dafb9a69ca9"
   }
 ]);
 
