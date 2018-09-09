@@ -42,7 +42,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "3eab829e69bd4c50f231ab0afdfd5422"
+    "revision": "d687c39684b15a5c2eb44cad213e16b5"
   },
   {
     "url": "index.js",
