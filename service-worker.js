@@ -42,7 +42,7 @@ if (workbox) {
   },
   {
     "url": "images/Richie Bendall's Website QR Code.png",
-    "revision": "9c31df396ba4e69cda6b5305568467f5"
+    "revision": "c5d9fe11bbfdb6b7331390c10c09d878"
   },
   {
     "url": "images/Richie Bendall's Website QR Code.svg",
