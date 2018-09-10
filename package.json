@@ -11,7 +11,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "copy": "copyfiles -u 1 src/**/* src/* dist",
-        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css --minify-js --file-ext html",
+        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css --minify-js true --file-ext html",
         "ci-sw": "workbox injectManifest workbox-config.js",
         "build": "npm run copy && npm run ci-sw && npm run ci-html",
         "start": "node server.js"
