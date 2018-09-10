@@ -37,12 +37,20 @@ if (workbox) {
     "revision": "ff49ec38859294575eb0e30266ef0e5a"
   },
   {
-    "url": "index.html",
-    "revision": "10d5a5df0101872949fd58c1bac0a289"
+    "url": "images/Richie Bendall's Website QR Code.eps",
+    "revision": "f9d707a8c52b7ecd85c36dfb6b30188c"
   },
   {
-    "url": "index.js",
-    "revision": "b55a5cee9a5a816b79c808df79e5a063"
+    "url": "images/Richie Bendall's Website QR Code.png",
+    "revision": "9c31df396ba4e69cda6b5305568467f5"
+  },
+  {
+    "url": "images/Richie Bendall's Website QR Code.svg",
+    "revision": "ed44bf62a42e18dfb43ef1d981ac9929"
+  },
+  {
+    "url": "index.html",
+    "revision": "10d5a5df0101872949fd58c1bac0a289"
   },
   {
     "url": "manifests/browserconfig.xml",
