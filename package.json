@@ -11,7 +11,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "copy": "copyfiles -u 1 src/**/* src/* dist",
-        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --html-5 --collapse-whitespace",
+        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace",
         "ci-sw": "workbox injectManifest workbox-config.js",
         "build": "npm run copy && npm run ci-sw && npm run ci-html",
         "start": "node server.js"
