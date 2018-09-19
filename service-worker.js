@@ -50,7 +50,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "b3fac949508d53787b00572a76db9712"
+    "revision": "9087fa229955d88f5ed462f922342d2a"
   },
   {
     "url": "manifests/browserconfig.xml",
@@ -126,7 +126,7 @@ if (workbox) {
   },
   {
     "url": "sitemap.xml",
-    "revision": "d68bb8e3010a8466c101a54f654df8a1"
+    "revision": "9a080040846102846b73ddee511685b0"
   },
   {
     "url": "social.html",
