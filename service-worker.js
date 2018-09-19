@@ -37,20 +37,12 @@ if (workbox) {
     "revision": "ff49ec38859294575eb0e30266ef0e5a"
   },
   {
-    "url": "images/Richie Bendall's Website QR Code.eps",
-    "revision": "f9d707a8c52b7ecd85c36dfb6b30188c"
-  },
-  {
     "url": "images/Richie Bendall's Website QR Code.png",
     "revision": "c5d9fe11bbfdb6b7331390c10c09d878"
   },
   {
-    "url": "images/Richie Bendall's Website QR Code.svg",
-    "revision": "ed44bf62a42e18dfb43ef1d981ac9929"
-  },
-  {
     "url": "index.html",
-    "revision": "9087fa229955d88f5ed462f922342d2a"
+    "revision": "bfea268cc1cd212cbea00d75335b654a"
   },
   {
     "url": "manifests/browserconfig.xml",
@@ -130,7 +122,7 @@ if (workbox) {
   },
   {
     "url": "social.html",
-    "revision": "e29c99237686524e5a8d704a0202c605"
+    "revision": "102d511c88578ae0f4593e24fc6dfbdb"
   }
 ]);
 
