@@ -126,7 +126,7 @@ if (workbox) {
   },
   {
     "url": "sitemap.xml",
-    "revision": "1f4d57bcf2ed44924139a5df68a741d8"
+    "revision": "ad4e2dda5033856cbd0fafa13c49a96b"
   },
   {
     "url": "social.html",
