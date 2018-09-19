@@ -50,7 +50,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "93e11b53ebbf5bc4ad9463e853b94e5b"
+    "revision": "f08af2fdbfe4e8a37be724837c304e54"
   },
   {
     "url": "manifests/browserconfig.xml",
