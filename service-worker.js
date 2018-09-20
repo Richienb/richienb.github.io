@@ -21,6 +21,10 @@ if (workbox) {
 
     workbox.precaching.precacheAndRoute([
   {
+    "url": "_config.yml",
+    "revision": "474f14a024e368440e2f95769cff7bb4"
+  },
+  {
     "url": "404.html",
     "revision": "4712b588c7d120c8896938462529b33a"
   },
