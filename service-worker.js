@@ -26,11 +26,11 @@ if (workbox) {
   },
   {
     "url": "404.html",
-    "revision": "4712b588c7d120c8896938462529b33a"
+    "revision": "e6f8702ab7f5825ee1a5f841a1100ce1"
   },
   {
     "url": "error.html",
-    "revision": "c5b958aaaf7a72a2918483f97a71913c"
+    "revision": "fd2a4f6f65c32bcb606818d1b6e801e0"
   },
   {
     "url": "favicon.ico",
@@ -46,7 +46,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "c37ba14153980a2a2ce8c547cd841df7"
+    "revision": "dc841c5fe28b22ba14d0e215f59dc968"
   },
   {
     "url": "manifests/browserconfig.xml",
@@ -58,7 +58,7 @@ if (workbox) {
   },
   {
     "url": "offline.html",
-    "revision": "d181fb77768e7892d84792c9138e80d8"
+    "revision": "31f1128019a2cf1ba8b957a9f57d05c7"
   },
   {
     "url": "resources/android-chrome-144x144.png",
@@ -126,7 +126,7 @@ if (workbox) {
   },
   {
     "url": "social.html",
-    "revision": "102d511c88578ae0f4593e24fc6dfbdb"
+    "revision": "e3d014ff86c033fe4d1a52ea2037e10b"
   }
 ]);
 
