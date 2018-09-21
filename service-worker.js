@@ -46,7 +46,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "dc841c5fe28b22ba14d0e215f59dc968"
+    "revision": "d2fa8edb82b26786e0d2af81450bf16b"
   },
   {
     "url": "manifests/browserconfig.xml",
