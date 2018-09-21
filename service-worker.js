@@ -122,7 +122,7 @@ if (workbox) {
   },
   {
     "url": "sitemap.xml",
-    "revision": "d52f6ebb542241d644a6a603521b3618"
+    "revision": "40b6d2357d5c621af1c56d413d09740a"
   },
   {
     "url": "social.html",
