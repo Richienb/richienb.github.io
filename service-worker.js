@@ -26,11 +26,11 @@ if (workbox) {
   },
   {
     "url": "404.html",
-    "revision": "2ab86db33e6bf901b4d9b47c9ee8428f"
+    "revision": "46937fe2d92887d66a59fa86882a2203"
   },
   {
     "url": "error.html",
-    "revision": "fd2a4f6f65c32bcb606818d1b6e801e0"
+    "revision": "ea3e6347e0748e0911c980d9c5515a53"
   },
   {
     "url": "favicon.ico",
@@ -58,7 +58,7 @@ if (workbox) {
   },
   {
     "url": "offline.html",
-    "revision": "31f1128019a2cf1ba8b957a9f57d05c7"
+    "revision": "8ca1e03c28ac2c3acae95a2a0a8a209c"
   },
   {
     "url": "resources/android-chrome-144x144.png",
