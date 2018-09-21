@@ -46,7 +46,7 @@ if (workbox) {
   },
   {
     "url": "index.html",
-    "revision": "d7ef4f5daa923bc867abd07704d9deeb"
+    "revision": "c37ba14153980a2a2ce8c547cd841df7"
   },
   {
     "url": "manifests/browserconfig.xml",
@@ -122,7 +122,7 @@ if (workbox) {
   },
   {
     "url": "sitemap.xml",
-    "revision": "9a080040846102846b73ddee511685b0"
+    "revision": "d52f6ebb542241d644a6a603521b3618"
   },
   {
     "url": "social.html",
