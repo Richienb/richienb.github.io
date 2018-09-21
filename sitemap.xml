@@ -25,6 +25,10 @@
         <priority>0.80</priority>
     </url>
     <url>
+        <loc>https://www.richie-bendall.ml/ROS-Encryption</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
         <loc>https://www.richie-bendall.ml/html-form-elements</loc>
         <priority>0.80</priority>
     </url>
