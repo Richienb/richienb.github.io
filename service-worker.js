@@ -26,7 +26,7 @@ if (workbox) {
   },
   {
     "url": "404.html",
-    "revision": "e6f8702ab7f5825ee1a5f841a1100ce1"
+    "revision": "2ab86db33e6bf901b4d9b47c9ee8428f"
   },
   {
     "url": "error.html",
