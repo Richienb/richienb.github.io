@@ -248,11 +248,6 @@
         }
     </style>
 
-    <!-- IE6 compatiblity script -->
-    <!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
-
 </head>
 
 <body class="page-404">
@@ -264,10 +259,10 @@
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
                         </svg>
                 </div>
-                <div class="display-table-cell">
+                <main class="display-table-cell">
                     <h1 id="error-header">Error</h1>
                     <h2 id="error-message">An unexpected error occurred</h2>
-                </div>
+                </main>
             </div>
         </div>
     </div>
@@ -279,6 +274,10 @@
 <path d="M0 0h24v24H0z" fill="none"/>
             </symbol>
         </svg>
+
+    <!-- IE6 compatiblity assets -->
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
 </body>
 

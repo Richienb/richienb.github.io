@@ -44,11 +44,6 @@
         }
     </script>
 
-    <!-- IE6 compatiblity script -->
-    <!--[if lt IE 9]>
-    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -61,109 +56,109 @@
         body {
             background-color: #eee;
         }
-        
+
         .social-btns .btn,
         .social-btns .btn:before,
         .social-btns .btn .mdi {
             transition: all 0.35s;
             transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
         }
-        
+
         .social-btns .btn:before {
             top: 90%;
             left: -110%;
         }
-        
+
         .social-btns .btn .mdi {
             -webkit-transform: scale(0.8);
             transform: scale(0.8);
         }
-        
+
         .social-btns .btn.youtube:before {
             background-color: #f00;
         }
-        
+
         .social-btns .btn.youtube .mdi {
             color: #f00;
         }
-        
+
         .social-btns .btn.google-plus:before {
             background-color: #dd4b39;
         }
-        
+
         .social-btns .btn.google-plus .mdi {
             color: #dd4b39;
         }
-        
+
         .social-btns .btn.stack-overflow:before {
             background-color: #f48024;
         }
-        
+
         .social-btns .btn.stack-overflow .mdi {
             color: #f48024;
         }
-        
+
         .social-btns .btn.email:before {
             background-color: #3f51b5;
         }
-        
+
         .social-btns .btn.email .mdi {
             color: #3f51b5;
         }
-        
+
         .social-btns .btn.github-circle:before {
             background-color: #4078c0;
         }
-        
+
         .social-btns .btn.github-circle .mdi {
             color: #4078c0;
         }
-        
+
         .social-btns .btn.web:before {
             background-color: #f44336;
         }
-        
+
         .social-btns .btn.web .mdi {
             color: #f44336;
         }
-        
+
         .social-btns .btn.discord:before {
             background-color: #7289da;
         }
-        
+
         .social-btns .btn.discord .mdi {
             color: #7289da;
         }
-        
+
         .social-btns .btn.blogger:before {
             background-color: #f57d00;
         }
-        
+
         .social-btns .btn.blogger .mdi {
             color: #f57d00;
         }
-        
+
         .social-btns .btn.qrcode:before {
             background-color: #607d8b;
         }
-        
+
         .social-btns .btn.qrcode .mdi {
             color: #607d8b;
         }
-        
+
         .social-btns .btn:focus:before,
         .social-btns .btn:hover:before {
             top: -10%;
             left: -10%;
         }
-        
+
         .social-btns .btn:focus .mdi,
         .social-btns .btn:hover .mdi {
             color: #fff;
             -webkit-transform: scale(1);
             transform: scale(1);
         }
-        
+
         .social-btns {
             height: 90px;
             margin: auto;
@@ -175,7 +170,7 @@
             left: 0;
             right: 0;
         }
-        
+
         .social-btns .btn {
             display: inline-block;
             background-color: #fff;
@@ -190,7 +185,7 @@
             box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
             opacity: 0.99;
         }
-        
+
         .social-btns .btn:before {
             content: '';
             width: 120%;
@@ -199,7 +194,7 @@
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-        
+
         .social-btns .btn .mdi {
             font-size: 38px;
             vertical-align: middle;
@@ -207,7 +202,10 @@
     </style>
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.7.94/css/materialdesignicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- IE6 compatiblity assets -->
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
 </body>
 
