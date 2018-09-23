@@ -52,18 +52,10 @@ jobs:
           install:
               # Install required packages
               - npm install
-              
-              # Setup minifier script
-              - git clone https://github.com/appleboy/minify-tool.git minify-tool
-              - cp ./minify-tool/minify minify
-              - chmod +x ./minify-tool/install.sh minify
-              - ./minify-tool/install.sh
 
           script:
               # Generate service worker cacher
               - npm run build
-              
-              - ./minify src -o dist
 
           deploy:
               - provider: script
