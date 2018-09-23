@@ -6,7 +6,7 @@
     "devDependencies": {
         "copyfiles": "^2.1.0",
         "workbox-cli": "^3.6.1",
-        "minify-all": "^1.2.2",
+        "minify-all": "^1.2.2"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
