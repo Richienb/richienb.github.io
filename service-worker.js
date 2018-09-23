@@ -17,7 +17,7 @@ limitations under the License.
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
 
 if (workbox) {
-    console.log(`Yay! Workbox has loaded 🎉`);
+    console.log("Yay! Workbox has loaded 🎉");
 
     workbox.precaching.precacheAndRoute([
   {
@@ -144,7 +144,7 @@ if (workbox) {
     });
 
 } else {
-    console.log(`Noo! Workbox didn't load 😬`);
+    console.log("Noo! Workbox didn't load 😬");
 }
 
 workbox.googleAnalytics.initialize();
