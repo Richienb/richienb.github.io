@@ -42,7 +42,7 @@ jobs:
               # Check for spelling errors
               - pyspelling
 
-        - # Generate service worker
+        - # Generate final compiled files
 
           cache:
               # Ensure npm is cached
@@ -50,12 +50,20 @@ jobs:
                   - node_modules # NPM packages
 
           install:
-              # Install required package
+              # Install required packages
               - npm install
+              
+              # Setup minifier script
+              - git clone https://github.com/appleboy/minify-tool.git minify-tool
+              - cp ./minify-tool/minify minify
+              - chmod +x ./minify-tool/install.sh minify
+              - ./install.sh
 
           script:
               # Generate service worker cacher
               - npm run build
+              
+              - ./minify src -o dist
 
           deploy:
               - provider: script
