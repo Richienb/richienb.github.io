@@ -5,27 +5,29 @@
     "private": true,
     "devDependencies": {
         "copyfiles": "^2.1.0",
-        "workbox-cli": "^3.6.1"
+        "workbox-cli": "^3.6.1",
+        "html-minifier": "^3.5.20"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "copy": "copyfiles -u 1 src/**/* src/* dist",
+        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css --minify-js --file-ext html",
         "ci-sw": "workbox injectManifest workbox-config.js",
-        "build": "npm run copy && gulp && npm run ci-sw",
+        "build": "npm run copy && npm run ci-sw && npm run ci-html",
         "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.16.3"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Richienb/richienb.github.io.git"
     },
     "keywords": [],
-    "author": "Richie Bendall",
+    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Richienb/richienb.github.io/issues"
     },
-    "homepage": "https://github.com/Richienb/richienb.github.io#readme",
-    "engines": {
-        "node": ">=0.12.0"
-    }
+    "homepage": "https://github.com/Richienb/richienb.github.io#readme"
 }
