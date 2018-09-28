@@ -1,8 +1,0 @@
-User-agent: Browsershots
-Disallow:
-
-User-agent: *
-Disallow: /404.html
-Disallow: /offline.html
-
-Sitemap: https://www.richie-bendall.ml/sitemap.xml

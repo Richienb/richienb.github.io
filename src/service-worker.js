@@ -14,12 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
-
 if (workbox) {
     console.log("Yay! Workbox has loaded 🎉");
 
-    workbox.precaching.precacheAndRoute([]);
+    workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
     workbox.routing.registerRoute(".*\.\html", args => {
         return articleHandler.handle(args).then(response => {

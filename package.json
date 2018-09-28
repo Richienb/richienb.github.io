@@ -5,14 +5,34 @@
     "private": true,
     "devDependencies": {
         "copyfiles": "^2.1.0",
+        "css-loader": "^1.0.0",
+        "file-loader": "^2.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "live-server": "^1.2.0",
+        "style-loader": "^0.23.0",
+        "webpack": "^4.19.1",
+        "webpack-cli": "^3.1.1",
         "workbox-cli": "^3.6.1"
+    },
+    "dependencies": {
+        "ajv": "^6.5.4",
+        "extract-loader": "^3.0.0",
+        "html-loader": "^0.5.5",
+        "html-minifier-webpack-plugin": "^2.0.0",
+        "html5shiv": "^3.7.3",
+        "material-design-icons": "^3.0.1",
+        "material-design-lite": "^1.3.0",
+        "normalize.css": "^8.0.0",
+        "workbox-webpack-plugin": "^3.6.1"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "copy": "copyfiles -u 1 src/**/* src/* dist",
         "ci-sw": "workbox injectManifest workbox-config.js",
-        "build": "npm run copy && gulp && npm run ci-sw",
-        "start": "node server.js"
+        "build": "npm run copy && npm run ci-sw",
+        "start-dev": "live-server --open=src",
+        "start": "live-server --open=dist",
+        "webpack": "npx webpack --config webpack.config.js"
     },
     "repository": {
         "type": "git",
