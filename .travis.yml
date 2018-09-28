@@ -22,26 +22,6 @@ before_install:
 
 jobs:
     include:
-        - stage:                Optimisation & Generating
-
-          cache:
-              # Ensure pip is cached
-              - pip
-
-          # Set the build language
-          language:             python
-
-          # Set the build language version
-          python:               3.6.6
-
-          install:
-              # Install the required dependency
-              - pip install pyspelling
-
-          script:
-              # Check for spelling errors
-              - pyspelling
-
         - # Generate final compiled files
 
           cache:
@@ -50,8 +30,11 @@ jobs:
                   - node_modules # NPM packages
 
           install:
+              # Install yarn
+              - npm install --global yarn
+
               # Install required packages
-              - npm install
+              - yarn install
 
           script:
               # Generate service worker cacher

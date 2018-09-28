@@ -5,19 +5,22 @@
     "private": true,
     "devDependencies": {
         "copyfiles": "^2.1.0",
-        "workbox-cli": "^3.6.1",
-        "html-minifier": "^3.5.20"
+        "style-loader": "^0.23.0",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.1",
+        "webpack-dev-server": "^3.1.9"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "copy": "copyfiles -u 1 src/**/* src/* dist",
-        "ci-html": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css --minify-js --file-ext html",
-        "ci-sw": "workbox injectManifest workbox-config.js",
-        "build": "npm run copy && npm run ci-sw && npm run ci-html",
-        "start": "node server.js"
+        "copy": "copyfiles -u ./src/index.html ./dist/index.html",
+        "webpack": "npx webpack",
+        "webpack-server": "npx webpack-dev-server"
     },
     "dependencies": {
-        "express": "^4.16.3"
+        "@polymer/polymer": "^3.0.5",
+        "css-loader": "^1.0.0",
+        "html5shiv": "^3.7.3",
+        "normalize.css": "^8.0.0"
     },
     "repository": {
         "type": "git",
