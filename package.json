@@ -5,7 +5,7 @@
     "private": true,
     "devDependencies": {
         "copyfiles": "^2.1.0",
-        "workbox-cli": "^3.6.1",
+        "workbox-cli": "^3.6.2",
         "html-minifier": "^3.5.20"
     },
     "scripts": {
