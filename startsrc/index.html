@@ -10,12 +10,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="generator" content="Polymer Starter Kit">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>My App</title>
+    <title>Richie Bendall's Website</title>
     <meta name="description" content="My App description">
 
     <!--
@@ -60,62 +61,151 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="msapplication-tap-highlight" content="no">
 
     <script type="module">
-      import '@polymer/paper-card/paper-card.js';
-      import '@polymer/paper-button/paper-button.js';
+        import '@polymer/paper-card/paper-card.js';
+        import '@polymer/paper-button/paper-button.js';
+        import '@polymer/app-layout/app-layout.js';
+        import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
     </script>
 
     <script>
+        /**
+         * [polymer-root-path]
+         *
+         * Leave this line unchanged if you intend to serve your app from the root
+         * path (e.g., with URLs like `my.domain/` and `my.domain/view1`).
+         *
+         * If you intend to serve your app from a non-root path (e.g., with URLs
+         * like `my.domain/my-app/` and `my.domain/my-app/view1`), edit this line
+         * to indicate the path from which you'll be serving, including leading
+         * and trailing slashes (e.g., `/my-app/`).
+         */
+        window.MyAppGlobals = {
+            rootPath: '/'
+        };
 
-      /**
-      * [polymer-root-path]
-      *
-      * Leave this line unchanged if you intend to serve your app from the root
-      * path (e.g., with URLs like `my.domain/` and `my.domain/view1`).
-      *
-      * If you intend to serve your app from a non-root path (e.g., with URLs
-      * like `my.domain/my-app/` and `my.domain/my-app/view1`), edit this line
-      * to indicate the path from which you'll be serving, including leading
-      * and trailing slashes (e.g., `/my-app/`).
-      */
-      window.MyAppGlobals = { rootPath: '/' };
-
-      // Load and register pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js', {
-            scope: MyAppGlobals.rootPath
-          });
-        });
-      }
+        // Load and register pre-caching Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js', {
+                    scope: MyAppGlobals.rootPath
+                });
+            });
+        }
     </script>
 
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
     <!-- Add any global styles for body, document, etc. -->
-    <style>
-      body {
-        margin: 0;
-        font-family: "Roboto", "Noto", sans-serif;
-        line-height: 1.5;
-        min-height: 100vh;
-        background-color: #eeeeee;
-      }
+    <style include="app-grid-style">
+        body {
+            margin: 0;
+            font-family: "Roboto", "Noto", sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            background-color: #eeeeee;
+        }
+
+        html,
+        body {
+            margin: 0;
+            background-color: #7986cb;
+        }
+
+        app-toolbar {
+            color: #ffffff;
+            background-color: #3f51b5;
+        }
+
+        :host {
+            --app-grid-columns: 3;
+            --app-grid-item-height: 100px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .item {
+            background-color: white;
+        }
+
+        @media (max-width: 100px) {
+            :host {
+                --app-grid-columns: 1;
+            }
+        }
+
+        paper-card {
+            width: 250px;
+            margin: 8px;
+        }
+
+        .content-area {
+            margin: auto;
+            max-width: 900px;
+            padding: 8px;
+        }
     </style>
-  </head>
-  <body>
-      <paper-card heading="Emmental" image="http://placehold.it/350x150/FFC107/000000" alt="Emmental">
-        <div class="card-content">
-          Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
-        </div>
-        <div class="card-actions">
-          <paper-button>Share</paper-button>
-          <paper-button>Explore!</paper-button>
-        </div>
-      </paper-card>
+</head>
+
+<body>
+    <app-header-layout>
+        <app-header effects="waterfall">
+            <app-toolbar>
+                <div main-title>Richie Bendall's Website</div>
+            </app-toolbar>
+        </app-header>
+        <main>
+            <div class="horizontal-section-container content-area">
+                <div>
+                    <div class="horizontal-section">
+                        <paper-card heading="ROS Code">
+                            <div class="card-content">
+                                A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is provided as a Python 3 library.
+                            </div>
+                            <div class="card-actions">
+                                <paper-button>Website</paper-button>
+                                <paper-button>Source Code</paper-button>
+                            </div>
+                        </paper-card>
+                        <paper-card heading="Emmental" alt="Emmental">
+                            <div class="card-content">
+                                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                            </div>
+                            <div class="card-actions">
+                                <paper-button>Share</paper-button>
+                                <paper-button>Explore!</paper-button>
+                            </div>
+                        </paper-card>
+                        <paper-card heading="Emmental" alt="Emmental">
+                            <div class="card-content">
+                                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                            </div>
+                            <div class="card-actions">
+                                <paper-button>Share</paper-button>
+                                <paper-button>Explore!</paper-button>
+                            </div>
+                        </paper-card>
+                        <paper-card heading="Emmental" alt="Emmental">
+                            <div class="card-content">
+                                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+                            </div>
+                            <div class="card-actions">
+                                <paper-button>Share</paper-button>
+                                <paper-button>Explore!</paper-button>
+                            </div>
+                        </paper-card>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </app-header-layout>
     <noscript>
-      Please enable JavaScript to view this website.
+        Please enable JavaScript to view this website.
     </noscript>
     <!-- Built with love using Polymer Starter Kit -->
-  </body>
+</body>
+
 </html>
