@@ -1,6 +1,48 @@
+$mdc-theme-primary: #3F51B5;
+$mdc-theme-secondary: #f44336;
+$mdc-theme-background: #5C6BC0;
+// $mdc-theme-surface: #ffffff;
+// $mdc-theme-on-primary: #ffffff;
+// $mdc-theme-on-secondary: #ffffff;
+// $mdc-theme-on-surface: #212121;
+
 @import "@material/button/mdc-button";
+@import "@material/typography/mdc-typography";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Material+Icons');
 
 .foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+    @include mdc-button-ink-color(red);
+    @include mdc-states(red);
+}
+
+body {
+    // min-height: 100vh;
+    // position: relative;
+    margin: 0;
+}
+
+html > body {
+    font-family: "Roboto", "Noto", "Helvetica", "Arial", sans-serif !important;
+}
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+// Note: these styles do not account for any paddings/margins that you may need.
+body {
+    display: flex;
+    height: 100vh;
+}
+
+#mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+}
+
+#main-content {
+    overflow: auto;
+    height: 100%;
+}
+
+#app-bar {
+    position: absolute;
 }
