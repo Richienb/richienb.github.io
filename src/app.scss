@@ -1,14 +1,13 @@
 $mdc-theme-primary: #3F51B5;
 $mdc-theme-secondary: #f44336;
-$mdc-theme-background: #5C6BC0;
-// $mdc-theme-surface: #ffffff;
+$mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
 // $mdc-theme-on-primary: #ffffff;
 // $mdc-theme-on-secondary: #ffffff;
 // $mdc-theme-on-surface: #212121;
-
 @import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
 @import "@material/typography/mdc-typography";
-@import url("https://fonts.googleapis.com/css?family=Roboto|Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css");
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
@@ -24,10 +23,11 @@ body {
     position: relative;
     margin: 0;
     display: flex;
+    background: #5C6BC0;
 }
 
 html > body {
-    font-family: "Roboto", "Noto", "Helvetica", "Arial", sans-serif !important;
+    background: #5C6BC0;
 }
 
 #mdc-drawer-app-content {
@@ -47,3 +47,18 @@ html > body {
 .mdc-top-app-bar--fixed-adjust {
     padding-top: 64px;
 }
+
+.demo-card {
+    width: 350px;
+    // margin: 48px 0;
+}
+
+.mdc-card__primary-action {
+    padding: 1rem;
+}
+
+.demo-card__title {
+    margin: 0;
+}
+
+@import 'node_modules/normalize.css/normalize.css';

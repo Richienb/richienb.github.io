@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const path = require('path');
+const ClosurePlugin = require('closure-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
     // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
@@ -53,10 +54,7 @@ module.exports = {
                     }, {
                         loader: 'css-loader'
                     }, {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: () => [autoprefixer()]
-                        }
+                        loader: 'postcss-loader'
                     }, {
                         loader: 'sass-loader',
                         options: {
@@ -72,5 +70,15 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [new ClosurePlugin({
+            mode: 'STANDARD'
+        }, {
+            // compiler flags here
+            //
+            // for debuging help, try these:
+            //
+            // formatting: 'PRETTY_PRINT'
+            // debug: true
+        })]
 };
