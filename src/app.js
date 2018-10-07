@@ -24,7 +24,8 @@ document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-bu
 import {MDCSelect} from "@material/select/index";
 const select = new MDCSelect(document.querySelector('.mdc-select'));
 select.listen('change', () => {
-  alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+    document.cookie = `googtrans=/en/${select.value}; path=/`
+    location.reload();
 });
 
 var request = new XMLHttpRequest();
@@ -36,10 +37,11 @@ request.onreadystatechange = function() {
       // Success!
       var data = JSON.parse(this.responseText);
       Object.keys(data).forEach(function(key) {
-          console.log('Key : ' + key + ', Value : ' + data[key].nativeName)
-          document.getElementById("language-selector").appendChild(el);
+          var opt = document.createElement("option");
+          opt.value = key;
+          opt.text = data[key].nativeName;
+          document.getElementById("language-selector").add(opt, null);
       })
-      console.log(data);
     } else {
       // Error :(
       console.err("Unable to load Google Translate");
