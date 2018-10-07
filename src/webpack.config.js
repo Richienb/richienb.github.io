@@ -72,7 +72,8 @@ module.exports = {
         ]
     },
     plugins: [new ClosurePlugin({
-            mode: 'STANDARD'
+            mode: 'STANDARD',
+            // compilation_level: 'BUNDLE'
         }, {
             // compiler flags here
             //
@@ -80,5 +81,6 @@ module.exports = {
             //
             // formatting: 'PRETTY_PRINT'
             // debug: true
+            warning_level: 'QUIET'
         })]
 };

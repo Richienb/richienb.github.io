@@ -1,14 +1,14 @@
 # Disable sudo to speed up build
-sudo:                           false
+sudo:                             false
 
 # Set build language to Node JS
-language:                       node_js
+language:                         node_js
 
 # Set the version of Node JS to use
-node_js:                        "node"
+node_js:                          node
 
 # Set build branch
-branches:                       master
+branches:                         master
 
 before_install:
     # Configure access token to enable pushing to the repository
@@ -22,7 +22,7 @@ before_install:
 
 jobs:
     include:
-        - stage:                Optimisation & Generating # Generate final compiled files
+        - stage:                  Optimisation & Generating # Generate final compiled files
 
           cache:
               # Ensure npm is cached
@@ -39,26 +39,30 @@ jobs:
               # Install required packages
               - yarn install --non-interactive
 
-          script:
-              # Generate service worker cacher
+          before_deploy:
+              # Build the website
               - npm run build
 
           deploy:
-              - provider: script
-                script: bash ./deploy.sh
-                skip_cleanup: true
-                on:
-                    branch: master
+              provider:           pages
+              skip-cleanup:       true
+              local-dir:          dist
+              github-token:       $github_token
+              keep-history:       true
+              fqdn:               www.richie-bendall.ml
+              committer-from-gh:  true
+              on:
+                  branch:         master
 
           after_deploy:
               # Clear CloudFlare cache
               - |
                 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
                 -H "X-Auth-Email: richiebendall@gmail.com" \
-                -H "X-Auth-Key: ${cf_api_key}" \
+                -H "X-Auth-Key:   ${cf_api_key}" \
                 -H "Content-Type: application/json" \
                 --data '{"purge_everything":true}'
 
 notifications:
     # Disable emails for build status notifications
-    email:                      false
+    email:                        false
