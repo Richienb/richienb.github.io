@@ -6,27 +6,24 @@ $mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
 // $mdc-theme-on-surface: #212121;
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
-@import "@material/typography/mdc-typography";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css");
+@import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list"; // Note: these styles do not account for any paddings/margins that you may need.
+@import "@material/select/mdc-select";
 
-.foo-button {
-    @include mdc-button-ink-color(teal);
-    @include mdc-states(teal);
-}
+// .foo-button {
+//     @include mdc-button-ink-color(teal);
+//     @include mdc-states(teal);
+// }
 
 body {
     min-height: 100vh;
     position: relative;
     margin: 0;
     display: flex;
-    background: #5C6BC0;
-}
-
-html > body {
     background: #5C6BC0;
 }
 
@@ -48,17 +45,21 @@ html > body {
     padding-top: 64px;
 }
 
-.demo-card {
+#content-card {
     width: 350px;
-    // margin: 48px 0;
 }
 
-.mdc-card__primary-action {
+#content-card .mdc-card__primary-action {
     padding: 1rem;
 }
 
-.demo-card__title {
+#content-card .mdc-card__primary-action .mdc-card__title {
     margin: 0;
+}
+
+#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button {
+    @include mdc-button-ink-color(red);
+    @include mdc-states(red);
 }
 
 @import 'node_modules/normalize.css/normalize.css';

@@ -69,8 +69,31 @@ module.exports = {
                     presets: ['es2015']
                 }
             }
+            // ,
+            // {
+            //     test: /\.html$/,
+            //     loader: 'raw-loader!html-minifier-loader'
+            // }
         ]
     },
+    // 'html-minifier-loader': {
+    //     collapseBooleanAttributes: true,
+    //     collapseInlineTagWhitespace: true,
+    //     collapseWhitespace: true,
+    //     conservativeCollapse: true,
+    //     decodeEntities: true,
+    //     minifyCSS: true,
+    //     minifyJS: true,
+    //     minifyURLs: true,
+    //     preserveLineBreaks: true,
+    //     quoteCharacter: "\"",
+    //     removeAttributeQuotes: true,
+    //     removeComments: false,
+    //     removeRedundantAttributes: true,
+    //     removeScriptTypeAttributes: true,
+    //     removeStyleLinkTypeAttributes: true,
+    //     useShortDoctype: true
+    // },
     plugins: [new ClosurePlugin({
             mode: 'STANDARD',
             // compilation_level: 'BUNDLE'

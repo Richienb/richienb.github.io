@@ -55,6 +55,34 @@
                     <span class="mdc-list-item__text">QR Code</span>
                 </a>
                 <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Localisation</h6>
+                <div class="mdc-select mdc-select--outlined">
+                    <select class="mdc-select__native-control" id="language-selector">
+                        <option value="" disabled></option>
+                    </select>
+                    <label class="mdc-floating-label">Language</label>
+                    <div class="mdc-notched-outline">
+                        <svg>
+                            <path class="mdc-notched-outline__path"></path>
+                        </svg>
+                    </div>
+                    <div class="mdc-notched-outline__idle"></div>
+                </div>
+                <hr>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            autoDisplay: false,
+                            gaTrack: true,
+                            gaId: 'UA-92292858-9'
+                        }, 'google_translate_element');
+                    }
+                    document.cookie = "googtrans=/en/en; path=/";
+                </script>
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Information</h6>
                 <a class="mdc-list-item" href="https://creativecommons.org/licenses/by/4.0/">
                     <i class="mdi mdc-list-item__graphic mdi-copyright" aria-hidden="true"></i>
@@ -76,25 +104,25 @@
     <header class="mdc-top-app-bar drawer-top-app-bar" id="app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon notranslate">menu</a>
                 <span class="mdc-top-app-bar__title">Richie Bendall's Website</span>
             </section>
         </div>
     </header>
-    <div id="main-content" class="drawer-frame-app-content">
+    <main id="main-content" class="drawer-frame-app-content">
         <div class="mdc-top-app-bar--fixed-adjust"></div>
-        <div class="mdc-card demo-card">
-            <div class="mdc-card__primary-action" data-mdc-auto-init="ripple">
-                <h2 class="demo-card__title mdc-typography--headline6">Our Changing Planet</h2>
-                <div class="demo-card__secondary mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
-            </div>
+        <section class="mdc-card" id="content-card">
+            <article class="mdc-card__primary-action">
+                <h2 class="mdc-card__title mdc-typography--headline6">Our Changing Planet</h2>
+                <div class="mdc-card__secondary mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+            </article>
             <div class="mdc-card__actions">
-                <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init="ripple">Website</button>
-                    <button class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init="ripple">Source Code</button>
-                </div>
+                <nav class="mdc-card__action-buttons">
+                    <button class="mdc-button mdc-card__action mdc-card__action--button">Website</button>
+                    <button class="mdc-button mdc-card__action mdc-card__action--button">Source Code</button>
+                </nav>
             </div>
-        </div>
+        </section>
         <div class="mdc-layout-grid mdc-layout-grid--align-left demo-grid demo-grid--alignment">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell demo-cell"></div>
@@ -102,7 +130,7 @@
                 <div class="mdc-layout-grid__cell demo-cell"></div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
