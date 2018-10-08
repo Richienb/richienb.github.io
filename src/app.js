@@ -6,9 +6,6 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, 
     document.getElementById("language-selector").value = "en";
 }
 
-import {MDCRipple} from '@material/ripple/index';
-// const ripple = new MDCRipple(document.querySelector('.foo-button'));
-
 import {MDCDrawer} from "@material/drawer/index";
 const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
@@ -23,7 +20,8 @@ document.getElementById("websitelink").addEventListener("click", function() {
     drawer.open = false;
 });
 
-document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, #content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list .mdc-list-item').forEach(function(el) {
+import {MDCRipple} from '@material/ripple/index';
+document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, #content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
     MDCRipple.attachTo(el);
 });
 
@@ -34,30 +32,6 @@ select.listen('change', () => {
     location.reload();
 });
 
-// var request = new XMLHttpRequest();
-// request.open('GET', 'https://api.myjson.com/bins/12jvj0', true);
-//
-// request.onreadystatechange = function() {
-//     if (this.readyState === 4) {
-//         if (this.status >= 200 && this.status < 400) {
-//             // Success!
-//             var data = JSON.parse(this.responseText);
-//             Object.keys(data).forEach(function(key) {
-//                 var opt = document.createElement("option");
-//                 opt.value = key;
-//                 opt.text = data[key];
-//                 document.getElementById("language-selector").add(opt, null);
-//             })
-//         } else {
-//             // Error :(
-//             console.err("Unable to load Google Translate");
-//         }
-//     }
-// };
-//
-// request.send();
-// request = null;
-
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -66,25 +40,5 @@ function googleTranslateElementInit() {
         gaId: 'UA-92292858-9'
     }, 'google_translate_element');
 }
-// import 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-
-// for (var i = 0; i < document.querySelectorAll('.mdc-button').length; i++) {
-//     MDCRipple.attachTo(document.querySelectorAll('.mdc-button')[i]);
-// }
-
-// import mdcAutoInit from '@material/auto-init/index';
-//
-// mdcAutoInit.register('ripple', MDCRipple);
-
-// if ("onhashchange" in window) {
-//     window.addEventListener("hashchange", function() {
-//         if (window.location.hash === "#") {
-//             window.location.href.substr(0, window.location.href.indexOf('#'))
-//         }
-//     }, false);
-// }
-
-// import mdcAutoInit from '@material/auto-init/index';
-// mdcAutoInit.register('ripple', MDCRipple);
 
 import 'html5shiv/dist/html5shiv-printshiv.js';

@@ -1,9 +1,6 @@
 $mdc-theme-primary: #3F51B5;
 $mdc-theme-secondary: #f44336;
-$mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
-// $mdc-theme-on-primary: #ffffff;
-// $mdc-theme-on-secondary: #ffffff;
-// $mdc-theme-on-surface: #212121;
+$mdc-theme-background: #5C6BC0;
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons");
@@ -11,12 +8,9 @@ $mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
 @import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list"; // Note: these styles do not account for any paddings/margins that you may need.
+@import "@material/list/mdc-list";
 @import "@material/select/mdc-select";
-@import "@material/layout-grid/mdc-layout-grid"; // .foo-button {
-//     @include mdc-button-ink-color(teal);
-//     @include mdc-states(teal);
-// }
+@import "@material/layout-grid/mdc-layout-grid";
 
 body {
     background: #5C6BC0;
@@ -57,7 +51,7 @@ main {
 
 #content-card {
     max-width: 350px;
-    // min-width: 300px;
+    // height: 220px;
 }
 
 #content-card .mdc-card__primary-action {
@@ -80,4 +74,5 @@ main {
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
+
 @import 'node_modules/normalize.css/normalize.css';
