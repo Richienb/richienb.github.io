@@ -12,10 +12,16 @@ $mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list"; // Note: these styles do not account for any paddings/margins that you may need.
-@import "@material/select/mdc-select"; // .foo-button {
+@import "@material/select/mdc-select";
+@import "@material/layout-grid/mdc-layout-grid";
+// .foo-button {
 //     @include mdc-button-ink-color(teal);
 //     @include mdc-states(teal);
 // }
+
+#content-grid {
+    max-width: 75%;
+}
 
 body {
     min-height: 100vh;
@@ -29,6 +35,11 @@ body {
 #mdc-drawer-app-content {
     flex: auto;
     overflow: auto;
+}
+
+main {
+    min-width: 100vw;
+    min-height: 80vh;
 }
 
 #main-content {
@@ -45,7 +56,8 @@ body {
 }
 
 #content-card {
-    width: 350px;
+    max-width: 350px;
+    min-width: 300px;
 }
 
 #content-card .mdc-card__primary-action {
