@@ -12,9 +12,7 @@ $mdc-theme-background: #5C6BC0; // $mdc-theme-surface: #ffffff;
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list"; // Note: these styles do not account for any paddings/margins that you may need.
-@import "@material/select/mdc-select";
-
-// .foo-button {
+@import "@material/select/mdc-select"; // .foo-button {
 //     @include mdc-button-ink-color(teal);
 //     @include mdc-states(teal);
 // }
@@ -25,6 +23,7 @@ body {
     margin: 0;
     display: flex;
     background: #5C6BC0;
+    top: 0 !important;
 }
 
 #mdc-drawer-app-content {
@@ -60,6 +59,14 @@ body {
 #content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button {
     @include mdc-button-ink-color(red);
     @include mdc-states(red);
+}
+
+.hidden {
+    display: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
 }
 
 @import 'node_modules/normalize.css/normalize.css';

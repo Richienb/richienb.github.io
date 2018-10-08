@@ -197,6 +197,11 @@
     "@material/theme" "^0.40.0"
     "@material/typography" "^0.39.0"
 
+"@material/layout-grid@^0.39.0":
+  version "0.39.0"
+  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.39.0.tgz#8e96645404cfee2655999bc591264c434897af3d"
+  integrity sha512-F2V7cf7pJtlDyHKJJ1u7Xn6JWfiY7bFbg33QnhRXYTAhDF5aEcFPeSh9CK8ZZZ4Bom9gzfms2VXWXClbfQgE2Q==
+
 "@material/line-ripple@^0.40.0":
   version "0.40.0"
   resolved "https://registry.yarnpkg.com/@material/line-ripple/-/line-ripple-0.40.0.tgz#5dd890035ec7e99dba19ef8a53de42f1f424d338"

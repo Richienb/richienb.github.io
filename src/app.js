@@ -1,5 +1,11 @@
 console.log('%c Currently in development!', 'text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #f44336; font-size: 5em');
 
+if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2] !== "") {
+    document.getElementById("language-selector").value = document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2];
+} else {
+    document.getElementById("language-selector").value = "en";
+}
+
 import {MDCRipple} from '@material/ripple/index';
 // const ripple = new MDCRipple(document.querySelector('.foo-button'));
 
@@ -17,8 +23,8 @@ document.getElementById("websitelink").addEventListener("click", function() {
     drawer.open = false;
 });
 
-document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, #content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(thisArg) {
-    MDCRipple.attachTo(thisArg);
+document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, #content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list .mdc-list-item').forEach(function(el) {
+    MDCRipple.attachTo(el);
 });
 
 import {MDCSelect} from "@material/select/index";
@@ -28,29 +34,39 @@ select.listen('change', () => {
     location.reload();
 });
 
-var request = new XMLHttpRequest();
-request.open('GET', 'https://api.myjson.com/bins/awah8', true);
+// var request = new XMLHttpRequest();
+// request.open('GET', 'https://api.myjson.com/bins/12jvj0', true);
+//
+// request.onreadystatechange = function() {
+//     if (this.readyState === 4) {
+//         if (this.status >= 200 && this.status < 400) {
+//             // Success!
+//             var data = JSON.parse(this.responseText);
+//             Object.keys(data).forEach(function(key) {
+//                 var opt = document.createElement("option");
+//                 opt.value = key;
+//                 opt.text = data[key];
+//                 document.getElementById("language-selector").add(opt, null);
+//             })
+//         } else {
+//             // Error :(
+//             console.err("Unable to load Google Translate");
+//         }
+//     }
+// };
+//
+// request.send();
+// request = null;
 
-request.onreadystatechange = function() {
-  if (this.readyState === 4) {
-    if (this.status >= 200 && this.status < 400) {
-      // Success!
-      var data = JSON.parse(this.responseText);
-      Object.keys(data).forEach(function(key) {
-          var opt = document.createElement("option");
-          opt.value = key;
-          opt.text = data[key].nativeName;
-          document.getElementById("language-selector").add(opt, null);
-      })
-    } else {
-      // Error :(
-      console.err("Unable to load Google Translate");
-    }
-  }
-};
-
-request.send();
-request = null;
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false,
+        gaTrack: true,
+        gaId: 'UA-92292858-9'
+    }, 'google_translate_element');
+}
+// import 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
 
 // for (var i = 0; i < document.querySelectorAll('.mdc-button').length; i++) {
 //     MDCRipple.attachTo(document.querySelectorAll('.mdc-button')[i]);
