@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 const ClosurePlugin = require('closure-webpack-plugin');
 
