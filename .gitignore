@@ -1,6 +1,11 @@
 # distribution directory
 dist/
 
+# Bundled files
+bundle.js
+bundle.css
+service-worker.js
+
 ### Linux ###
 *~
 
