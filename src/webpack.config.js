@@ -1,5 +1,6 @@
 const path = require('path');
 const ClosurePlugin = require('closure-webpack-plugin');
+const workboxPlugin = require('workbox-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
     // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
@@ -93,7 +94,8 @@ module.exports = {
     //     removeStyleLinkTypeAttributes: true,
     //     useShortDoctype: true
     // },
-    plugins: [new ClosurePlugin({
+    plugins: [
+        new ClosurePlugin({
             mode: 'STANDARD',
             // compilation_level: 'BUNDLE'
         }, {
@@ -104,5 +106,7 @@ module.exports = {
             // formatting: 'PRETTY_PRINT'
             // debug: true
             warning_level: 'QUIET'
-        })]
+        }),
+        new workboxPlugin.InjectManifest({swSrc: 'sw.js', swDest: 'service-worker.js', importWorkboxFrom: 'cdn', "globPatterns": ["**/*.*"]})
+    ]
 };

@@ -197,6 +197,15 @@
     "@material/theme" "^0.40.0"
     "@material/typography" "^0.39.0"
 
+"@material/image-list@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/image-list/-/image-list-0.40.1.tgz#8ce15459a2451e6241c681bf79515a3b0fcb5f51"
+  integrity sha512-DMu2i+ga2g6EulG4MU9J/KZ2TdqJkBcWW8grMp4Pe2OYAsTTtnjz+tQ/MIESvwEpIcMXtqakmuY3id2ZxcnmlA==
+  dependencies:
+    "@material/shape" "^0.40.1"
+    "@material/theme" "^0.40.1"
+    "@material/typography" "^0.40.1"
+
 "@material/layout-grid@^0.39.0":
   version "0.39.0"
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.39.0.tgz#8e96645404cfee2655999bc591264c434897af3d"
@@ -270,10 +279,20 @@
   resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.40.0.tgz#40f87a12c0835ae1810e90acb4004c3b74b6e2e7"
   integrity sha512-UsCnvCPln2//uI0YF/sqCtOWLgA5mzCl68+f/f283K4k21imGrHDAi093xDyy1LAUWyC1IVR+/RYVKXbHLtBlA==
 
+"@material/shape@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.40.1.tgz#bd4224902896c3d45fab353d788fe6c4866483a8"
+  integrity sha512-o1pw5+s/jWqsKbUAkCCaEcB8XLqJ4FlZhYfSvxZ88WRw9zoWOt9iQMMP82wLWhUX1DSzpNRI8BAD7aNLK6yRlA==
+
 "@material/theme@^0.40.0":
   version "0.40.0"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.40.0.tgz#0b91750bf6334fa7bebf2b1aabb8ec727f519e13"
   integrity sha512-t4Xn15IaM7bAg8EWDkuzfx8xafMXjcMn+cnriPRtZOQ9X8R2gPSIuIQ36EwqFWpGTGMftXJkOEM/KmMLf3rKnQ==
+
+"@material/theme@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.40.1.tgz#3cc3f1bf87ee9581df03e347a1979e53ae617221"
+  integrity sha512-cH1CsGIDisEQ2oroZhLTypV0Ir00x3WIwFXnPo7qv3832tuIDkZY623U3rUax6KNPz4Hh1j0tNpTwgrNZwvwWA==
 
 "@material/top-app-bar@^0.40.0":
   version "0.40.0"
@@ -293,6 +312,11 @@
   version "0.39.0"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.39.0.tgz#7d7468673e104609d926528ffe5571cfd44d8c3c"
   integrity sha512-S7YTR2mXuAaPvsgX6jyT1YvWQhH2xHWi+SKJvlunoF/Dw6vq6Ud+APmqigHVRPNCcFt4zkbM7C64IxYjjkIApQ==
+
+"@material/typography@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.40.1.tgz#68ecb767f7c54ca2f4053cccdd1c4a0198e60f9b"
+  integrity sha512-LkW2tAsId8zGKxGA5VIFXV/D1h4vCHQIuALRMaDpHbNGffgr2ubtJNvCh2EQkm19MTv4igVLEjn1Svh0dXcTpA==
 
 abbrev@1:
   version "1.1.1"

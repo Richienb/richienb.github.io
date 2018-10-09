@@ -11,6 +11,11 @@ $mdc-theme-background: #5C6BC0;
 @import "@material/list/mdc-list";
 @import "@material/select/mdc-select";
 @import "@material/layout-grid/mdc-layout-grid";
+@import "@material/image-list/mdc-image-list";
+
+.mdc-image-list {
+  @include mdc-image-list-standard-columns(5);
+}
 
 body {
     background: #5C6BC0;
@@ -41,18 +46,18 @@ main {
     overflow: auto;
 }
 
-#app-bar {
-    position: absolute;
-}
+// #app-bar {
+//     position: absolute;
+// }
 
 .mdc-top-app-bar--fixed-adjust {
     padding-top: 64px;
 }
 
-#content-card {
-    max-width: 350px;
-    // height: 220px;
-}
+// #content-card {
+//     // max-width: 400px;
+//     // height: 220px;
+// }
 
 #content-card .mdc-card__primary-action {
     padding: 1rem;
