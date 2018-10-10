@@ -37,7 +37,7 @@ jobs:
               - npm install -g yarn
 
               # Install required packages
-              - yarn install --non-interactive
+              - yarn install --non-interactive --production
 
           before_deploy:
               # Build the website
