@@ -39,7 +39,7 @@ jobs:
               # Install required packages
               - yarn install --non-interactive --production
 
-          before_deploy:
+          script:
               # Build the website
               - npm run build
 
