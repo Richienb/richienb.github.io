@@ -1,23 +1,19 @@
-$mdc-theme-primary: #3F51B5;
-$mdc-theme-secondary: #f44336;
-$mdc-theme-background: #5C6BC0;
-@import "@material/button/mdc-button";
-@import "@material/card/mdc-card";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css");
-@import "@material/typography/mdc-typography";
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list";
-@import "@material/select/mdc-select";
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/image-list/mdc-image-list";
-
-.mdc-image-list {
-  @include mdc-image-list-standard-columns(5);
-}
+$mdc-theme-primary: #3F51B5; // Primary colour
+$mdc-theme-secondary: #f44336; // Secondary colour
+$mdc-theme-background: #5C6BC0; // Background colour
+@import "@material/button/mdc-button"; // MDC button base styles
+@import "@material/card/mdc-card"; // MDC card base styles
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons"); // Roboto and Material Icons font
+@import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css"); // Material Design Icons Font
+@import "@material/typography/mdc-typography"; // MDC typography base styles
+@import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
+@import "@material/drawer/mdc-drawer"; // MDC drawer base styles
+@import "@material/list/mdc-list"; // MDC list base styles
+@import "@material/select/mdc-select"; // MDC select base styles
+@import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
 
 body {
+    // Document body
     background: #5C6BC0;
     display: flex;
     margin: 0;
@@ -27,57 +23,48 @@ body {
 }
 
 #mdc-drawer-app-content {
+    // Content of app drawer
     flex: auto;
     overflow: auto;
 }
 
 main {
+    // Document main
     min-height: 80vh;
     min-width: 100vw;
-}
-
-#content-grid {
-    margin: auto;
-    max-width: 1100px;
-}
-
-#main-content {
     height: 100%;
     overflow: auto;
 }
 
-// #app-bar {
-//     position: absolute;
-// }
-
-.mdc-top-app-bar--fixed-adjust {
-    padding-top: 64px;
+#content-grid {
+    // The grid of cards
+    margin: auto;
+    max-width: 1100px;
 }
 
-// #content-card {
-//     // max-width: 400px;
-//     // height: 220px;
-// }
-
-#content-card .mdc-card__primary-action {
+.content-card .mdc-card__primary-action {
+    // The main text area of a card
     padding: 1rem;
 }
 
-#content-card .mdc-card__primary-action .mdc-card__title {
+.content-card .mdc-card__primary-action .mdc-card__title {
+    // The title area of a card
     margin: 0;
 }
 
-#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button {
+.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button {
+    // The buttons inside of the cards
     @include mdc-button-ink-color(red);
     @include mdc-states(red);
 }
 
 .hidden {
+    // Used to hide an element
     display: none;
 }
 
 .goog-te-banner-frame.skiptranslate {
+    // Google Translate banner
     display: none !important;
 }
-
-@import 'node_modules/normalize.css/normalize.css';
+@import 'node_modules/normalize.css/normalize.css'; // Normalise CSS - A CSS reset

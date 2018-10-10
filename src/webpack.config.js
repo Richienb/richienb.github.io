@@ -107,6 +107,11 @@ module.exports = {
             // debug: true
             warning_level: 'QUIET'
         }),
-        new workboxPlugin.InjectManifest({swSrc: 'sw.js', swDest: 'service-worker.js', importWorkboxFrom: 'cdn', "globPatterns": ["**/*.*"]})
+        new workboxPlugin.InjectManifest({
+            swSrc: 'sw.js',
+            swDest: 'service-worker.js',
+            importWorkboxFrom: 'cdn',
+            globPatterns: ['index.html', 'bundle.css', 'bundle.js', 'error.html']
+        })
     ]
 };

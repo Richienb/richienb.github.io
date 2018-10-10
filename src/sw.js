@@ -6,11 +6,11 @@ if (workbox) {
     workbox.routing.registerRoute(".*\.\html", args => {
         return articleHandler.handle(args).then(response => {
             if (!response) {
-                return caches.match('offline.html');
+                return caches.match('error.html#Offline#Try%20again%20later');
             } else if (response.status === 404) {
-                return caches.match('404.html');
+                return caches.match('error.html#Error%20404#Page%20not%20found');
             } else if (response.status >= 400) {
-                return caches.match('error.html');
+                return caches.match('error.html#Error%20' + response.status + "#An%20unexpected%20error%20has%20occurred");
             }
             return response;
         });

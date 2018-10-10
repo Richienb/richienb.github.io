@@ -1,14 +1,16 @@
 console.log('%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io', 'text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #f44336; font-size: 3em');
 
-// Check that service workers are registered
+// Check if service workers are supported
 if ('serviceWorker' in navigator) {
-    // Use the window load event to keep the page load performant
+    // Wait for the window to finish loading to keep everything performant
     window.addEventListener('load', () => {
+        // Register the service worker
         navigator.serviceWorker.register('/service-worker.js');
     });
 }
-// Enable passive scrolling mode if supported
+// Check if passive scrolling mode is supported
 if ('ontouchstart' in document.documentElement) {
+    // Enable passive scrolling mode
     document.addEventListener('touchstart', onTouchStart, {passive: true});
 }
 
@@ -54,7 +56,7 @@ document.getElementById("websitelink").addEventListener("click", function() {
 import {MDCRipple} from '@material/ripple/index';
 
 // For each button, main card area and drawer item
-document.querySelectorAll('#content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, #content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
+document.querySelectorAll('.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, .content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
 
     // Initialise the ripple effect
     MDCRipple.attachTo(el);

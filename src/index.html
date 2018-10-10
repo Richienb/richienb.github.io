@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- SEO -->
     <title>Richie Bendall's Website</title>
     <meta name="Description" content="This is the Richie Bendall's official website.">
     <meta name="keywords" content="html, css, richie-bendall, js, website, open-source, nodejs, travis-ci, mdc, mdc-web. material-design-components">
     <meta name="author" content="Richie Bendall">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
 
@@ -21,6 +21,11 @@
 
     <!-- See https://goo.gl/qRE0vM -->
     <meta name="theme-color" content="#3f51b5">
+
+    <!-- Preload resources -->
+    <link rel="preload" href="bundle.css" as="style">
+    <link rel="preload" href="bundle.js" as="script">
+    <link rel="dns-prefetch" href="https://translate.googleapis.com">
 
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -230,14 +235,6 @@
     </aside>
 
     <div class="mdc-drawer-scrim"></div>
-    <!-- <header class="mdc-top-app-bar mdc-top-app-bar--short" id="app-bar">
-  <div class="mdc-top-app-bar__row">
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-      <span class="mdc-top-app-bar__title">Title</span>
-    </section>
-  </div>
-</header> -->
     <header class="mdc-top-app-bar drawer-top-app-bar" id="app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -251,7 +248,7 @@
         <div class="mdc-layout-grid" id="content-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS Code</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is
@@ -266,7 +263,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">richienb.github.io</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">It's the website you're viewing this content in right now. It's also open source on GitHub.</div>
@@ -280,7 +277,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS Cursor Scheme Previewer</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">ROS Cursor Scheme Previewier is a Material Design website which allows you to preview the cursors in your cursor scheme.</div>
@@ -294,7 +291,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS Calculator</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">An advanced calculator for the web featuring material design and allows you to perform simple and scientific equations.</div>
@@ -308,7 +305,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ReadSettings For Python</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">Easily create, edit and remove a customized settings file which you are able to use for storing all of the settings for your application. At the moment, ReadSettings
@@ -323,7 +320,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Background Music Greenscreen</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">Allows you to embed a url in your videos which will automatically play music from <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=sKIbH-gXmX0">this
@@ -338,7 +335,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Does It Work?</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">Lets you check what web features are available in your browser.</div>
@@ -352,7 +349,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">MIT License Tools</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">This is a website which makes api requests to mit-license.org in order to create your very own dynamic license or get the url for your already existing license.</div>
@@ -366,7 +363,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS FileSystem Watcher</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.</div>
@@ -380,7 +377,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">HTML Form Elements</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">An easy way to preview all the different HTML form elements with copyable snippets of code.</div>
@@ -394,7 +391,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS Encryption</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">This is a website featuring Material Design and can be used to encrypt and decrypt text with an optional password.</div>
@@ -408,7 +405,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Media Downloader</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A simple tool to download any type of media file from YouTube or other sources.</div>
@@ -422,7 +419,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">MDL Kitchen Sink</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A comprehensive index of all the components offered by MDL.</div>
@@ -436,7 +433,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS Online Text Editor</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A simple text editor for the web featuring Material Design and multiple customization options.</div>
@@ -450,7 +447,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Git Files</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.</div>
@@ -464,7 +461,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">VirusShare Hashes</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">Every single MD5 hash uploaded on <a target="_blank" rel="noopener" href="https://virusshare.com/hashes.4n6">VirusShare</a> in a single file, ready for distribution
@@ -479,7 +476,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">ROS QuickScan</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">ROS QuickScan is a tool for checking single files against a list of hashes provided by VirusShare Hashes.</div>
@@ -493,7 +490,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Jython Builds</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.</div>
@@ -507,7 +504,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Web Example</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">An example website with simple boilerplate code for starting out with building for the web.</div>
@@ -521,7 +518,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Captcha Example</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Recaptcha
@@ -536,7 +533,7 @@
                     </section>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-                    <section class="mdc-card" id="content-card">
+                    <section class="mdc-card content-card">
                         <article class="mdc-card__primary-action">
                             <h2 class="mdc-card__title mdc-typography--headline6">Hello World VB.NET</h2>
                             <div class="mdc-card__secondary mdc-typography--body2">This is a simple Windows Forms application for VB.NET which includes a label saying Hello World</div>
