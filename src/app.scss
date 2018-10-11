@@ -22,12 +22,6 @@ body {
     top: 0 !important;
 }
 
-#mdc-drawer-app-content {
-    // Content of app drawer
-    flex: auto;
-    overflow: auto;
-}
-
 main {
     // Document main
     min-height: 80vh;
@@ -35,6 +29,17 @@ main {
     height: 100%;
     overflow: auto;
 }
+
+#mdc-drawer-app-content {
+    // Content of app drawer
+    flex: auto;
+    overflow: auto;
+}
+
+// #app-bar {
+//     // The top app bar
+//     position: relative;
+// }
 
 #content-grid {
     // The grid of cards
