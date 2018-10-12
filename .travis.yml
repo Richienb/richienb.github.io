@@ -41,6 +41,7 @@ script:
 
 deploy:
     provider:           pages
+    target-branch:      master
     local_dir:          src
     github_commit:      "CI | Built the website [skip ci]"
     skip_cleanup:       true
