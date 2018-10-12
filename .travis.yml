@@ -50,7 +50,7 @@ deploy:
     github_commit:      "CI | Built the website [skip ci]"
     skip_cleanup:       true
     github_token:       $github_token
-    keep_history:       true
+    keep_history:       false
     fqdn:               www.richie-bendall.ml
     committer_from_gh:  true
     on:
