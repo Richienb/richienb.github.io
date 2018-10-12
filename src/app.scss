@@ -22,6 +22,16 @@ body {
     top: 0 !important;
 }
 
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 main {
     // Document main
     min-height: 80vh;
@@ -35,11 +45,6 @@ main {
     flex: auto;
     overflow: auto;
 }
-
-// #app-bar {
-//     // The top app bar
-//     position: relative;
-// }
 
 #content-grid {
     // The grid of cards
