@@ -38,6 +38,10 @@ install:
 script:
     # Build the website
     - npm run build
+    
+before_deploy:
+    # Remove the unneeded node_modules folder
+    - rm -rf node_modules
 
 deploy:
     provider:           pages
