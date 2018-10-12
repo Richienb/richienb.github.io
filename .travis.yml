@@ -53,8 +53,7 @@ deploy:
  
 after_deploy:
    # Clear CloudFlare cache
-   - |
-     curl --request DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
+   - curl --request DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
       --header "X-Auth-Email: richiebendall@gmail.com" \
       --header "X-Auth-Key: ${cf_api_key}" \
       --header "Content-Type: application/json" \
