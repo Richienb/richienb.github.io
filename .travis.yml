@@ -42,7 +42,7 @@ script:
 deploy:
     provider:           pages
     skip-cleanup:       true
-    local-dir:          src
+   #local-dir:          src
     github-token:       $github_token
     keep-history:       true
     fqdn:               www.richie-bendall.ml
