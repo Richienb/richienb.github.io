@@ -8,7 +8,7 @@ language:               node_js
 node_js:                node
 
 # Set build branch
-branches:               master
+branches:               development
 
 cache:
     # Ensure npm is cached
@@ -50,7 +50,7 @@ deploy:
     fqdn:               www.richie-bendall.ml
     committer_from_gh:  true
     on:
-        branch:         master
+        branch:         development
  
 after_deploy:
    # Clear CloudFlare cache
