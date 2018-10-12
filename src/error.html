@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Import Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
     <!-- SEO -->
     <title>Error - An Error Occurred</title>
@@ -28,7 +28,7 @@
     <!-- Run critical JavaScript -->
     <script async defer>
         // Print out a message in the console
-        console.log("Want to help develop my website? Well, you can. My website is open source so you can edit it and use it as inspiration for your own website at https://github.com/Richienb/richienb.github.io");
+        console.log('%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io', 'text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #f44336; font-size: 3em');
 
         // Enable passive scrolling mode if supported
         if ('ontouchstart' in document.documentElement) {
@@ -43,13 +43,13 @@
         html {
             background-color: #2f3242;
         }
-        
+
         body {
             min-height: 100vh;
             position: relative;
             margin: 0;
         }
-        
+
         svg {
             position: absolute;
             top: 50%;
@@ -57,7 +57,7 @@
             margin-top: -250px;
             margin-left: -400px;
         }
-        
+
         .message-box {
             height: 200px;
             width: 380px;
@@ -70,35 +70,41 @@
             font-family: "Roboto", sans-serif;
             font-weight: 300;
         }
-        
+
         .message-box h1 {
             font-size: 60px;
             line-height: 46px;
             margin-bottom: 40px;
+            font-weight: 300;
         }
-        
+
+        .message-box p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
         .buttons-con .action-link-wrap {
             margin-top: 40px;
         }
-        
+
         .buttons-con .action-link-wrap a {
             background: #f44336;
             padding: 8px 25px;
             border-radius: 4px;
             color: #fcfcfc;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 14px;
             transition: all 0.3s linear;
             cursor: pointer;
             text-decoration: none;
             margin-right: 10px;
         }
-        
+
         .buttons-con .action-link-wrap a:hover {
             background: #5a5c6c;
             color: #fff;
         }
-        
+
         #Polygon-1,
         #Polygon-2,
         #Polygon-3,
@@ -108,29 +114,29 @@
             animation: float 1s infinite ease-in-out alternate;
             will-change: transform;
         }
-        
+
         #Polygon-2 {
             animation-delay: 0.2s;
         }
-        
+
         #Polygon-3 {
             animation-delay: 0.4s;
         }
-        
+
         #Polygon-4 {
             animation-delay: 0.6s;
         }
-        
+
         #Polygon-5 {
             animation-delay: 0.8s;
         }
-        
+
         @keyframes float {
             100% {
                 transform: translateY(20px);
             }
         }
-        
+
         @media (max-width: 450px) {
             svg {
                 position: absolute;
@@ -139,6 +145,7 @@
                 margin-top: -250px;
                 margin-left: -190px;
             }
+
             .message-box {
                 top: 50%;
                 left: 50%;
@@ -174,6 +181,28 @@
 
     <!-- IE6 compatiblity assets -->
     <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <script async defer>
+        // Function to update the text
+        function updatetext() {
+            // Set the header to the first hash value
+            document.querySelector(".message-box h1").innerHTML = decodeURI(window.location.hash.split("#")[1])
+
+            // Set the message to the second hash value
+            document.querySelector(".message-box p").innerHTML = decodeURI(window.location.hash.split("#")[2])
+        }
+
+        // Run the update text function
+        updatetext()
+
+        // Check if hash change detection is supported
+        if ("onhashchange" in window) {
+            // Detect when the hash changes
+            window.addEventListener("hashchange", function() {
+                // Run the update text function
+                updatetext()
+            }, false);
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
 </body>

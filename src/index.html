@@ -2,588 +2,572 @@
 <html lang="en">
 
 <head>
-    <!-- Common declarations -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Initialise Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Common -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- SEO -->
     <title>Richie Bendall's Website</title>
-    <meta name="description" content="Welcome To Richie Bendall's Official Website.">
-    <meta name="keywords" content="Richie Bendall, Website, HTML, CSS, JS">
+    <meta name="Description" content="This is the Richie Bendall's official website.">
+    <meta name="keywords" content="html, css, richie-bendall, js, website, open-source, nodejs, travis-ci, mdc, mdc-web. material-design-components">
     <meta name="author" content="Richie Bendall">
 
-    <!-- Define web app manifests -->
-    <link rel="manifest" href="manifests/site.webmanifest">
-    <meta name="msapplication-config" content="manifests/browserconfig.xml">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
 
-    <!-- Set theme colour -->
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- See https://goo.gl/qRE0vM -->
     <meta name="theme-color" content="#3f51b5">
 
-    <!-- Set favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Preload resources -->
+    <link rel="preload" href="bundle.css" as="style">
+    <link rel="preload" href="bundle.js" as="script">
+    <link rel="dns-prefetch" href="https://translate.googleapis.com">
 
-    <!-- Prepare some URLs-->
-    <link rel="prefetch" href="social.html">
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Richie Bendall's Website">
 
-    <!-- Run critical JavaScript -->
-    <script async defer>
-        // Check that service workers are registered
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
-        // Enable passive scrolling mode if supported
-        if ('ontouchstart' in document.documentElement) {
-            document.addEventListener('touchstart', onTouchStart, {
-                passive: true
-            });
-        }
-    </script>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Richie Bendall's Website">
 
-    <!-- Initialise MDL -->
-    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-red.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
 
-    <!-- Activate Normalise CSS -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Initialise Critical CSS -->
-    <style>
-        html,
-        div,
-        header,
-        nav,
-        article,
-        footer {
-            display: block;
-        }
-
-        html>body {
-            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
-        }
-
-        html {
-            background: #7986cb;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        .mdl-layout-title {
-            padding: 16px;
-        }
-
-        .portfolio-header {
-            position: relative;
-        }
-
-        .portfolio-header .mdl-layout__header-row {
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .mdl-layout__title {
-            font-size: 14px;
-            font-weight: 300;
-            text-align: center;
-        }
-
-        .portfolio-logo-row {
-            min-height: 200px;
-        }
-
-        .portfolio-logo {
-            background-size: cover;
-            height: 150px;
-            margin: auto auto 10px;
-            width: 150px;
-        }
-
-        .portfolio-navigation-row {
-            background-color: rgba(0, 0, 0, 0.08);
-            height: 45px;
-            text-transform: uppercase;
-        }
-
-        .portfolio-navigation-row .mdl-navigation {
-            max-width: 900px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .portfolio-navigation-row .mdl-navigation__link {
-            -ms-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            line-height: 42px;
-        }
-
-        .portfolio-card .mdl-card__title {
-            padding-bottom: 0;
-        }
-
-        img.article-image {
-            height: auto;
-            width: 100%;
-        }
-
-        .portfolio-max-width {
-            margin: auto;
-            max-width: 900px;
-        }
-
-        .mdl-button {
-            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
-        }
-
-        footer {
-            background-size: cover;
-        }
-
-        #halfway-through {
-            position: absolute;
-            right: 40px;
-            top: 36px;
-            z-index: 999;
-        }
-
-        .autosize {
-            width: auto;
-            height: auto;
-        }
-
-        #qr-code {
-            max-width: 50%;
-            max-height: 50%;
-        }
-
-        #youtube_video {
-            max-width: 75%;
-            max-height: 75%;
-        }
-    </style>
-
+    <!-- Bundled assets -->
+    <link rel="stylesheet" href="bundle.css">
+    <script src="bundle.js" async></script>
 </head>
 
-<body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header article-header" id="mainheader">
-            <!-- Always shows a header, even in smaller screens. -->
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<body class="mdc-typography">
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content" id="mdc-drawer-app-content">
+            <nav class="mdc-list">
+                <h6 class="mdc-list-group__subheader">Main</h6>
+                <a class="mdc-list-item mdc-list-item--activated" id="websitelink" href="#" aria-selected="true">
+                    <i class="mdi mdc-list-item__graphic mdi-earth" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Website</span>
+                </a>
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Social</h6>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw">
+                    <i class="mdi mdc-list-item__graphic mdi-youtube" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">YouTube</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://plus.google.com/104023294057020158565">
+                    <i class="mdi mdc-list-item__graphic mdi-google-plus" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Google+</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://stackoverflow.com/users/8384910/richie-bendall">
+                    <i class="mdi mdc-list-item__graphic mdi-stack-overflow" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Stack Overflow</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="mailto:richiebendall@gmail.com">
+                    <i class="mdi mdc-list-item__graphic mdi-email-outline" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Email</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://github.com/Richienb">
+                    <i class="mdi mdc-list-item__graphic mdi-github-circle" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">GitHub</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://discordapp.com/invite/kH6bCkb">
+                    <i class="mdi mdc-list-item__graphic mdi-discord" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Discord</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://blog.richie-bendall.ml/">
+                    <i class="mdi mdc-list-item__graphic mdi-blogger" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Blog</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://cdn.rawgit.com/Richienb/richienb.github.io/cccfb249/images/Richie%20Bendall's%20Website%20QR%20Code.png">
+                    <i class="mdi mdc-list-item__graphic mdi-qrcode" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">QR Code</span>
+                </a>
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Localisation</h6>
+                <hr class="mdc-list-divider">
+                <span style="height: 75px !important; padding: 20px">
+                    <div class="mdc-select mdc-select--outlined">
+                        <select class="mdc-select__native-control notranslate" id="language-selector">
+                            <option value="af">Afrikaans</option>
+                            <option value="am">አማርኛ</option>
+                            <option value="az">Azərbaycan</option>
+                            <option value="ar">العربية</option>
+                            <option value="hy">հայերեն</option>
+                            <option value="bs">Bosanskih</option>
+                            <option value="eu">Euskal</option>
+                            <option value="bn">বাংলা</option>
+                            <option value="bg">Български</option>
+                            <option value="be">Беларуская</option>
+                            <option value="ca">Català</option>
+                            <option value="co">Corsu</option>
+                            <option value="ceb">Cebuano</option>
+                            <option value="ha">Hausa</option>
+                            <option value="haw">ʻŌlelo Hawaiʻi</option>
+                            <option value="hmn">Hmong</option>
+                            <option value="iw">עִברִי</option>
+                            <option value="hr">Hrvatski</option>
+                            <option value="da">Dansk</option>
+                            <option value="cs">České</option>
+                            <option value="en" selected>English</option>
+                            <option value="fy">Frysk</option>
+                            <option value="nl">Nederlandse</option>
+                            <option value="eo">Esperanto</option>
+                            <option value="et">Eesti</option>
+                            <option value="ig">Igbo</option>
+                            <option value="tl">Filipino</option>
+                            <option value="fi">Suomen</option>
+                            <option value="fr">Français</option>
+                            <option value="gl">Galego</option>
+                            <option value="ka">ქართული</option>
+                            <option value="de">Deutsch</option>
+                            <option value="el">Ελληνική</option>
+                            <option value="gu">ગુજરાતી</option>
+                            <option value="ht">Kreyòl Ayisyen</option>
+                            <option value="is">Íslensk</option>
+                            <option value="hu">Magyar</option>
+                            <option value="hi">हिंदी</option>
+                            <option value="id">Indonesia</option>
+                            <option value="ga">Gaeilge</option>
+                            <option value="it">Italiano</option>
+                            <option value="ja">日本語</option>
+                            <option value="jw">Javanese</option>
+                            <option value="kn">ಕನ್ನಡ</option>
+                            <option value="kk">Қазақ</option>
+                            <option value="km">នខ្មែរ</option>
+                            <option value="ko">한국어</option>
+                            <option value="ku">Kurdî (Kurmanish)</option>
+                            <option value="ky">Киргизский</option>
+                            <option value="lo">ລາວ</option>
+                            <option value="la">Latin</option>
+                            <option value="lt">Lietuvių</option>
+                            <option value="lb">Lëtzebuergesch</option>
+                            <option value="lv">Latviešu</option>
+                            <option value="mk">Македонски</option>
+                            <option value="mg">Malagasy</option>
+                            <option value="ms">Melayu</option>
+                            <option value="ml">മലയാളം</option>
+                            <option value="mt">Malti</option>
+                            <option value="mi">Māori</option>
+                            <option value="mr">मराठी</option>
+                            <option value="mn">Монгол улсын</option>
+                            <option value="my">ျမန္မာ(ဗမာ)</option>
+                            <option value="ne">नेपाली</option>
+                            <option value="ny">Chichewa</option>
+                            <option value="fa">فارسی</option>
+                            <option value="no">Norsk</option>
+                            <option value="pl">Polski</option>
+                            <option value="pt">Portuguesa</option>
+                            <option value="pa">ਪੰਜਾਬੀ</option>
+                            <option value="ps">پښتو</option>
+                            <option value="ru">Русский</option>
+                            <option value="ro">Română</option>
+                            <option value="gd">Gàidhlig Na H-Alba</option>
+                            <option value="sr">Руски</option>
+                            <option value="sd">سنڌي</option>
+                            <option value="si">සිංහල</option>
+                            <option value="sm">Samoan</option>
+                            <option value="st">Sesotho</option>
+                            <option value="sn">Shona</option>
+                            <option value="sk">Slovenskej</option>
+                            <option value="sl">Slovenski</option>
+                            <option value="so">Somali</option>
+                            <option value="sw">Swahili</option>
+                            <option value="sq">Shqiptare</option>
+                            <option value="es">Español</option>
+                            <option value="su">Basa sunda</option>
+                            <option value="sv">Svenska</option>
+                            <option value="ta">தமிழ்</option>
+                            <option value="tg">Тоҷик</option>
+                            <option value="tr">Türk</option>
+                            <option value="th">ไทย</option>
+                            <option value="te">తెలుగు</option>
+                            <option value="uk">Український</option>
+                            <option value="ur">اردو</option>
+                            <option value="vi">Việt nam</option>
+                            <option value="uz">O'zbek</option>
+                            <option value="xh">Isizulu</option>
+                            <option value="cy">Cymru</option>
+                            <option value="yi">ייִדיש</option>
+                            <option value="yo">Yorùbá</option>
+                            <option value="zh-CN">简体中文）</option>
+                            <option value="zh-TW">中國傳統的）</option>
+                            <option value="zu">Zulu</option>
+                        </select>
+                        <label class="mdc-floating-label">Language</label>
+                        <div class="mdc-notched-outline">
+                            <svg>
+                                <path class="mdc-notched-outline__path"></path>
+                            </svg>
+                        </div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                </span>
+                <hr class="mdc-list-divider">
+                <h6 class="mdc-list-group__subheader">Information</h6>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/">
+                    <i class="mdi mdc-list-item__graphic mdi-copyright" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">License</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing">
+                    <i class="mdi mdc-list-item__graphic mdi-checkbox-multiple-marked-outline" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Terms and Conditions</span>
+                </a>
+                <a class="mdc-list-item" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing">
+                    <i class="mdi mdc-list-item__graphic mdi-lock-outline" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Privacy Policy</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
 
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">Richie Bendall's Website</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
+    <div class="mdc-drawer-scrim"></div>
 
+    <header class="mdc-top-app-bar drawer-top-app-bar" id="app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="mdc-top-app-bar__navigation-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg></a>
+                <span class="mdc-top-app-bar__title">Richie Bendall's Website</span>
+            </section>
+        </div>
+    </header>
+
+    <main id="main-content" class="drawer-frame-app-content">
+        <div class="mdc-top-app-bar--fixed-adjust">
+            <div class="mdc-layout-grid" id="content-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Code</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is
+                                    provided as a Python 3 library.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://ros-code.richie-bendall.ml" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ROS-Code" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">richienb.github.io</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">It's the website you're viewing this content in right now. It's also open source on GitHub.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a href="#" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/richienb.github.io" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Cursor Scheme Previewer</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">ROS Cursor Scheme Previewier is a Material Design website which allows you to preview the cursors in your cursor scheme.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/ros-cursor-scheme-previewer" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ros-cursor-scheme-previewer" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Calculator</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">An advanced calculator for the web featuring material design and allows you to perform simple and scientific equations.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://calculator.richie-bendall.ml" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ROS-Calculator" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ReadSettings For Python</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">Easily create, edit and remove a customized settings file which you are able to use for storing all of the settings for your application. At the moment,
+                                    ReadSettings
+                                    is compatible with Python 3 but compatibility to more programming langauages may come in the future.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://readsettings.richie-bendall.ml" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/readsettings-python" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Background Music Greenscreen</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">Allows you to embed a url in your videos which will automatically play music from <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=sKIbH-gXmX0">this
+                                        YouTube video</a>. This also changes the background colour of the website to be the green screen colour.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://music-greenscreen.richie-bendall.ml" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/background-music-greenscreen" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Does It Work?</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">Lets you check what web features are available in your browser.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/does-it-work" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/does-it-work" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">MIT License Tools</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">This is a website which makes api requests to mit-license.org in order to create your very own dynamic license or get the url for your already existing license.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/mit-license-tools" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/mit-license-tools" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS FileSystem Watcher</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/ROS-FileSystem-Watcher" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ROS-FileSystem-Watcher" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">HTML Form Elements</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">An easy way to preview all the different HTML form elements with copyable snippets of code.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/html-form-elements" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/html-form-elements" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Encryption</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">This is a website featuring Material Design and can be used to encrypt and decrypt text with an optional password.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/ros-encryption" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ros-encryption" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Media Downloader</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A simple tool to download any type of media file from YouTube or other sources.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/media-downloader" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/media-downloader" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">MDL Kitchen Sink</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A comprehensive index of all the components offered by MDL.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/mdl-kitchen-sink" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/mdl-kitchen-sink" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Online Text Editor</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A simple text editor for the web featuring Material Design and multiple customization options.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://online-editor.richie-bendall.ml" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ROS-Text-Editor-Online" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Git Files</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/git-files" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/git-files" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">VirusShare Hashes</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">Every single MD5 hash uploaded on <a target="_blank" rel="noopener" href="https://virusshare.com/hashes.4n6">VirusShare</a> in a single file, ready for
+                                    distribution
+                                    and CI integrations.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/virusshare-hashes" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/virusshare-hashes" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS QuickScan</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">ROS QuickScan is a tool for checking single files against a list of hashes provided by VirusShare Hashes.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/ROS-Quick-Scan" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/ROS-Quick-Scan" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Jython Builds</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/jython-builds" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/jython-builds" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Web Example</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">An example website with simple boilerplate code for starting out with building for the web.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/example-web" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/example-web" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Captcha Example</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Recaptcha
+                                        2.0<a> and <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Invisible Recaptcha<a>.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/example-captcha" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/example-captcha" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">Hello World VB.NET</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">This is a simple Windows Forms application for VB.NET which includes a label saying Hello World</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/Hello-World-VB.NET" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/Hello-World-VB.NET" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
-        </header>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation">
-            <a href="social" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="halfway-through">
-                <i class="material-icons" role="presentation">person</i>
-                <span class="visuallyhidden">Social</span>
-                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-            </a>
-
-        </nav>
-
-        <main class="mdl-layout__content article" id="mainbody">
-            <div class="mdl-grid portfolio-max-width">
-                <!-- ROS Code -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS Code</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is provided as a Python 3 library.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Code" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Code" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- richienb.github.io -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">richienb.github.io</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        It's the website you're viewing this content in right now. It's also open source on GitHub.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/richienb.github.io" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Cursor Scheme Previewer -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS Cursor Scheme Previewer</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        ROS Cursor Scheme Previewier is a Material Design website which allows you to preview the cursors in your cursor scheme.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ros-cursor-scheme-previewer" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ros-cursor-scheme-previewer" target="_blank" rel="noopener">Source code</a>
-                    </div>
-                </section>
-
-                <!-- ROS Calculator -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS Calculator</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        An advanced calculator for the web featuring material design and allows scientific equations.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Calculator" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Calculator" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- ReadSettings for Python -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ReadSettings for Python</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Easily create, edit and remove a customized settings file which you can use for storing all of the settings for your application. At the moment, ReadSettings is compatible with Python 3 but support to more programming langauages may come in the future.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/readsettings-python" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/readsettings-python" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Background Music Greenscreen -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Background Music Greenscreen</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Allows you to embed a url in your videos which will automatically play music from <a href="https://youtu.be/sKIbH-gXmX0">this Youtube video</a>. This also changes the background colour of the website to be the green screen colour
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/background-music-greenscreen" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/background-music-greenscreen" target="_blank" rel="noopener">Source code</a>
-                    </div>
-                </section>
-
-                <!-- Does It Work? -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Does It Work?</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Lets you check what web features are available in your browser.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/does-it-work" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/does-it-work" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- ROS Filesystem Watcher -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS FileSystem Watcher</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        A VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-FileSystem-Watcher/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-FileSystem-Watcher" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- HTML Form Elements -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">HTML Form Elements</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        An easy way to preview all the different HTML form elements with copyable snippets of code.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/html-form-elements" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/html-form-elements" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- ROS Encryption -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS Encryption</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        This is a website featuring Material Design and is used to encrypt text.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ros-encryption" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ros-encryption" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Media Downloader -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Media Downloader</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        A simple tool to download any type of media file from YouTube or other sources.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/media-downloader" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/media-downloader" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- ROS Online Text Editor -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS Online Text Editor</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        A simple text editor for the web featuring Material Design and a few customization options.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/ROS-Text-Editor-Online" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Text-Editor-Online" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Git Files -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Git Files</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/git-files/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/git-files" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- VirusShare Hashes -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">VirusShare Hashes</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Every single <a href="https://virusshare.com/hashes.4n6">VirusShare</a> MD5 hash in a single file, ready for distribution and CI integrations.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/virusshare-hashes/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/virusshare-hashes" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- ROS QuickScan -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">ROS QuickScan</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        ROS QuickScan is a tool for checking single files against a list of hashes provided by <a href="https://github.com/Richienb/virusshare-hashes">VirusShare Hashes</a>.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Quick-Scan/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/ROS-Quick-Scan" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Jython Builds -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Jython Builds</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/jython-builds/blob/master/README.md" target="_blank" rel="noopener">Readme</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/jython-builds" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Web Example -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Web Example</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        An example website with simple boilerplate code for starting out with building for the web.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/example-web" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/example-web" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-                <!-- Captcha Example -->
-                <section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="//:0" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Captcha Example</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a href="https://developers.google.com/recaptcha/docs/display">Recaptcha 2.0</a> and <a href="https://developers.google.com/recaptcha/docs/invisible">Invisible Recaptcha</a>.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://richienb.github.io/example-captcha" target="_blank" rel="noopener">Website</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://github.com/Richienb/example-captcha" target="_blank" rel="noopener">Source code</a>
-
-                    </div>
-                </section>
-
-            </div>
-            <footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">
-                        <noscript style="color: #9e9e9e;">Enable Javascript for the best experience when using </noscript> Richie Bendall's Website</div>
-                </div>
-                <div class="mdl-mini-footer__right-section">
-                    <ul class="mdl-mini-footer__link-list">
-                        <li><a href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing"><i class="material-icons" title="Terms and Conditions">supervisor_account</i></a></li>
-                        <li><a href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing"><i class="material-icons" title="Privacy Policy">lock</i></a></li>
-                        <li><a href="https://creativecommons.org/licenses/by/4.0/"><i class="material-icons" title="Creative Commons Attribution 4.0 International">copyright</i></a></li>
-                    </ul>
-                </div>
-
-            </footer>
-        </main>
-    </div>
-
-    <!-- Run Critical JavaScript -->
-    <script async defer>
-        function ready(fn) {
-            if (document.readyState != 'loading') {
-                fn();
-            } else if (document.addEventListener) {
-                document.addEventListener('DOMContentLoaded', fn);
-            } else {
-                document.attachEvent('onreadystatechange', function() {
-                    if (document.readyState != 'loading')
-                        fn();
-                });
-            }
+        </div>
+    </main>
+    <div id="google_translate_element" style="display: none" tabindex="-1" aria-hidden="true"></div>
+    <script async>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false,
+                gaTrack: true,
+                gaId: 'UA-92292858-9'
+            }, 'google_translate_element');
         }
-
-        ready(function() {
-            // Print out a message in the console
-            console.log("Ever wanted to help me develop my website or view the source code yourself? Now you can. It's Open Source on GitHub for you to check out: https://github.com/Richienb/richienb.github.io");
-
-            // Fade in the document
-            var el = document.getElementById("mainbody");
-
-            function fadeIn(el) {
-                el.style.opacity = 0;
-                var tick = function() {
-                    el.style.opacity = +el.style.opacity + 0.05;
-                    if (+el.style.opacity < 1) {
-                        (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
-                        setTimeout(tick, 16);
-                    }
-                };
-                tick();
-            }
-            fadeIn(el);
-        });
     </script>
-
-    <!-- IE6 compatiblity assets -->
-    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 
 </html>

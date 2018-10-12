@@ -1,5 +1,10 @@
-# distribution directory
-dist/
+# distribution director
+
+# bundled files
+bundle.js
+bundle.css
+service-worker.js
+precache-manifest*
 
 ### Linux ###
 *~

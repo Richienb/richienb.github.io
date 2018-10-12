@@ -1,14 +1,19 @@
 # Disable sudo to speed up build
-sudo:                           false
+sudo:                   false
 
 # Set build language to Node JS
-language:                       node_js
+language:               node_js
 
 # Set the version of Node JS to use
-node_js:                        "node"
+node_js:                node
 
 # Set build branch
-branches:                       master
+branches:               master
+
+cache:
+    # Ensure npm is cached
+    directories:
+        - node_modules # NPM packages
 
 before_install:
     # Configure access token to enable pushing to the repository
@@ -20,59 +25,39 @@ before_install:
     # Set commit email
     - git config --global user.email "richiebendall@gmail.com"
 
-jobs:
-    include:
-        - stage:                Optimisation & Generating
+install:
+    # Navigate to the source directory
+    - cd src
 
-          cache:
-              # Ensure pip is cached
-              - pip
+    # Install the yarn package manager
+    - npm install -g yarn
 
-          # Set the build language
-          language:             python
+    # Install required packages
+    - yarn install --non-interactive --production
 
-          # Set the build language version
-          python:               3.6.6
+script:
+    # Build the website
+    - npm run build
 
-          install:
-              # Install the required dependency
-              - pip install pyspelling
+deploy:
+    provider:           pages
+    skip-cleanup:       true
+    github-token:       $github_token
+    keep-history:       true
+    fqdn:               www.richie-bendall.ml
+    committer-from-gh:  true
+    on:
+        branch:         master
 
-          script:
-              # Check for spelling errors
-              - pyspelling
-
-        - # Generate final compiled files
-
-          cache:
-              # Ensure npm is cached
-              directories:
-                  - node_modules # NPM packages
-
-          install:
-              # Install required packages
-              - npm install
-
-          script:
-              # Generate service worker cacher
-              - npm run build
-
-          deploy:
-              - provider: script
-                script: bash ./deploy.sh
-                skip_cleanup: true
-                on:
-                    branch: master
-
-          after_deploy:
-              # Clear CloudFlare cache
-              - |
-                curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
-                -H "X-Auth-Email: richiebendall@gmail.com" \
-                -H "X-Auth-Key: ${cf_api_key}" \
-                -H "Content-Type: application/json" \
-                --data '{"purge_everything":true}'
+after_deploy:
+    # Clear CloudFlare cache
+    - |
+      curl --request DELETE "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/purge_cache" \
+      --header "X-Auth-Email: richiebendall@gmail.com" \
+      --header "X-Auth-Key: ${cf_api_key}" \
+      --header "Content-Type: application/json" \
+      --data '{"purge_everything":true}'
 
 notifications:
     # Disable emails for build status notifications
-    email:                      false
+    email:              false
