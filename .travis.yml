@@ -60,6 +60,6 @@ after_deploy:
       --header "Content-Type: application/json" \
       --data '{"purge_everything":true}'
  
- notifications:
-    # Disable emails for build status notifications
-    email:              false
+notifications:
+   # Disable emails for build status notifications
+   email:              false
