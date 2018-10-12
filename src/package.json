@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Warning: no test specified\" && exit 0",
         "start": "webpack-dev-server --config webpack.config.js",
-        "build": "webpack --config webpack.config.js && workbox injectManifest workbox-config.js && html-minifier --input-dir . --output-dir . --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js  --file-ext html"
+        "build": "webpack --config webpack.config.js && workbox injectManifest workbox-config.js && html-minifier --input-dir . --output-dir . --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --minify-css true --minify-js  --file-ext html"
     },
     "keywords": [
         "html",
