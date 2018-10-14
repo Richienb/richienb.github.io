@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
     // Wait for the window to finish loading to keep everything performant
     window.addEventListener('load', () => {
         // Register the service worker
-        navigator.serviceWorker.register('/service-worker.js');
+        navigator.serviceWorker.register('service-worker.js');
     });
 }
 // Check if passive scrolling mode is supported
