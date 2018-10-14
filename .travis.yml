@@ -37,7 +37,7 @@ install:
 
 script:
     # Build the website
-    - npm run build
+    - npm run build && npx workbox injectManifest workbox-config.js
     
 before_deploy:
     # Remove the unneeded node_modules folder
