@@ -8,6 +8,7 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
     });
 }
+
 // Check if passive scrolling mode is supported
 if ('ontouchstart' in document.documentElement) {
     // Enable passive scrolling mode
