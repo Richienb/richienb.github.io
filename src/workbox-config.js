@@ -6,7 +6,10 @@ module.exports = {
   "swSrc": "sw.js",
   "swDest": "service-worker.js",
   "globIgnores": [
+    "node_modules/**/*",
     "(workbox-|webpack\.|postcss\.)config\.js",
-    "node_modules/**/*"
+    "app\.(js|scss)",
+    "yarn\.lock",
+    "package\.json"
   ]
 };
