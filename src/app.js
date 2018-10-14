@@ -1,14 +1,5 @@
 console.log('%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io', 'text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #f44336; font-size: 3em');
 
-// Check if service workers are supported
-if ('serviceWorker' in navigator) {
-    // Wait for the window to finish loading to keep everything performant
-    window.addEventListener('load', () => {
-        // Register the service worker
-        navigator.serviceWorker.register('service-worker.js');
-    });
-}
-
 // Check if passive scrolling mode is supported
 if ('ontouchstart' in document.documentElement) {
     // Enable passive scrolling mode
