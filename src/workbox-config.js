@@ -1,11 +1,11 @@
 module.exports = {
-  "globDirectory": "dist/",
+  "globDirectory": ".",
   "globPatterns": [
     "**/*.*"
   ],
   "swSrc": "sw.js",
   "swDest": "service-worker.js",
   "globIgnores": [
-    "../workbox-config.js"
+    "(workbox-|webpack\.|postcss\.)config\.js"
   ]
 };
