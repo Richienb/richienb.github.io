@@ -6,6 +6,7 @@ module.exports = {
   "swSrc": "sw.js",
   "swDest": "service-worker.js",
   "globIgnores": [
-    "(workbox-|webpack\.|postcss\.)config\.js"
+    "(workbox-|webpack\.|postcss\.)config\.js",
+    "node_modules/**/*"
   ]
 };
