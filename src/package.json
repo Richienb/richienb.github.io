@@ -25,7 +25,7 @@
     "license": "ISC",
     "dependencies": {
         "@babel/core": "^7.1.2",
-        "@material/button": "^0.40.0",
+        "@material/button": "^0.40.1",
         "@material/card": "^0.40.0",
         "@material/drawer": "^0.40.0",
         "@material/layout-grid": "^0.39.0",
