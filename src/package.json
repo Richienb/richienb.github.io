@@ -33,7 +33,7 @@
         "@material/select": "^0.40.1",
         "@material/theme": "^0.40.0",
         "@material/top-app-bar": "^0.40.0",
-        "@material/typography": "0.39.0",
+        "@material/typography": "0.40.1",
         "autoprefixer": "^9.2.1",
         "babel-core": "6.26.3",
         "babel-loader": "7.1.5",
