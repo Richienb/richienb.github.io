@@ -7,9 +7,6 @@ language:               node_js
 # Set the version of Node JS to use
 node_js:                node
 
-# Set build branch
-branches:               development
-
 cache:
     # Ensure npm is cached
     directories:
