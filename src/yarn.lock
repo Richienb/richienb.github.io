@@ -139,17 +139,17 @@
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.40.1.tgz#a0d8e19cee98dae0f96dbf0887a14b3f7acd2aac"
   integrity sha512-vrbOK8hONVCYgURQ9h7nkXvMdYnZVVNmAfFFijF8fbWQdwnoPcNTdqV6RoQlhBEqHYHQqLNfdUDlznAPKLclGQ==
 
-"@material/button@^0.40.0":
-  version "0.40.0"
-  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.40.0.tgz#d23cac5d6f628668782cc8b12368d10450e67397"
-  integrity sha512-1HWT+Exqfcplda6xPmD9hvWmmr7Y8MdCkIhFkY14g1UuIf3rcGQGfS49HCT6OkLbcQ9tM7qgCSXHxCGK6MkY9w==
+"@material/button@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.40.1.tgz#b5a8657f7d3783d7fc0936f95d0187bdb0319eae"
+  integrity sha512-xLNjq9zySnpZAP4UynyeXnnlLXf3iIA/6ilecwgF4d2ooUmNXcRdlRa8wGYT36JHsCfsP3AeZOjoTZUcmaiejw==
   dependencies:
-    "@material/elevation" "^0.40.0"
-    "@material/ripple" "^0.40.0"
-    "@material/rtl" "^0.39.1"
-    "@material/shape" "^0.40.0"
-    "@material/theme" "^0.40.0"
-    "@material/typography" "^0.39.0"
+    "@material/elevation" "^0.40.1"
+    "@material/ripple" "^0.40.1"
+    "@material/rtl" "^0.40.1"
+    "@material/shape" "^0.40.1"
+    "@material/theme" "^0.40.1"
+    "@material/typography" "^0.40.1"
 
 "@material/card@^0.40.0":
   version "0.40.0"
@@ -190,6 +190,14 @@
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/theme" "^0.40.0"
+
+"@material/elevation@^0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.40.1.tgz#beb17eb90bde94459c41cd826c2de13f13b10b25"
+  integrity sha512-VD9ii90WzI+t4df08A9hQIsYLH/N+85a2Mqo10CNVZLZYW5fDOwFH/h7553aNoAuSHKPcGCLdyav9J9oC6TSaQ==
+  dependencies:
+    "@material/animation" "^0.40.1"
+    "@material/theme" "^0.40.1"
 
 "@material/floating-label@^0.40.1":
   version "0.40.1"
