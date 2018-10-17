@@ -29,7 +29,7 @@
         "@material/card": "^0.40.0",
         "@material/drawer": "^0.40.0",
         "@material/layout-grid": "^0.39.0",
-        "@material/ripple": "^0.40.0",
+        "@material/ripple": "^0.40.1",
         "@material/select": "^0.40.1",
         "@material/theme": "^0.40.0",
         "@material/top-app-bar": "^0.40.0",
