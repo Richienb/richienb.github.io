@@ -3,7 +3,7 @@ $mdc-theme-secondary: #f44336; // Secondary colour
 $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/button/mdc-button"; // MDC button base styles
 @import "@material/card/mdc-card"; // MDC card base styles
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons"); // Roboto and Material Icons font
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500"); // Roboto and Material Icons font
 @import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css"); // Material Design Icons Font
 @import "@material/typography/mdc-typography"; // MDC typography base styles
 @import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
@@ -72,4 +72,5 @@ main {
     // Google Translate banner
     display: none !important;
 }
+
 @import 'node_modules/normalize.css/normalize.css'; // Normalise CSS - A CSS reset
