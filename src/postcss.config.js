@@ -1,6 +1,8 @@
+const postcssPresetEnv = require("postcss-preset-env");
+
 module.exports = {
     plugins: {
-        'autoprefixer': {},
-        'cssnano': {}
+        postcssPresetEnv: { stage: 0 },
+        cssnano: {}
     }
-}
+};
