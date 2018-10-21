@@ -34,7 +34,6 @@
     "@material/theme": "^0.40.1",
     "@material/top-app-bar": "^0.40.1",
     "@material/typography": "0.40.1",
-    "autoprefixer": "^9.2.1",
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
     "babel-plugin-transform-object-assign": "^6.22.0",
