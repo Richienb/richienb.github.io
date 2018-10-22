@@ -63,6 +63,15 @@ main {
     @include mdc-states(red);
 }
 
+#gravatar-icon {
+    // The profile image
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+    top: 36px;
+    z-index: 999;
+}
+
 .hidden {
     // Used to hide an element
     display: none;
@@ -72,5 +81,4 @@ main {
     // Google Translate banner
     display: none !important;
 }
-
 @import 'node_modules/normalize.css/normalize.css'; // Normalise CSS - A CSS reset

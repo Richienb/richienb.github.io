@@ -17,7 +17,7 @@
     <link rel="icon" href="favicon.ico">
 
     <!-- See https://goo.gl/OOhYW5 -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- See https://goo.gl/qRE0vM -->
     <meta name="theme-color" content="#3f51b5">
@@ -259,13 +259,14 @@
     <header class="mdc-top-app-bar drawer-top-app-bar" id="app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <a href="#" class="mdc-top-app-bar__navigation-icon">
+                <span class="mdc-top-app-bar__navigation-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="none" d="M0 0h24v24H0V0z" />
                         <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                     </svg>
-                </a>
+                </span>
                 <span class="mdc-top-app-bar__title">Richie Bendall's Website</span>
+                <a target="_blank" rel="noopener" href="https://gravatar.com/richienb"><img src="https://secure.gravatar.com/avatar/9476a2bfb62f572fc000056ca01522e3.png?r=g&s=50&d=retro" id="gravatar-icon" alt="Profile Image"></a>
             </section>
         </div>
     </header>
@@ -278,7 +279,8 @@
                         <section class="mdc-card content-card">
                             <article class="mdc-card__primary-action">
                                 <h2 class="mdc-card__title mdc-typography--headline6">ROS Code</h2>
-                                <div class="mdc-card__secondary mdc-typography--body2">A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is provided as a Python 3 library.</div>
+                                <div class="mdc-card__secondary mdc-typography--body2">A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is
+                                    provided as a Python 3 library.</div>
                             </article>
                             <div class="mdc-card__actions">
                                 <nav class="mdc-card__action-buttons">
@@ -334,7 +336,8 @@
                         <section class="mdc-card content-card">
                             <article class="mdc-card__primary-action">
                                 <h2 class="mdc-card__title mdc-typography--headline6">ReadSettings For Python</h2>
-                                <div class="mdc-card__secondary mdc-typography--body2">Easily create, edit and remove a customized settings file which you are able to use for storing all of the settings for your application. At the moment, ReadSettings is compatible with Python 3 but compatibility to more programming langauages may come in the future.</div>
+                                <div class="mdc-card__secondary mdc-typography--body2">Easily create, edit and remove a customized settings file which you are able to use for storing all of the settings for your application. At the moment,
+                                    ReadSettings is compatible with Python 3 but compatibility to more programming langauages may come in the future.</div>
                             </article>
                             <div class="mdc-card__actions">
                                 <nav class="mdc-card__action-buttons">
@@ -474,6 +477,20 @@
                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                         <section class="mdc-card content-card">
                             <article class="mdc-card__primary-action">
+                                <h2 class="mdc-card__title mdc-typography--headline6">MDC Quick Start</h2>
+                                <div class="mdc-card__secondary mdc-typography--body2">The easiest way to start using Material Design Components for the Web. This codebase is adapted from Google's <a href="https://material.io/develop/web/docs/getting-started/">Getting Started</a> guide on the official Material Design website.</div>
+                            </article>
+                            <div class="mdc-card__actions">
+                                <nav class="mdc-card__action-buttons">
+                                    <a target="_blank" rel="noopener" href="https://www.richie-bendall.ml/mdc-quickstart" class="mdc-button mdc-card__action mdc-card__action--button">Website</a>
+                                    <a target="_blank" rel="noopener" href="https://github.com/Richienb/mdc-quickstart" class="mdc-button mdc-card__action mdc-card__action--button">Source Code</a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content-card">
+                            <article class="mdc-card__primary-action">
                                 <h2 class="mdc-card__title mdc-typography--headline6">Git Files</h2>
                                 <div class="mdc-card__secondary mdc-typography--body2">A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.</div>
                             </article>
@@ -489,7 +506,8 @@
                         <section class="mdc-card content-card">
                             <article class="mdc-card__primary-action">
                                 <h2 class="mdc-card__title mdc-typography--headline6">VirusShare Hashes</h2>
-                                <div class="mdc-card__secondary mdc-typography--body2">Every single MD5 hash uploaded on <a target="_blank" rel="noopener" href="https://virusshare.com/hashes.4n6">VirusShare</a> in a single file, ready for distribution and CI integrations.</div>
+                                <div class="mdc-card__secondary mdc-typography--body2">Every single MD5 hash uploaded on <a target="_blank" rel="noopener" href="https://virusshare.com/hashes.4n6">VirusShare</a> in a single file, ready for
+                                    distribution and CI integrations.</div>
                             </article>
                             <div class="mdc-card__actions">
                                 <nav class="mdc-card__action-buttons">
@@ -546,7 +564,7 @@
                             <article class="mdc-card__primary-action">
                                 <h2 class="mdc-card__title mdc-typography--headline6">Captcha Example</h2>
                                 <div class="mdc-card__secondary mdc-typography--body2">An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Recaptcha
-                                  2.0</a> and <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Invisible Recaptcha</a>.</div>
+                                        2.0</a> and <a target="_blank" rel="noopener" href="https://developers.google.com/recaptcha/docs/display">Invisible Recaptcha</a>.</div>
                             </article>
                             <div class="mdc-card__actions">
                                 <nav class="mdc-card__action-buttons">
