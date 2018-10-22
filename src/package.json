@@ -54,7 +54,7 @@
         "sitemap-generator-cli": "^7.3.0",
         "webpack": "3.12.0",
         "workbox-cli": "^3.6.3",
-        "workbox-webpack-plugin": "^3.6.2"
+        "workbox-webpack-plugin": "^3.6.3"
     },
     "devDependencies": {
         "webpack-dev-server": "2.11.3"
