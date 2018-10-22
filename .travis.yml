@@ -33,12 +33,17 @@ install:
     - yarn install --non-interactive --production
 
 script:
-    # Build the website
-    - npm run build && npx workbox injectManifest workbox-config.js
-    
-before_deploy:
+    # Build the website with Webpack
+    - npm run build
+
+    # Generate the service worker
+    - npx workbox injectManifest workbox-config.js
+
     # Remove the unneeded node_modules folder
     - rm -rf node_modules
+
+    # Minify the HTML code
+    - npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --file-ext html
 
 deploy:
     provider:           pages
@@ -52,7 +57,7 @@ deploy:
     committer_from_gh:  true
     on:
         branch:         development
- 
+
 after_deploy:
    # Clear CloudFlare cache
    - |
@@ -61,7 +66,7 @@ after_deploy:
       --header "X-Auth-Key: ${cf_api_key}" \
       --header "Content-Type: application/json" \
       --data '{"purge_everything":true}'
- 
+
 notifications:
    # Disable emails for build status notifications
    email:              false

@@ -70,11 +70,6 @@ module.exports = {
                     plugins: ['transform-object-assign']
                 }
             }
-            // ,
-            // {
-            //     test: /\.html$/,
-            //     loader: 'raw-loader!html-minifier-loader'
-            // }
         ]
     },
     // 'html-minifier-loader': {
