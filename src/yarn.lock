@@ -662,7 +662,7 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@^9.1.5:
+autoprefixer@^9.2.1:
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.2.1.tgz#1f2f1179ceed4711b7ab064dbd5c3f9e83d9dc62"
   integrity sha512-qlK4GnZk8OXLK+8kBn9ttfzu2PkhRe8kVYoWcc9HsrZEMWiBkQuRYdXyJg9cIIKxfMzhh6UbvlJ1CsstMIzxwA==
@@ -1465,13 +1465,22 @@ browserslist@^4.0.0:
     electron-to-chromium "^1.3.73"
     node-releases "^1.0.0-alpha.12"
 
-browserslist@^4.2.0, browserslist@^4.2.1:
+browserslist@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.2.1.tgz#257a24c879d1cd4016348eee5c25de683260b21d"
   integrity sha512-1oO0c7Zhejwd+LXihS89WqtKionSbz298rJZKJgfrHIZhrV8AC15gw553VcB0lcEugja7IhWD7iAlrsamfYVPA==
   dependencies:
     caniuse-lite "^1.0.30000890"
     electron-to-chromium "^1.3.79"
+    node-releases "^1.0.0-alpha.14"
+
+browserslist@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.3.1.tgz#453e46e74b0663ec5d764cdac3e5ac52bd776038"
+  integrity sha512-rlvbN4EERDFJcwI8qzmRz48a1zqvwE4L0G4d05EjH2nlswJqBxCXByafWhhCpVrHOsnOrDMtVjibPHdBElb8sg==
+  dependencies:
+    caniuse-lite "^1.0.30000893"
+    electron-to-chromium "^1.3.80"
     node-releases "^1.0.0-alpha.14"
 
 btoa@^1.2.1:
@@ -1588,6 +1597,11 @@ caniuse-lite@^1.0.30000890, caniuse-lite@^1.0.30000892:
   version "1.0.30000892"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000892.tgz#344d2b51ee3ff5977537da4aa449c90eec40b759"
   integrity sha512-X9rxMaWZNbJB5qjkDqPtNv/yfViTeUL6ILk0QJNxLV3OhKC5Acn5vxsuUvllR6B48mog8lmS+whwHq/QIYSL9w==
+
+caniuse-lite@^1.0.30000893:
+  version "1.0.30000898"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000898.tgz#651306e690ca83caca5814da5afa3eb4de0f86c2"
+  integrity sha512-ytlTZqO4hYe4rNAJhMynUAIUI33jsP2Bb1two/9OVC39wZjPZ8exIO0eCLw5mqAtegOGiGF0kkTWTn3B02L+mw==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2543,7 +2557,7 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.47:
+electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.80:
   version "1.3.80"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.80.tgz#e99ec7efe64c2c6a269d3885ff411ea88852fa53"
   integrity sha512-WClidEWEUNx7OfwXehB0qaxCuetjbKjev2SmXWgybWPLKAThBiMTF/2Pd8GSUDtoGOavxVzdkKwfFAPRSWlkLw==
@@ -5452,10 +5466,10 @@ postcss-convert-values@^4.0.1:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-custom-media@^7.0.6:
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.6.tgz#c6b00ff7fee6ddc7dfdd946d66ed65e7743db09b"
-  integrity sha512-Txk5Ve0XWw105N6490xoq1aAHkLWIBGowBxHrLqbfsPfv/nzPvP2txyPMwn6OW87eeTO7H0a7P/BVJ4WMPEgJA==
+postcss-custom-media@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.7.tgz#bbc698ed3089ded61aad0f5bfb1fb48bf6969e73"
+  integrity sha512-bWPCdZKdH60wKOTG4HKEgxWnZVjAIVNOJDvi3lkuTa90xo/K0YHa2ZnlKLC5e2qF8qCcMQXt0yzQITBp8d0OFA==
   dependencies:
     postcss "^7.0.5"
 
@@ -5816,14 +5830,14 @@ postcss-place@^4.0.1:
     postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
 
-postcss-preset-env@6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.1.1.tgz#c2c8038c3bdedb6b80cfc10f05ba90ff4612972a"
-  integrity sha512-+vf9llIUVtFNYG9FPMJrg6wyVbdR7q4pne8UmD81zLnBhyBdU2pio6Ao10IeiCPduX2q0MChsuqXB1Zv9ZJCgQ==
+postcss-preset-env@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.2.0.tgz#e513e11cd4037fcb54ad6dac773c918e728f2180"
+  integrity sha512-gzqwaI32UBxWSjz2Rs8TAwRfDuDYlB9bGZWHMhjhrIegWNbOyohRsGO7ZrL8mNQ+4uN4k7XYOnoik9Cbczu06Q==
   dependencies:
-    autoprefixer "^9.1.5"
-    browserslist "^4.2.0"
-    caniuse-lite "^1.0.30000890"
+    autoprefixer "^9.2.1"
+    browserslist "^4.3.1"
+    caniuse-lite "^1.0.30000893"
     cssdb "^3.2.1"
     postcss "^7.0.5"
     postcss-attribute-case-insensitive "^4.0.0"
@@ -5832,7 +5846,7 @@ postcss-preset-env@6.1.1:
     postcss-color-hex-alpha "^5.0.2"
     postcss-color-mod-function "^3.0.3"
     postcss-color-rebeccapurple "^4.0.1"
-    postcss-custom-media "^7.0.6"
+    postcss-custom-media "^7.0.7"
     postcss-custom-properties "^8.0.8"
     postcss-custom-selectors "^5.1.2"
     postcss-dir-pseudo-class "^5.0.0"
