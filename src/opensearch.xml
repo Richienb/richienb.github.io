@@ -1,0 +1,8 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>Richie Web</ShortName>
+    <Description>Richie Bendall's Website</Description>
+    <Url type="text/html" method="get" template="https://www.google.com/search?q=site%3Arichie-bendall.ml+{searchTerms}" />
+    <Image width="16" height="16">https://www.richie-bendall.ml/favicon.ico</Image>
+    <InputEncoding>UTF-8</InputEncoding>
+    <moz:SearchForm>https://www.richie-bendall.ml</moz:SearchForm>
+</OpenSearchDescription>
