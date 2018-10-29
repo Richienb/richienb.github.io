@@ -2,7 +2,7 @@
     <ShortName>Richie Web</ShortName>
     <LongName>Richie Bendall's Website</LongName>
     <Description>Search Richie Bendall's Website, right from your browser.</Description>
-    <Url type="text/html" method="get" template="https://www.google.com/search?filter=0&amp;q=site%3Arichie-bendall.ml+{searchTerms}" />
+    <Url type="text/html" method="get" template="https://www.google.com/search?q={searchTerms}&filter=0&as_sitesearch=richie-bendall.ml&pws=0&adtest=off" />
     <Image width="16" height="16">https://www.richie-bendall.ml/favicon.ico</Image>
     <InputEncoding>UTF-8</InputEncoding>
     <Developer>Richie Bendall</Developer>
