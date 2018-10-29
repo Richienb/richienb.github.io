@@ -31,7 +31,7 @@
         "@material/layout-grid": "^0.40.1",
         "@material/ripple": "^0.41.0",
         "@material/select": "^0.40.1",
-        "@material/theme": "^0.40.1",
+        "@material/theme": "^0.41.0",
         "@material/top-app-bar": "^0.40.1",
         "@material/typography": "0.40.1",
         "babel-core": "6.26.3",
