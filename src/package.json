@@ -49,7 +49,7 @@
         "normalize.css": "^8.0.0",
         "postcss": "7.0.5",
         "postcss-loader": "^3.0.0",
-        "postcss-preset-env": "6.2.0",
+        "postcss-preset-env": "6.3.0",
         "sass-loader": "^7.1.0",
         "sitemap-generator-cli": "^7.3.0",
         "webpack": "3.12.0",
