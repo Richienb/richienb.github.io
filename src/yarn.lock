@@ -241,16 +241,16 @@
     "@material/theme" "^0.41.0"
     "@material/typography" "^0.41.0"
 
-"@material/card@^0.40.1":
-  version "0.40.1"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.40.1.tgz#0b48a9a985b8f65d48f28a7913296354bcca05f8"
-  integrity sha512-yxywT+YSjnmO4kBfkhiU4agno6qXbPcz7rfNDdl3F7F0rSNVgk13SwqkdmwLZ4+1lGwWjg8NGihm0Tr8nranLg==
+"@material/card@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.41.0.tgz#79f0b529da8a533d4220017ee3c71dd14c272622"
+  integrity sha512-6/NIHuUZkftHoNS/l3JpROrpvI0TqYv4Xq9O1iRnxPmw2hwqvQ70LucE4+bJ+YzVomqYarV2KrtUUPrwSa90Lw==
   dependencies:
-    "@material/elevation" "^0.40.1"
-    "@material/ripple" "^0.40.1"
+    "@material/elevation" "^0.41.0"
+    "@material/ripple" "^0.41.0"
     "@material/rtl" "^0.40.1"
-    "@material/shape" "^0.40.1"
-    "@material/theme" "^0.40.1"
+    "@material/shape" "^0.41.0"
+    "@material/theme" "^0.41.0"
 
 "@material/dom@^0.40.0":
   version "0.40.0"
