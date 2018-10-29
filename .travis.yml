@@ -7,6 +7,10 @@ language:               node_js
 # Set the version of Node JS to use
 node_js:                node
 
+env:
+    # Ensure HTTPS is used
+    - NODE_TLS_REJECT_UNAUTHORIZED=1
+
 cache:
     # Ensure npm is cached
     directories:
