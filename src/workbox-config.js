@@ -9,6 +9,9 @@ module.exports = {
         "app.+(js|scss)",
         "yarn.lock",
         "+(package|sandbox.config).json",
-        ".prettierrc"
+        ".prettierrc",
+        "_config.yml",
+        "sw.js",
+        "README.md"
     ]
 };
