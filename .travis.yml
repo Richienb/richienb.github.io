@@ -12,9 +12,11 @@ env:
     - NODE_TLS_REJECT_UNAUTHORIZED=1
 
 cache:
-    # Ensure npm is cached
+    # Ensure packages cached via yarn are cached
+    yarn:               true
     directories:
-        - node_modules # NPM packages
+        # Ensure npm packages are cached
+        - node_modules
 
 before_install:
     # Configure access token to enable pushing to the repository
