@@ -5,7 +5,9 @@ module.exports = {
         },
         cssnano: {
             preset: ['advanced', {
-                autoprefixer: false
+                autoprefixer: {
+                    add: false
+                }
             }]
         }
     }
