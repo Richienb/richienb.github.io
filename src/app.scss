@@ -3,8 +3,7 @@ $mdc-theme-secondary: #f44336; // Secondary colour
 $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/button/mdc-button"; // MDC button base styles
 @import "@material/card/mdc-card"; // MDC card base styles
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500"); // Roboto and Material Icons font
-@import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css"); // Material Design Icons Font
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500"); // Roboto font
 @import "@material/typography/mdc-typography"; // MDC typography base styles
 @import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
 @import "@material/drawer/mdc-drawer"; // MDC drawer base styles
@@ -19,19 +18,18 @@ body {
     margin: 0;
     min-height: 100vh;
     position: relative;
-    top: 0 !important;
 }
 
-* {
-    // All elements
+body > * {
+    // All elements in body
     user-select: none;
 }
 
 main {
     // Document main
+    height: 100%;
     min-height: 80vh;
     min-width: 100vw;
-    height: 100%;
     overflow: auto;
 }
 
@@ -44,7 +42,7 @@ main {
 #content-grid {
     // The grid of cards
     margin: auto;
-    max-width: 1100px;
+    max-width: 1250px;
 }
 
 .content-card .mdc-card__primary-action {
@@ -71,6 +69,10 @@ main {
     top: 36px;
     z-index: 999;
 }
+// #app-bar {
+//     // The top app bar
+//     position: absolute;
+// }
 
 .hidden {
     // Used to hide an element
