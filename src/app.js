@@ -1,11 +1,11 @@
-console.log('%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io', 'text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; color: #f44336; font-size: 2.5em');
+console.log("%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io", "text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; color: #f44336; font-size: 2.5em");
 
 // Check if passive scrolling mode is supported
-if ('ontouchstart' in document.documentElement) {
+if ("ontouchstart" in document.documentElement) {
     // Enable passive scrolling mode
-    document.addEventListener('touchstart', function() {
-        return;
-    }, {passive: true});
+    document.addEventListener("touchstart", function() {
+        return
+    }, {passive: true})
 }
 
 // Check if the googtrans cookie exists
@@ -21,19 +21,19 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, 
 import {MDCDrawer} from "@material/drawer/index";
 
 // Initialise the drawer
-const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
 
 // Import MDC Top App Bar
 import {MDCTopAppBar} from "@material/top-app-bar/index";
 
 // Initialise the top app bar
-const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+const topAppBar = MDCTopAppBar.attachTo(document.getElementById("app-bar"));
 
 // Set main content of top app bar
-topAppBar.setScrollTarget(document.getElementById('main-content'));
+topAppBar.setScrollTarget(document.getElementById("main-content"));
 
 // Listen for an open menu button click
-topAppBar.listen('MDCTopAppBar:nav', () => {
+topAppBar.listen("MDCTopAppBar:nav", () => {
 
     // Invert the open state of the drawer
     drawer.open = !drawer.open;
@@ -47,15 +47,16 @@ document.getElementById("websitelink").addEventListener("click", function() {
 });
 
 // Import MDC Ripple
-import {MDCRipple} from '@material/ripple/index';
+import {MDCRipple} from "@material/ripple/index";
 
 // Import MDC Auto Init
-import mdcAutoInit from '@material/auto-init';
+import mdcAutoInit from "@material/auto-init";
 
 // For each button, main card area and drawer item initialise the ripple effect
+mdcAutoInit.register("MDCRipple", MDCRipple);
 mdcAutoInit()
 
-// document.querySelectorAll('.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, .content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
+// document.querySelectorAll(".content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, .content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item").forEach(function(el) {
 //
 //     // Initialise the ripple effect
 //     MDCRipple.attachTo(el);
@@ -65,10 +66,10 @@ mdcAutoInit()
 import {MDCSelect} from "@material/select/index";
 
 // Initialise language selector
-const select = new MDCSelect(document.querySelector('.mdc-select'));
+const select = new MDCSelect(document.querySelector(".mdc-select"));
 
 // List for a language chosen
-select.listen('change', () => {
+select.listen("change", () => {
 
     // Set the language cookie depending on the selected language
     document.cookie = `googtrans=/en/${select.value}; path=/`
@@ -78,4 +79,4 @@ select.listen('change', () => {
 });
 
 // Import html5shiv printshiv
-import 'html5shiv/dist/html5shiv-printshiv.js';
+import "html5shiv/dist/html5shiv-printshiv.js";
