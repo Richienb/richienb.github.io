@@ -5,7 +5,9 @@ if ("ontouchstart" in document.documentElement) {
     // Enable passive scrolling mode
     document.addEventListener("touchstart", function() {
         return
-    }, {passive: true})
+    }, {
+        passive: true
+    })
 }
 
 // Check if the googtrans cookie exists
@@ -18,13 +20,17 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, 
 }
 
 // Import MDC Drawer
-import {MDCDrawer} from "@material/drawer/index"
+import {
+    MDCDrawer
+} from "@material/drawer/index"
 
 // Initialise the drawer
 const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"))
 
 // Import MDC Top App Bar
-import {MDCTopAppBar} from "@material/top-app-bar/index"
+import {
+    MDCTopAppBar
+} from "@material/top-app-bar/index"
 
 // Initialise the top app bar
 const topAppBar = MDCTopAppBar.attachTo(document.getElementById("app-bar"))
@@ -47,7 +53,9 @@ document.getElementById("websitelink").addEventListener("click", function() {
 })
 
 // Import MDC Ripple
-import {MDCRipple} from "@material/ripple/index"
+import {
+    MDCRipple
+} from "@material/ripple/index"
 
 // Import MDC Auto Init
 import mdcAutoInit from "@material/auto-init"
@@ -59,7 +67,9 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 mdcAutoInit()
 
 // Import MDC Select
-import {MDCSelect} from "@material/select/index"
+import {
+    MDCSelect
+} from "@material/select/index"
 
 // Initialise language selector
 const select = new MDCSelect(document.querySelector(".mdc-select"))
