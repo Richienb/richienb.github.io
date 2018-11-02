@@ -25,7 +25,7 @@ body > * {
     user-select: none;
 }
 
-main {
+#main-content {
     // Document main
     height: 100%;
     min-height: 80vh;
@@ -36,7 +36,8 @@ main {
 #mdc-drawer-app-content {
     // Content of app drawer
     flex: auto;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #content-grid {
@@ -68,15 +69,6 @@ main {
     right: 40px;
     top: 36px;
     z-index: 999;
-}
-// #app-bar {
-//     // The top app bar
-//     position: absolute;
-// }
-
-.hidden {
-    // Used to hide an element
-    display: none;
 }
 
 .goog-te-banner-frame.skiptranslate {
