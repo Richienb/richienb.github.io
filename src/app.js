@@ -72,7 +72,7 @@ import {
 } from "@material/select/index"
 
 // Initialise language selector
-const select = new MDCSelect(document.querySelector(".mdc-select"))
+const select = new MDCSelect(document.getElementById("language-selector"))
 
 // List for a language chosen
 select.listen("change", () => {
