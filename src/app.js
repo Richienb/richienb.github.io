@@ -49,12 +49,17 @@ document.getElementById("websitelink").addEventListener("click", function() {
 // Import MDC Ripple
 import {MDCRipple} from '@material/ripple/index';
 
-// For each button, main card area and drawer item
-document.querySelectorAll('.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, .content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
+// Import MDC Auto Init
+import mdcAutoInit from '@material/auto-init';
 
-    // Initialise the ripple effect
-    MDCRipple.attachTo(el);
-});
+// For each button, main card area and drawer item initialise the ripple effect
+mdcAutoInit()
+
+// document.querySelectorAll('.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button, .content-card .mdc-card__primary-action, .mdc-drawer .mdc-drawer__content .mdc-list a.mdc-list-item').forEach(function(el) {
+//
+//     // Initialise the ripple effect
+//     MDCRipple.attachTo(el);
+// });
 
 // Import MDC Select
 import {MDCSelect} from "@material/select/index";

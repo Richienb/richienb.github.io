@@ -214,6 +214,11 @@
   resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.41.0.tgz#315b45b32e1aeebee8a4cf555b8ad52076d09ddd"
   integrity sha512-yYAwJbX3Q2AFd4dr6IYOsWLQy2HN8zWOFVl9AbUXunjzTfJCa/ecfXCriaT6qkmoNoHeTdJHRrsQJZC5GsPvzA==
 
+"@material/auto-init@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/auto-init/-/auto-init-0.41.0.tgz#8a59bb0b83e0f51ead9508074f9a29b2b6a20eec"
+  integrity sha512-jp6L8MpYu7DudgDfA8iTyD9BwQrYPEDsIJGbqzN9vcCBl5FoBatkB8pcFXKr+1mRBk7T1Qmf6+H5nDtxyXjHEQ==
+
 "@material/base@^0.41.0":
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.41.0.tgz#badadce711b4c25b1eb889a5e7581e32cd07c421"
