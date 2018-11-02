@@ -154,114 +154,119 @@
                 <h6 class="mdc-list-group__subheader">Localisation</h6>
                 <hr class="mdc-list-divider">
                 <span style="height: 75px !important; padding: 20px">
-                    <div class="mdc-select mdc-select--outlined">
-                        <select class="mdc-select__native-control notranslate" id="language-selector">
-                            <option value="af">Afrikaans</option>
-                            <option value="am">አማርኛ</option>
-                            <option value="az">Azərbaycan</option>
-                            <option value="ar">العربية</option>
-                            <option value="hy">հայերեն</option>
-                            <option value="bs">Bosanskih</option>
-                            <option value="eu">Euskal</option>
-                            <option value="bn">বাংলা</option>
-                            <option value="bg">Български</option>
-                            <option value="be">Беларуская</option>
-                            <option value="ca">Català</option>
-                            <option value="co">Corsu</option>
-                            <option value="ceb">Cebuano</option>
-                            <option value="ha">Hausa</option>
-                            <option value="haw">ʻŌlelo Hawaiʻi</option>
-                            <option value="hmn">Hmong</option>
-                            <option value="iw">עִברִי</option>
-                            <option value="hr">Hrvatski</option>
-                            <option value="da">Dansk</option>
-                            <option value="cs">České</option>
-                            <option value="en" selected>English</option>
-                            <option value="fy">Frysk</option>
-                            <option value="nl">Nederlandse</option>
-                            <option value="eo">Esperanto</option>
-                            <option value="et">Eesti</option>
-                            <option value="ig">Igbo</option>
-                            <option value="tl">Filipino</option>
-                            <option value="fi">Suomen</option>
-                            <option value="fr">Français</option>
-                            <option value="gl">Galego</option>
-                            <option value="ka">ქართული</option>
-                            <option value="de">Deutsch</option>
-                            <option value="el">Ελληνική</option>
-                            <option value="gu">ગુજરાતી</option>
-                            <option value="ht">Kreyòl Ayisyen</option>
-                            <option value="is">Íslensk</option>
-                            <option value="hu">Magyar</option>
-                            <option value="hi">हिंदी</option>
-                            <option value="id">Indonesia</option>
-                            <option value="ga">Gaeilge</option>
-                            <option value="it">Italiano</option>
-                            <option value="ja">日本語</option>
-                            <option value="jw">Javanese</option>
-                            <option value="kn">ಕನ್ನಡ</option>
-                            <option value="kk">Қазақ</option>
-                            <option value="km">នខ្មែរ</option>
-                            <option value="ko">한국어</option>
-                            <option value="ku">Kurdî (Kurmanish)</option>
-                            <option value="ky">Киргизский</option>
-                            <option value="lo">ລາວ</option>
-                            <option value="la">Latin</option>
-                            <option value="lt">Lietuvių</option>
-                            <option value="lb">Lëtzebuergesch</option>
-                            <option value="lv">Latviešu</option>
-                            <option value="mk">Македонски</option>
-                            <option value="mg">Malagasy</option>
-                            <option value="ms">Melayu</option>
-                            <option value="ml">മലയാളം</option>
-                            <option value="mt">Malti</option>
-                            <option value="mi">Māori</option>
-                            <option value="mr">मराठी</option>
-                            <option value="mn">Монгол улсын</option>
-                            <option value="my">ျမန္မာ(ဗမာ)</option>
-                            <option value="ne">नेपाली</option>
-                            <option value="ny">Chichewa</option>
-                            <option value="fa">فارسی</option>
-                            <option value="no">Norsk</option>
-                            <option value="pl">Polski</option>
-                            <option value="pt">Portuguesa</option>
-                            <option value="pa">ਪੰਜਾਬੀ</option>
-                            <option value="ps">پښتو</option>
-                            <option value="ru">Русский</option>
-                            <option value="ro">Română</option>
-                            <option value="gd">Gàidhlig Na H-Alba</option>
-                            <option value="sr">Руски</option>
-                            <option value="sd">سنڌي</option>
-                            <option value="si">සිංහල</option>
-                            <option value="sm">Samoan</option>
-                            <option value="st">Sesotho</option>
-                            <option value="sn">Shona</option>
-                            <option value="sk">Slovenskej</option>
-                            <option value="sl">Slovenski</option>
-                            <option value="so">Somali</option>
-                            <option value="sw">Swahili</option>
-                            <option value="sq">Shqiptare</option>
-                            <option value="es">Español</option>
-                            <option value="su">Basa sunda</option>
-                            <option value="sv">Svenska</option>
-                            <option value="ta">தமிழ்</option>
-                            <option value="tg">Тоҷик</option>
-                            <option value="tr">Türk</option>
-                            <option value="th">ไทย</option>
-                            <option value="te">తెలుగు</option>
-                            <option value="uk">Український</option>
-                            <option value="ur">اردو</option>
-                            <option value="vi">Việt nam</option>
-                            <option value="uz">O'zbek</option>
-                            <option value="xh">Isizulu</option>
-                            <option value="cy">Cymru</option>
-                            <option value="yi">ייִדיש</option>
-                            <option value="yo">Yorùbá</option>
-                            <option value="zh-CN">简体中文）</option>
-                            <option value="zh-TW">中國傳統的）</option>
-                            <option value="zu">Zulu</option>
-                        </select>
-                        <label class="mdc-floating-label">Language</label>
+                    <div class="mdc-select mdc-select--outlined demo-width-class" id="language-selector">
+                        <input type="hidden" name="enhanced-select">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text"></div>
+                        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+                            <ul class="mdc-list notranslate">
+                                <li class="mdc-list-item" data-value="af">Afrikaans</li>
+                                <li class="mdc-list-item" data-value="am">አማርኛ</li>
+                                <li class="mdc-list-item" data-value="az">Azərbaycan</li>
+                                <li class="mdc-list-item" data-value="ar">العربية</li>
+                                <li class="mdc-list-item" data-value="hy">հայերեն</li>
+                                <li class="mdc-list-item" data-value="bs">Bosanskih</li>
+                                <li class="mdc-list-item" data-value="eu">Euskal</li>
+                                <li class="mdc-list-item" data-value="bn">বাংলা</li>
+                                <li class="mdc-list-item" data-value="bg">Български</li>
+                                <li class="mdc-list-item" data-value="be">Беларуская</li>
+                                <li class="mdc-list-item" data-value="ca">Català</li>
+                                <li class="mdc-list-item" data-value="co">Corsu</li>
+                                <li class="mdc-list-item" data-value="ceb">Cebuano</li>
+                                <li class="mdc-list-item" data-value="ha">Hausa</li>
+                                <li class="mdc-list-item" data-value="haw">ʻŌlelo Hawaiʻi</li>
+                                <li class="mdc-list-item" data-value="hmn">Hmong</li>
+                                <li class="mdc-list-item" data-value="iw">עִברִי</li>
+                                <li class="mdc-list-item" data-value="hr">Hrvatski</li>
+                                <li class="mdc-list-item" data-value="da">Dansk</li>
+                                <li class="mdc-list-item" data-value="cs">České</li>
+                                <li class="mdc-list-item" data-value="en" aria-selected="true">English</li>
+                                <li class="mdc-list-item" data-value="fy">Frysk</li>
+                                <li class="mdc-list-item" data-value="nl">Nederlandse</li>
+                                <li class="mdc-list-item" data-value="eo">Esperanto</li>
+                                <li class="mdc-list-item" data-value="et">Eesti</li>
+                                <li class="mdc-list-item" data-value="ig">Igbo</li>
+                                <li class="mdc-list-item" data-value="tl">Filipino</li>
+                                <li class="mdc-list-item" data-value="fi">Suomen</li>
+                                <li class="mdc-list-item" data-value="fr">Français</li>
+                                <li class="mdc-list-item" data-value="gl">Galego</li>
+                                <li class="mdc-list-item" data-value="ka">ქართული</li>
+                                <li class="mdc-list-item" data-value="de">Deutsch</li>
+                                <li class="mdc-list-item" data-value="el">Ελληνική</li>
+                                <li class="mdc-list-item" data-value="gu">ગુજરાતી</li>
+                                <li class="mdc-list-item" data-value="ht">Kreyòl Ayisyen</li>
+                                <li class="mdc-list-item" data-value="is">Íslensk</li>
+                                <li class="mdc-list-item" data-value="hu">Magyar</li>
+                                <li class="mdc-list-item" data-value="hi">हिंदी</li>
+                                <li class="mdc-list-item" data-value="id">Indonesia</li>
+                                <li class="mdc-list-item" data-value="ga">Gaeilge</li>
+                                <li class="mdc-list-item" data-value="it">Italiano</li>
+                                <li class="mdc-list-item" data-value="ja">日本語</li>
+                                <li class="mdc-list-item" data-value="jw">Javanese</li>
+                                <li class="mdc-list-item" data-value="kn">ಕನ್ನಡ</li>
+                                <li class="mdc-list-item" data-value="kk">Қазақ</li>
+                                <li class="mdc-list-item" data-value="km">នខ្មែរ</li>
+                                <li class="mdc-list-item" data-value="ko">한국어</li>
+                                <li class="mdc-list-item" data-value="ku">Kurdî (Kurmanish)</li>
+                                <li class="mdc-list-item" data-value="ky">Киргизский</li>
+                                <li class="mdc-list-item" data-value="lo">ລາວ</li>
+                                <li class="mdc-list-item" data-value="la">Latin</li>
+                                <li class="mdc-list-item" data-value="lt">Lietuvių</li>
+                                <li class="mdc-list-item" data-value="lb">Lëtzebuergesch</li>
+                                <li class="mdc-list-item" data-value="lv">Latviešu</li>
+                                <li class="mdc-list-item" data-value="mk">Македонски</li>
+                                <li class="mdc-list-item" data-value="mg">Malagasy</li>
+                                <li class="mdc-list-item" data-value="ms">Melayu</li>
+                                <li class="mdc-list-item" data-value="ml">മലയാളം</li>
+                                <li class="mdc-list-item" data-value="mt">Malti</li>
+                                <li class="mdc-list-item" data-value="mi">Māori</li>
+                                <li class="mdc-list-item" data-value="mr">मराठी</li>
+                                <li class="mdc-list-item" data-value="mn">Монгол улсын</li>
+                                <li class="mdc-list-item" data-value="my">ျမန္မာ(ဗမာ)</li>
+                                <li class="mdc-list-item" data-value="ne">नेपाली</li>
+                                <li class="mdc-list-item" data-value="ny">Chichewa</li>
+                                <li class="mdc-list-item" data-value="fa">فارسی</li>
+                                <li class="mdc-list-item" data-value="no">Norsk</li>
+                                <li class="mdc-list-item" data-value="pl">Polski</li>
+                                <li class="mdc-list-item" data-value="pt">Portuguesa</li>
+                                <li class="mdc-list-item" data-value="pa">ਪੰਜਾਬੀ</li>
+                                <li class="mdc-list-item" data-value="ps">پښتو</li>
+                                <li class="mdc-list-item" data-value="ru">Русский</li>
+                                <li class="mdc-list-item" data-value="ro">Română</li>
+                                <li class="mdc-list-item" data-value="gd">Gàidhlig Na H-Alba</li>
+                                <li class="mdc-list-item" data-value="sr">Руски</li>
+                                <li class="mdc-list-item" data-value="sd">سنڌي</li>
+                                <li class="mdc-list-item" data-value="si">සිංහල</li>
+                                <li class="mdc-list-item" data-value="sm">Samoan</li>
+                                <li class="mdc-list-item" data-value="st">Sesotho</li>
+                                <li class="mdc-list-item" data-value="sn">Shona</li>
+                                <li class="mdc-list-item" data-value="sk">Slovenskej</li>
+                                <li class="mdc-list-item" data-value="sl">Slovenski</li>
+                                <li class="mdc-list-item" data-value="so">Somali</li>
+                                <li class="mdc-list-item" data-value="sw">Swahili</li>
+                                <li class="mdc-list-item" data-value="sq">Shqiptare</li>
+                                <li class="mdc-list-item" data-value="es">Español</li>
+                                <li class="mdc-list-item" data-value="su">Basa sunda</li>
+                                <li class="mdc-list-item" data-value="sv">Svenska</li>
+                                <li class="mdc-list-item" data-value="ta">தமிழ்</li>
+                                <li class="mdc-list-item" data-value="tg">Тоҷик</li>
+                                <li class="mdc-list-item" data-value="tr">Türk</li>
+                                <li class="mdc-list-item" data-value="th">ไทย</li>
+                                <li class="mdc-list-item" data-value="te">తెలుగు</li>
+                                <li class="mdc-list-item" data-value="uk">Український</li>
+                                <li class="mdc-list-item" data-value="ur">اردو</li>
+                                <li class="mdc-list-item" data-value="vi">Việt nam</li>
+                                <li class="mdc-list-item" data-value="uz">O'zbek</li>
+                                <li class="mdc-list-item" data-value="xh">Isizulu</li>
+                                <li class="mdc-list-item" data-value="cy">Cymru</li>
+                                <li class="mdc-list-item" data-value="yi">ייִדיש</li>
+                                <li class="mdc-list-item" data-value="yo">Yorùbá</li>
+                                <li class="mdc-list-item" data-value="zh-CN">简体中文）</li>
+                                <li class="mdc-list-item" data-value="zh-TW">中國傳統的）</li>
+                                <li class="mdc-list-item" data-value="zu">Zulu</li>
+                            </ul>
+                        </div>
+                        <label class="mdc-floating-label">Choose Language</label>
                         <div class="mdc-notched-outline">
                             <svg>
                                 <path class="mdc-notched-outline__path"></path>
