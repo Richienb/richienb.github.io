@@ -84,5 +84,15 @@ mdcAutoInit()
 //     location.reload()
 // });
 
-// Import html5shiv printshiv
-import "html5shiv/dist/html5shiv-printshiv.js"
+while (document.querySelector(".goog-logo-link").firstChild)
+    document.querySelector(".goog-logo-link").removeChild(document.querySelector(".goog-logo-link").firstChild);
+var children = [];
+for (var i = document.querySelector(".goog-te-gadget").children.length; i--;) {
+    // Skip comment nodes on IE8
+    if (document.querySelector(".goog-te-gadget").children[i].nodeType != 8)
+        children.unshift(document.querySelector(".goog-te-gadget").children[i]);
+}
+document.querySelector(".goog-te-gadget").innerHTML = (children)
+
+    // Import html5shiv printshiv
+    import "html5shiv/dist/html5shiv-printshiv.js"
