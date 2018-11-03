@@ -8,9 +8,9 @@ $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
 @import "@material/drawer/mdc-drawer"; // MDC drawer base styles
 @import "@material/list/mdc-list"; // MDC list base styles
-@import "@material/menu-surface/mdc-menu-surface"; // MDC menu surface base styles
-@import "@material/menu/mdc-menu"; // MDC menu base styles
-@import "@material/select/mdc-select"; // MDC select base styles
+// @import "@material/menu-surface/mdc-menu-surface"; // MDC menu surface base styles
+// @import "@material/menu/mdc-menu"; // MDC menu base styles
+// @import "@material/select/mdc-select"; // MDC select base styles
 @import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
 
 body {
@@ -20,12 +20,19 @@ body {
     margin: 0;
     min-height: 100vh;
     position: relative;
+    top: 0 !important;
 }
 
 body > * {
     // All elements in body
     user-select: none;
 }
+// body > div.mdc-select__menu.mdc-menu.mdc-menu-surface.mdc-menu-surface--open > ul > li {
+//     color: #000000;
+// }
+// .demo-width-class {
+//     width: 400px;
+// }
 
 #main-content {
     // Document main
@@ -74,7 +81,6 @@ body > * {
 }
 
 .goog-te-banner-frame.skiptranslate {
-    // Google Translate banner
     display: none !important;
 }
 @import 'node_modules/normalize.css/normalize.css'; // Normalise CSS - A CSS reset

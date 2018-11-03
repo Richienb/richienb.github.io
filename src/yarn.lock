@@ -276,30 +276,10 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.41.0"
 
-"@material/floating-label@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/floating-label/-/floating-label-0.41.0.tgz#17a9af90199b3bcf0ba13b1b5d3616451c7c8c0b"
-  integrity sha512-qI6f1nZU3crXxWAI9fw3U5fHw2qOzEor49EvskbcaV5KSRW5qO+jtfUQ3ib/Vhki7lqhgwNHB/0n7KYhvhjRHQ==
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/base" "^0.41.0"
-    "@material/rtl" "^0.40.1"
-    "@material/theme" "^0.41.0"
-    "@material/typography" "^0.41.0"
-
 "@material/layout-grid@^0.41.0":
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.41.0.tgz#2e7d3be76313e0684d573b10c2c6a88b3230d251"
   integrity sha512-Sa5RNoTGgfIojqJ9E94p7/k11V6q/tGk7HwKi4AQNAPjxield0zcl3G/SbsSb8YSHoK+D+7OXDN+n11x6EqF7g==
-
-"@material/line-ripple@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/line-ripple/-/line-ripple-0.41.0.tgz#de499b0d1dc7f60ddbf497bcc49be76475642d1f"
-  integrity sha512-5DDIoC3d78fCLhNgle7DRFojT3D2SF+XVpUd3g6yLZmybHB7832p4bgl/qGpbIXwk1wAQA1dkUgKH5foxorjNQ==
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/base" "^0.41.0"
-    "@material/theme" "^0.41.0"
 
 "@material/list@^0.41.0":
   version "0.41.0"
@@ -314,40 +294,6 @@
     "@material/theme" "^0.41.0"
     "@material/typography" "^0.41.0"
 
-"@material/menu-surface@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/menu-surface/-/menu-surface-0.41.0.tgz#13b3f0824096216ae10b6f63d78c2ee3e4fb76b3"
-  integrity sha512-HiGFrEIF8DCfEtS8mRtc6MCcK2CJNCh0U6KWWeSIXv+9nW2oiN09piuULXM7aU46wETvfweVcgvHNJvBAXnXjQ==
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/base" "^0.41.0"
-    "@material/elevation" "^0.41.0"
-    "@material/rtl" "^0.40.1"
-    "@material/shape" "^0.41.0"
-    "@material/theme" "^0.41.0"
-
-"@material/menu@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/menu/-/menu-0.41.0.tgz#0ae4893ed7738ce496ebb1c1fea342ed07def33f"
-  integrity sha512-w8UFEnTWzOWl1hRx06tFBqAY4I0vYmbDIVwxO8g1CIgQkfG2dIXjJUfVvlYf9NzZ0VOyyKMh69MmMA5KP+HgAw==
-  dependencies:
-    "@material/base" "^0.41.0"
-    "@material/list" "^0.41.0"
-    "@material/menu-surface" "^0.41.0"
-    "@material/ripple" "^0.41.0"
-    "@material/rtl" "^0.40.1"
-
-"@material/notched-outline@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/notched-outline/-/notched-outline-0.41.0.tgz#0b84bc710032fd9809fb21a9233fe3e71a142733"
-  integrity sha512-nQBkOXvkd5G9FeJ9UuecZh88WRgTsnGVvfj7UFJZEkvkzZwLBGUiJS6fF9FYraih3ZFgmphdbJxXEd9af3cqyQ==
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/base" "^0.41.0"
-    "@material/rtl" "^0.40.1"
-    "@material/shape" "^0.41.0"
-    "@material/theme" "^0.41.0"
-
 "@material/ripple@^0.41.0":
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.41.0.tgz#73dbb9bf0e1d72382926b39f2527c011e689dde2"
@@ -361,24 +307,6 @@
   version "0.40.1"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.40.1.tgz#5b0d973e3c6f8e2ea3656c06ada37ba2fedfa206"
   integrity sha512-Pk6Iw1/KrhWZoZtkDsPMDUW0bm7Z1zeXb3MTQRCFmjf1wU5cRxgOTtuoZLcJqlcKGppLAzJL/TJV3E7KEiuL0A==
-
-"@material/select@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/select/-/select-0.41.0.tgz#f57b2f24df89b4706db7d3822bb9f59f67599f51"
-  integrity sha512-MAU/EHGT1QmBlDvvKI1X7M0ua9w8RqP0UjDMkFxhyfA9tv7ZBS7u/z2/GBb9DUzFu2rKu9DCQ5B+GLBglukfAg==
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/base" "^0.41.0"
-    "@material/floating-label" "^0.41.0"
-    "@material/line-ripple" "^0.41.0"
-    "@material/menu" "^0.41.0"
-    "@material/menu-surface" "^0.41.0"
-    "@material/notched-outline" "^0.41.0"
-    "@material/ripple" "^0.41.0"
-    "@material/rtl" "^0.40.1"
-    "@material/shape" "^0.41.0"
-    "@material/theme" "^0.41.0"
-    "@material/typography" "^0.41.0"
 
 "@material/shape@^0.41.0":
   version "0.41.0"

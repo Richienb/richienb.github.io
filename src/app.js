@@ -10,14 +10,14 @@ if ("ontouchstart" in document.documentElement) {
     })
 }
 
-// Check if the googtrans cookie exists
-if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2] !== undefined) {
-    // Set the value of the selector to the value of the cookie
-    document.getElementById("language-selector").value = document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2]
-} else {
-    // Set the value of the selector to the default, English
-    document.getElementById("language-selector").value = "en"
-}
+// // Check if the googtrans cookie exists
+// if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2] !== undefined) {
+//     // Set the value of the selector to the value of the cookie
+//     document.getElementById("language-selector").value = document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2]
+// } else {
+//     // Set the value of the selector to the default, English
+//     document.getElementById("language-selector").value = "en"
+// }
 
 // Import MDC Drawer
 import {
@@ -46,7 +46,7 @@ topAppBar.listen("MDCTopAppBar:nav", () => {
 })
 
 // Listen for a website link click
-document.getElementById("websitelink").addEventListener("click", function() {
+document.getElementById("website-menu-item").addEventListener("click", function() {
 
     // Close the drawer
     drawer.open = false
@@ -66,23 +66,23 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 // Automatically initialise the objects
 mdcAutoInit()
 
-// Import MDC Select
-import {
-    MDCSelect
-} from "@material/select/index"
+// // Import MDC Select
+// import {
+//     MDCSelect
+// } from "@material/select/index"
 
-// Initialise language selector
-const select = new MDCSelect(document.getElementById("language-selector"))
-
-// List for a language chosen
-select.listen("change", () => {
-
-    // Set the language cookie depending on the selected language
-    document.cookie = `googtrans=/en/${select.value} path=/`
-
-    // Refesh the page to start the translation
-    location.reload()
-})
+// // Initialise language selector
+// const select = new MDCSelect(document.getElementById("language-selector"))
+//
+// // Listen for a language chosen
+// select.listen('MDCSelect:change', () => {
+//
+//     // Set the language cookie depending on the selected language
+//     document.cookie = `googtrans=/en/${select.value} path=/`
+//
+//     // Refesh the page to start the translation
+//     location.reload()
+// });
 
 // Import html5shiv printshiv
 import "html5shiv/dist/html5shiv-printshiv.js"
