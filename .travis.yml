@@ -77,7 +77,7 @@ after_deploy:
       --data '{"purge_everything":true}'
 
    # Recrawl site for Google Search
-   - curl https://www.google.com/ping?sitemap=https://www.richie-bendall.ml/sitemap.xml
+   - curl -s https://www.google.com/ping?sitemap=https://www.richie-bendall.ml/sitemap.xml > /dev/null && echo Google Search recrawl requested.
 
 notifications:
    # Disable emails for build status notifications
