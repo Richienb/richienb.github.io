@@ -10,14 +10,10 @@ if ("ontouchstart" in document.documentElement) {
     })
 }
 
-// // Check if the googtrans cookie exists
-// if (document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2] !== undefined) {
-//     // Set the value of the selector to the value of the cookie
-//     document.getElementById("language-selector").value = document.cookie.replace(/(?:(?:^|.*;\s*)googtrans\s*\=\s*([^;]*).*$)|^.*$/, "$1").split("/")[2]
-// } else {
-//     // Set the value of the selector to the default, English
-//     document.getElementById("language-selector").value = "en"
-// }
+window.onload = function() {
+    document.querySelector(".goog-logo-link").parentNode.parentNode.removeChild(document.querySelector(".goog-logo-link").parentNode);
+    document.querySelector(".goog-te-gadget").innerHTML = document.querySelector(".goog-te-gadget").innerHTML.replace('Powered by ', '')
+}
 
 // Import MDC Drawer
 import {
@@ -58,7 +54,7 @@ import {
 } from "@material/ripple/index"
 
 // Import MDC Auto Init
-import mdcAutoInit from "@material/auto-init"
+import mdcAutoInit from "@material/auto-init/index"
 
 // Register MDC Ripple as an automatically initialsable object
 mdcAutoInit.register("MDCRipple", MDCRipple)
@@ -66,33 +62,5 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 // Automatically initialise the objects
 mdcAutoInit()
 
-// // Import MDC Select
-// import {
-//     MDCSelect
-// } from "@material/select/index"
-
-// // Initialise language selector
-// const select = new MDCSelect(document.getElementById("language-selector"))
-//
-// // Listen for a language chosen
-// select.listen('MDCSelect:change', () => {
-//
-//     // Set the language cookie depending on the selected language
-//     document.cookie = `googtrans=/en/${select.value} path=/`
-//
-//     // Refesh the page to start the translation
-//     location.reload()
-// });
-
-while (document.querySelector(".goog-logo-link").firstChild)
-    document.querySelector(".goog-logo-link").removeChild(document.querySelector(".goog-logo-link").firstChild);
-var children = [];
-for (var i = document.querySelector(".goog-te-gadget").children.length; i--;) {
-    // Skip comment nodes on IE8
-    if (document.querySelector(".goog-te-gadget").children[i].nodeType != 8)
-        children.unshift(document.querySelector(".goog-te-gadget").children[i]);
-}
-document.querySelector(".goog-te-gadget").innerHTML = (children)
-
-    // Import html5shiv printshiv
-    import "html5shiv/dist/html5shiv-printshiv.js"
+// Import html5shiv printshiv
+import "html5shiv/dist/html5shiv-printshiv.js"
