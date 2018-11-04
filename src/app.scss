@@ -61,6 +61,11 @@ body > * {
     @include mdc-states(red);
 }
 
+.content-card > .mdc-card__primary-action > p {
+    // The main text of the cards
+    margin: 0;
+}
+
 #gravatar-icon {
     // The profile image
     border-radius: 50%;
