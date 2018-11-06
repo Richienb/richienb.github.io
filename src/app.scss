@@ -8,9 +8,6 @@ $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
 @import "@material/drawer/mdc-drawer"; // MDC drawer base styles
 @import "@material/list/mdc-list"; // MDC list base styles
-// @import "@material/menu-surface/mdc-menu-surface"; // MDC menu surface base styles
-// @import "@material/menu/mdc-menu"; // MDC menu base styles
-// @import "@material/select/mdc-select"; // MDC select base styles
 @import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
 
 body {
@@ -76,6 +73,14 @@ body > * {
     right: 40px;
     top: 30px;
     z-index: 999;
+}
+
+@media (max-width: 400px) {       
+    // Screen size 400px or smaller
+    #gravatar-icon {
+        // The profile image
+        display: none;
+   }
 }
 
 .goog-te-banner-frame.skiptranslate {
