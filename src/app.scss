@@ -99,4 +99,9 @@ body > * {
     padding-left: 15px;
     padding-top: 15px;
 }
+
+.goog-te-spinner-pos {
+    // Google Translate spinner object in footer
+    display: none;
+}
 @import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset
