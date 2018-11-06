@@ -11,7 +11,7 @@ if ("ontouchstart" in document.documentElement) {
 }
 
 window.onload = function() {
-    document.querySelector(".goog-logo-link").parentNode.parentNode.removeChild(document.querySelector(".goog-logo-link").parentNode);
+    document.querySelector(".goog-logo-link").parentNode.parentNode.removeChild(document.querySelector(".goog-logo-link").parentNode)
     document.querySelector(".goog-te-gadget").innerHTML = document.querySelector(".goog-te-gadget").innerHTML.replace('Powered by ', '')
 }
 
