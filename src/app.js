@@ -51,7 +51,7 @@ import {
 // Import MDC Auto Init
 import mdcAutoInit from "@material/auto-init/index"
 
-// Register MDC Ripple as an automatically initialsable object
+// Register MDC Ripple as an automatically initialisable object
 mdcAutoInit.register("MDCRipple", MDCRipple)
 
 // Automatically initialise the objects
