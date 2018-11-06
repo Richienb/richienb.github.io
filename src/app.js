@@ -10,11 +10,6 @@ if ("ontouchstart" in document.documentElement) {
     })
 }
 
-window.onload = function() {
-    document.querySelector(".goog-logo-link").parentNode.parentNode.removeChild(document.querySelector(".goog-logo-link").parentNode)
-    document.querySelector(".goog-te-gadget").innerHTML = document.querySelector(".goog-te-gadget").innerHTML.replace('Powered by ', '')
-}
-
 // Import MDC Drawer
 import {
     MDCDrawer
@@ -62,5 +57,14 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 // Automatically initialise the objects
 mdcAutoInit()
 
+// Document ready function
+import "docready/docready"
+
+// Remove Google Translate text when document loaded
+docReady(function() {
+    document.querySelector(".goog-logo-link").parentNode.parentNode.removeChild(document.querySelector(".goog-logo-link").parentNode)
+    document.querySelector(".goog-te-gadget").innerHTML = document.querySelector(".goog-te-gadget").innerHTML.replace('Powered by ', '')
+})
+
 // Import html5shiv printshiv
-import "html5shiv/dist/html5shiv-printshiv.js"
+import "html5shiv/dist/html5shiv-printshiv"
