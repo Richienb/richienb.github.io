@@ -46,6 +46,7 @@
         "file-loader": "^2.0.0",
         "html-minifier": "^3.5.21",
         "html5shiv": "^3.7.3",
+        "docready": "^1.0.0",
         "node-sass": "^4.10.0",
         "normalize.css": "^8.0.0",
         "postcss": "7.0.5",
