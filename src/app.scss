@@ -8,7 +8,9 @@ $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
 @import "@material/drawer/mdc-drawer"; // MDC drawer base styles
 @import "@material/list/mdc-list"; // MDC list base styles
-@import "@material/select/mdc-select"; // MDC select base styles
+// @import "@material/menu-surface/mdc-menu-surface"; // MDC menu surface base styles
+// @import "@material/menu/mdc-menu"; // MDC menu base styles
+// @import "@material/select/mdc-select"; // MDC select base styles
 @import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
 
 body {
@@ -18,6 +20,7 @@ body {
     margin: 0;
     min-height: 100vh;
     position: relative;
+    top: 0 !important;
 }
 
 body > * {
@@ -78,5 +81,17 @@ body > * {
 .goog-te-banner-frame.skiptranslate {
     // Google Translate banner
     display: none !important;
+}
+
+.goog-logo-link {
+    // Google Translate logo
+    display: none !important;
+}
+
+.goog-te-gadget {
+    // Google Translate widget
+    color: transparent !important;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 @import 'node_modules/normalize.css/normalize.css'; // Normalise CSS - A CSS reset
