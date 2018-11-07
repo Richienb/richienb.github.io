@@ -1,7 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js');
 
 if (workbox) {
-    console.log("Yay! Workbox has loaded 🎉");
+    console.debug("Yay! Workbox has loaded 🎉");
 
     workbox.precaching.precacheAndRoute([]);
 
@@ -19,7 +19,7 @@ if (workbox) {
     });
 
 } else {
-    console.log("Noo! Workbox didn't load 😬");
+    console.debug("Noo! Workbox didn't load 😬");
 }
 
 workbox.googleAnalytics.initialize();
