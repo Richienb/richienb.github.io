@@ -290,6 +290,15 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.41.0"
 
+"@material/icon-button@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.41.0.tgz#695c334232dd11266805c6196ac0a3ee95f37204"
+  integrity sha512-RzGSH97aUcTW4he+uU8ahT75DEn6+29L0hH4PBKe03/R/qHFfOrWfjfd03PPiCkaT5SNkPkt1YnfEPqKolnH1Q==
+  dependencies:
+    "@material/base" "^0.41.0"
+    "@material/ripple" "^0.41.0"
+    "@material/theme" "^0.41.0"
+
 "@material/layout-grid@^0.41.0":
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.41.0.tgz#2e7d3be76313e0684d573b10c2c6a88b3230d251"
@@ -2467,11 +2476,6 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
-
-docready@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/docready/-/docready-1.0.0.tgz#c65eb47510c93c66c86faeedc8ba3db9b3421836"
-  integrity sha1-xl60dRDJPGbIb67tyLo9ubNCGDY=
 
 dom-serializer@0, dom-serializer@~0.1.0:
   version "0.1.0"
