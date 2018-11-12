@@ -71,12 +71,12 @@ module.exports = {
         }]
     },
     plugins: [
-        new ClosurePlugin({
+        new ClosurePlugin(options: {
             // Configuration
-            mode: 'STANDARD',
-        }, {
-            // Compiler flags
-            warning_level: 'QUIET'
+            languageIn: 'ECMASCRIPT6',
+            languageOut: 'ECMASCRIPT5',
+            compilationLevel: 'ADVANCED',
+            createSourceMap: true
         })
     ]
 };
