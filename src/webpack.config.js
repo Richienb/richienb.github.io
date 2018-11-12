@@ -71,12 +71,14 @@ module.exports = {
         }]
     },
     plugins: [
-        new ClosurePlugin(options: {
-            // Configuration
-            languageIn: 'ECMASCRIPT6',
-            languageOut: 'ECMASCRIPT5',
-            compilationLevel: 'ADVANCED',
-            createSourceMap: true
+        new ClosureCompiler({
+            options: {
+                // Configuration
+                languageIn: 'ECMASCRIPT6',
+                languageOut: 'ECMASCRIPT5',
+                compilationLevel: 'ADVANCED',
+                createSourceMap: true
+            }
         })
     ]
 };
