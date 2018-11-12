@@ -72,7 +72,7 @@ module.exports = {
     },
     plugins: [
         new ClosureCompiler({
-            {
+            compiler: {
                 // Configuration
                 languageIn: 'ECMASCRIPT6',
                 languageOut: 'ECMASCRIPT5',
