@@ -1,6 +1,5 @@
 const path = require('path');
 const ClosurePlugin = require('closure-webpack-plugin');
-const workboxPlugin = require('workbox-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
     // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
