@@ -1,5 +1,5 @@
 const path = require('path');
-const ClosureCompilerPlugin = require('closure-webpack-plugin');
+const ClosurePlugin = require('closure-webpack-plugin');
 const workboxPlugin = require('workbox-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
@@ -71,14 +71,12 @@ module.exports = {
         }]
     },
     plugins: [
-        new ClosureCompilerPlugin({
-            compiler: {
-                language_in: 'ECMASCRIPT6',
-                language_out: 'ECMASCRIPT5',
-                compilation_level: 'ADVANCED',
-                create_source_map: __dirname + './output.js.map'
-            },
-            concurrency: 3,
+        new ClosurePlugin({
+            // Other configuration options
+            mode: 'AGGRESSIVE_BUNDLE'
+        }, {
+            // Compiler flags
+            warning_level: 'QUIET'
         })
     ]
 };
