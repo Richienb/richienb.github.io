@@ -1,5 +1,5 @@
 const path = require('path');
-const ClosurePlugin = require('closure-webpack-plugin');
+const ClosureCompiler = require('closure-webpack-plugin');
 const workboxPlugin = require('workbox-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
