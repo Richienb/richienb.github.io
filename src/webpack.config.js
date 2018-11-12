@@ -73,7 +73,7 @@ module.exports = {
     plugins: [
         new ClosurePlugin({
             // Other configuration options
-            mode: 'AGGRESSIVE_BUNDLE'
+            mode: 'STANDARD'
         }, {
             // Compiler flags
             warning_level: 'QUIET'
