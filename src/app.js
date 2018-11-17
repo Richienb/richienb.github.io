@@ -10,6 +10,13 @@ if ("ontouchstart" in document.documentElement) {
     })
 }
 
+// Listen for when the site finishes loading
+document.addEventListener("DOMContentLoaded", function(event) {
+    // If the Gravatar image failed to load, hide it
+    document.getElementById('gravatar-icon').onerror = document.getElementById('gravatar-icon').style.display = 'none'
+
+})
+
 // Import MDC Drawer
 import {
     MDCDrawer
