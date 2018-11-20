@@ -1,6 +1,3 @@
-# Disable sudo to speed up build
-sudo:                   false
-
 # Set build language to Node JS
 language:               node_js
 
