@@ -48,7 +48,7 @@
         "html5shiv": "^3.7.3",
         "node-sass": "^4.10.0",
         "normalize.css": "^8.0.1",
-        "postcss": "7.0.5",
+        "postcss": "7.0.6",
         "postcss-loader": "^3.0.0",
         "postcss-preset-env": "6.4.0",
         "sass-loader": "^7.1.0",
