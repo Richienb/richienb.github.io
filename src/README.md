@@ -4,4 +4,4 @@ ___
 
 Browser testing kindly provided by:
 
-![Browserstack](https://i.imgur.com/yLGiIoY.png)
+[![Browserstack](https://i.imgur.com/yLGiIoY.png)](https://www.browserstack.com/)
