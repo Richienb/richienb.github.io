@@ -4,11 +4,14 @@ Richie Bendall
 
 /* SITE */
 
-Standards: HTML, CSS, JS
+Standards: HTML5, SCSS and Babel
 
-Components:
-MDL,
-Roboto and Material Icons via Google Fonts,
+/* COMPONENTS */
+
+Material Design Components for the Web,
+Roboto font via Google Fonts,
+Material icons from Google Icons,
 Service Worker via Workbox,
 HTML5shiv for IE6 and below support,
-JQuery
+Normalize CSS as a CSS reset,
+Web app manifest.
