@@ -21,11 +21,6 @@ body {
     top: 0 !important;
 }
 
-body > * {
-    // All elements in body
-    user-select: none;
-}
-
 #main-content {
     // Document main
     height: 100%;
