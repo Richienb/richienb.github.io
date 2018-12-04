@@ -33,7 +33,7 @@
         "@material/layout-grid": "^0.41.0",
         "@material/ripple": "^0.41.0",
         "@material/top-app-bar": "^0.41.0",
-        "@material/typography": "0.41.0",
+        "@material/typography": "0.42.0",
         "babel-core": "6.26.3",
         "babel-loader": "7.1.5",
         "babel-plugin-transform-object-assign": "^6.22.0",
