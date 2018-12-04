@@ -29,7 +29,7 @@
         "@material/button": "^0.41.0",
         "@material/card": "^0.41.1",
         "@material/drawer": "^0.41.1",
-        "@material/icon-button": "^0.41.0",
+        "@material/icon-button": "^0.42.0",
         "@material/layout-grid": "^0.41.0",
         "@material/ripple": "^0.41.0",
         "@material/top-app-bar": "^0.41.0",
