@@ -64,8 +64,16 @@ body {
     border-radius: 50%;
     position: absolute;
     right: 40px;
-    top: 30px;
+    top: 35px;
     z-index: 999;
+}
+
+@media (max-width: 599px) {
+    // Screen size 599px or smaller
+    #gravatar-icon {
+        // The profile image
+        top: 30px;
+    }
 }
 
 @media (max-width: 400px) {
