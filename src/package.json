@@ -28,6 +28,7 @@
         "@material/auto-init": "^0.41.0",
         "@material/button": "^0.42.0",
         "@material/card": "^0.42.0",
+        "@material/dialog": "^0.42.0",
         "@material/drawer": "^0.42.0",
         "@material/icon-button": "^0.42.0",
         "@material/layout-grid": "^0.41.0",
@@ -52,12 +53,12 @@
         "postcss-loader": "^3.0.0",
         "postcss-preset-env": "6.4.0",
         "sass-loader": "^7.1.0",
-        "sitemap-generator-cli": "^7.3.0",
-        "webpack": "3.12.0",
-        "workbox-cli": "^3.6.3"
+        "webpack": "3.12.0"
     },
     "devDependencies": {
-        "webpack-dev-server": "2.11.3"
+        "webpack-dev-server": "2.11.3",
+        "sitemap-generator-cli": "^7.3.0",
+        "workbox-cli": "^3.6.3"
     },
     "repository": {
         "type": "git",

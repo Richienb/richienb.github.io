@@ -11,7 +11,7 @@ if ("ontouchstart" in document.documentElement) {
 }
 
 // When the Gravatar image fails to load
-document.getElementById("gravatar-icon").onerror = function () { 
+document.getElementById("gravatar-icon").onerror = function() {
     // Hide the Gravatar image
     this.style.display = "none";
 }
@@ -47,6 +47,20 @@ document.getElementById("website-menu-item").addEventListener("click", function(
 
     // Close the drawer
     drawer.open = false
+})
+
+// Import MDC Dialog
+import {
+    MDCDialog
+} from '@material/dialog/index';
+
+// Setup dialog
+const btc_support_dialog = new MDCDialog(document.getElementById("btc-support-dialog"))
+
+// Listen for menu item click
+document.getElementById("btc-support-button").addEventListener("click", function() {
+    // Open the dialog
+    btc_support_dialog.open()
 })
 
 // Import MDC Ripple

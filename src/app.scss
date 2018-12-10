@@ -10,6 +10,7 @@ $mdc-theme-background: #5C6BC0; // Background colour
 @import "@material/drawer/mdc-drawer"; // MDC drawer base styles
 @import "@material/list/mdc-list"; // MDC list base styles
 @import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
+@import "@material/dialog/mdc-dialog"; // MDC Dialog styles
 
 body {
     // Document body
@@ -30,6 +31,24 @@ body {
 #mdc-drawer-app-content {
     // Content of app drawer
     flex: auto;
+
+    > nav > span {
+        // All the span tags inside of the drawer
+        cursor: pointer;
+    }
+}
+
+#btc-support-dialog ul > li {
+    // The text inside each list item of the dialog
+    .mdc-list-item__primary-text {
+        // The primary text of a list item
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .mdc-list-item__secondary-text {
+        // The secondary text of a list item
+        color: rgba(0, 0, 0, 0.54);
+    }
 }
 
 #content-grid {
@@ -38,25 +57,28 @@ body {
     max-width: 1250px;
 }
 
-.content-card .mdc-card__primary-action {
-    // The main text area of a card
-    padding: 1rem;
-}
+.content-card {
+    // The content inside of the cards
+    > .mdc-card__actions > nav > a {
+        // The buttons inside of the cards
+        @include mdc-button-ink-color(red);
+        @include mdc-states(red);
+    }
 
-.content-card .mdc-card__primary-action .mdc-card__title {
-    // The title area of a card
-    margin: 0;
-}
+    .mdc-card__primary-action {
+        // The main text area of a card
+        padding: 1rem;
 
-.content-card .mdc-card__actions .mdc-card__action-buttons .mdc-button {
-    // The buttons inside of the cards
-    @include mdc-button-ink-color(red);
-    @include mdc-states(red);
-}
+        .mdc-card__title {
+            // The title area of a card
+            margin: 0;
+        }
+    }
 
-.content-card > .mdc-card__primary-action > p {
-    // The main text of the cards
-    margin: 0;
+    > .mdc-card__primary-action > p {
+        // The main text of the cards
+        margin: 0;
+    }
 }
 
 #gravatar-icon {
@@ -67,7 +89,6 @@ body {
     top: 35px;
     z-index: 999;
 }
-
 @media (max-width: 599px) {
     // Screen size 599px or smaller
     #gravatar-icon {
@@ -75,7 +96,6 @@ body {
         top: 30px;
     }
 }
-
 @media (max-width: 400px) {
     // Screen size 400px or smaller
     #gravatar-icon {
