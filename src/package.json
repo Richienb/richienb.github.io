@@ -24,7 +24,7 @@
     "author": "Richie Bendall",
     "license": "ISC",
     "dependencies": {
-        "@babel/core": "^7.2.0",
+        "@babel/core": "^7.2.2",
         "@material/auto-init": "^0.41.0",
         "@material/button": "^0.42.0",
         "@material/card": "^0.42.0",
