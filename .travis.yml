@@ -37,7 +37,7 @@ install:
 
 script:
     # Build the website with Webpack
-    - npm run build
+    - yarn run build
 
     # Generate the service worker
     - npx workbox injectManifest workbox-config.js
