@@ -49,7 +49,7 @@ script:
     - npx sitemap-generator-cli https://www.richie-bendall.ml
 
     # Minify the HTML code
-    - npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --file-ext html
+    - npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html
 
 deploy:
     provider:           pages
