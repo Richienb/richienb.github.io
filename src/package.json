@@ -26,7 +26,7 @@
     "dependencies": {
         "@babel/core": "^7.2.2",
         "@material/auto-init": "^0.41.0",
-        "@material/button": "^0.42.0",
+        "@material/button": "^0.43.0",
         "@material/card": "^0.42.0",
         "@material/dialog": "^0.42.0",
         "@material/drawer": "^0.42.0",
