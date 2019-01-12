@@ -308,16 +308,16 @@
     "@material/theme" "^0.43.0"
     "@material/typography" "^0.43.0"
 
-"@material/card@^0.42.0":
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.42.0.tgz#8e8c4674167f15c8abd895524c74496c0e1e503c"
-  integrity sha512-Aj37mG4HP8fVGtFywsJZuPhxHy6Fb4G59PVzdm7/Yz3VF47v6FMEaQ418kHg9K2qya4al6f4mYjipN6h9ZGfmw==
+"@material/card@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.43.0.tgz#70c01f45c31cff18651e7fdf61be7a409b3344ff"
+  integrity sha512-uy0d7gtRWI3d1RDbzWqKnhvDH5iFv8myjd+UJNFGy076ZPZA5re+/RSP01Hc9IX+bDAQzAIDoVWLcFdPD7DpLg==
   dependencies:
-    "@material/elevation" "^0.41.0"
-    "@material/ripple" "^0.42.0"
+    "@material/elevation" "^0.43.0"
+    "@material/ripple" "^0.43.0"
     "@material/rtl" "^0.42.0"
-    "@material/shape" "^0.42.0"
-    "@material/theme" "^0.41.0"
+    "@material/shape" "^0.43.0"
+    "@material/theme" "^0.43.0"
 
 "@material/dialog@^0.43.0":
   version "0.43.0"
