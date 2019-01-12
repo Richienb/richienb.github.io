@@ -372,14 +372,14 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.43.0"
 
-"@material/icon-button@^0.42.0":
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.42.0.tgz#67f100b34717846b9fb738202c1fc935214ed541"
-  integrity sha512-T8Za2DsJTYp/nFpJxAZhwtY95pyGsOxS9R5vImyyQaQ9CZahXzmFhJF+cai1LF41tV68hwgnMifJ0iVLgFq4dQ==
+"@material/icon-button@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.43.0.tgz#e777e585d56b99306b91b197c0d486e9fac9f034"
+  integrity sha512-muldr6pmX2peY9ECYxcZfnmDWLqinT+HRVuND2ltCKUqgLBGi4DETQQE0PEOzsChePJothbyqeQorXgcBP8EgQ==
   dependencies:
     "@material/base" "^0.41.0"
-    "@material/ripple" "^0.42.0"
-    "@material/theme" "^0.41.0"
+    "@material/ripple" "^0.43.0"
+    "@material/theme" "^0.43.0"
 
 "@material/layout-grid@^0.41.0":
   version "0.41.0"
