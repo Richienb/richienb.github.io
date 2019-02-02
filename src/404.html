@@ -199,7 +199,7 @@ permalink: /404.html
             <br /> or requesting a page that's no longer here.
         </p>
         <div align="center">
-            <a class="btn-back" href="#">Back to previous page</a>
+            <a class="btn-back" href="#" onclick="return false;">Back to previous page</a>
         </div>
         <img src="https://mars-404.templateku.co/img/astronaut.svg" class="astronaut" />
         <img src="https://mars-404.templateku.co/img/spaceship.svg" class="spaceship" />
@@ -207,7 +207,14 @@ permalink: /404.html
 
     <!-- IE6 compatiblity asset -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-
+    
+    <!-- Javascript -->
+    <script>
+        document.querySelector(".btn-back").addEventListener("click", function() {
+	        window.history.back();
+        });
+    </script>
+    
 </body>
 
 </html>
