@@ -2,6 +2,6 @@ User-agent: Browsershots
 Disallow:
 
 User-agent: *
-Disallow: /error.html
+Disallow: /404.html
 
 Sitemap: https://www.richie-bendall.ml/sitemap.xml
