@@ -81,14 +81,20 @@ body {
     }
 }
 
-#gravatar-icon {
-    // The profile image
-    border-radius: 50%;
+#gravatar-icon-container {
+    // The container of the profile image
     position: absolute;
     right: 40px;
     top: 35px;
     z-index: 999;
+
+    #gravatar-icon {
+        // The profile image
+        border-radius: 50%;
+    }
 }
+
+
 @media (max-width: 599px) {
     // Screen size 599px or smaller
     #gravatar-icon {
