@@ -2,7 +2,7 @@
 language:               node_js
 
 # Set the version of Node JS to use
-node_js:                node
+node_js:                lts
 
 env:
     # Ensure HTTPS is used
