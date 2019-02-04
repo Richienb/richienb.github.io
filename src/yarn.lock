@@ -308,13 +308,13 @@
     "@material/theme" "^0.43.0"
     "@material/typography" "^0.43.0"
 
-"@material/card@^0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.43.0.tgz#70c01f45c31cff18651e7fdf61be7a409b3344ff"
-  integrity sha512-uy0d7gtRWI3d1RDbzWqKnhvDH5iFv8myjd+UJNFGy076ZPZA5re+/RSP01Hc9IX+bDAQzAIDoVWLcFdPD7DpLg==
+"@material/card@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.44.0.tgz#e62050e3e77f525173a015119200055cd7b71bf0"
+  integrity sha512-fUixXuh133bVp5c1gPIHreL5jwMJEeVIQf0E4xdxhkA+i4ku8fIAvIW62EuCmfJsXicv4q8NG3Ip6pCY+NW3ZA==
   dependencies:
-    "@material/elevation" "^0.43.0"
-    "@material/ripple" "^0.43.0"
+    "@material/elevation" "^0.44.0"
+    "@material/ripple" "^0.44.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^0.43.0"
     "@material/theme" "^0.43.0"
@@ -364,6 +364,19 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.43.0"
 
+"@material/elevation@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.44.0.tgz#ca16a67188ce9810dc2fa3d7a39073e72df4b754"
+  integrity sha512-edNou34yFCSMb6XXe/6Y7AEh8DigWAhBUyIeMiMBD4k1km2xYCJbcnl8FBPJFteOrca97KoJComRlJPB6EurRQ==
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/theme" "^0.43.0"
+
+"@material/feature-targeting@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.0.tgz#52cc73f0c8a83159de0357aebe74f15f9856fb4c"
+  integrity sha512-ShuC2TOLfjFpYUCQFtvkqDJhM6HTaucSx5HkRbOvOG+VlpzDx6pAqRUmdVaq2p7tHoQf2vwPMlSVm3gOjWt4VQ==
+
 "@material/icon-button@^0.43.0":
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.43.0.tgz#e777e585d56b99306b91b197c0d486e9fac9f034"
@@ -398,6 +411,16 @@
   dependencies:
     "@material/animation" "^0.41.0"
     "@material/base" "^0.41.0"
+    "@material/theme" "^0.43.0"
+
+"@material/ripple@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.44.0.tgz#98920ff8ec4bf5714c97df3d190f02f8a5b476cc"
+  integrity sha512-MlaW4nUDgzS0JOBfsUawXyTOilr0jn+xvTVn6PEaGh2rmhNA54AhixXvdsVUWE9lfmHAsZV0AJHz2z7nunNhbQ==
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/base" "^0.41.0"
+    "@material/feature-targeting" "^0.44.0"
     "@material/theme" "^0.43.0"
 
 "@material/rtl@^0.42.0":
