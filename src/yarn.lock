@@ -364,13 +364,18 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.43.0"
 
-"@material/icon-button@^0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.43.0.tgz#e777e585d56b99306b91b197c0d486e9fac9f034"
-  integrity sha512-muldr6pmX2peY9ECYxcZfnmDWLqinT+HRVuND2ltCKUqgLBGi4DETQQE0PEOzsChePJothbyqeQorXgcBP8EgQ==
+"@material/feature-targeting@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.0.tgz#52cc73f0c8a83159de0357aebe74f15f9856fb4c"
+  integrity sha512-ShuC2TOLfjFpYUCQFtvkqDJhM6HTaucSx5HkRbOvOG+VlpzDx6pAqRUmdVaq2p7tHoQf2vwPMlSVm3gOjWt4VQ==
+
+"@material/icon-button@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.44.0.tgz#febbcfd27d91eca8096ae042b9c07ed0f65345e9"
+  integrity sha512-n6L7RaRyEci6eGsuBTSEG+t9ATHAHaMlf9zuTWorEnIXY4DAmGO7ggBjw4+1XIOjhpLeIjyJdcvUK6Yz/UVM6Q==
   dependencies:
     "@material/base" "^0.41.0"
-    "@material/ripple" "^0.43.0"
+    "@material/ripple" "^0.44.0"
     "@material/theme" "^0.43.0"
 
 "@material/layout-grid@^0.41.0":
@@ -398,6 +403,16 @@
   dependencies:
     "@material/animation" "^0.41.0"
     "@material/base" "^0.41.0"
+    "@material/theme" "^0.43.0"
+
+"@material/ripple@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.44.0.tgz#98920ff8ec4bf5714c97df3d190f02f8a5b476cc"
+  integrity sha512-MlaW4nUDgzS0JOBfsUawXyTOilr0jn+xvTVn6PEaGh2rmhNA54AhixXvdsVUWE9lfmHAsZV0AJHz2z7nunNhbQ==
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/base" "^0.41.0"
+    "@material/feature-targeting" "^0.44.0"
     "@material/theme" "^0.43.0"
 
 "@material/rtl@^0.42.0":
