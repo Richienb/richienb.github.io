@@ -1,14 +1,5 @@
+// Log development message
 console.log("%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io", "font-family: Roboto, sans-serif; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; line-height: 2rem; text-decoration: inherit; text-transform: inherit; font-size: 1.5rem; font-weight: 400; letter-spacing: normal;")
-
-// Check if passive scrolling mode is supported
-if ("ontouchstart" in document.documentElement) {
-    // Enable passive scrolling mode
-    document.addEventListener("touchstart", function() {
-        return
-    }, {
-        passive: true
-    })
-}
 
 // When the Gravatar image fails to load
 document.getElementById("gravatar-icon").onerror = function() {
