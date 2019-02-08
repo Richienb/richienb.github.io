@@ -33,13 +33,6 @@ topAppBar.listen("MDCTopAppBar:nav", () => {
     drawer.open = !drawer.open
 })
 
-// Listen for a website link click
-document.getElementById("website-menu-item").addEventListener("click", function() {
-
-    // Close the drawer
-    drawer.open = false
-})
-
 // Import MDC Dialog
 import {
     MDCDialog
