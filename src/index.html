@@ -25,8 +25,6 @@
     <!-- Preload resources -->
     <link rel="preload" href="bundle.css" as="style">
     <link rel="preload" href="bundle.js" as="script">
-    <link rel="preconnect" href="https://translate.googleapis.com">
-    <link rel="preconnect" href="https://www.gstatic.com">
 
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -182,9 +180,6 @@
                     </i>
                     <span class="mdc-list-item__text">Uptime Status</span>
                 </a>
-                <hr class="mdc-list-divider">
-                <h6 class="mdc-list-group__subheader">Localisation</h6>
-                <div id="google_translate_element"></div>
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Information</h6>
                 <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" target="_blank" rel="noopener" href="https://choosealicense.com/licenses/cc-by-4.0">
@@ -1195,18 +1190,7 @@
                 navigator.serviceWorker.register('service-worker.js');
             });
         }
-
-        // Initialise Google Translate settings
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                autoDisplay: false,
-                gaTrack: true,
-                gaId: 'UA-92292858-9'
-            }, 'google_translate_element');
-        }
     </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 
 </html>
