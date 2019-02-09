@@ -15,11 +15,9 @@ $mdc-theme-background: #5C6BC0; // Background colour
 body {
     // Document body
     background-color: #5C6BC0;
-    display: flex;
     margin: 0;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
 }
 
 .app {
@@ -35,14 +33,9 @@ body {
     }
 }
 
-.drawer--content {
-    // Content of app drawer
-    flex: auto;
-
-    > nav > span {
-        // All the span tags inside of the drawer
-        cursor: pointer;
-    }
+.drawer--content > nav > span {
+    // All the span tags inside of the drawer
+    cursor: pointer;
 }
 
 .btc-dialog {
@@ -105,14 +98,14 @@ body {
 }
 
 
-@media (max-width: 599px) {
+@media screen and (max-width: 599px) {
     // Screen size 599px or smaller
     #gravatar-icon {
         // The profile image
         top: 30px;
     }
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     // Screen size 400px or smaller
     #gravatar-icon {
         // The profile image
