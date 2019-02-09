@@ -14,21 +14,28 @@ $mdc-theme-background: #5C6BC0; // Background colour
 
 body {
     // Document body
-    background: #5C6BC0;
+    background-color: #5C6BC0;
     display: flex;
     margin: 0;
     min-height: 100vh;
     position: relative;
-    top: 0 !important;
+    overflow-x: hidden;
 }
 
-#main-content {
-    // Document main
-    min-width: 100%;
-    overflow: auto;
+.app {
+    &--content {
+        // Document main
+        min-width: 100%;
+        overflow: auto;
+    }
+    &--bar {
+        // Top app bar
+        position: absolute;
+        z-index: 7;
+    }
 }
 
-#mdc-drawer-app-content {
+.drawer--content {
     // Content of app drawer
     flex: auto;
 
@@ -38,57 +45,60 @@ body {
     }
 }
 
-#btc-support-dialog ul > li {
-    // The text inside each list item of the dialog
-    .mdc-list-item__primary-text {
-        // The primary text of a list item
-        color: rgba(0, 0, 0, 0.87);
-    }
+.btc-dialog {
+    &--list > li {
+        // The text inside each list item of the dialog
+        .mdc-list-item__primary-text {
+            // The primary text of a list item
+            color: rgba(0, 0, 0, 0.87);
+        }
 
-    .mdc-list-item__secondary-text {
-        // The secondary text of a list item
-        color: rgba(0, 0, 0, 0.54);
+        .mdc-list-item__secondary-text {
+            // The secondary text of a list item
+            color: rgba(0, 0, 0, 0.54);
+        }
     }
 }
 
-#content-grid {
-    // The grid of cards
-    margin: auto;
-    max-width: 1250px;
-}
-
-.content-card {
-    // The content inside of the cards
-    > .mdc-card__actions > nav > a {
-        // The buttons inside of the cards
-        @include mdc-button-ink-color(red);
-        @include mdc-states(red);
+.content {
+    &--grid {
+        // The grid of cards
+        margin: auto;
+        max-width: 1250px;
     }
 
-    .mdc-card__primary-action {
-        // The main text area of a card
-        padding: 1rem;
+    &--card {
+        // The content inside of the cards
+        > .mdc-card__actions > nav > a {
+            // The buttons inside of the cards
+            @include mdc-button-ink-color(red);
+            @include mdc-states(red);
+        }
 
-        .mdc-card__title {
-            // The title area of a card
+        .mdc-card__primary-action {
+            // The main text area of a card
+            padding: 1rem;
+
+            .mdc-card__title {
+                // The title area of a card
+                margin: 0;
+            }
+        }
+
+        > .mdc-card__primary-action > p {
+            // The main text of the cards
             margin: 0;
         }
     }
-
-    > .mdc-card__primary-action > p {
-        // The main text of the cards
-        margin: 0;
-    }
 }
 
-#gravatar-icon-container {
+.gravatar {
     // The container of the profile image
     position: absolute;
     right: 40px;
     top: 35px;
     z-index: 999;
-
-    #gravatar-icon {
+    &--icon {
         // The profile image
         border-radius: 50%;
     }
@@ -109,4 +119,5 @@ body {
         display: none;
     }
 }
+
 @import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset
