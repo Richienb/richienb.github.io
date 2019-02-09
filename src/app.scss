@@ -30,7 +30,7 @@ body {
     }
     &--bar {
         // Top app bar
-        position: absolute;
+        position: fixed;
         z-index: 7;
     }
 }
