@@ -4,7 +4,7 @@ console.log("%cMy website is open source on GitHub! https://github.com/Richienb/
 // When the Gravatar image fails to load
 document.querySelector(".gravatar--icon").addEventListener("error", () => {
     // Hide the Gravatar image
-    this.style.display = "none";
+    document.querySelector(".gravatar--icon").style.display = "none";
 })
 
 // Import MDC Drawer
