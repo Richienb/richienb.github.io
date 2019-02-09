@@ -51,6 +51,7 @@ const btc_dialog = new MDCDialog(document.querySelector(".btc-dialog"))
 
 // Listen for menu item click
 document.querySelector(".btc-dialog--button").addEventListener("click", () => {
+
     // Open the dialog
     btc_dialog.open()
 })
