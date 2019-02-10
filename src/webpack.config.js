@@ -76,6 +76,12 @@ module.exports = {
         }, {
             // Compiler flags
             warning_level: 'QUIET'
-        })
+        }),
+        new DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("production")
+            },
+            '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
+        }),
     ]
 };
