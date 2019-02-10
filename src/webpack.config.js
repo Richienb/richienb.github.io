@@ -76,11 +76,6 @@ module.exports = {
         }, {
             // Compiler flags
             warning_level: 'QUIET'
-        }),
-        new webpack.DefinePlugin({
-            "process.env": {
-                NODE_ENV: JSON.stringify("production")
-            }
         })
     ]
 };
