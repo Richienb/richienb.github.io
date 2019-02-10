@@ -1,10 +1,12 @@
 // Log development message
 console.log("%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io", "font-family: Roboto, sans-serif; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; line-height: 2rem; text-decoration: inherit; text-transform: inherit; font-size: 1.5rem; font-weight: 400; letter-spacing: normal;")
 
+import $ from "jquery";
+
 // When the Gravatar image fails to load
-document.querySelector(".gravatar--icon").addEventListener("error", () => {
+$(".gravatar--icon").on("error", () => {
     // Hide the Gravatar image
-    document.querySelector(".gravatar--icon").style.display = "none";
+    $(".gravatar--icon").hide()
 })
 
 // Import MDC Drawer
@@ -33,7 +35,7 @@ topAppBar.listen("MDCTopAppBar:nav", () => {
     drawer.open = !drawer.open
 })
 
-document.querySelector(".drawer--website").addEventListener("click", (e) => {
+$(".drawer--website").click((e) => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -50,7 +52,9 @@ import {
 const btc_dialog = new MDCDialog(document.querySelector(".btc-dialog"))
 
 // Listen for menu item click
-document.querySelector(".btc-dialog--button").addEventListener("click", () => {
+$(".btc-dialog--button").click((e) => {
+    // Prevent hash changes
+    e.preventDefault()
 
     // Open the dialog
     btc_dialog.open()
@@ -69,6 +73,79 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 
 // Automatically initialise the objects
 mdcAutoInit()
+
+// Import Auth0 Lock
+const Auth0Lock = require("auth0-lock").default
+
+// Initialise lock object
+const lock = new Auth0Lock("w72j6KObRRkXL889ivFXoroFVyoxGq1H", "richienb.au.auth0.com")
+
+// If authentication information exists
+if (JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token")) {
+    // Hide the login button
+    $(".sso--login").hide()
+
+    // Show the logout button
+    $(".sso--logout").show()
+
+} else {
+
+    // Hide the logout button
+    $(".sso--logout").hide()
+}
+
+// Listen for the authenticated event
+lock.on("authenticated", (authResult) => {
+    // Use the token in authResult to getUserInfo() and save it to localStorage
+    lock.getUserInfo(authResult.accessToken, (error, profile) => {
+        // If an error occurred
+        if (error) {
+            // Terminate the function
+            return;
+
+        }
+
+        // Save the user token
+        localStorage.setItem('token', authResult.accessToken);
+
+        // Save the user profile
+        localStorage.setItem('profile', JSON.stringify(profile));
+
+        // Hide the login button
+        $(".sso--login").hide()
+
+        // Show the logout button
+        $(".sso--logout").show()
+
+    });
+});
+
+// When the login button is clicked
+$(".sso--login").click((e) => {
+    // Prevent hash changes
+    e.preventDefault()
+
+    // Show the lock UI
+    lock.show()
+})
+
+// When the logout button is clicked
+$(".sso--logout").click((e) => {
+    // Prevent hash changes
+    e.preventDefault()
+
+    // Remove the profile information
+    localStorage.removeItem("profile")
+
+    // Remove the token information
+    localStorage.removeItem("token")
+
+    // Hide the logout button
+    $(".sso--logout").hide()
+
+    // Show the login button
+    $(".sso--login").show()
+})
 
 // Import html5shiv printshiv
 import "html5shiv/dist/html5shiv-printshiv"
