@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ClosurePlugin = require('closure-webpack-plugin');
 
 function tryResolve_(url, sourceFilename) {
@@ -77,7 +78,7 @@ module.exports = {
             // Compiler flags
             warning_level: 'QUIET'
         }),
-        new DefinePlugin({
+        new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("production")
             },
