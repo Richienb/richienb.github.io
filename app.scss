@@ -1,0 +1,124 @@
+$mdc-theme-primary: #3F51B5; // Primary colour
+$mdc-theme-secondary: #f44336; // Secondary colour
+$mdc-theme-background: #5C6BC0; // Background colour
+@import "@material/button/mdc-button"; // MDC button base styles
+@import "@material/card/mdc-card"; // MDC card base styles
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500"); // Roboto font
+@import "@material/typography/mdc-typography"; // MDC typography base styles
+@import "@material/icon-button/mdc-icon-button"; // MDC icon button styles
+@import "@material/top-app-bar/mdc-top-app-bar"; // MDC top app bar base styles
+@import "@material/drawer/mdc-drawer"; // MDC drawer base styles
+@import "@material/list/mdc-list"; // MDC list base styles
+@import "@material/layout-grid/mdc-layout-grid"; // MDC layout grid base styles
+@import "@material/dialog/mdc-dialog"; // MDC Dialog styles
+
+body {
+    // Document body
+    background-color: #5C6BC0;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.app {
+    &--content {
+        // Document main
+        min-width: 100%;
+        overflow: auto;
+    }
+    &--bar {
+        // Top app bar
+        position: fixed;
+        z-index: 7;
+    }
+}
+
+.drawer--content > nav > span {
+    // All the span tags inside of the drawer
+    cursor: pointer;
+}
+
+.btc-dialog {
+    &--list > li {
+        // The text inside each list item of the dialog
+        .mdc-list-item__primary-text {
+            // The primary text of a list item
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        .mdc-list-item__secondary-text {
+            // The secondary text of a list item
+            color: rgba(0, 0, 0, 0.54);
+        }
+    }
+}
+
+.content {
+    &--grid {
+        // The grid of cards
+        margin: auto;
+        max-width: 1250px;
+    }
+
+    &--card {
+        // The content inside of the cards
+        > .mdc-card__actions > nav > a {
+            // The buttons inside of the cards
+            @include mdc-button-ink-color(red);
+            @include mdc-states(red);
+        }
+
+        .mdc-card__primary-action {
+            // The main text area of a card
+            padding: 1rem;
+
+            .mdc-card__title {
+                // The title area of a card
+                margin: 0;
+            }
+        }
+
+        > .mdc-card__primary-action > p {
+            // The main text of the cards
+            margin: 0;
+        }
+    }
+}
+
+.gravatar {
+    // The container of the profile image
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    z-index: 999;
+    &--icon {
+        // The profile image
+        border-radius: 50%;
+    }
+}
+
+
+@media screen and (max-width: 599px) {
+    // Screen size 599px or smaller
+    #gravatar-icon {
+        // The profile image
+        top: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    // Screen size 400px or smaller
+    #gravatar-icon {
+        // The profile image
+        display: none;
+    }
+}
+
+.auth0-lock-container {
+    .auth0-lock {
+        &-overlay, &-lock-widget {
+            transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+    }
+}
+
+@import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset

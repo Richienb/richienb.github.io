@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta http-equiv=X-UA-Compatible content="ie=edge">
+
+    
+    <title>Richie Bendall's Website</title>
+    <meta name=description content="This is the Richie Bendall's official website.">
+    <meta name=keywords content="html, css, richie-bendall, js, website, open-source, nodejs, travis-ci, mdc, mdc-web. material-design-components">
+    <meta name=author content="Richie Bendall">
+
+    
+    <link rel=icon href=favicon.ico>
+
+    
+    <link rel=manifest href=site.webmanifest>
+
+    
+    <meta name=theme-color content=#3f51b5>
+
+    
+    <link rel=preload href=bundle.css as=style>
+    <link rel=preload href=bundle.js as=script>
+
+    
+    <meta name=mobile-web-app-capable content=yes>
+    <meta name=application-name content="Richie Bendall's Website">
+
+    
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+    <meta name=apple-mobile-web-app-title content="Richie Bendall's Website">
+
+    
+    <link rel=apple-touch-icon href=images/manifest/icon-48x48.png>
+    <link rel=apple-touch-icon sizes=72x72 href=images/manifest/icon-72x72.png>
+    <link rel=apple-touch-icon sizes=96x96 href=images/manifest/icon-96x96.png>
+    <link rel=apple-touch-icon sizes=144x144 href=images/manifest/icon-144x144.png>
+    <link rel=apple-touch-icon sizes=192x192 href=images/manifest/icon-192x192.png>
+
+    
+    <meta name=msapplication-TileImage content=images/manifest/icon-144x144.png>
+    <meta name=msapplication-TileColor content=#3f51b5>
+    <meta name=msapplication-tap-highlight content=no>
+
+    
+    <link rel=search type=application/opensearchdescription+xml href=opensearch.xml title="Richie Bendall's Website">
+
+    
+    <link rel=stylesheet href=bundle.css>
+    <script src=bundle.js async></script>
+
+</head>
+
+<body class=mdc-typography>
+    <header class="app--bar mdc-top-app-bar mdc-top-app-bar--fixed drawer-top-app-bar">
+        <div class=mdc-top-app-bar__row>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button class=mdc-top-app-bar__navigation-icon aria-label="Open menu">
+                    <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                        <path fill=none d="M0 0h24v24H0V0z"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
+                <span class=mdc-top-app-bar__title>Richie Bendall's Website</span>
+                <a class=gravatar target=_blank rel=noopener href=https://gravatar.com/richienb aria-label="Open Gravatar page"><img class=gravatar--icon src="https://secure.gravatar.com/avatar/9476a2bfb62f572fc000056ca01522e3.png?r=g&s=50&d=retro" width=50 height=50 alt="Profile image"></a>
+            </section>
+        </div>
+    </header>
+    <aside class="app--drawer mdc-drawer mdc-drawer--modal mdc-top-app-bar--fixed-adjust">
+        <div class="drawer--content mdc-drawer__content">
+            <nav class=mdc-list>
+                <h6 class=mdc-list-group__subheader>Main</h6>
+                <a class="drawer--website mdc-list-item mdc-list-item--activated" data-mdc-auto-init=MDCRipple href=# aria-selected=true>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"/>
+                        </svg>
+                    <span class=mdc-list-item__text data-mdc-auto-init=MDCRipple>Website</span>
+                </a>
+                <hr class=mdc-list-divider>
+                <h6 class=mdc-list-group__subheader>Social</h6>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>YouTube</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://stackoverflow.com/users/8384910/richie-bendall>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d=M17.36,20.2V14.82H19.15V22H3V14.82H4.8V20.2H17.36M6.77,14.32L7.14,12.56L15.93,14.41L15.56,16.17L6.77,14.32M7.93,10.11L8.69,8.5L16.83,12.28L16.07,13.9L7.93,10.11M10.19,6.12L11.34,4.74L18.24,10.5L17.09,11.87L10.19,6.12M14.64,1.87L20,9.08L18.56,10.15L13.2,2.94L14.64,1.87M6.59,18.41V16.61H15.57V18.41H6.59Z />
+                        </svg>
+                    <span class=mdc-list-item__text>Stack Overflow</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://github.com/Richienb>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>GitHub</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://www.reddit.com/user/Richienb>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M22,11.5C22,10.1 20.9,9 19.5,9C18.9,9 18.3,9.2 17.9,9.6C16.4,8.7 14.6,8.1 12.5,8L13.6,4L17,5A2,2 0 0,0 19,7A2,2 0 0,0 21,5A2,2 0 0,0 19,3C18.3,3 17.6,3.4 17.3,4L13.3,3C13,2.9 12.8,3.1 12.7,3.4L11.5,8C9.5,8.1 7.6,8.7 6.1,9.6C5.7,9.2 5.1,9 4.5,9C3.1,9 2,10.1 2,11.5C2,12.4 2.4,13.1 3.1,13.6L3,14.5C3,18.1 7,21 12,21C17,21 21,18.1 21,14.5L20.9,13.6C21.6,13.1 22,12.4 22,11.5M9,11.8C9.7,11.8 10.2,12.4 10.2,13C10.2,13.6 9.7,14.2 9,14.2C8.3,14.2 7.8,13.7 7.8,13C7.8,12.3 8.3,11.8 9,11.8M15.8,17.2C14,18.3 10,18.3 8.2,17.2C8,17 7.9,16.7 8.1,16.5C8.3,16.3 8.6,16.2 8.8,16.4C10,17.3 14,17.3 15.2,16.4C15.4,16.2 15.7,16.3 15.9,16.5C16.1,16.7 16,17 15.8,17.2M15,14.2C14.3,14.2 13.8,13.6 13.8,13C13.8,12.3 14.4,11.8 15,11.8C15.7,11.8 16.2,12.4 16.2,13C16.2,13.7 15.7,14.2 15,14.2Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Reddit</span>
+                </a>
+                
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=mailto:richiebendall@gmail.com>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Email</span>
+                </a>
+                
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://discordapp.com/invite/kH6bCkb>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Discord</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://blog.richie-bendall.ml>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Blog</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://send.richie-bendall.ml>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M4.01 6.03l7.51 3.22-7.52-1 .01-2.22m7.5 8.72L4 17.97v-2.22l7.51-1M2.01 3L2 10l15 2-15 2 .01 7L23 12 2.01 3z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Send</span>
+                </a>
+                <hr class=mdc-list-divider>
+                <h6 class=mdc-list-group__subheader>SSO</h6>
+                <a href=# class="sso--login mdc-list-item" data-mdc-auto-init=MDCRipple>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M22 19h-6v-4h-2.68c-1.14 2.42-3.6 4-6.32 4-3.86 0-7-3.14-7-7s3.14-7 7-7c2.72 0 5.17 1.58 6.32 4H24v6h-2v4zm-4-2h2v-4h2v-2H11.94l-.23-.67C11.01 8.34 9.11 7 7 7c-2.76 0-5 2.24-5 5s2.24 5 5 5c2.11 0 4.01-1.34 4.71-3.33l.23-.67H18v4zM7 15c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Login</span>
+                </a>
+                <a href=# class="sso--logout mdc-list-item" data-mdc-auto-init=MDCRipple>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <g fill=none>
+                                <path d="M0 0h24v24H0V0z"/>
+                                <path opacity=.87 d="M0 0h24v24H0V0z"/>
+                            </g>
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Logout</span>
+                </a>
+                <hr class=mdc-list-divider>
+                <h6 class=mdc-list-group__subheader>Other</h6>
+                <a href=# class="btc-dialog--button mdc-list-item" data-mdc-auto-init=MDCRipple>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M4.5,5H8V2H10V5H11.5V2H13.5V5C19,5 19,11 16,11.25C20,11 21,19 13.5,19V22H11.5V19H10V22H8V19H4.5L5,17H6A1,1 0 0,0 7,16V8A1,1 0 0,0 6,7H4.5V5M10,7V11C10,11 14.5,11.25 14.5,9C14.5,6.75 10,7 10,7M10,12.5V17C10,17 15.5,17 15.5,14.75C15.5,12.5 10,12.5 10,12.5Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Support</span>
+                <a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://www.addthis.com/bookmark.php>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Share</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://www.richie-bendall.ml/images/QR%20Code.png>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d=M3,11H5V13H3V11M11,5H13V9H11V5M9,11H13V15H11V13H9V11M15,11H17V13H19V11H21V13H19V15H21V19H19V21H17V19H13V21H11V17H15V15H17V13H15V11M19,19V15H17V19H19M15,3H21V9H15V3M17,5V7H19V5H17M3,3H9V9H3V3M5,5V7H7V5H5M3,15H9V21H3V15M5,17V19H7V17H5Z />
+                        </svg>
+                    <span class=mdc-list-item__text>QR Code</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://www.richie-bendall.ml/images/Show%20Off.png>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M12,4.5C17,4.5 21.27,7.61 23,12C21.27,16.39 17,19.5 12,19.5C7,19.5 2.73,16.39 1,12C2.73,7.61 7,4.5 12,4.5M3.18,12C4.83,15.36 8.24,17.5 12,17.5C15.76,17.5 19.17,15.36 20.82,12C19.17,8.64 15.76,6.5 12,6.5C8.24,6.5 4.83,8.64 3.18,12Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Show Off</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://rawcdn.githack.com/Richienb/richienb.github.io/b62b813a6790e5ddeba19843211d009b1ba55a67/index.html>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d=M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z />
+                        </svg>
+                    <span class=mdc-list-item__text>Old Experience</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://richiebendallstatus.ml>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M4.93,4.93C3.12,6.74 2,9.24 2,12C2,14.76 3.12,17.26 4.93,19.07L6.34,17.66C4.89,16.22 4,14.22 4,12C4,9.79 4.89,7.78 6.34,6.34L4.93,4.93M19.07,4.93L17.66,6.34C19.11,7.78 20,9.79 20,12C20,14.22 19.11,16.22 17.66,17.66L19.07,19.07C20.88,17.26 22,14.76 22,12C22,9.24 20.88,6.74 19.07,4.93M7.76,7.76C6.67,8.85 6,10.35 6,12C6,13.65 6.67,15.15 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,10.89 8.45,9.89 9.17,9.17L7.76,7.76M16.24,7.76L14.83,9.17C15.55,9.89 16,10.89 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.15 18,13.65 18,12C18,10.35 17.33,8.85 16.24,7.76M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Uptime Status</span>
+                </a>
+                <hr class=mdc-list-divider>
+                <h6 class=mdc-list-group__subheader>Information</h6>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://choosealicense.com/licenses/cc-by-4.0>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M10.08 10.86c.05-.33.16-.62.3-.87s.34-.46.59-.62c.24-.15.54-.22.91-.23.23.01.44.05.63.13.2.09.38.21.52.36s.25.33.34.53.13.42.14.64h1.79c-.02-.47-.11-.9-.28-1.29s-.4-.73-.7-1.01-.66-.5-1.08-.66-.88-.23-1.39-.23c-.65 0-1.22.11-1.7.34s-.88.53-1.2.92-.56.84-.71 1.36S8 11.29 8 11.87v.27c0 .58.08 1.12.23 1.64s.39.97.71 1.35.72.69 1.2.91c.48.22 1.05.34 1.7.34.47 0 .91-.08 1.32-.23s.77-.36 1.08-.63.56-.58.74-.94.29-.74.3-1.15h-1.79c-.01.21-.06.4-.15.58s-.21.33-.36.46-.32.23-.52.3c-.19.07-.39.09-.6.1-.36-.01-.66-.08-.89-.23-.25-.16-.45-.37-.59-.62s-.25-.55-.3-.88-.08-.67-.08-1v-.27c0-.35.03-.68.08-1.01zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Content License</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href=https://choosealicense.com/licenses/apache-2.0>
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path fill=none d="M0 0h24v24H0V0z"/>
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Source License</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href="https://docs.google.com/document/d/1VdujSYPVONr13Au0t4HNCC_7xK4v-eGMS3_AHCDPFdc/edit?usp=sharing">
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Terms and Conditions</span>
+                </a>
+                <a class=mdc-list-item data-mdc-auto-init=MDCRipple target=_blank rel=noopener href="https://docs.google.com/document/d/1ROjgJhr12dAv_wxjcCR_MJUC-j46B1x6nUCyhVZZ2Qk/edit?usp=sharing">
+                        <svg class=mdc-list-item__graphic aria-hidden=true xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24">
+                            <g fill=none>
+                                <path d="M0 0h24v24H0V0z"/>
+                                <path opacity=.87 d="M0 0h24v24H0V0z"/>
+                            </g>
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                        </svg>
+                    <span class=mdc-list-item__text>Privacy Policy</span>
+                </a>
+            </a></a></nav>
+        </div>
+    </aside>
+    <div class=mdc-drawer-scrim></div>
+    <div class="app--content drawer-frame-app-content">
+        <div class=mdc-top-app-bar--fixed-adjust>
+            <main class="content--grid mdc-layout-grid">
+                <div class=mdc-layout-grid__inner>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=quilt-lang>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Quilt Lang</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A Python library that lets you write less code to do more things.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://quilt-lang.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/quilt class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Currently in Beta!">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-4 4v3c0 .22-.03.47-.07.7l-.1.65-.37.65c-.72 1.24-2.04 2-3.46 2s-2.74-.77-3.46-2l-.37-.64-.1-.65C8.03 15.48 8 15.23 8 15v-4c0-.23.03-.48.07-.7l.1-.65.37-.65c.3-.52.72-.97 1.21-1.31l.57-.39.74-.18c.31-.08.63-.12.94-.12.32 0 .63.04.95.12l.68.16.61.42c.5.34.91.78 1.21 1.31l.38.65.1.65c.04.22.07.47.07.69v1zm-6 2h4v2h-4zm0-4h4v2h-4z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=richienb-github-io>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">richienb.github.io</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">It's the website you're viewing this content in right now. It's also open source on GitHub.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=# class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/richienb.github.io class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-css-styles-toolkit>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS CSS Styles Toolkit</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A CSS file that adds shortcuts to css rules.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-css-styles-toolkit class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-css-styles-toolkit class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=mathext>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Mathext</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An extension to the math library provided by Python.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://mathext.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/mathext class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Currently in Beta!">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-4 4v3c0 .22-.03.47-.07.7l-.1.65-.37.65c-.72 1.24-2.04 2-3.46 2s-2.74-.77-3.46-2l-.37-.64-.1-.65C8.03 15.48 8 15.23 8 15v-4c0-.23.03-.48.07-.7l.1-.65.37-.65c.3-.52.72-.97 1.21-1.31l.57-.39.74-.18c.31-.08.63-.12.94-.12.32 0 .63.04.95.12l.68.16.61.42c.5.34.91.78 1.21 1.31l.38.65.1.65c.04.22.07.47.07.69v1zm-6 2h4v2h-4zm0-4h4v2h-4z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-data-waster>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Data Waster</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">The most straightforward way to waste all of your data.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-data-waster class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-data-waster class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Light">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx=12 cy=12 r=2.5 />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-cursor-scheme-previewer>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Cursor Scheme Previewer</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">ROS Cursor Scheme Previewer is a Material Design website which allows you to preview the cursors in your cursor scheme.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-cursor-scheme-previewer class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-cursor-scheme-previewer class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-calculator>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Calculator</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An advanced calculator for the web featuring material design and allows you to perform simple and scientific equations.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://calculator.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-calculator class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=readsettings-for-python>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ReadSettings For Python</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Easily create, edit and remove a customized settings file which you are able to use for storing all of the settings for your application.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://readsettings.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/readsettings-python class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=google-search-sitemap-updater>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Google Search Sitemap Updater</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A simple tool that lets you request a Google Search sitemap recrawl.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/google-search-sitemap-updater class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/google-search-sitemap-updater class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=background-music-greenscreen>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Background Music Greenscreen</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Allows you to embed a url in your videos which will automatically play music from <a target=_blank rel=noopener href="https://www.youtube.com/watch?v=sKIbH-gXmX0">this
+                                        YouTube video</a>. This also changes the background colour of the website to be the green screen colour.
+                                </p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://music-greenscreen.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/background-music-greenscreen class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Update planned">
+                                        <svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <defs>
+                                                <path id=a d="M0 0h24v24H0z"/>
+                                            </defs>
+                                            <clipPath>
+                                                <use xlink:href=#a overflow=visible />
+                                            </clipPath>
+                                            <path d="M11 8v5l4.25 2.52.77-1.28-3.52-2.09V8zm10 2V3l-2.64 2.64C16.74 4.01 14.49 3 12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9h-2c0 3.86-3.14 7-7 7s-7-3.14-7-7 3.14-7 7-7c1.93 0 3.68.79 4.95 2.05L14 10h7z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-code-editor>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Code Editor</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An online code and plain text editor taking advantage of Google's <a href=https://material.io/develop/web/ target=_blank rel=noopener>Material Design for the
+                                        Web</a> library and <a href=https://ace.c9.io/ target=_blank rel=noopener>Ace</a>.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-code-editor class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-code-editor class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-regex-numeric-range-generator>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Regex Numeric Range Generator</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A utility that can generate a regex code to match any range of numbers.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-regex-numeric-range-generator class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-regex-numeric-range-generator class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Light">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx=12 cy=12 r=2.5 />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-site-verification>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Site Verification</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is an easy way to prove that you own a site by adding a TXT record to your website's DNS records.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-site-verification class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-site-verification class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Light">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx=12 cy=12 r=2.5 />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-code>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Code</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A revolutionary, modern and pleasing programming language featuring a streamlined and speedy installation, a very straightforward and simplistic syntax and is
+                                    provided as a Python 3 library.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://ros-code.richie-bendall.ml class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ROS-Code class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title=Deprecated>
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=does-it-work>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Does It Work?</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Lets you check what web features are available in your browser.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/does-it-work class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/does-it-work class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=mit-license-tools>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">MIT License Tools</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a website which makes api requests to mit-license.org in order to create your very own dynamic license or get the url for your already existing license.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/mit-license-tools class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/mit-license-tools class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-filesystem-watcher>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS FileSystem Watcher</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A VB.NET application which watches over the filesystem on your computer and logs all changes to your files. This includes creation, deletion, moving and renames.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ROS-FileSystem-Watcher class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ROS-FileSystem-Watcher class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=html-form-elements>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">HTML Form Elements</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An easy way to preview all the different HTML form elements with copyable snippets of code.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/html-form-elements class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/html-form-elements class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Update planned">
+                                        <svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <defs>
+                                                <path id=a d="M0 0h24v24H0z"/>
+                                            </defs>
+                                            <clipPath>
+                                                <use xlink:href=#a overflow=visible />
+                                            </clipPath>
+                                            <path d="M11 8v5l4.25 2.52.77-1.28-3.52-2.09V8zm10 2V3l-2.64 2.64C16.74 4.01 14.49 3 12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9h-2c0 3.86-3.14 7-7 7s-7-3.14-7-7 3.14-7 7-7c1.93 0 3.68.79 4.95 2.05L14 10h7z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-chat>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Chat</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">ROS Chat is a sophisticated chatbot that will assist you in everyday tasks and more. It mostly specializes in chatting, but more features are available including rolling a dice, picking an item and playing paper scissors rock.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-chat class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-chat class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Light">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx=12 cy=12 r=2.5 />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-encryption>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Encryption</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a Material Design text encryption tool.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-encryption class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-encryption class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-youtube-video-downloader>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS YouTube Video Downloader</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a YouTube video downloader.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-youtube-video-downloader class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-youtube-video-downloader class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-uri-encoder>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS URI Encoder</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a tool which allows you to convert text into it's URI encoded counterpart and back.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-uri-encoder class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-uri-encoder class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=mdl-kitchen-sink>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">MDL Kitchen Sink</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A comprehensive index of all the components offered by MDL.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/mdl-kitchen-sink class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/mdl-kitchen-sink class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Contains components from version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=simple-mdc-quick-start>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Simple MDC Quick Start</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">The easiest way to start using Material Design Components for the web in a single HTML file.
+                                </p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/simple-mdc-quickstart class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/simple-mdc-quickstart class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-online-text-editor>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Online Text Editor</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A simple text editor for the web featuring Material Design and multiple customization options.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ROS-Text-Editor-Online class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ROS-Text-Editor-Online class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <a href=#ros-code-editor class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Long term support: Please use ROS Code Editor">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                                        </svg>
+                                    </a>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-static>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Static</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Free, open source static file hosting. Perfect for libraries, images and more.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://ros-static.ga class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-static class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=mdc-quick-start>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">MDC Quick Start</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An easy way to start using Material Design Components for the Web. This codebase is adapted from Google's <a href=https://material.io/develop/web/docs/getting-started/ >Getting
+                                        Started</a> guide on the official Material Design website.
+                                </p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/mdc-quickstart class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/mdc-quickstart class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=git-files>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Git Files</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A .gitignore and .gitattributes file containing ignore and attribute code for all programming languages, automatically updated daily.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/git-files class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/git-files class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Veteran">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=virusshare-hashes>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">VirusShare Hashes</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Every single MD5 hash uploaded on <a target=_blank rel=noopener href=https://virusshare.com/hashes.4n6>VirusShare</a> in a single file, ready for distribution
+                                    and CI integrations.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/virusshare-hashes class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/virusshare-hashes class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Veteran">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=temperature-converter>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Temperature Converter</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An online tool to quickly convert between Celsius and Fahrenheit temperatures.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/temperature-converter class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/temperature-converter class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=ros-quick-scan>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">ROS Quick Scan</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">A fast way to scan a file against <a target=_blank rel=noopener href=https://virusshare.com>VirusShare</a>'s MD5 hash list.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/ros-quick-scan class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/ros-quick-scan class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=jython-builds>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Jython Builds</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">Jython 2 and 3 pre-built, ready for easy distribution and continuous integration.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/jython-builds class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/jython-builds class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Veteran">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=e-asttle-score-calculator>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">E Asttle Score Calculator</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a tool to easily calculate your spelling age using the score of an <a href=https://e-asttle.tki.org.nz target=_blank rel=noopener>E Asttle</a>
+                                    spelling test. This is also an experiment for the new Material Design for the Web design library.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/e-astle-score-calculator class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/e-astle-score-calculator class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=web-example>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Web Example</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An example website with simple boilerplate code for starting out with building for the web.</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/example-web class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/example-web class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Quilt">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M4 5v13h17V5H4zm2 11V7h3v9H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-8-5.5V7h8v3.5h-8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card" id=captcha-example>
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Captcha Example</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">An example website for demos and finding out how Google's Recaptcha services for the web work. The site features <a target=_blank rel=noopener href=https://developers.google.com/recaptcha/docs/display>Recaptcha
+                                        2.0</a> and <a target=_blank rel=noopener href=https://developers.google.com/recaptcha/docs/display>Invisible Recaptcha</a>.
+                                </p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/example-captcha class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/example-captcha class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Droplet">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z"/>
+                                            <path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <section class="mdc-card content--card">
+                            <article class=mdc-card__primary-action data-mdc-auto-init=MDCRipple>
+                                <h2 class="mdc-card__title mdc-typography--headline6">Hello World VB.NET</h2>
+                                <p class="mdc-card__secondary mdc-typography--body2">This is a simple Windows Forms application for VB.NET which includes a label saying Hello World</p>
+                            </article>
+                            <div class=mdc-card__actions>
+                                <nav class=mdc-card__action-buttons>
+                                    <a href=https://www.richie-bendall.ml/Hello-World-VB.NET class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Website</span></a>
+                                    <a href=https://github.com/Richienb/Hello-World-VB.NET class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init=MDCRipple><span class=mdc-button__label>Source Code</span></a>
+                                </nav>
+                                <div class=mdc-card__action-icons>
+                                    <span class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Version Veteran">
+                                        <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 fill="rgba(0, 0, 0, 0.38)" viewBox="0 0 24 24">
+                                            <path fill=none d="M0 0h24v24H0V0z"/>
+                                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="btc-dialog mdc-dialog" role=alertdialog aria-modal=true aria-labelledby=my-dialog-title aria-describedby=my-dialog-content>
+        <div class=mdc-dialog__container>
+            <div class=mdc-dialog__surface>
+                <h2 class=mdc-dialog__title id=my-dialog-title>Support Richie Bendall</h2>
+                <div class=mdc-dialog__content id=my-dialog-content>
+                    <svg height=248 width=248 viewBox="0 0 248 248" xmlns=http://www.w3.org/2000/svg>
+                        <path d="M 8,8 l 8,0 0,8 -8,0 z M 16,8 l 8,0 0,8 -8,0 z M 24,8 l 8,0 0,8 -8,0 z M 32,8 l 8,0 0,8 -8,0 z M 40,8 l 8,0 0,8 -8,0 z M 48,8 l 8,0 0,8 -8,0 z M 56,8 l 8,0 0,8 -8,0 z M 88,8 l 8,0 0,8 -8,0 z M 104,8 l 8,0 0,8 -8,0 z M 112,8 l 8,0 0,8 -8,0 z M 136,8 l 8,0 0,8 -8,0 z M 144,8 l 8,0 0,8 -8,0 z M 168,8 l 8,0 0,8 -8,0 z M 184,8 l 8,0 0,8 -8,0 z M 192,8 l 8,0 0,8 -8,0 z M 200,8 l 8,0 0,8 -8,0 z M 208,8 l 8,0 0,8 -8,0 z M 216,8 l 8,0 0,8 -8,0 z M 224,8 l 8,0 0,8 -8,0 z M 232,8 l 8,0 0,8 -8,0 z M 8,16 l 8,0 0,8 -8,0 z M 56,16 l 8,0 0,8 -8,0 z M 72,16 l 8,0 0,8 -8,0 z M 88,16 l 8,0 0,8 -8,0 z M 112,16 l 8,0 0,8 -8,0 z M 128,16 l 8,0 0,8 -8,0 z M 136,16 l 8,0 0,8 -8,0 z M 152,16 l 8,0 0,8 -8,0 z M 168,16 l 8,0 0,8 -8,0 z M 184,16 l 8,0 0,8 -8,0 z M 232,16 l 8,0 0,8 -8,0 z M 8,24 l 8,0 0,8 -8,0 z M 24,24 l 8,0 0,8 -8,0 z M 32,24 l 8,0 0,8 -8,0 z M 40,24 l 8,0 0,8 -8,0 z M 56,24 l 8,0 0,8 -8,0 z M 104,24 l 8,0 0,8 -8,0 z M 128,24 l 8,0 0,8 -8,0 z M 168,24 l 8,0 0,8 -8,0 z M 184,24 l 8,0 0,8 -8,0 z M 200,24 l 8,0 0,8 -8,0 z M 208,24 l 8,0 0,8 -8,0 z M 216,24 l 8,0 0,8 -8,0 z M 232,24 l 8,0 0,8 -8,0 z M 8,32 l 8,0 0,8 -8,0 z M 24,32 l 8,0 0,8 -8,0 z M 32,32 l 8,0 0,8 -8,0 z M 40,32 l 8,0 0,8 -8,0 z M 56,32 l 8,0 0,8 -8,0 z M 72,32 l 8,0 0,8 -8,0 z M 80,32 l 8,0 0,8 -8,0 z M 88,32 l 8,0 0,8 -8,0 z M 104,32 l 8,0 0,8 -8,0 z M 112,32 l 8,0 0,8 -8,0 z M 120,32 l 8,0 0,8 -8,0 z M 136,32 l 8,0 0,8 -8,0 z M 144,32 l 8,0 0,8 -8,0 z M 168,32 l 8,0 0,8 -8,0 z M 184,32 l 8,0 0,8 -8,0 z M 200,32 l 8,0 0,8 -8,0 z M 208,32 l 8,0 0,8 -8,0 z M 216,32 l 8,0 0,8 -8,0 z M 232,32 l 8,0 0,8 -8,0 z M 8,40 l 8,0 0,8 -8,0 z M 24,40 l 8,0 0,8 -8,0 z M 32,40 l 8,0 0,8 -8,0 z M 40,40 l 8,0 0,8 -8,0 z M 56,40 l 8,0 0,8 -8,0 z M 80,40 l 8,0 0,8 -8,0 z M 120,40 l 8,0 0,8 -8,0 z M 136,40 l 8,0 0,8 -8,0 z M 152,40 l 8,0 0,8 -8,0 z M 168,40 l 8,0 0,8 -8,0 z M 184,40 l 8,0 0,8 -8,0 z M 200,40 l 8,0 0,8 -8,0 z M 208,40 l 8,0 0,8 -8,0 z M 216,40 l 8,0 0,8 -8,0 z M 232,40 l 8,0 0,8 -8,0 z M 8,48 l 8,0 0,8 -8,0 z M 56,48 l 8,0 0,8 -8,0 z M 72,48 l 8,0 0,8 -8,0 z M 80,48 l 8,0 0,8 -8,0 z M 96,48 l 8,0 0,8 -8,0 z M 104,48 l 8,0 0,8 -8,0 z M 120,48 l 8,0 0,8 -8,0 z M 128,48 l 8,0 0,8 -8,0 z M 136,48 l 8,0 0,8 -8,0 z M 144,48 l 8,0 0,8 -8,0 z M 168,48 l 8,0 0,8 -8,0 z M 184,48 l 8,0 0,8 -8,0 z M 232,48 l 8,0 0,8 -8,0 z M 8,56 l 8,0 0,8 -8,0 z M 16,56 l 8,0 0,8 -8,0 z M 24,56 l 8,0 0,8 -8,0 z M 32,56 l 8,0 0,8 -8,0 z M 40,56 l 8,0 0,8 -8,0 z M 48,56 l 8,0 0,8 -8,0 z M 56,56 l 8,0 0,8 -8,0 z M 72,56 l 8,0 0,8 -8,0 z M 88,56 l 8,0 0,8 -8,0 z M 104,56 l 8,0 0,8 -8,0 z M 120,56 l 8,0 0,8 -8,0 z M 136,56 l 8,0 0,8 -8,0 z M 152,56 l 8,0 0,8 -8,0 z M 168,56 l 8,0 0,8 -8,0 z M 184,56 l 8,0 0,8 -8,0 z M 192,56 l 8,0 0,8 -8,0 z M 200,56 l 8,0 0,8 -8,0 z M 208,56 l 8,0 0,8 -8,0 z M 216,56 l 8,0 0,8 -8,0 z M 224,56 l 8,0 0,8 -8,0 z M 232,56 l 8,0 0,8 -8,0 z M 80,64 l 8,0 0,8 -8,0 z M 88,64 l 8,0 0,8 -8,0 z M 96,64 l 8,0 0,8 -8,0 z M 128,64 l 8,0 0,8 -8,0 z M 152,64 l 8,0 0,8 -8,0 z M 160,64 l 8,0 0,8 -8,0 z M 8,72 l 8,0 0,8 -8,0 z M 16,72 l 8,0 0,8 -8,0 z M 24,72 l 8,0 0,8 -8,0 z M 32,72 l 8,0 0,8 -8,0 z M 40,72 l 8,0 0,8 -8,0 z M 56,72 l 8,0 0,8 -8,0 z M 64,72 l 8,0 0,8 -8,0 z M 72,72 l 8,0 0,8 -8,0 z M 80,72 l 8,0 0,8 -8,0 z M 96,72 l 8,0 0,8 -8,0 z M 112,72 l 8,0 0,8 -8,0 z M 120,72 l 8,0 0,8 -8,0 z M 128,72 l 8,0 0,8 -8,0 z M 136,72 l 8,0 0,8 -8,0 z M 144,72 l 8,0 0,8 -8,0 z M 168,72 l 8,0 0,8 -8,0 z M 176,72 l 8,0 0,8 -8,0 z M 192,72 l 8,0 0,8 -8,0 z M 208,72 l 8,0 0,8 -8,0 z M 224,72 l 8,0 0,8 -8,0 z M 24,80 l 8,0 0,8 -8,0 z M 32,80 l 8,0 0,8 -8,0 z M 40,80 l 8,0 0,8 -8,0 z M 64,80 l 8,0 0,8 -8,0 z M 88,80 l 8,0 0,8 -8,0 z M 104,80 l 8,0 0,8 -8,0 z M 112,80 l 8,0 0,8 -8,0 z M 152,80 l 8,0 0,8 -8,0 z M 160,80 l 8,0 0,8 -8,0 z M 184,80 l 8,0 0,8 -8,0 z M 200,80 l 8,0 0,8 -8,0 z M 224,80 l 8,0 0,8 -8,0 z M 232,80 l 8,0 0,8 -8,0 z M 24,88 l 8,0 0,8 -8,0 z M 32,88 l 8,0 0,8 -8,0 z M 40,88 l 8,0 0,8 -8,0 z M 48,88 l 8,0 0,8 -8,0 z M 56,88 l 8,0 0,8 -8,0 z M 88,88 l 8,0 0,8 -8,0 z M 120,88 l 8,0 0,8 -8,0 z M 128,88 l 8,0 0,8 -8,0 z M 168,88 l 8,0 0,8 -8,0 z M 176,88 l 8,0 0,8 -8,0 z M 184,88 l 8,0 0,8 -8,0 z M 200,88 l 8,0 0,8 -8,0 z M 208,88 l 8,0 0,8 -8,0 z M 216,88 l 8,0 0,8 -8,0 z M 8,96 l 8,0 0,8 -8,0 z M 24,96 l 8,0 0,8 -8,0 z M 32,96 l 8,0 0,8 -8,0 z M 48,96 l 8,0 0,8 -8,0 z M 72,96 l 8,0 0,8 -8,0 z M 104,96 l 8,0 0,8 -8,0 z M 120,96 l 8,0 0,8 -8,0 z M 128,96 l 8,0 0,8 -8,0 z M 152,96 l 8,0 0,8 -8,0 z M 176,96 l 8,0 0,8 -8,0 z M 192,96 l 8,0 0,8 -8,0 z M 200,96 l 8,0 0,8 -8,0 z M 208,96 l 8,0 0,8 -8,0 z M 224,96 l 8,0 0,8 -8,0 z M 16,104 l 8,0 0,8 -8,0 z M 48,104 l 8,0 0,8 -8,0 z M 56,104 l 8,0 0,8 -8,0 z M 72,104 l 8,0 0,8 -8,0 z M 80,104 l 8,0 0,8 -8,0 z M 88,104 l 8,0 0,8 -8,0 z M 104,104 l 8,0 0,8 -8,0 z M 120,104 l 8,0 0,8 -8,0 z M 144,104 l 8,0 0,8 -8,0 z M 192,104 l 8,0 0,8 -8,0 z M 216,104 l 8,0 0,8 -8,0 z M 8,112 l 8,0 0,8 -8,0 z M 24,112 l 8,0 0,8 -8,0 z M 32,112 l 8,0 0,8 -8,0 z M 48,112 l 8,0 0,8 -8,0 z M 136,112 l 8,0 0,8 -8,0 z M 160,112 l 8,0 0,8 -8,0 z M 168,112 l 8,0 0,8 -8,0 z M 184,112 l 8,0 0,8 -8,0 z M 192,112 l 8,0 0,8 -8,0 z M 200,112 l 8,0 0,8 -8,0 z M 208,112 l 8,0 0,8 -8,0 z M 216,112 l 8,0 0,8 -8,0 z M 232,112 l 8,0 0,8 -8,0 z M 24,120 l 8,0 0,8 -8,0 z M 32,120 l 8,0 0,8 -8,0 z M 48,120 l 8,0 0,8 -8,0 z M 56,120 l 8,0 0,8 -8,0 z M 72,120 l 8,0 0,8 -8,0 z M 80,120 l 8,0 0,8 -8,0 z M 88,120 l 8,0 0,8 -8,0 z M 96,120 l 8,0 0,8 -8,0 z M 104,120 l 8,0 0,8 -8,0 z M 112,120 l 8,0 0,8 -8,0 z M 120,120 l 8,0 0,8 -8,0 z M 128,120 l 8,0 0,8 -8,0 z M 152,120 l 8,0 0,8 -8,0 z M 208,120 l 8,0 0,8 -8,0 z M 216,120 l 8,0 0,8 -8,0 z M 32,128 l 8,0 0,8 -8,0 z M 40,128 l 8,0 0,8 -8,0 z M 48,128 l 8,0 0,8 -8,0 z M 64,128 l 8,0 0,8 -8,0 z M 72,128 l 8,0 0,8 -8,0 z M 80,128 l 8,0 0,8 -8,0 z M 96,128 l 8,0 0,8 -8,0 z M 120,128 l 8,0 0,8 -8,0 z M 152,128 l 8,0 0,8 -8,0 z M 176,128 l 8,0 0,8 -8,0 z M 184,128 l 8,0 0,8 -8,0 z M 200,128 l 8,0 0,8 -8,0 z M 208,128 l 8,0 0,8 -8,0 z M 8,136 l 8,0 0,8 -8,0 z M 56,136 l 8,0 0,8 -8,0 z M 96,136 l 8,0 0,8 -8,0 z M 112,136 l 8,0 0,8 -8,0 z M 120,136 l 8,0 0,8 -8,0 z M 128,136 l 8,0 0,8 -8,0 z M 136,136 l 8,0 0,8 -8,0 z M 144,136 l 8,0 0,8 -8,0 z M 152,136 l 8,0 0,8 -8,0 z M 168,136 l 8,0 0,8 -8,0 z M 176,136 l 8,0 0,8 -8,0 z M 200,136 l 8,0 0,8 -8,0 z M 216,136 l 8,0 0,8 -8,0 z M 224,136 l 8,0 0,8 -8,0 z M 232,136 l 8,0 0,8 -8,0 z M 8,144 l 8,0 0,8 -8,0 z M 32,144 l 8,0 0,8 -8,0 z M 104,144 l 8,0 0,8 -8,0 z M 112,144 l 8,0 0,8 -8,0 z M 120,144 l 8,0 0,8 -8,0 z M 160,144 l 8,0 0,8 -8,0 z M 168,144 l 8,0 0,8 -8,0 z M 184,144 l 8,0 0,8 -8,0 z M 192,144 l 8,0 0,8 -8,0 z M 200,144 l 8,0 0,8 -8,0 z M 216,144 l 8,0 0,8 -8,0 z M 224,144 l 8,0 0,8 -8,0 z M 232,144 l 8,0 0,8 -8,0 z M 8,152 l 8,0 0,8 -8,0 z M 40,152 l 8,0 0,8 -8,0 z M 48,152 l 8,0 0,8 -8,0 z M 56,152 l 8,0 0,8 -8,0 z M 64,152 l 8,0 0,8 -8,0 z M 72,152 l 8,0 0,8 -8,0 z M 88,152 l 8,0 0,8 -8,0 z M 128,152 l 8,0 0,8 -8,0 z M 136,152 l 8,0 0,8 -8,0 z M 144,152 l 8,0 0,8 -8,0 z M 200,152 l 8,0 0,8 -8,0 z M 208,152 l 8,0 0,8 -8,0 z M 8,160 l 8,0 0,8 -8,0 z M 24,160 l 8,0 0,8 -8,0 z M 40,160 l 8,0 0,8 -8,0 z M 48,160 l 8,0 0,8 -8,0 z M 72,160 l 8,0 0,8 -8,0 z M 104,160 l 8,0 0,8 -8,0 z M 120,160 l 8,0 0,8 -8,0 z M 152,160 l 8,0 0,8 -8,0 z M 160,160 l 8,0 0,8 -8,0 z M 208,160 l 8,0 0,8 -8,0 z M 224,160 l 8,0 0,8 -8,0 z M 232,160 l 8,0 0,8 -8,0 z M 8,168 l 8,0 0,8 -8,0 z M 32,168 l 8,0 0,8 -8,0 z M 40,168 l 8,0 0,8 -8,0 z M 56,168 l 8,0 0,8 -8,0 z M 72,168 l 8,0 0,8 -8,0 z M 80,168 l 8,0 0,8 -8,0 z M 88,168 l 8,0 0,8 -8,0 z M 104,168 l 8,0 0,8 -8,0 z M 112,168 l 8,0 0,8 -8,0 z M 120,168 l 8,0 0,8 -8,0 z M 128,168 l 8,0 0,8 -8,0 z M 144,168 l 8,0 0,8 -8,0 z M 160,168 l 8,0 0,8 -8,0 z M 168,168 l 8,0 0,8 -8,0 z M 176,168 l 8,0 0,8 -8,0 z M 184,168 l 8,0 0,8 -8,0 z M 192,168 l 8,0 0,8 -8,0 z M 200,168 l 8,0 0,8 -8,0 z M 216,168 l 8,0 0,8 -8,0 z M 224,168 l 8,0 0,8 -8,0 z M 72,176 l 8,0 0,8 -8,0 z M 80,176 l 8,0 0,8 -8,0 z M 112,176 l 8,0 0,8 -8,0 z M 128,176 l 8,0 0,8 -8,0 z M 136,176 l 8,0 0,8 -8,0 z M 144,176 l 8,0 0,8 -8,0 z M 152,176 l 8,0 0,8 -8,0 z M 168,176 l 8,0 0,8 -8,0 z M 200,176 l 8,0 0,8 -8,0 z M 208,176 l 8,0 0,8 -8,0 z M 216,176 l 8,0 0,8 -8,0 z M 224,176 l 8,0 0,8 -8,0 z M 232,176 l 8,0 0,8 -8,0 z M 8,184 l 8,0 0,8 -8,0 z M 16,184 l 8,0 0,8 -8,0 z M 24,184 l 8,0 0,8 -8,0 z M 32,184 l 8,0 0,8 -8,0 z M 40,184 l 8,0 0,8 -8,0 z M 48,184 l 8,0 0,8 -8,0 z M 56,184 l 8,0 0,8 -8,0 z M 72,184 l 8,0 0,8 -8,0 z M 80,184 l 8,0 0,8 -8,0 z M 96,184 l 8,0 0,8 -8,0 z M 104,184 l 8,0 0,8 -8,0 z M 128,184 l 8,0 0,8 -8,0 z M 136,184 l 8,0 0,8 -8,0 z M 144,184 l 8,0 0,8 -8,0 z M 152,184 l 8,0 0,8 -8,0 z M 160,184 l 8,0 0,8 -8,0 z M 168,184 l 8,0 0,8 -8,0 z M 184,184 l 8,0 0,8 -8,0 z M 200,184 l 8,0 0,8 -8,0 z M 216,184 l 8,0 0,8 -8,0 z M 8,192 l 8,0 0,8 -8,0 z M 56,192 l 8,0 0,8 -8,0 z M 88,192 l 8,0 0,8 -8,0 z M 96,192 l 8,0 0,8 -8,0 z M 136,192 l 8,0 0,8 -8,0 z M 160,192 l 8,0 0,8 -8,0 z M 168,192 l 8,0 0,8 -8,0 z M 200,192 l 8,0 0,8 -8,0 z M 224,192 l 8,0 0,8 -8,0 z M 232,192 l 8,0 0,8 -8,0 z M 8,200 l 8,0 0,8 -8,0 z M 24,200 l 8,0 0,8 -8,0 z M 32,200 l 8,0 0,8 -8,0 z M 40,200 l 8,0 0,8 -8,0 z M 56,200 l 8,0 0,8 -8,0 z M 72,200 l 8,0 0,8 -8,0 z M 88,200 l 8,0 0,8 -8,0 z M 96,200 l 8,0 0,8 -8,0 z M 168,200 l 8,0 0,8 -8,0 z M 176,200 l 8,0 0,8 -8,0 z M 184,200 l 8,0 0,8 -8,0 z M 192,200 l 8,0 0,8 -8,0 z M 200,200 l 8,0 0,8 -8,0 z M 208,200 l 8,0 0,8 -8,0 z M 216,200 l 8,0 0,8 -8,0 z M 224,200 l 8,0 0,8 -8,0 z M 232,200 l 8,0 0,8 -8,0 z M 8,208 l 8,0 0,8 -8,0 z M 24,208 l 8,0 0,8 -8,0 z M 32,208 l 8,0 0,8 -8,0 z M 40,208 l 8,0 0,8 -8,0 z M 56,208 l 8,0 0,8 -8,0 z M 72,208 l 8,0 0,8 -8,0 z M 88,208 l 8,0 0,8 -8,0 z M 104,208 l 8,0 0,8 -8,0 z M 112,208 l 8,0 0,8 -8,0 z M 136,208 l 8,0 0,8 -8,0 z M 144,208 l 8,0 0,8 -8,0 z M 152,208 l 8,0 0,8 -8,0 z M 168,208 l 8,0 0,8 -8,0 z M 200,208 l 8,0 0,8 -8,0 z M 216,208 l 8,0 0,8 -8,0 z M 224,208 l 8,0 0,8 -8,0 z M 232,208 l 8,0 0,8 -8,0 z M 8,216 l 8,0 0,8 -8,0 z M 24,216 l 8,0 0,8 -8,0 z M 32,216 l 8,0 0,8 -8,0 z M 40,216 l 8,0 0,8 -8,0 z M 56,216 l 8,0 0,8 -8,0 z M 72,216 l 8,0 0,8 -8,0 z M 80,216 l 8,0 0,8 -8,0 z M 88,216 l 8,0 0,8 -8,0 z M 112,216 l 8,0 0,8 -8,0 z M 120,216 l 8,0 0,8 -8,0 z M 128,216 l 8,0 0,8 -8,0 z M 144,216 l 8,0 0,8 -8,0 z M 152,216 l 8,0 0,8 -8,0 z M 160,216 l 8,0 0,8 -8,0 z M 192,216 l 8,0 0,8 -8,0 z M 200,216 l 8,0 0,8 -8,0 z M 216,216 l 8,0 0,8 -8,0 z M 224,216 l 8,0 0,8 -8,0 z M 8,224 l 8,0 0,8 -8,0 z M 56,224 l 8,0 0,8 -8,0 z M 72,224 l 8,0 0,8 -8,0 z M 80,224 l 8,0 0,8 -8,0 z M 88,224 l 8,0 0,8 -8,0 z M 104,224 l 8,0 0,8 -8,0 z M 112,224 l 8,0 0,8 -8,0 z M 160,224 l 8,0 0,8 -8,0 z M 176,224 l 8,0 0,8 -8,0 z M 184,224 l 8,0 0,8 -8,0 z M 192,224 l 8,0 0,8 -8,0 z M 224,224 l 8,0 0,8 -8,0 z M 8,232 l 8,0 0,8 -8,0 z M 16,232 l 8,0 0,8 -8,0 z M 24,232 l 8,0 0,8 -8,0 z M 32,232 l 8,0 0,8 -8,0 z M 40,232 l 8,0 0,8 -8,0 z M 48,232 l 8,0 0,8 -8,0 z M 56,232 l 8,0 0,8 -8,0 z M 72,232 l 8,0 0,8 -8,0 z M 104,232 l 8,0 0,8 -8,0 z M 120,232 l 8,0 0,8 -8,0 z M 136,232 l 8,0 0,8 -8,0 z M 144,232 l 8,0 0,8 -8,0 z M 160,232 l 8,0 0,8 -8,0 z M 176,232 l 8,0 0,8 -8,0 z M 200,232 l 8,0 0,8 -8,0 z M 208,232 l 8,0 0,8 -8,0 z M 216,232 l 8,0 0,8 -8,0 z "/>
+                    </svg>
+                    <br>Scan this QR with your <strong>Bitcoin</strong> wallet application.
+                    <br>Please feel free to donate any amount you want.
+                    <br><br>
+                    <span class=mdc-typography--headline5>Addresses</span>
+                    <br>
+                    <ul class="btc-dialog--list mdc-list mdc-list--two-line">
+                        <li class=mdc-list-item tabindex=0 data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Bitcoin (BTC)</span>
+                                <span class=mdc-list-item__secondary-text>31pgYq9Q8XXjfWYYb2V3JAryHap2pTtXBr</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Bitcoin Cash (BCH)</span>
+                                <span class=mdc-list-item__secondary-text>qql4dpxcmlxcfv66cnhqn8lnf7rlaa9qncke5hfxcs</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Ethereum (ETH)</span>
+                                <span class=mdc-list-item__secondary-text>0x3C3D28a7E1E219b244236Eb49646f78896C94b8C</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Ethereum Classic (ETC)</span>
+                                <span class=mdc-list-item__secondary-text>0xfb66acf306EdD3ecfebC60F9DaD8989f15261e52</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Litecoin (LTC)</span>
+                                <span class=mdc-list-item__secondary-text>MCfZhXptbrTLo47X3P1sDez1FfJLyWiCmK</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Zero Exchange (ZRX)</span>
+                                <span class=mdc-list-item__secondary-text>0x6d9e2F35b2DF899fE8b46850ff990a65DbA170EB</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Basic Attention Token (BAT)</span>
+                                <span class=mdc-list-item__secondary-text>0xBe3DE0D4efc5f5b05CA4Af6E0Cf4cF1EAf60980F</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>USD Coin (USDC)</span>
+                                <span class=mdc-list-item__secondary-text>0x77Aa410b57Dc0AA49d05F584Bf2869Ce3f28700D</span>
+                            </span>
+                        </li>
+                        <li class=mdc-list-item data-mdc-auto-init=MDCRipple>
+                            <span class=mdc-list-item__text>
+                                <span class=mdc-list-item__primary-text>Zcash (ZEC)</span>
+                                <span class=mdc-list-item__secondary-text>t1TJgB3UDS6EBddCHMLLQvB1GmVjNkeVkKw</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <footer class=mdc-dialog__actions>
+                    <button type=button class="mdc-button mdc-dialog__button" data-mdc-dialog-action=no>Dismiss</button>
+                </footer>
+            </div>
+        </div>
+        <div class=mdc-dialog__scrim></div>
+    </div>
+    <script>
+        // Check to make sure service workers are supported in the current browser,
+        // and that the current page is accessed from a secure origin. Using a
+        // service worker from an insecure origin will trigger JS console errors.
+        var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
+            // [::1] is the IPv6 localhost address.
+            window.location.hostname === '[::1]' ||
+            // 127.0.0.1/8 is considered localhost for IPv4.
+            window.location.hostname.match(
+                /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+            )
+        );
+
+        // Check if service workers are supported and are needed
+        if ('serviceWorker' in navigator &&
+            (window.location.protocol === 'https:' || isLocalhost)) {
+            // Wait for the window to finish loading to keep everything performing well
+            window.addEventListener('load', () => {
+                // Register the service worker
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

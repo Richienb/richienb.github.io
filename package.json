@@ -1,0 +1,83 @@
+{
+    "name": "richienb.github.io",
+    "version": "1.0.0",
+    "description": "This repository hosts Richie Bendall's Website",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Warning: no test specified\" && exit 0",
+        "start": "webpack-dev-server --config webpack.config.js",
+        "build": "webpack --config webpack.config.js"
+    },
+    "keywords": [
+        "html",
+        "css",
+        "richie-bendall",
+        "js",
+        "website",
+        "open-source",
+        "nodejs",
+        "travis-ci",
+        "mdc",
+        "material-design-components",
+        "mdc-web"
+    ],
+    "author": "Richie Bendall",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@babel/core": "^7.2.2",
+        "@material/auto-init": "^0.41.0",
+        "@material/button": "^0.44.0",
+        "@material/card": "^0.44.0",
+        "@material/dialog": "^0.44.0",
+        "@material/drawer": "^0.44.0",
+        "@material/icon-button": "^0.44.0",
+        "@material/layout-grid": "^0.41.0",
+        "@material/ripple": "^0.44.0",
+        "@material/top-app-bar": "^0.44.0",
+        "@material/typography": "^0.44.0",
+        "auth0-lock": "^11.14.0",
+        "babel-core": "6.26.3",
+        "babel-loader": "7.1.5",
+        "babel-plugin-transform-object-assign": "^6.22.0",
+        "babel-preset-env": "^1.7.0",
+        "closure-webpack-plugin": "^1.1.1",
+        "css-loader": "^2.1.0",
+        "cssnano": "^4.1.9",
+        "cssnano-preset-advanced": "^4.0.7",
+        "extract-loader": "^3.1.0",
+        "file-loader": "^2.0.0",
+        "html-minifier": "^3.5.21",
+        "html5shiv": "^3.7.3",
+        "jquery": "^3.3.1",
+        "node-sass": "^4.11.0",
+        "normalize.css": "^8.0.1",
+        "postcss": "7.0.14",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "6.5.0",
+        "sass-loader": "^7.1.0",
+        "sitemap-generator-cli": "^7.4.0",
+        "webpack": "3.12.0",
+        "workbox-cli": "^3.6.3"
+    },
+    "devDependencies": {
+        "webpack-dev-server": "2.11.3"
+    },
+    "resolutions": {
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Richienb/richienb.github.io.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Richienb/richienb.github.io/issues"
+    },
+    "homepage": "https://github.com/Richienb/richienb.github.io#readme",
+    "browserslist": [
+        "last 2 versions",
+        "not IE 10",
+        "not IE_Mob 10",
+        "not dead"
+    ]
+}
