@@ -5,3 +5,8 @@ ___
 Browser testing kindly provided by:
 
 [![Browserstack](https://i.imgur.com/yLGiIoY.png)](https://www.browserstack.com/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRichienb%2Frichienb.github.io.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRichienb%2Frichienb.github.io?ref=badge_shield)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRichienb%2Frichienb.github.io.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FRichienb%2Frichienb.github.io?ref=badge_large)
