@@ -74,6 +74,12 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 // Automatically initialise the objects
 mdcAutoInit()
 
+// For each MDC icon button that is using MDC Ripple
+$.each($('.mdc-icon-button[data-mdc-auto-init="MDCRipple"]'), (_, obj) => {
+    // Make the ripple unbounded
+    obj.MDCRipple.unbounded = true;
+});
+
 // Import Auth0 Lock
 const Auth0Lock = require("auth0-lock").default
 
