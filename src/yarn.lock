@@ -286,19 +286,19 @@
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.43.0.tgz#6d9fa113c82e841817882172c152d60d2d203ca6"
   integrity sha512-/zndZL6EihI18v2mYd4O8xvOBAAXmLeHyHVK28LozSAaJ9okQgD25wq5Ktk95oMTmPIC+rH66KcK6371ivNk8g==
 
-"@material/top-app-bar@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@material/top-app-bar/-/top-app-bar-0.44.0.tgz#2495c7f9567568fb961ccced24f479c4806a72af"
-  integrity sha512-tf0yXQJARYs8UPaH8oo3LnsSHEiur7Zm8Fc3hv3F0gNRRaZYBjwsMQMVbZZaWoQCWskMALyntBg+Fo18zdgDxw==
+"@material/top-app-bar@^0.44.1":
+  version "0.44.1"
+  resolved "https://registry.yarnpkg.com/@material/top-app-bar/-/top-app-bar-0.44.1.tgz#016caeb0cbb8cea65290af702ad95956eba5d4af"
+  integrity sha512-RyRfKEO8qoOmrxoFPFgX3msM+TfFKHPgxRPVnaffIcQzi/0ALeB6qFcxGphZxAeK+/8q+kaNtDhBb9ay12VAIA==
   dependencies:
     "@material/animation" "^0.41.0"
     "@material/base" "^0.41.0"
-    "@material/elevation" "^0.44.0"
-    "@material/ripple" "^0.44.0"
+    "@material/elevation" "^0.44.1"
+    "@material/ripple" "^0.44.1"
     "@material/rtl" "^0.42.0"
-    "@material/shape" "^0.43.0"
+    "@material/shape" "^0.44.1"
     "@material/theme" "^0.43.0"
-    "@material/typography" "^0.44.0"
+    "@material/typography" "^0.44.1"
 
 "@material/typography@^0.44.0", "@material/typography@^0.44.1":
   version "0.44.1"
