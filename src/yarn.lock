@@ -221,13 +221,13 @@
   resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.1.tgz#afafc80294e5efab94bee31a187273d43d34979a"
   integrity sha512-90cc7njn4aHbH9UxY8qgZth1W5JgOgcEdWdubH1t7sFkwqFxS5g3zgxSBt46TygFBVIXNZNq35Xmg80wgqO7Pg==
 
-"@material/icon-button@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.44.0.tgz#febbcfd27d91eca8096ae042b9c07ed0f65345e9"
-  integrity sha512-n6L7RaRyEci6eGsuBTSEG+t9ATHAHaMlf9zuTWorEnIXY4DAmGO7ggBjw4+1XIOjhpLeIjyJdcvUK6Yz/UVM6Q==
+"@material/icon-button@^0.44.1":
+  version "0.44.1"
+  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.44.1.tgz#28935c16edef62c0f77fcc1195707c55331a5d0f"
+  integrity sha512-46fLWwqLjer3w1h1HvfNsVuBmNwg+rFbIrLBzUXSb9iM6YlunjBNwPZI5KTmVpt04GkzVI2h4o2ej8dOdvQWOg==
   dependencies:
     "@material/base" "^0.41.0"
-    "@material/ripple" "^0.44.0"
+    "@material/ripple" "^0.44.1"
     "@material/theme" "^0.43.0"
 
 "@material/layout-grid@^0.41.0":
