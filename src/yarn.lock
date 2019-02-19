@@ -146,18 +146,18 @@
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.41.0.tgz#badadce711b4c25b1eb889a5e7581e32cd07c421"
   integrity sha512-tEyzwBRu3d1H120SfKsDVYZHcqT5lKohh/7cWKR93aAaPDkSvjpKJIjyu2yuSkjpDduVZGzVocYbOvhUKhhzXQ==
 
-"@material/button@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.44.0.tgz#f01dcbea88bdc314e7640b76e5558101c8b4d69d"
-  integrity sha512-T8u8s8rlB49D9/5Nh5b0XsKRgSq3X0yWGo71MgaTnCnwxt8oZ6PxW/cH6Nn3Xp0NCr3mlSVQs08BviUfAmtlsg==
+"@material/button@^0.44.1":
+  version "0.44.1"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-0.44.1.tgz#2a0bc0e6961128ace81e050770695c4aaad7f3bd"
+  integrity sha512-+eI0nI2zkxZOanPfeWzZPoQDbv2NqgUhUhPxERKoXEqkyJIne7gWRYMHqHjKPctsD2xmzgqGmGCLcrvhgFZ+FQ==
   dependencies:
-    "@material/elevation" "^0.44.0"
-    "@material/feature-targeting" "^0.44.0"
-    "@material/ripple" "^0.44.0"
+    "@material/elevation" "^0.44.1"
+    "@material/feature-targeting" "^0.44.1"
+    "@material/ripple" "^0.44.1"
     "@material/rtl" "^0.42.0"
-    "@material/shape" "^0.43.0"
+    "@material/shape" "^0.44.1"
     "@material/theme" "^0.43.0"
-    "@material/typography" "^0.44.0"
+    "@material/typography" "^0.44.1"
 
 "@material/card@^0.44.0":
   version "0.44.0"
@@ -215,11 +215,6 @@
     "@material/animation" "^0.41.0"
     "@material/feature-targeting" "^0.44.1"
     "@material/theme" "^0.43.0"
-
-"@material/feature-targeting@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.0.tgz#52cc73f0c8a83159de0357aebe74f15f9856fb4c"
-  integrity sha512-ShuC2TOLfjFpYUCQFtvkqDJhM6HTaucSx5HkRbOvOG+VlpzDx6pAqRUmdVaq2p7tHoQf2vwPMlSVm3gOjWt4VQ==
 
 "@material/feature-targeting@^0.44.1":
   version "0.44.1"
