@@ -159,15 +159,16 @@
     "@material/theme" "^0.43.0"
     "@material/typography" "^0.44.1"
 
-"@material/card@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.44.0.tgz#e62050e3e77f525173a015119200055cd7b71bf0"
-  integrity sha512-fUixXuh133bVp5c1gPIHreL5jwMJEeVIQf0E4xdxhkA+i4ku8fIAvIW62EuCmfJsXicv4q8NG3Ip6pCY+NW3ZA==
+"@material/card@^0.44.1":
+  version "0.44.1"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-0.44.1.tgz#e72efba79e716143d530c75ecf18216aaa3c7499"
+  integrity sha512-SNun2DrzYMXTRfGUSTKkKRCO+2MIuRd+2j3FhjyBUDCaPDoqaHbDIK75vTSXlsE/xCXuJ4Uv4M/w0XS7RRHM0g==
   dependencies:
-    "@material/elevation" "^0.44.0"
-    "@material/ripple" "^0.44.0"
+    "@material/elevation" "^0.44.1"
+    "@material/feature-targeting" "^0.44.1"
+    "@material/ripple" "^0.44.1"
     "@material/rtl" "^0.42.0"
-    "@material/shape" "^0.43.0"
+    "@material/shape" "^0.44.1"
     "@material/theme" "^0.43.0"
 
 "@material/dialog@^0.44.1":
@@ -207,7 +208,7 @@
     "@material/typography" "^0.44.1"
     focus-trap "^4.0.2"
 
-"@material/elevation@^0.44.0", "@material/elevation@^0.44.1":
+"@material/elevation@^0.44.1":
   version "0.44.1"
   resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.44.1.tgz#19efa293e195b00141711899e3c3fde6a3670454"
   integrity sha512-Gr2x/FHysM4ty7sctLPT48pw7YItLZvhXsB4ZzXpdhuy7QshxllBW9NGlAMffzrmNu16MTl3ouGzbhArUYz4jw==
@@ -263,11 +264,6 @@
   version "0.42.0"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.42.0.tgz#1836e78186c2d8b996f6fbf97adab203535335bc"
   integrity sha512-VrnrKJzhmspsN8WXHuxxBZ69yM5IwhCUqWr1t1eNfw3ZEvEj7i1g3P31HGowKThIN1dc1Wh4LE14rCISWCtv5w==
-
-"@material/shape@^0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.43.0.tgz#b877acfd8be8abc9ddcf6601eb60dd0588292415"
-  integrity sha512-KGnoQV4G2OQbMe5Lr5Xbk8XNlO93Qi/juxXtd2wrAfiaPmktD8ug0CwdVDOPBOmj9a0gX3Ofi9XWcoU+tLEVjg==
 
 "@material/shape@^0.44.1":
   version "0.44.1"
