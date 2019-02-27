@@ -7,9 +7,7 @@ if (workbox) {
 
     workbox.routing.registerRoute(".*\.\html", args => {
         return articleHandler.handle(args).then(response => {
-            if (!response) {
-                return caches.match('error.html#Offline#Try%20again%20later');
-            } else if (response.status === 404) {
+            if (response.status === 404) {
                 return caches.match('404.html');
             }
             return response;
