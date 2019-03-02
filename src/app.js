@@ -1,7 +1,7 @@
 // Log development message
 console.log("%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io", "font-family: Roboto, sans-serif; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; line-height: 2rem; text-decoration: inherit; text-transform: inherit; font-size: 1.5rem; font-weight: 400; letter-spacing: normal;")
 
-import $ from "jquery";
+import $ from "jquery"
 
 // When the Gravatar image fails to load
 $(".gravatar--icon").on("error", () => {
@@ -46,7 +46,7 @@ $(".drawer--website").click((e) => {
 // Import MDC Dialog
 import {
     MDCDialog
-} from '@material/dialog/index';
+} from '@material/dialog/index'
 
 // Setup dialog
 const btc_dialog = new MDCDialog(document.querySelector(".btc-dialog"))
@@ -77,11 +77,11 @@ mdcAutoInit()
 // For each MDC icon button that is using MDC Ripple
 $.each($('.mdc-icon-button[data-mdc-auto-init="MDCRipple"]'), (_, obj) => {
     // Make the ripple unbounded
-    obj.MDCRipple.unbounded = true;
-});
+    obj.MDCRipple.unbounded = true
+})
 
 // Import Auth0 Lock
-const Auth0Lock = require("auth0-lock").default
+import { Auth0Lock } from 'auth0-lock'
 
 // Initialise lock object
 const lock = new Auth0Lock("w72j6KObRRkXL889ivFXoroFVyoxGq1H", "richienb.au.auth0.com")
@@ -107,15 +107,15 @@ lock.on("authenticated", (authResult) => {
         // If an error occurred
         if (error) {
             // Terminate the function
-            return;
+            return
 
         }
 
         // Save the user token
-        localStorage.setItem('token', authResult.accessToken);
+        localStorage.setItem('token', authResult.accessToken)
 
         // Save the user profile
-        localStorage.setItem('profile', JSON.stringify(profile));
+        localStorage.setItem('profile', JSON.stringify(profile))
 
         // Hide the login button
         $(".sso--login").hide()
@@ -123,8 +123,8 @@ lock.on("authenticated", (authResult) => {
         // Show the logout button
         $(".sso--logout").show()
 
-    });
-});
+    })
+})
 
 // When the login button is clicked
 $(".sso--login").click((e) => {
