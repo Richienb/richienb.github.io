@@ -351,7 +351,7 @@
     "@material/typography" "^1.0.0"
     tslib "^1.9.3"
 
-"@material/typography@^0.44.0", "@material/typography@^0.44.1":
+"@material/typography@^0.44.1":
   version "0.44.1"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.44.1.tgz#a94f01172f9122180bc2ce0aa55658183a35590d"
   integrity sha512-wMXHusg+Lp5Fdgoj3m0c+Lt6GCeGSh3EPRtQ1TQ2bwdBa0et2FqBaQRgXoq3tVmr0O/7unTfa0DoXlh4nVp1wA==
