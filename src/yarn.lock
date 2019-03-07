@@ -143,10 +143,13 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/auto-init@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/auto-init/-/auto-init-0.41.0.tgz#8a59bb0b83e0f51ead9508074f9a29b2b6a20eec"
-  integrity sha512-jp6L8MpYu7DudgDfA8iTyD9BwQrYPEDsIJGbqzN9vcCBl5FoBatkB8pcFXKr+1mRBk7T1Qmf6+H5nDtxyXjHEQ==
+"@material/auto-init@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@material/auto-init/-/auto-init-1.0.0.tgz#0431b03f1bd533f57c4532657e236fe47711f3ab"
+  integrity sha512-xlWEjjyQquXMi9xz3RH7HW/5dsLGkVYQnm1WCYw2a6JIpIlipkkLEzBNc//agiQongIBbLndL07gO7WQeSohNA==
+  dependencies:
+    "@material/base" "^1.0.0"
+    tslib "^1.9.3"
 
 "@material/base@^0.41.0":
   version "0.41.0"
