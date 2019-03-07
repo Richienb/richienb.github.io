@@ -280,7 +280,7 @@
     "@material/theme" "^0.43.0"
     "@material/typography" "^0.44.1"
 
-"@material/ripple@^0.44.0", "@material/ripple@^0.44.1":
+"@material/ripple@^0.44.1":
   version "0.44.1"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.44.1.tgz#79cb2ddf1f998498d877d3e3c46b50fed6f13b01"
   integrity sha512-prJ1p3bR+GvwAtJgtdeIixsnRVApN3bizGnX7upKoqxsqbBDHj84JxaO8EsG9bjruG/LJu8Fb6WKKdIp2oXHTA==
