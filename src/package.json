@@ -27,7 +27,7 @@
         "@babel/core": "^7.3.4",
         "@material/auto-init": "^0.41.0",
         "@material/button": "^0.44.1",
-        "@material/card": "^0.44.1",
+        "@material/card": "^1.0.1",
         "@material/dialog": "^0.44.1",
         "@material/drawer": "^0.44.1",
         "@material/icon-button": "^0.44.1",
