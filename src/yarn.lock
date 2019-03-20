@@ -611,10 +611,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-auth0-js@^9.10.0:
-  version "9.10.0"
-  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.10.0.tgz#56d7886d4994fd94986778f0799d93340202c100"
-  integrity sha512-cHE4cGQRMjCS6IorIWdH2wdYSpDQchHq/xQOn7FlEaquDrb2zgQi4G5AWzO7wW2ED4UZsX4rHElc2BMZev8rGA==
+auth0-js@^9.10.1:
+  version "9.10.1"
+  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.10.1.tgz#91feac770006f4703ff6b3463eae41922a99d5e4"
+  integrity sha512-CDePT7UapFLPwp/lqOjL7kMk/lOi7h0AixurxaX+Rey4+4C0NRI+GiRR5u0dJQWSIXyKKOLieHpxzsr0c7VqSg==
   dependencies:
     base64-js "^1.2.0"
     idtoken-verifier "^1.2.0"
@@ -624,17 +624,17 @@ auth0-js@^9.10.0:
     url-join "^4.0.0"
     winchan "^0.2.1"
 
-auth0-lock@^11.14.0:
-  version "11.14.0"
-  resolved "https://registry.yarnpkg.com/auth0-lock/-/auth0-lock-11.14.0.tgz#214f52d652f0cf009b848f3d5eeff03cd50b8969"
-  integrity sha512-JpxmRoGLxFxoHLuE7ViJBEDWIwy0pmvwj+yEfysjWlv0qme2UkOgSuIYtdjh5uBygi7Ye9j9XznjuAoe7uL9zg==
+auth0-lock@^11.14.1:
+  version "11.14.1"
+  resolved "https://registry.yarnpkg.com/auth0-lock/-/auth0-lock-11.14.1.tgz#71d64302bf8f343ce6e99f5b98316ef726c87f78"
+  integrity sha512-MHTFoh+ahTxDKKXEb8EB+HGWJRum/5OEUWNZzlZjbUMp4Qtfg83udDuD8pgWdsCjdCD1ZdAkWCwdNowKFEPtag==
   dependencies:
-    auth0-js "^9.10.0"
+    auth0-js "^9.10.1"
     auth0-password-policies "^1.0.2"
     blueimp-md5 "2.3.1"
-    fbjs "^0.3.1"
+    fbjs "^0.3.2"
     immutable "^3.7.3"
-    jsonp "^0.2.0"
+    jsonp "^0.2.1"
     password-sheriff "^1.1.0"
     prop-types "^15.6.0"
     react "^15.6.2"
@@ -2989,7 +2989,7 @@ faye-websocket@~0.11.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fbjs@^0.3.1:
+fbjs@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.3.2.tgz#033a540595084b5de3509a405d06f1a2a8e5b9fb"
   integrity sha1-AzpUBZUIS13jUJpAXQbxoqjlufs=
@@ -4338,7 +4338,7 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsonp@^0.2.0:
+jsonp@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/jsonp/-/jsonp-0.2.1.tgz#a65b4fa0f10bda719a05441ea7b94c55f3e15bae"
   integrity sha1-pltPoPEL2nGaBUQep7lMVfPhW64=
