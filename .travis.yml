@@ -37,19 +37,19 @@ install:
 
 script:
     # Build the website with Webpack
-    - yarn run build
+    - yarn build
 
     # Generate the service worker
-    - npx workbox injectManifest workbox-config.js
+    - yarn manifest
 
     # Remove the unneeded node_modules folder
     - rm -rf node_modules
 
     # Generate Sitemap
-    - npx sitemap-generator-cli https://www.richie-bendall.ml
+    - yarn sitemap
 
     # Minify the HTML code
-    - npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html
+    - yarn htmlminify
 
 deploy:
     provider:           pages

@@ -5,15 +5,6 @@ if (workbox) {
 
     workbox.precaching.precacheAndRoute([]);
 
-    workbox.routing.registerRoute(".*\.\html", args => {
-        return articleHandler.handle(args).then(response => {
-            if (response.status === 404) {
-                return caches.match('404.html');
-            }
-            return response;
-        });
-    });
-
 } else {
     console.debug("Noo! Workbox didn't load 😬");
 }

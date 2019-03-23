@@ -6,7 +6,10 @@
     "scripts": {
         "test": "echo \"Warning: no test specified\" && exit 0",
         "start": "webpack-dev-server --config webpack.config.js",
-        "build": "webpack --config webpack.config.js"
+        "build": "webpack --config webpack.config.js",
+        "manifest": "workbox injectManifest workbox-config.js",
+        "sitemap": "sitemap-generator-cli https://www.richie-bendall.ml",
+        "minify": "html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html"
     },
     "keywords": [
         "html",
@@ -26,15 +29,15 @@
     "dependencies": {
         "@babel/core": "^7.3.4",
         "@material/auto-init": "^0.41.0",
-        "@material/button": "^0.44.1",
-        "@material/card": "^0.44.1",
-        "@material/dialog": "^0.44.1",
-        "@material/drawer": "^0.44.1",
-        "@material/icon-button": "^0.44.1",
+        "@material/button": "^1.0.1",
+        "@material/card": "^1.0.1",
+        "@material/dialog": "^1.0.1",
+        "@material/drawer": "^1.0.1",
+        "@material/icon-button": "^1.0.1",
         "@material/layout-grid": "^0.41.0",
-        "@material/ripple": "^0.44.1",
-        "@material/top-app-bar": "^0.44.1",
-        "@material/typography": "^0.44.1",
+        "@material/ripple": "^1.0.1",
+        "@material/top-app-bar": "^1.0.1",
+        "@material/typography": "^1.0.0",
         "auth0-lock": "^11.14.1",
         "babel-core": "6.26.3",
         "babel-loader": "7.1.5",
@@ -54,6 +57,8 @@
         "postcss": "7.0.14",
         "postcss-loader": "^3.0.0",
         "postcss-preset-env": "6.6.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
         "sass-loader": "^7.1.0",
         "sitemap-generator-cli": "^7.4.0",
         "webpack": "3.12.0",
@@ -63,8 +68,8 @@
         "webpack-dev-server": "2.11.3"
     },
     "resolutions": {
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0"
+        "react": "^16.8.5",
+        "react-dom": "^16.8.5"
     },
     "repository": {
         "type": "git",
