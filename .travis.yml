@@ -49,7 +49,7 @@ script:
     - yarn sitemap
 
     # Minify the HTML code
-    - yarn htmlminify
+    - yarn minify
 
 deploy:
     provider:           pages
