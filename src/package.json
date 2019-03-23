@@ -9,7 +9,7 @@
         "build": "webpack --config webpack.config.js",
         "manifest": "workbox injectManifest workbox-config.js",
         "sitemap": "npx sitemap-generator-cli https://www.richie-bendall.ml",
-        "minify": "html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html"
+        "minify": "npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --conservative-collapse --decode-entities --minify-css --minify-js --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html"
     },
     "keywords": [
         "html",
