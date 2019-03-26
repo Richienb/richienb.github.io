@@ -192,10 +192,10 @@
     focus-trap "^4.0.2"
     tslib "^1.9.3"
 
-"@material/dom@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.0.1.tgz#a0bff19e5c3d14a147dca91f55eb8410eee31739"
-  integrity sha512-7gb9Tk8YBn2fLEa5fJfvDexG0QxvRGDb8c6uZEhvK4bTd2ZHCfHg9KrO+smC6Trbn5jC+FsBvdRZBbMjtS/E4g==
+"@material/dom@^1.0.1", "@material/dom@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.1.0.tgz#3bd3d1a3415b4181118fecb182d93beda56a6f8c"
+  integrity sha512-+HWW38ZaM2UBPu4+7QCusLDSf4tFT31rsEXHkTkxYSg/QpDivfPx6YDz4OmYtafmhPR1d1YjqB3MYysUHdodyw==
   dependencies:
     tslib "^1.9.3"
 
@@ -260,16 +260,16 @@
     "@material/typography" "^1.0.0"
     tslib "^1.9.3"
 
-"@material/ripple@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-1.0.1.tgz#2287f893ea4462a7f3a96d207397c6d2258e541e"
-  integrity sha512-aBigRoVMjIU2lLDq7TMocI2H2YFbO1hICs5FTdSRp4Yis/QFTrgaW32q8yuHdZI56j+b2BWIWapqA2xpSmCMXQ==
+"@material/ripple@^1.0.1", "@material/ripple@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-1.1.0.tgz#236016fb30c8366faf143297df2c38166d84ffbc"
+  integrity sha512-mkfDBZAmxjpRG7V9TrfOmLxt1g/wvGHCXtYPgvH7W8ozjf53edqxLOFENEdvHbie27y9nyixzXn0gzU0HnxSeA==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
-    "@material/dom" "^1.0.1"
+    "@material/dom" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/theme" "^1.0.0"
+    "@material/theme" "^1.1.0"
     tslib "^1.9.3"
 
 "@material/rtl@^0.42.0":
@@ -284,10 +284,10 @@
   dependencies:
     "@material/feature-targeting" "^0.44.1"
 
-"@material/theme@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-1.0.0.tgz#6fd9ee1bb7fd2a5bdc6b7465cb15fe345e435670"
-  integrity sha512-Bg/BQLU5MmCwtQ3DHcSs9DodZB8PTvuItv1wXrP54S/wBVwryIB5uMDmERhnItbNnAFbkKhlAuhn1asMmMzfkQ==
+"@material/theme@^1.0.0", "@material/theme@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-1.1.0.tgz#9c95dd804168c23c30589fcf09ecc5af5b3d1adc"
+  integrity sha512-YYUV9Rhbx4r/EMb/zoOYJUWjhXChNaLlH1rqt3vpNVyxRcxGqoVMGp5u1XALBCFiD9dACPKLIkKyRYa928nmPQ==
   dependencies:
     "@material/feature-targeting" "^0.44.1"
 
