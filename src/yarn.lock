@@ -175,31 +175,25 @@
     "@material/shape" "^1.0.0"
     "@material/theme" "^1.1.0"
 
-"@material/dialog@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-1.0.1.tgz#940eed0df837d23a9db267f4a0110495f160a6f8"
-  integrity sha512-FR+zsIqLBTIQB5QN/Hf0HlAfa4dkCVHaTefbYkDf6U8ZbtbOMbhhePz8iVcNpVPjwk7P/UDzM8XAhxoda20nDw==
+"@material/dialog@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-1.1.0.tgz#62f6bf31a7329ff4948609fb0e377ea336654972"
+  integrity sha512-XbFTTdzzRhjClLMDFxz8SR/mwwCBpQL6N7Z7UzX7SgD51UJmd19SsXPItFquRKk3mkNuoFBBcR4KJ6julAW+Fg==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
-    "@material/dom" "^1.0.1"
-    "@material/elevation" "^1.0.0"
-    "@material/ripple" "^1.0.1"
+    "@material/dom" "^1.1.0"
+    "@material/elevation" "^1.1.0"
+    "@material/feature-targeting" "^0.44.1"
+    "@material/ripple" "^1.1.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.0.0"
-    "@material/theme" "^1.0.0"
+    "@material/theme" "^1.1.0"
     "@material/typography" "^1.0.0"
     focus-trap "^4.0.2"
     tslib "^1.9.3"
 
 "@material/dom@^1.0.1", "@material/dom@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.1.0.tgz#3bd3d1a3415b4181118fecb182d93beda56a6f8c"
-  integrity sha512-+HWW38ZaM2UBPu4+7QCusLDSf4tFT31rsEXHkTkxYSg/QpDivfPx6YDz4OmYtafmhPR1d1YjqB3MYysUHdodyw==
-  dependencies:
-    tslib "^1.9.3"
-
-"@material/dom@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.1.0.tgz#3bd3d1a3415b4181118fecb182d93beda56a6f8c"
   integrity sha512-+HWW38ZaM2UBPu4+7QCusLDSf4tFT31rsEXHkTkxYSg/QpDivfPx6YDz4OmYtafmhPR1d1YjqB3MYysUHdodyw==
