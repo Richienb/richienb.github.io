@@ -30,7 +30,7 @@
         "@babel/core": "^7.3.4",
         "@material/auto-init": "^0.41.0",
         "@material/button": "^1.0.1",
-        "@material/card": "^1.0.1",
+        "@material/card": "^1.1.0",
         "@material/dialog": "^1.0.1",
         "@material/drawer": "^1.0.1",
         "@material/icon-button": "^1.0.1",
