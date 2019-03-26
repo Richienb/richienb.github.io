@@ -150,17 +150,17 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/button@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@material/button/-/button-1.0.1.tgz#095bc9457ae18bcea5d4a0c8aa0a8a510a31afb1"
-  integrity sha512-gMGuAlG9ETKH14Up4RAH87Z+51NkU725C4H7J0AnICzG75Rto8PtpMqNu5+w/c1cQM1Hudc8JfsflneMEZ10oA==
+"@material/button@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-1.1.0.tgz#dbb46c953040d3a161346e1d3cd057159b9a3c34"
+  integrity sha512-P1oZyyC1ELRe26vdnmax+fO3BWNmftDqHDDlQbJ+gfYMDQsNQtZNJU16ZbnVHsnzEXOpFj729imbmuLfnz8Nbg==
   dependencies:
-    "@material/elevation" "^1.0.0"
+    "@material/elevation" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/ripple" "^1.0.1"
+    "@material/ripple" "^1.1.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.0.0"
-    "@material/theme" "^1.0.0"
+    "@material/theme" "^1.1.0"
     "@material/typography" "^1.0.0"
 
 "@material/card@^1.1.0":
