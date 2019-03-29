@@ -133,14 +133,9 @@ $carbon-width: 100%;
 $carbon-font-size: 14px;
 
 #carbonads {
-    margin: 8px;
-    display: block;
     overflow: hidden;
-    margin-bottom: 20px;
     max-width: $carbon-width;
-    border-radius: 4px;
     text-align: center;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0,0,0,.12);
     font-size: $carbon-font-size;
     line-height: 1.5;
 
@@ -155,41 +150,38 @@ $carbon-font-size: 14px;
 
     span {
         position: relative;
-        display: block;
         overflow: hidden;
+
+        .carbon-img {
+            margin-bottom: 8px;
+            max-width: $carbon-width;
+            line-height: 1;
+            margin: 8px;
+
+            img {
+                margin: 0 auto;
+                max-width: $carbon-width !important;
+                width: $carbon-width;
+                height: auto;
+                width: 50%;
+                float: left;
+                margin-right: 4px;
+            }
+        }
+
+        .carbon-text {
+            display: block;
+            padding: 0 1em 8px;
+        }
+
+        .carbon-poweredby {
+            display: block;
+            padding: 10px $carbon-font-size;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 9px;
+            line-height: 0;
+        }
     }
-}
-
-.carbon-img {
-    display: block;
-    margin-bottom: 8px;
-    max-width: $carbon-width;
-    line-height: 1;
-    margin: 8px;
-
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: $carbon-width !important;
-        width: $carbon-width;
-        height: auto;
-        width: 50%;
-        float: left;
-        margin-right: 4px;
-    }
-}
-
-.carbon-text {
-    display: block;
-    padding: 0 1em 8px;
-}
-
-.carbon-poweredby {
-    display: block;
-    padding: 10px $carbon-font-size;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 9px;
-    line-height: 0;
 }
 @import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset
