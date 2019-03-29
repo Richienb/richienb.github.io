@@ -129,59 +129,40 @@ body {
         }
     }
 }
-$carbon-width: 100%;
-$carbon-font-size: 14px;
 
 #carbonads {
-    overflow: hidden;
-    max-width: $carbon-width;
-    text-align: center;
-    font-size: $carbon-font-size;
-    line-height: 1.5;
+    color: #637381;
+    font-family: Roboto, Helvetica, sans-serif;
+    line-height: 28px;
+    padding: 8px 8px 0;
 
-    a {
-        color: black;
-        text-decoration: none;
-
-        &.carbon-text {
-            font-size: 11px;
-        }
-    }
-
-    span {
-        position: relative;
-        overflow: hidden;
-
-        .carbon-img {
-            margin-bottom: 8px;
-            max-width: $carbon-width;
-            line-height: 1;
-            margin: 8px;
-
-            img {
-                margin: 0 auto;
-                max-width: $carbon-width !important;
-                width: $carbon-width;
-                height: auto;
-                width: 50%;
-                float: left;
-                margin-right: 4px;
-            }
+    .carbon-wrap {
+        .carbon-img > img {
+            display: block;
+            margin-right: 9px;
+            max-width: 40% !important;
+            height: auto;
+            float: left;
         }
 
         .carbon-text {
+            color: #637381;
+            font-weight: 300;
             display: block;
-            padding: 0 1em 8px;
+            font-size: 12px;
+            line-height: 15.96px;
+            margin-bottom: 0;
+            text-decoration: none;
         }
+    }
 
-        .carbon-poweredby {
-            display: block;
-            padding: 10px $carbon-font-size;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 9px;
-            line-height: 0;
-        }
+    .carbon-poweredby {
+        color: #c5cdd0;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
     }
 }
 @import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset
