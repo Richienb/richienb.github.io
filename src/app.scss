@@ -32,32 +32,23 @@ body {
         // Top app bar
         position: fixed;
         z-index: 7;
+        .mdc-top-app-bar__navigation-icon {
+            // Menu open button
+            cursor: pointer
+        }
     }
 }
 
-.drawer {
-    &--list {
-        padding-top: 0;
+.support-dialog--list > li {
+    // The text inside each list item of the dialog
+    .mdc-list-item__primary-text {
+        // The primary text of a list item
+        color: rgba(0, 0, 0, 0.87);
     }
 
-    &--content > nav > span {
-        // All the span tags inside of the drawer
-        cursor: pointer;
-    }
-}
-
-.btc-dialog {
-    &--list > li {
-        // The text inside each list item of the dialog
-        .mdc-list-item__primary-text {
-            // The primary text of a list item
-            color: rgba(0, 0, 0, 0.87);
-        }
-
-        .mdc-list-item__secondary-text {
-            // The secondary text of a list item
-            color: rgba(0, 0, 0, 0.54);
-        }
+    .mdc-list-item__secondary-text {
+        // The secondary text of a list item
+        color: rgba(0, 0, 0, 0.54);
     }
 }
 
@@ -97,7 +88,7 @@ body {
     // The container of the profile image
     position: absolute;
     right: 40px;
-    top: 35px;
+    top: 40px;
     z-index: 999;
 
     &--icon {
@@ -107,14 +98,14 @@ body {
 }
 @media screen and (max-width: 599px) {
     // Screen size 599px or smaller
-    #gravatar-icon {
+    .gravatar {
         // The profile image
         top: 30px;
     }
 }
 @media screen and (max-width: 400px) {
     // Screen size 400px or smaller
-    #gravatar-icon {
+    .gravatar {
         // The profile image
         display: none;
     }
@@ -131,10 +122,11 @@ body {
 }
 
 #carbonads {
+    // Carbon ads
     color: #637381;
     font-family: Roboto, Helvetica, sans-serif;
     line-height: 28px;
-    padding: 8px 8px 0;
+    padding: 0 8px;
 
     .carbon-wrap {
         .carbon-img > img {

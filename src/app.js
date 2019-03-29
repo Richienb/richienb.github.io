@@ -7,7 +7,7 @@ import $ from "jquery"
 // When the Gravatar image fails to load
 $(".gravatar--icon").on("error", () => {
     // Hide the Gravatar image
-    $(".gravatar--icon").hide()
+    $(".gravatar").hide()
 })
 
 // Import MDC Drawer
@@ -50,15 +50,15 @@ import {
 } from '@material/dialog/index'
 
 // Setup dialog
-const btc_dialog = new MDCDialog(document.querySelector(".btc-dialog"))
+const support_dialog = new MDCDialog(document.querySelector(".support-dialog"))
 
 // Listen for menu item click
-$(".btc-dialog--button").click((e) => {
+$(".support-dialog--button").click((e) => {
     // Prevent hash changes
     e.preventDefault()
 
     // Open the dialog
-    btc_dialog.open()
+    support_dialog.open()
 })
 
 // Import MDC Ripple
@@ -76,13 +76,17 @@ mdcAutoInit.register("MDCRipple", MDCRipple)
 mdcAutoInit()
 
 // For each MDC icon button that is using MDC Ripple
-$.each($('.mdc-icon-button[data-mdc-auto-init="MDCRipple"]'), (_, obj) => {
+$('.mdc-icon-button[data-mdc-auto-init="MDCRipple"]').each((_, {
+    MDCRipple
+}) => {
     // Make the ripple unbounded
-    obj.MDCRipple.unbounded = true
+    MDCRipple.unbounded = true
 })
 
 // Import Auth0 Lock
-import { Auth0Lock } from 'auth0-lock'
+import {
+    Auth0Lock
+} from 'auth0-lock'
 
 // Initialise lock object
 const lock = new Auth0Lock("w72j6KObRRkXL889ivFXoroFVyoxGq1H", "richienb.au.auth0.com")
@@ -102,18 +106,16 @@ if (JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token")
 }
 
 // Listen for the authenticated event
-lock.on("authenticated", (authResult) => {
+lock.on("authenticated", ({
+    accessToken
+}) => {
     // Use the token in authResult to getUserInfo() and save it to localStorage
-    lock.getUserInfo(authResult.accessToken, (error, profile) => {
-        // If an error occurred
-        if (error) {
-            // Terminate the function
-            return
-
-        }
+    lock.getUserInfo(accessToken, (error, profile) => {
+        // If an error occurred, terminate the function
+        if (error) return
 
         // Save the user token
-        localStorage.setItem('token', authResult.accessToken)
+        localStorage.setItem('token', accessToken)
 
         // Save the user profile
         localStorage.setItem('profile', JSON.stringify(profile))
