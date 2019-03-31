@@ -65,7 +65,7 @@
         "workbox-cli": "^4.1.0"
     },
     "devDependencies": {
-        "webpack-dev-server": "2.11.3"
+        "webpack-dev-server": "2.11.5"
     },
     "resolutions": {
         "react": "^16.8.5",
