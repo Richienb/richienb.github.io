@@ -32,9 +32,15 @@ body {
         // Top app bar
         position: fixed;
         z-index: 7;
+
         .mdc-top-app-bar__navigation-icon {
             // Menu open button
-            cursor: pointer
+            cursor: pointer;
+        }
+        @media print {
+            .mdc-top-app-bar__navigation-icon {
+                display: none;
+            }
         }
     }
 }
