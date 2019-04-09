@@ -175,10 +175,10 @@
     "@material/shape" "^1.0.0"
     "@material/theme" "^1.1.0"
 
-"@material/dialog@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-1.1.0.tgz#62f6bf31a7329ff4948609fb0e377ea336654972"
-  integrity sha512-XbFTTdzzRhjClLMDFxz8SR/mwwCBpQL6N7Z7UzX7SgD51UJmd19SsXPItFquRKk3mkNuoFBBcR4KJ6julAW+Fg==
+"@material/dialog@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-1.1.1.tgz#09c9d505ff650ce4eb3c00d681af6b492ae8069a"
+  integrity sha512-2jj/5GrEqU5D36+a2cFprNk8/H0zF8drx/1G9Mb0EZxU+RkgkHt8xdUWjxmjlCZsIDjEj4IGMLFahD17IMBvLw==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
@@ -187,7 +187,7 @@
     "@material/feature-targeting" "^0.44.1"
     "@material/ripple" "^1.1.0"
     "@material/rtl" "^0.42.0"
-    "@material/shape" "^1.0.0"
+    "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
     "@material/typography" "^1.0.0"
     focus-trap "^4.0.2"
