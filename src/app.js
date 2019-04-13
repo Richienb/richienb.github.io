@@ -26,9 +26,6 @@ import {
 // Initialise the top app bar
 const topAppBar = MDCTopAppBar.attachTo(document.querySelector(".app--bar"))
 
-// Set main content of top app bar
-topAppBar.setScrollTarget(document.querySelector(".app--content"))
-
 // Listen for an open menu button click
 topAppBar.listen("MDCTopAppBar:nav", () => {
 
