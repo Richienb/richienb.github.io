@@ -111,7 +111,7 @@ const handleTheme = () => {
 }
 
 // If theme doesn't exist, set it to "auto"
-if (!localStorage.getItem("theme")) localStorage.setItem("theme", "auto")
+if (["auto", "light", "dark"].indexOf(localStorage.getItem("theme")) === -1) localStorage.setItem("theme", "auto")
 
 // Handle the current theme
 handleTheme()
