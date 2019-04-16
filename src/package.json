@@ -62,7 +62,7 @@
         "sass-loader": "^7.1.0",
         "sitemap-generator-cli": "^7.4.0",
         "webpack": "3.12.0",
-        "workbox-cli": "^4.2.0"
+        "workbox-cli": "^4.3.0"
     },
     "devDependencies": {
         "webpack-dev-server": "2.11.5"
