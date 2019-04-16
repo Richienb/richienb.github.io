@@ -1,3 +1,6 @@
+# Include well known directory
+include: [".well-known"]
+
 plugins:
   # Automatically generate sitemap
   - jekyll-sitemap
