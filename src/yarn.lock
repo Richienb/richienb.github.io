@@ -623,10 +623,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-auth0-js@^9.10.1:
-  version "9.10.1"
-  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.10.1.tgz#91feac770006f4703ff6b3463eae41922a99d5e4"
-  integrity sha512-CDePT7UapFLPwp/lqOjL7kMk/lOi7h0AixurxaX+Rey4+4C0NRI+GiRR5u0dJQWSIXyKKOLieHpxzsr0c7VqSg==
+auth0-js@^9.10.2:
+  version "9.10.2"
+  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.10.2.tgz#5b374f48a61deaff4906d3f0c0cd46e9590fb5f3"
+  integrity sha512-tvVcL14jTrPq7c535rVLDKHNPW7cW0LKGqeiJA8psa+OGZ0AXv49jLxE+vjxNN6y508JE2bi7p9bhdlJ2pKSRA==
   dependencies:
     base64-js "^1.2.0"
     idtoken-verifier "^1.2.0"
@@ -636,12 +636,12 @@ auth0-js@^9.10.1:
     url-join "^4.0.0"
     winchan "^0.2.1"
 
-auth0-lock@^11.14.1:
-  version "11.14.1"
-  resolved "https://registry.yarnpkg.com/auth0-lock/-/auth0-lock-11.14.1.tgz#71d64302bf8f343ce6e99f5b98316ef726c87f78"
-  integrity sha512-MHTFoh+ahTxDKKXEb8EB+HGWJRum/5OEUWNZzlZjbUMp4Qtfg83udDuD8pgWdsCjdCD1ZdAkWCwdNowKFEPtag==
+auth0-lock@^11.15.0:
+  version "11.15.0"
+  resolved "https://registry.yarnpkg.com/auth0-lock/-/auth0-lock-11.15.0.tgz#8dd6a0a3e82ed39760695a14d66f7d881116ae34"
+  integrity sha512-VvPTTHpOAMdQuvxcWwAiskZiUBCLJh1RGAb8oBsmk4f7yOwdeVpUmu1e74yIJdEjDtyvm8kj8IblGZ3os+Wt6w==
   dependencies:
-    auth0-js "^9.10.1"
+    auth0-js "^9.10.2"
     auth0-password-policies "^1.0.2"
     blueimp-md5 "2.3.1"
     fbjs "^0.3.2"
@@ -649,6 +649,7 @@ auth0-lock@^11.14.1:
     jsonp "^0.2.1"
     password-sheriff "^1.1.0"
     prop-types "^15.6.0"
+    qs "^6.7.0"
     react "^15.6.2"
     react-dom "^15.6.2"
     react-transition-group "^2.2.1"
@@ -6122,7 +6123,7 @@ qs@6.5.2, qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-qs@^6.4.0, qs@^6.5.1:
+qs@^6.4.0, qs@^6.5.1, qs@^6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
