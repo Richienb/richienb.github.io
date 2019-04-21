@@ -101,18 +101,12 @@ body {
         // The profile image
         border-radius: 50%;
     }
-}
-@media screen and (max-width: 599px) {
-    // Screen size 599px or smaller
-    .gravatar {
-        // The profile image
+    @media screen and (max-width: 599px) {
+        // Screen width 599px or smaller
         top: 30px;
     }
-}
-@media screen and (max-width: 400px) {
-    // Screen size 400px or smaller
-    .gravatar {
-        // The profile image
+    @media screen and (max-width: 400px) {
+        // Screen width 400px or smaller
         display: none;
     }
 }
@@ -135,6 +129,7 @@ body {
 
     .carbon-wrap {
         .carbon-img > img {
+            // Image in ad
             display: block;
             margin-right: 9px;
             max-width: 40% !important;
@@ -143,6 +138,7 @@ body {
         }
 
         .carbon-text {
+            // Ad text
             color: #637381;
             font-weight: 300;
             display: block;
@@ -154,12 +150,61 @@ body {
     }
 
     .carbon-poweredby {
+        // "Powered by carbon" text
         color: #c5cdd0;
         font-size: 8px;
         font-weight: 500;
         line-height: 10px;
         text-transform: uppercase;
         text-decoration: none;
+    }
+}
+
+::-webkit-scrollbar {
+    // Setup main scrollbar
+    border-radius: 100px;
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+    overflow: visible;
+
+    &-button {
+        // Setup scrollbar up and down buttons
+        height: 0;
+        width: 0;
+    }
+
+    &-corner {
+        // Setup corner of scrollbar
+        background-color: transparent;
+    }
+
+    &-thumb {
+        // Setup scrollbar thumb
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: solid transparent;
+        border-width: 1px 1px 1px 6px;
+        min-height: 28px;
+        padding: 100px 0 0;
+
+        &:hover {
+            // Darken if hovered
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        &:active {
+            // Darken even more if clicked
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &-track {
+        // Setup bar for scrollbar
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 0 0 0 4px;
     }
 }
 @import "node_modules/normalize.css/normalize.css"; // Normalise CSS - A CSS reset
