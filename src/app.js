@@ -5,7 +5,7 @@ console.log("%cMy website is open source on GitHub! https://github.com/Richienb/
 import $ from "jquery"
 
 // Hide Gravatar image if it fails to load
-$(".gravatar--icon").on("error", () => $(".gravatar").hide())
+$(".gravatar__icon").on("error", () => $(".gravatar").hide())
 
 // Import MDC Drawer
 import {
@@ -23,12 +23,8 @@ import {
 // Initialise the top app bar
 const topAppBar = MDCTopAppBar.attachTo(document.querySelector(".app--bar"))
 
-// Listen for an open menu button click
-topAppBar.listen("MDCTopAppBar:nav", () => {
-
-    // Invert the open state of the drawer
-    drawer.open = !drawer.open
-})
+// When open menu button clicked invert the open state of the drawer
+topAppBar.listen("MDCTopAppBar:nav", () => drawer.open = !drawer.open)
 
 $(".drawer--website").click((e) => {
     // Prevent hash changes
@@ -114,7 +110,7 @@ if (["auto", "light", "dark"].indexOf(localStorage.getItem("theme")) === -1) loc
 handleTheme()
 
 // When theme toggle button clicked
-$(".theme--toggle").click(e => {
+$(".theme-toggle").click(e => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -148,15 +144,15 @@ const lock = new Auth0Lock(
 // If authentication information exists
 if (JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token")) {
     // Hide the login button
-    $(".sso--login").hide()
+    $(".sso__login").hide()
 
     // Show the logout button
-    $(".sso--logout").show()
+    $(".sso__logout").show()
 
 } else {
 
     // Hide the logout button
-    $(".sso--logout").hide()
+    $(".sso__logout").hide()
 }
 
 // Listen for the authenticated event
@@ -175,16 +171,16 @@ lock.on("authenticated", ({
         localStorage.setItem('profile', JSON.stringify(profile))
 
         // Hide the login button
-        $(".sso--login").hide()
+        $(".sso__login").hide()
 
         // Show the logout button
-        $(".sso--logout").show()
+        $(".sso__logout").show()
 
     })
 })
 
 // When the login button is clicked
-$(".sso--login").click((e) => {
+$(".sso__login").click((e) => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -193,7 +189,7 @@ $(".sso--login").click((e) => {
 })
 
 // When the logout button is clicked
-$(".sso--logout").click((e) => {
+$(".sso__logout").click((e) => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -204,10 +200,10 @@ $(".sso--logout").click((e) => {
     localStorage.removeItem("token")
 
     // Hide the logout button
-    $(".sso--logout").hide()
+    $(".sso__logout").hide()
 
     // Show the login button
-    $(".sso--login").show()
+    $(".sso__login").show()
 })
 
 // Import html5shiv printshiv
