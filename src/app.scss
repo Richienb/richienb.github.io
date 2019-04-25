@@ -59,13 +59,13 @@ body {
 }
 
 .content {
-    &--grid {
+    &__grid {
         // The grid of cards
         margin: auto;
         max-width: 1250px;
     }
 
-    &--card {
+    &__card {
         // The content inside of the cards
         > .mdc-card__actions > nav > a {
             // The buttons inside of the cards
@@ -97,7 +97,7 @@ body {
     top: 40px;
     z-index: 999;
 
-    &--icon {
+    &__icon {
         // The profile image
         border-radius: 50%;
     }
