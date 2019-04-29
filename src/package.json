@@ -27,7 +27,7 @@
     "author": "Richie Bendall",
     "license": "Apache-2.0",
     "dependencies": {
-        "@babel/core": "^7.4.3",
+        "@babel/core": "^7.4.4",
         "@material/auto-init": "^0.41.0",
         "@material/button": "^1.1.1",
         "@material/card": "^1.1.1",
