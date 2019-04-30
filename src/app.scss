@@ -167,7 +167,6 @@ body {
     background-color: transparent;
     width: 8px;
     height: 8px;
-    overflow: visible;
 
     &-button {
         // Setup scrollbar up and down buttons
@@ -182,13 +181,9 @@ body {
 
     &-thumb {
         // Setup scrollbar thumb
-        border: 1px solid rgba(255, 255, 255, 0.4);
         border-radius: 100px;
         background-color: rgba(0, 0, 0, 0.2);
-        border: solid transparent;
-        border-width: 1px 1px 1px 6px;
         min-height: 28px;
-        padding: 100px 0 0;
 
         &:hover {
             // Darken if hovered
@@ -204,7 +199,6 @@ body {
     &-track {
         // Setup bar for scrollbar
         background-clip: padding-box;
-        border: solid transparent;
         border-width: 0 0 0 4px;
     }
 }
