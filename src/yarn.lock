@@ -150,14 +150,14 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/button@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@material/button/-/button-1.1.1.tgz#35af0d295f6ce6e3df9d4978485b5294d794f682"
-  integrity sha512-03aEyzZBIeqpgZkqLjro/enz8ORUnfQslBUdAgkPqdjh1X0oIEugr3UaFyC5QlSBTU3j3GIsnKIxWaggkRenpQ==
+"@material/button@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@material/button/-/button-2.0.0.tgz#8699cbae8fe30572b2d6e499438f85481be6262a"
+  integrity sha512-3qGywVbKUM34CDUihHPNpGh4PmKOmPgPYa8Y346mZg1wpOf7gW0vi+EZQOC98AqEKhIMe7l0axKuLfklUHOHjA==
   dependencies:
     "@material/elevation" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/ripple" "^1.1.0"
+    "@material/ripple" "^2.0.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
@@ -266,6 +266,18 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-1.1.0.tgz#236016fb30c8366faf143297df2c38166d84ffbc"
   integrity sha512-mkfDBZAmxjpRG7V9TrfOmLxt1g/wvGHCXtYPgvH7W8ozjf53edqxLOFENEdvHbie27y9nyixzXn0gzU0HnxSeA==
+  dependencies:
+    "@material/animation" "^1.0.0"
+    "@material/base" "^1.0.0"
+    "@material/dom" "^1.1.0"
+    "@material/feature-targeting" "^0.44.1"
+    "@material/theme" "^1.1.0"
+    tslib "^1.9.3"
+
+"@material/ripple@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-2.0.0.tgz#f8c84c874e784ce00a81f2915917c2bc9a0de628"
+  integrity sha512-VSWhYeJDvBU5WextcC/WH5t92UzxhErIB+xaSfDIU3bViK2s8/qi9pWcd52FkDoLZuLQFsXU22eYJkDav4p+pw==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
