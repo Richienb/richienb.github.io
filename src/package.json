@@ -6,6 +6,7 @@
     "sideEffects": false,
     "scripts": {
         "lint": "eslint . --color",
+        "all": "yarn build && yarn manifest && rm -rf node_modules && yarn sitemap && yarn minify",
         "start": "webpack-dev-server --config webpack.config.js",
         "build": "webpack --config webpack.config.js",
         "manifest": "workbox injectManifest workbox-config.js",
