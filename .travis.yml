@@ -33,7 +33,7 @@ install:
     - npm install -g yarn
 
     # Install required packages
-    - yarn install --non-interactive --production
+    - yarn install --non-interactive
 
 script:
     # Build the website with Webpack

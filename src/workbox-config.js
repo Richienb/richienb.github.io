@@ -12,6 +12,6 @@ module.exports = {
         ".prettierrc",
         "_config.yml",
         "sw.js",
-        "README.md"
-    ]
-};
+        "README.md",
+    ],
+}
