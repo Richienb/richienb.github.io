@@ -728,16 +728,16 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/drawer@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-2.0.0.tgz#874f50565a48b2af3e97aea6327a05e55b8ae5b1"
-  integrity sha512-1ZJFKYtxsB5ZLr5w3Q0joTz6Q9LM89fIiVl4ciMU3sdUN2UL2+T77wPekKFxycE7ll2n2JNzBKlmZHHI2NIA0g==
+"@material/drawer@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-2.1.1.tgz#ccdc3404bba60f3f72b153d04f9a8967c06a7df6"
+  integrity sha512-z0q2Kwb79ZMng4Kb7u2UgIxQJPNLcTq/Bj/J7EJlTlUPSMXe4N/geAhSFHyGBG/iXQupdQw5E2Wu7Fo2sfx7sg==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
     "@material/elevation" "^1.1.0"
-    "@material/list" "^2.0.0"
-    "@material/ripple" "^2.0.0"
+    "@material/list" "^2.1.1"
+    "@material/ripple" "^2.1.1"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
@@ -775,15 +775,15 @@
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.41.0.tgz#2e7d3be76313e0684d573b10c2c6a88b3230d251"
   integrity sha512-Sa5RNoTGgfIojqJ9E94p7/k11V6q/tGk7HwKi4AQNAPjxield0zcl3G/SbsSb8YSHoK+D+7OXDN+n11x6EqF7g==
 
-"@material/list@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@material/list/-/list-2.0.0.tgz#556780a590f98751d6cb45138d909b3b2d55c73a"
-  integrity sha512-HwwfQehlRCftnYvcb9DX/vHDbH8Q+ofL3IkKNi5hUBPLW1gAzszE5yOkAgxVFCENushdKqNKPAlCgjAiXMSDyA==
+"@material/list@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@material/list/-/list-2.1.1.tgz#fac8fc886d72c33ffb0f91abbc2483570cda4674"
+  integrity sha512-yZFNLQ6+nTGTJsVuqbYh9gSC+aUh3hC/0aJZzAjVCCY0qSi1vWDHcYdgmgDr4THznlcPr9TxAi6IBiJ/fHXjZg==
   dependencies:
     "@material/base" "^1.0.0"
     "@material/dom" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/ripple" "^2.0.0"
+    "@material/ripple" "^2.1.1"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
