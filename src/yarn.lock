@@ -691,14 +691,14 @@
     "@material/theme" "^1.1.0"
     "@material/typography" "^1.0.0"
 
-"@material/card@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@material/card/-/card-2.0.0.tgz#11f337c5bc5dc68625ec75280cae061108600e8c"
-  integrity sha512-2tOWdauiBSm1IAgeX2w796Fw9uZBKfBlW1dBJqdHm9aMcjxa99897g+K2DbPe+FzeQoqOAwrPULv+VwTVCJBTw==
+"@material/card@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@material/card/-/card-2.1.1.tgz#f15b59d2dff4c99b20eb014dbd70c22bd1a3bc6f"
+  integrity sha512-LZ1nYncZOa7RNzo2Rp+yNvvhPdcbymTA+LHOXqU01c6KSKIfwhfK+oMV4qRKyUTrF1H83rdlGAXF69YISFr9+g==
   dependencies:
     "@material/elevation" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/ripple" "^2.0.0"
+    "@material/ripple" "^2.1.1"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
@@ -790,10 +790,10 @@
     "@material/typography" "^1.0.0"
     tslib "^1.9.3"
 
-"@material/ripple@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-2.0.0.tgz#f8c84c874e784ce00a81f2915917c2bc9a0de628"
-  integrity sha512-VSWhYeJDvBU5WextcC/WH5t92UzxhErIB+xaSfDIU3bViK2s8/qi9pWcd52FkDoLZuLQFsXU22eYJkDav4p+pw==
+"@material/ripple@^2.0.0", "@material/ripple@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-2.1.1.tgz#850e44bafe9db962f400c7e067eb28c1cb11010b"
+  integrity sha512-/WIOBen3OLasJrr2ZXo9wpVJo6Z+1qFxnOvC61iXWqnDctq1fgTAQQbiMaRtsbfU68jDfhgLFJlwjgzvqAvFWQ==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
