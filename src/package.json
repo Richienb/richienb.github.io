@@ -34,7 +34,7 @@
         "@material/card": "^2.1.1",
         "@material/dialog": "^2.1.1",
         "@material/drawer": "^2.0.0",
-        "@material/icon-button": "^2.0.0",
+        "@material/icon-button": "^2.1.1",
         "@material/layout-grid": "^0.41.0",
         "@material/ripple": "^2.0.0",
         "@material/top-app-bar": "^2.1.1",
