@@ -703,10 +703,10 @@
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
 
-"@material/dialog@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-2.1.1.tgz#028fdf5782344cea065b4e249d50145faf3d6609"
-  integrity sha512-rkGwjr/GN+dnMN6t4tY4G9h+PTRl60SPSUlJs0MaTTJkpUAlH7F1t0+gVTkfR6klaPAw/z5KcuRqwkad1reU2w==
+"@material/dialog@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-2.2.0.tgz#2bc5b6548df46493e52e78da676d319f74a1d2d7"
+  integrity sha512-p260m49CRItuHtTnkHBACKdUF6qKDdwHSVvxaHhbeZbGGY+9rOGDDPSNy/yvNuHkVP3F/3Oy815mrS7/kFV1pA==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
