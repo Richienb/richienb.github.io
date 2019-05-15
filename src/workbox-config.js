@@ -13,5 +13,6 @@ module.exports = {
         "_config.yml",
         "sw.js",
         "README.md",
+        "pinterest-c16e1.html"
     ],
 }
