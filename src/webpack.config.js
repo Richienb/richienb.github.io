@@ -36,7 +36,7 @@ function materialImporter(url, prev) {
 module.exports = {
     mode: "production",
     entry: [
-        "./app.scss", "./app.js",
+        "./app.sass", "./app.js",
     ],
     output: {
         filename: "bundle.js",
@@ -44,7 +44,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.scss$/,
+            test: /\.sass$/,
             use: [{
                 loader: "file-loader",
                 options: {

@@ -67,7 +67,7 @@
 </head>
 
 <body class="mdc-typography">
-    <header class="app--bar mdc-top-app-bar mdc-top-app-bar--fixed drawer-top-app-bar">
+    <header class="app__bar mdc-top-app-bar mdc-top-app-bar--fixed drawer-top-app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                 <button class="mdc-top-app-bar__navigation-icon" aria-label="Open menu">
@@ -78,14 +78,14 @@
                 </button>
                 <span class="mdc-top-app-bar__title">Richie Bendall's Website</span>
                 <a class="gravatar" target="_blank" rel="noopener" href="https://gravatar.com/richienb" aria-label="Open Gravatar page">
-                	<img class="gravatar__icon" src="https://secure.gravatar.com/avatar/9476a2bfb62f572fc000056ca01522e3.png?r=g&s=50&d=retro" width="50" height="50" alt="Profile image" lazyload="on">
+                    <img class="gravatar__icon" src="https://secure.gravatar.com/avatar/9476a2bfb62f572fc000056ca01522e3.png?r=g&s=50&d=retro" width="50" height="50" alt="Profile image" lazyload="on" loading="lazy">
                 </a>
             </section>
         </div>
     </header>
-    <aside class="app--drawer mdc-drawer mdc-drawer--modal mdc-top-app-bar--fixed-adjust">
-        <div class="drawer--content mdc-drawer__content">
-            <nav class="drawer--list mdc-list">
+    <aside class="app__drawer mdc-drawer mdc-drawer--modal mdc-top-app-bar--fixed-adjust">
+        <div class="drawer__content mdc-drawer__content">
+            <nav class="drawer__list mdc-list">
                 <script async src="https://cdn.carbonads.com/carbon.js?serve=CK7I6K3E&placement=wwwrichie-bendallml" id="_carbonads_js"></script>
                 <h6 class="mdc-list-group__subheader">Social</h6>
                 <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCxOiLzcbFeW-Ayz_MbgWIXw">
@@ -167,7 +167,7 @@
                     <span class="mdc-list-item__text">Logout</span>
                 </a>
                 <a href="#" class="theme-toggle mdc-list-item" data-mdc-auto-init="MDCRipple">
-                    <svg class="theme--toggle__svg mdc-list-item__graphic" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <svg class="theme-toggle__svg mdc-list-item__graphic" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="none" d="M0 0h24v24H0V0z" />
                         <path
                             d="M11 7l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L13 7h-2zm-.15 5.65L12 9l1.15 3.65h-2.3zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48z" />
@@ -175,7 +175,7 @@
                     <span class="mdc-list-item__text">Toggle Theme</span>
                 </a>
                 <h6 class="mdc-list-group__subheader">Other</h6>
-                <a href="#" class="support-dialog--button mdc-list-item" data-mdc-auto-init="MDCRipple">
+                <a href="#" class="support-dialog__button mdc-list-item" data-mdc-auto-init="MDCRipple">
                     <svg class="mdc-list-item__graphic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M4.5,5H8V2H10V5H11.5V2H13.5V5C19,5 19,11 16,11.25C20,11 21,19 13.5,19V22H11.5V19H10V22H8V19H4.5L5,17H6A1,1 0 0,0 7,16V8A1,1 0 0,0 6,7H4.5V5M10,7V11C10,11 14.5,11.25 14.5,9C14.5,6.75 10,7 10,7M10,12.5V17C10,17 15.5,17 15.5,14.75C15.5,12.5 10,12.5 10,12.5Z" />
@@ -261,7 +261,7 @@
         </div>
     </aside>
     <div class="mdc-drawer-scrim"></div>
-    <div class="app--content drawer-frame-app-content">
+    <div class="app__content drawer-frame-app-content">
         <div class="mdc-top-app-bar--fixed-adjust">
             <main class="content__grid mdc-layout-grid">
                 <div class="mdc-layout-grid__inner">
@@ -1538,7 +1538,7 @@
                     <br>
                     <span class="mdc-typography--headline5">Addresses</span>
                     <br>
-                    <ul class="support-dialog--list mdc-list mdc-list--two-line">
+                    <ul class="support-dialog__list mdc-list mdc-list--two-line">
                         <li class="mdc-list-item" tabindex="0" data-mdc-auto-init="MDCRipple">
                             <span class="mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">Bitcoin (BTC)</span>
@@ -1621,25 +1621,25 @@
         <div class="mdc-dialog__scrim"></div>
     </div>
     <script>
+        "use strict";
+
         // Check to make sure service workers are supported in the current browser,
         // and that the current page is accessed from a secure origin. Using a
         // service worker from an insecure origin will trigger JS console errors.
-        var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
+        var isLocalhost = Boolean(window.location.hostname === "localhost" ||
             // [::1] is the IPv6 localhost address.
-            window.location.hostname === '[::1]' ||
+            window.location.hostname === "[::1]" ||
             // 127.0.0.1/8 is considered localhost for IPv4.
             window.location.hostname.match(
                 /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-            )
-        );
+            ));
 
         // Check if service workers are supported and are needed
-        if ('serviceWorker' in navigator &&
-            (window.location.protocol === 'https:' || isLocalhost)) {
+        if ("serviceWorker" in navigator && (window.location.protocol === "https:" || isLocalhost)) {
             // Wait for the window to finish loading to keep everything performing well
-            window.addEventListener('load', () => {
+            window.addEventListener("load", function() {
                 // Register the service worker
-                navigator.serviceWorker.register('service-worker.js');
+                navigator.serviceWorker.register("service-worker.js");
             });
         }
     </script>
