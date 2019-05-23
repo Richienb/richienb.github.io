@@ -70,7 +70,7 @@
         "sitemap-generator-cli": "^7.4.0",
         "style-loader": "^0.23.1",
         "terser-webpack-plugin": "^1.2.4",
-        "webpack": "4.31.0",
+        "webpack": "4.32.2",
         "webpack-cli": "^3.3.2",
         "webpack-dev-server": "3.4.1",
         "workbox-cli": "^4.3.1"
