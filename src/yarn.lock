@@ -728,20 +728,20 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/drawer@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-2.1.1.tgz#ccdc3404bba60f3f72b153d04f9a8967c06a7df6"
-  integrity sha512-z0q2Kwb79ZMng4Kb7u2UgIxQJPNLcTq/Bj/J7EJlTlUPSMXe4N/geAhSFHyGBG/iXQupdQw5E2Wu7Fo2sfx7sg==
+"@material/drawer@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-2.3.0.tgz#be81ef24d21f77b2d716dbd8240c02c9dccce2c9"
+  integrity sha512-BIrRLkqUO2SLkSRPWtXNwF4ZFmP1NOYynNelPZOdHZOIa6HcgmXzCL5p7hInJ5MDar/xMTA84CSO6Vf1byQwHA==
   dependencies:
     "@material/animation" "^1.0.0"
     "@material/base" "^1.0.0"
     "@material/elevation" "^1.1.0"
-    "@material/list" "^2.1.1"
-    "@material/ripple" "^2.1.1"
+    "@material/list" "^2.3.0"
+    "@material/ripple" "^2.3.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
-    "@material/typography" "^1.0.0"
+    "@material/typography" "^2.3.0"
     focus-trap "^5.0.0"
     tslib "^1.9.3"
 
@@ -775,22 +775,22 @@
   resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.41.0.tgz#2e7d3be76313e0684d573b10c2c6a88b3230d251"
   integrity sha512-Sa5RNoTGgfIojqJ9E94p7/k11V6q/tGk7HwKi4AQNAPjxield0zcl3G/SbsSb8YSHoK+D+7OXDN+n11x6EqF7g==
 
-"@material/list@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@material/list/-/list-2.1.1.tgz#fac8fc886d72c33ffb0f91abbc2483570cda4674"
-  integrity sha512-yZFNLQ6+nTGTJsVuqbYh9gSC+aUh3hC/0aJZzAjVCCY0qSi1vWDHcYdgmgDr4THznlcPr9TxAi6IBiJ/fHXjZg==
+"@material/list@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@material/list/-/list-2.3.0.tgz#07f8d7194495f487d440bbe9fd09a2d3a68cee06"
+  integrity sha512-uuHWXpaXvPuOaQtQXwrgNc+WTTwBSwU/es65KJJcGrpc/o8Q3mYwMepotMN7E7/L75Wxz2w6uejnoM3zGZfvqg==
   dependencies:
     "@material/base" "^1.0.0"
     "@material/dom" "^1.1.0"
     "@material/feature-targeting" "^0.44.1"
-    "@material/ripple" "^2.1.1"
+    "@material/ripple" "^2.3.0"
     "@material/rtl" "^0.42.0"
     "@material/shape" "^1.1.1"
     "@material/theme" "^1.1.0"
-    "@material/typography" "^1.0.0"
+    "@material/typography" "^2.3.0"
     tslib "^1.9.3"
 
-"@material/ripple@^2.0.0", "@material/ripple@^2.1.1", "@material/ripple@^2.3.0":
+"@material/ripple@^2.0.0", "@material/ripple@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-2.3.0.tgz#4701b2cfecddc4c83ae62c777ae2bf9607988705"
   integrity sha512-ejXR0nstERofFhssRyFlwOLgebwm2uGbarHtWZ2/+7QY2Th/Z1wOqNb2h/WRoShsJXK11RUsochb6BJrg30u7w==
