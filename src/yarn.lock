@@ -836,13 +836,6 @@
     "@material/typography" "^2.3.0"
     tslib "^1.9.3"
 
-"@material/typography@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-1.0.0.tgz#327ecfcac5ee3af8a3a102f3f125a761202f4189"
-  integrity sha512-Oeqbjci1cC7jTE8/n3dwnkqKe9ZeWiaE+rgMtRYtRFw1HvAw14SpGA5EEAS/Li2Hu2KZ50FYCe3HYqShfxtChA==
-  dependencies:
-    "@material/feature-targeting" "^0.44.1"
-
 "@material/typography@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-2.3.0.tgz#fe2180c697172227f0745cda684ecafdaba3f8dd"
