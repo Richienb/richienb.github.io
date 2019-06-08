@@ -61,7 +61,7 @@
         "eslint-config-google": "^0.13.0",
         "extract-loader": "^3.1.0",
         "file-loader": "^4.0.0",
-        "google-closure-compiler": "^20190513.0.0",
+        "google-closure-compiler": "^20190528.0.0",
         "html-minifier": "^4.0.0",
         "node-sass": "^4.12.0",
         "postcss-loader": "^3.0.0",
