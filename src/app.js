@@ -59,13 +59,16 @@ import mdcAutoInit from "@material/auto-init"
 // Register MDC Ripple as an automatically initialisable object
 mdcAutoInit.register("MDCRipple", MDCRipple)
 
-// Automatically initialise the objects
-if (!matchMedia("prefers-reduced-motion").matches) mdcAutoInit()
+// If user doesn't prefer reduced motion
+if (!matchMedia("prefers-reduced-motion").matches) {
+    // Automatically initialise the objects
+    mdcAutoInit()
 
-// Unbound each MDC icon button that is using MDCRipple
-$(`.mdc-icon-button[data-mdc-auto-init="MDCRipple"]`).each(async (_, {
-    MDCRipple,
-}) => MDCRipple.unbounded = true)
+    // Unbound each MDC icon button that is using MDCRipple
+    $(`.mdc-icon-button[data-mdc-auto-init="MDCRipple"]`).each(async (_, {
+        MDCRipple,
+    }) => MDCRipple.unbounded = true)
+}
 
 // Custom array cycler
 Array.prototype.cycle = function(str) {
@@ -127,7 +130,7 @@ $(".theme-toggle").click((e) => {
     handleTheme()
 })
 
-// // Import Auth0 Lock
+// Import Auth0 Lock
 import {
     Auth0Lock,
 } from "auth0-lock"
@@ -195,9 +198,6 @@ $(".sso__logout").click((e) => {
 
     // Remove the profile information
     localStorage.removeItem("profile")
-
-    // Remove the token information
-    localStorage.removeItem("token")
 
     // Hide the logout button
     $(".sso__logout").hide()

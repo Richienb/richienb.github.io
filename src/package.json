@@ -40,9 +40,7 @@
         "auth0-lock": "^11.16.3",
         "html5shiv": "^3.7.3",
         "jquery": "^3.4.1",
-        "normalize.css": "^8.0.1",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "normalize.css": "^8.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.4.5",
@@ -71,11 +69,7 @@
         "webpack": "4.34.0",
         "webpack-cli": "^3.3.4",
         "webpack-dev-server": "3.7.1",
-        "workbox-cli": "^4.3.1"
-    },
-    "resolutions": {
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "workbox-webpack-plugin": "^4.3.1"
     },
     "repository": {
         "type": "git",
