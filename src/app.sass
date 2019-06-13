@@ -85,7 +85,7 @@ body
         // The main text area of a card
         color: white
 
-      .mdc-card__action-icons > .mdc-icon-button__icon
+      .mdc-card__action-icons .mdc-icon-button__icon
         // The icon button icons
         fill: rgba(255, 255, 255, 0.38)
 
@@ -103,18 +103,6 @@ body
         // The "Powered by" link
         color: rgb(208, 204, 197)
 
-  &.setting--animate-colours
-    // Animate background colours changing
-    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1)
-
-    .content__card,
-    .app__drawer,
-    ::selection,
-    a
-      // Animate background and foreground colours changing
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1)
-      transition-property: background-color, color
-
 .app
   &__content
     // Document main
@@ -123,8 +111,19 @@ body
 
   &__bar
     // Top app bar
-    position: fixed
+    // position: fixed
     z-index: 7
+
+    &.mdc-top-app-bar--short-collapsed
+      // Collapsed top app bar
+      .gravatar
+        position: inherit
+        right: inherit
+        top: inherit
+
+        img
+          height: 24px
+          width: 24px
 
     .mdc-top-app-bar__navigation-icon
       // Menu open button
@@ -178,8 +177,8 @@ body
 .gravatar
   // The container of the profile image
   position: absolute
-  right: 40px
-  top: 40px
+  right: 30px
+  top: 30px
   z-index: 999
 
   &__icon

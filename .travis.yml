@@ -39,9 +39,6 @@ script:
     # Build the website with Webpack
     - yarn build
 
-    # Generate the service worker
-    - yarn manifest
-
     # Remove the unneeded node_modules folder
     - rm -rf node_modules
 

@@ -1,11 +1,9 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js")
-
 if (workbox) {
     console.debug("Yay! Workbox has loaded 🎉")
 
-    workbox.precaching.precacheAndRoute([])
+    workbox.precaching.precacheAndRoute(self.__precacheManifest || [])
+
+    workbox.googleAnalytics.initialize()
 } else {
     console.debug("Noo! Workbox didn't load 😬")
 }
-
-workbox.googleAnalytics.initialize()

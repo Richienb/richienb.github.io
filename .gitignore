@@ -1,6 +1,7 @@
 # distribution director
 
 # bundled files
+workbox-*/
 bundle.js
 bundle.css
 service-worker.js

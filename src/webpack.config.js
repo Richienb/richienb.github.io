@@ -1,5 +1,7 @@
 const path = require("path")
-const TerserPlugin = require("terser-webpack-plugin")
+const {
+    InjectManifest,
+} = require("workbox-webpack-plugin")
 
 function tryResolve_(url, sourceFilename) {
     // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
@@ -66,8 +68,25 @@ module.exports = {
             ],
         }],
     },
-    optimization: {
-        minimizer: [new TerserPlugin()],
-        usedExports: true,
-    },
+    plugins: [
+        new InjectManifest({
+            globDirectory: ".",
+            globPatterns: ["**/*.*"],
+            importWorkboxFrom: "local",
+            swSrc: "sw.js",
+            swDest: "service-worker.js",
+            globIgnores: [
+                "node_modules/**/*",
+                "+(workbox-|webpack.|postcss.)config.js",
+                "app.+(js|sass)",
+                "yarn.lock",
+                "package.json",
+                "_config.yml",
+                "sw.js",
+                "README.md",
+                "pinterest-c16e1.html",
+                "*.log",
+            ],
+        }),
+    ],
 }

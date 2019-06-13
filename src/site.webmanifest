@@ -9,8 +9,7 @@
     "dir": "ltr",
     "lang": "en",
     "scope": "/",
-    "icons": [
-        {
+    "icons": [{
             "src": "images/manifest/icon-48x48.png",
             "sizes": "48x48",
             "type": "image/png"
