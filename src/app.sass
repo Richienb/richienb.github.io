@@ -111,26 +111,23 @@ body
 
   &__bar
     // Top app bar
-    // position: fixed
     z-index: 7
 
     &.mdc-top-app-bar--short-collapsed
       // Collapsed top app bar
       .gravatar
-        position: inherit
-        right: inherit
+        // The container of the profile image
         top: inherit
+        right: inherit
 
-        img
-          height: 24px
-          width: 24px
+        .gravatar__icon
+          height: 36px
+          width: 36px
 
     .mdc-top-app-bar__navigation-icon
       // Menu open button
       cursor: pointer
-
-    @media print
-      .mdc-top-app-bar__navigation-icon
+      @media print
         display: none
 
 .support-dialog
@@ -176,29 +173,22 @@ body
 
 .gravatar
   // The container of the profile image
-  position: absolute
-  right: 30px
-  top: 30px
-  z-index: 999
+  top: 28px
+  right: 28px
 
   &__icon
     // The profile image
     border-radius: 50%
 
-  @media screen and (max-width: 599px)
-    // Screen width 599px or smaller
-    top: 30px
-
   @media screen and (max-width: 400px)
     // Screen width 400px or smaller
     display: none
 
-.auth0-lock-container
-  .auth0-lock
-    // Auth0 Lock UI
-    &-lock-widget,
-    &-overlay
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+.auth0-lock-container .auth0-lock
+  // Auth0 Lock UI
+  &-lock-widget,
+  &-overlay
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 
 #carbonads
   // Carbon ads
@@ -235,7 +225,7 @@ body
     text-transform: uppercase
     text-decoration: none
 
-\::-webkit-scrollbar
+::-webkit-scrollbar
   // Setup main scrollbar
   border-radius: 100px
   background-color: transparent

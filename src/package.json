@@ -79,10 +79,5 @@
         "url": "https://github.com/Richienb/richienb.github.io/issues"
     },
     "homepage": "https://github.com/Richienb/richienb.github.io#readme",
-    "browserslist": [
-        "last 2 versions",
-        "not IE 10",
-        "not IE_Mob 10",
-        "not dead"
-    ]
+    "browserslist": ["last 2 versions", "not IE 10", "not IE_Mob 10", "not dead"]
 }

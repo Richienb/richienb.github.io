@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription
-	xmlns="http://a9.com/-/spec/opensearch/1.1/"
-	xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-	<ShortName>Richie Web</ShortName>
-	<LongName>Richie Bendall's Website</LongName>
-	<Description>Search Richie Bendall's Website, right from your browser.</Description>
-	<Url type="text/html" method="get" template="https://www.google.com/search?q={searchTerms}&#38;filter=0&#38;as_sitesearch=richie-bendall.ml&#38;pws=0&#38;adtest=off" />
-	<Image width="48" height="48">https://www.richie-bendall.ml/favicon.ico</Image>
-	<InputEncoding>UTF-8</InputEncoding>
-	<Developer>Richie Bendall</Developer>
-	<Attribution>Search provided by Google.</Attribution>
-	<moz:SearchForm>https://www.richie-bendall.ml</moz:SearchForm>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>Richie Web</ShortName>
+    <LongName>Richie Bendall's Website</LongName>
+    <Description>Search Richie Bendall's Website, right from your browser.</Description>
+    <Url type="text/html" method="get" template="https://www.google.com/search?q={searchTerms}&#38;filter=0&#38;as_sitesearch=richie-bendall.ml&#38;pws=0&#38;adtest=off" />
+    <Image width="48" height="48">https://www.richie-bendall.ml/favicon.ico</Image>
+    <InputEncoding>UTF-8</InputEncoding>
+    <Developer>Richie Bendall</Developer>
+    <Attribution>Search provided by Google.</Attribution>
+    <moz:SearchForm>https://www.richie-bendall.ml</moz:SearchForm>
 </OpenSearchDescription>
