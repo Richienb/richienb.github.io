@@ -7,6 +7,7 @@ import "jquery/src/core/init" // Element init
 import "jquery/src/event/alias" // Events and aliases
 import "jquery/src/manipulation" // Manipulation
 import "jquery/src/attributes/classes" // Classes
+import "jquery/src/css" // Modify CSS
 import "jquery/src/css/showHide" // Show and hide
 
 // Hide Gravatar image if it fails to load
