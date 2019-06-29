@@ -1,0 +1,7 @@
+User-agent: Browsershots
+Disallow:
+
+User-agent: *
+Disallow: /404.html
+
+Sitemap: https://www.richie-bendall.ml/sitemap.xml

@@ -1,0 +1,11 @@
+{
+    "type": "ramm-app",
+    "spec": 0,
+    "id": "richie-bendall-website",
+    "name": "Richie Bendall's Website",
+    "source": "https://github.com/Richienb/richienb.github.io/archive/master.zip",
+    "root": "richienb.github.io-master",
+    "icon": "images/manifest/icon-48x48.png",
+    "start": "index.html",
+    "themecolour": "#3f51b5"
+}

@@ -1,0 +1,264 @@
+// Primary colour
+$mdc-theme-primary: #3F51B5
+
+// Secondary colour
+$mdc-theme-secondary: #f44336
+
+// Background colour
+$mdc-theme-background: #5C6BC0
+
+// MDC button base styles
+@import @material/button/mdc-button
+
+// MDC card base styles
+@import @material/card/mdc-card
+
+// Roboto font
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500")
+
+// MDC typography base styles
+@import @material/typography/mdc-typography
+
+// MDC icon button styles
+@import @material/icon-button/mdc-icon-button
+
+// MDC top app bar base styles
+@import @material/top-app-bar/mdc-top-app-bar
+
+// MDC drawer base styles
+@import @material/drawer/mdc-drawer
+
+// MDC list base styles// MDC list base styles
+@import @material/list/mdc-list
+
+// MDC layout grid base styles
+@import @material/layout-grid/mdc-layout-grid
+
+// MDC Dialog styles
+@import @material/dialog/mdc-dialog
+
+// MDC Elevation
+@import @material/elevation/mdc-elevation
+
+body
+  // Document body
+  background-color: #5C6BC0
+  margin: 0
+  min-height: 100vh
+  position: relative
+
+  a
+    // Set default link colour
+    color: $mdc-theme-primary
+
+  &.setting--dark
+    // If dark mode active
+
+    &::-webkit-scrollbar
+      // Darken scrollbar
+      background-color: #505050
+
+    a
+      // Lighten link colour
+      color: #5C6BC0
+
+    .content__card, .app__drawer
+      // The cards and the drawer
+      background-color: #303030
+
+      .drawer__list
+        > .mdc-list-group__subheader
+          // Each header in the drawer
+          color: white
+
+        > .mdc-list-item
+          // Each drawer item
+          > .mdc-list-item__graphic
+            // The icon in each drawer item
+            fill: white
+
+          > .mdc-list-item__text
+            // The text in each drawer item
+            color: white
+
+      > .mdc-card__primary-action
+        // The main text area of a card
+        color: white
+
+      .mdc-card__action-icons .mdc-icon-button__icon
+        // The icon button icons
+        fill: rgba(255, 255, 255, 0.38)
+
+    .btc-dialog svg
+      // QR code in dialog
+      fill: white
+
+    #carbonads > span
+      // The carbon ad container
+      .carbon-text
+        // The text
+        color: rgb(188, 183, 173)
+
+      .carbon-poweredby
+        // The "Powered by" link
+        color: rgb(208, 204, 197)
+
+.app
+  &__content
+    // Document main
+    min-width: 100%
+    overflow: auto
+
+  &__bar
+    // Top app bar
+    z-index: 7
+
+    &.mdc-top-app-bar--short-collapsed
+      // Collapsed top app bar
+      .gravatar
+        // The container of the profile image
+        top: inherit
+        right: inherit
+
+        .gravatar__icon
+          height: 36px
+          width: 36px
+
+    .mdc-top-app-bar__navigation-icon
+      // Menu open button
+      cursor: pointer
+      @media print
+        display: none
+
+.support-dialog
+  .mdc-button
+    // The button inside of the dialog
+    +mdc-button-ink-color(red)
+    +mdc-states(red)
+
+  .support-dialog__list > li
+    // The text inside each list item of the dialog
+    .mdc-list-item__primary-text
+      // The primary text of a list item
+      color: rgba(0, 0, 0, 0.87)
+
+    .mdc-list-item__secondary-text
+      // The secondary text of a list item
+      color: rgba(0, 0, 0, 0.54)
+
+.content
+  &__grid
+    // The grid of cards
+    margin: auto
+    max-width: 1250px
+
+  &__card
+    // The content inside of the cards
+    > .mdc-card__actions > nav > a
+      // The buttons inside of the cards
+      +mdc-button-ink-color(red)
+      +mdc-states(red)
+
+    .mdc-card__primary-action
+      // The main text area of a card
+      padding: 1rem
+
+      .mdc-card__title
+        // The title area of a card
+        margin: 0
+
+    > .mdc-card__primary-action > p
+      // The main text of the cards
+      margin: 0
+
+.gravatar
+  // The container of the profile image
+  top: 28px
+  right: 28px
+
+  &__icon
+    // The profile image
+    border-radius: 50%
+
+  @media screen and (max-width: 400px)
+    // Screen width 400px or smaller
+    display: none
+
+.auth0-lock-container .auth0-lock
+  // Auth0 Lock UI
+  &-lock-widget,
+  &-overlay
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+
+#carbonads
+  // Carbon ads
+  color: #637381
+  line-height: 28px
+  padding: 0 8px
+  display: inline-block
+
+  .carbon-wrap
+    .carbon-img > img
+      // Image in ad
+      display: block
+      margin-right: 9px
+      max-width: 40% !important
+      height: auto
+      float: left
+
+    .carbon-text
+      // Ad text
+      color: #637381
+      font-weight: 300
+      display: block
+      font-size: 12px
+      line-height: 15.96px
+      margin-bottom: 0
+      text-decoration: none
+
+  .carbon-poweredby
+    // "Powered by carbon" text
+    color: #c5cdd0
+    font-size: 8px
+    font-weight: 500
+    line-height: 10px
+    text-transform: uppercase
+    text-decoration: none
+
+::-webkit-scrollbar
+  // Setup main scrollbar
+  border-radius: 100px
+  background-color: transparent
+  width: 8px
+  height: 8px
+
+  &-button
+    // Setup scrollbar up and down buttons
+    height: 0
+    width: 0
+
+  &-corner
+    // Setup corner of scrollbar
+    background-color: transparent
+
+  &-thumb
+    // Setup scrollbar thumb
+    border-radius: 100px
+    background-color: rgba(0, 0, 0, 0.2)
+    min-height: 28px
+
+    &:hover
+      // Darken if hovered
+      background-color: rgba(0, 0, 0, 0.4)
+
+    &:active
+      // Darken even more if clicked
+      background-color: rgba(0, 0, 0, 0.5)
+
+  &-track
+    // Setup bar for scrollbar
+    background-clip: padding-box
+    border-width: 0 0 0 4px
+
+// Normalise CSS - A CSS reset
+@import node_modules/normalize.css/normalize.css

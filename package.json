@@ -1,0 +1,83 @@
+{
+    "name": "richienb.github.io",
+    "version": "1.0.0",
+    "description": "This repository hosts Richie Bendall's Website",
+    "private": true,
+    "scripts": {
+        "lint": "eslint app.ts --color",
+        "all": "yarn build && rm -rf node_modules && yarn sitemap && yarn minify",
+        "start": "webpack-dev-server --config webpack.config.js",
+        "build": "webpack --config webpack.config.js --mode production",
+        "sitemap": "npx sitemap-generator-cli https://www.richie-bendall.ml",
+        "minify": "npx html-minifier --input-dir . --output-dir . --collapse-boolean-attributes --collapse-inline-tag-whitespace --conservative-collapse --decode-entities --minify-urls --preserve-line-breaks --remove-attribute-quotes --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css true --minify-js true --file-ext html"
+    },
+    "keywords": [
+        "html",
+        "css",
+        "richie-bendall",
+        "js",
+        "website",
+        "open-source",
+        "nodejs",
+        "travis-ci",
+        "mdc",
+        "material-design-components",
+        "mdc-web"
+    ],
+    "author": "Richie Bendall",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@material/auto-init": "^2.3.0",
+        "@material/button": "^2.3.0",
+        "@material/card": "^2.3.0",
+        "@material/dialog": "^2.3.0",
+        "@material/drawer": "^2.3.0",
+        "@material/icon-button": "^2.3.0",
+        "@material/layout-grid": "^0.41.0",
+        "@material/ripple": "^2.0.0",
+        "@material/top-app-bar": "^2.3.0",
+        "@material/typography": "^2.3.0",
+        "auth0-lock": "^11.16.3",
+        "html5shiv": "^3.7.3",
+        "jquery": "^3.4.1",
+        "normalize.css": "^8.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "@types/auth0-lock": "^11.4.12",
+        "@types/jquery": "^3.3.30",
+        "@types/terser-webpack-plugin": "^1.2.1",
+        "@types/workbox-webpack-plugin": "^4.1.0",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-transform-object-assign": "^6.22.0",
+        "css-loader": "^3.0.0",
+        "cssnano": "^4.1.10",
+        "cssnano-preset-advanced": "^4.0.7",
+        "eslint": "^6.0.1",
+        "eslint-config-google": "^0.13.0",
+        "extract-loader": "^3.1.0",
+        "file-loader": "^4.0.0",
+        "html-minifier": "^4.0.0",
+        "node-sass": "^4.12.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "6.6.0",
+        "sass-loader": "^7.1.0",
+        "sitemap-generator-cli": "^7.4.0",
+        "style-loader": "^0.23.1",
+        "terser-webpack-plugin": "^1.3.0",
+        "webpack": "4.35.0",
+        "webpack-cli": "^3.3.5",
+        "webpack-dev-server": "3.7.2",
+        "workbox-webpack-plugin": "^4.3.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Richienb/richienb.github.io.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Richienb/richienb.github.io/issues"
+    },
+    "homepage": "https://github.com/Richienb/richienb.github.io#readme",
+    "browserslist": ["last 2 versions", "not IE 10", "not IE_Mob 10", "not dead"]
+}
