@@ -1,0 +1,17 @@
+/* TEAM */
+
+Richie Bendall
+
+/* SITE */
+
+Standards: HTML5, SCSS and Babel
+
+/* COMPONENTS */
+
+Material Design Components for the Web,
+Roboto font via Google Fonts,
+Material icons from Google Icons,
+Service Worker via Workbox,
+HTML5shiv for IE6 and below support,
+Normalize CSS as a CSS reset,
+Web app manifest.
