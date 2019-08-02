@@ -26,9 +26,6 @@ before_install:
     - git config --global user.email "richiebendall@gmail.com"
 
 install:
-    # Navigate to the source directory
-    - cd src
-
     # Install the yarn package manager
     - npm install -g yarn
 

@@ -86,6 +86,12 @@ module.exports = {
                 "README.md",
                 "pinterest-c16e1.html",
                 "*.log",
+                "README.md",
+                "CNAME",
+                ".travis.yml",
+                ".gitignore",
+                ".gitattributes",
+                ".github/**/*"
             ],
         }),
     ],
