@@ -694,18 +694,25 @@
   dependencies:
     tslib "^1.9.3"
 
-"@material/auto-init@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@material/auto-init/-/auto-init-2.3.0.tgz#3d32507675939ab0d7c9f05b075805ed24d22095"
-  integrity sha512-WFlX3xdZjp/gWZiY0+poFjO12fl8t8C9M82kkQLb6WaUkoQ1YHeV2xQSDLY4IvwcKXb70IpcU3Tqgh+aoiHC0w==
+"@material/auto-init@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@material/auto-init/-/auto-init-3.1.0.tgz#bf2b1dcc12d9c09b1f6182f0ac0dba7c0986883c"
+  integrity sha512-Q0fuycL7JUyody+V9h8Y3mXlchNECOwCWOWwjJutcxeIqmhVJxf5qiJJnXZYrwQMMtUuO2A2DTHdrxCITL2COA==
   dependencies:
-    "@material/base" "^1.0.0"
+    "@material/base" "^3.1.0"
     tslib "^1.9.3"
 
 "@material/base@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@material/base/-/base-1.0.0.tgz#e4ef0b22c54aa887af94f5988fb1c0cb3245beba"
   integrity sha512-5dxFp46x5FA+Epg6YHLzN+5zRt9S2wR84UdvVAEJ1egea94m9UHUg7y9tAnNSN16aexRSywmzyLwPr+i8PGEYA==
+  dependencies:
+    tslib "^1.9.3"
+
+"@material/base@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@material/base/-/base-3.1.0.tgz#ab933896ab6390d4e1d2f9797b74a90f47db272a"
+  integrity sha512-pWEBHyPrMV3rdnjqWWH96h5t3MxQI6V1J9jOor+UBG7bXQtr6InTabTqhz5CLY7r+qZU8YvNh2OKIy8heP0cyQ==
   dependencies:
     tslib "^1.9.3"
 
