@@ -790,6 +790,11 @@
   resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.1.tgz#afafc80294e5efab94bee31a187273d43d34979a"
   integrity sha512-90cc7njn4aHbH9UxY8qgZth1W5JgOgcEdWdubH1t7sFkwqFxS5g3zgxSBt46TygFBVIXNZNq35Xmg80wgqO7Pg==
 
+"@material/feature-targeting@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-4.0.0.tgz#8d9d1470801a1fd166773731613d9fa89e0fd85e"
+  integrity sha512-0gk+f151vqmEdWkrQ9ocPlQRU9aUtSGsVBhletqIbsthLUsZIz9qk25FHjV1wHd/bGHknd9NH+T8ENprv3KLFg==
+
 "@material/icon-button@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-2.3.0.tgz#1160ecccd201161a1a38033732beed95a0624497"
@@ -873,6 +878,13 @@
   integrity sha512-NtWVVvwG9Te6/kuIl4fEwDcXGCS7mfPgo5CKPyxcK6y0hJHv6yRHpipJT9D4ZlXw0sQx9B33doOK7iYJtwBBZw==
   dependencies:
     "@material/feature-targeting" "^0.44.1"
+
+"@material/typography@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-4.0.0.tgz#57be7ac8b819f2ae29d48c9443b113d2f5585ecc"
+  integrity sha512-lUG4yjG9fl1ryNX4OVnOmi+EjhiV4WsWcYt4yzffHrFg1RfKuCAV59j7TtmlMfZIkNDwqK5jvk3oOpTRDFpL8Q==
+  dependencies:
+    "@material/feature-targeting" "^4.0.0"
 
 "@types/anymatch@*":
   version "1.3.1"
