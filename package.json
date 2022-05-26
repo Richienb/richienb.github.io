@@ -37,7 +37,7 @@
         "@material/ripple": "^2.0.0",
         "@material/top-app-bar": "^2.3.0",
         "@material/typography": "^2.3.0",
-        "auth0-lock": "^11.21.0",
+        "auth0-lock": "^11.33.0",
         "html5shiv": "^3.7.3",
         "jquery": "^3.4.1",
         "normalize.css": "^8.0.1"
