@@ -15,9 +15,10 @@
     },
     "rules": {
         "indent": ["error", 4],
-        "quotes": ["error", "double"],
+        "quotes": ["error", "double", {"avoidEscape": true, "allowTemplateLiterals": true}],
         "semi": ["error", "never"],
         "brace-style": 0,
-        "max-len": 0
+        "max-len": 0,
+        "require-jsdoc": 0
     }
 }

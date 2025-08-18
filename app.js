@@ -1,17 +1,10 @@
 // Log development message
 console.log("%cMy website is open source on GitHub! https://github.com/Richienb/richienb.github.io", "font-family: Roboto, sans-serif; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; line-height: 2rem; text-decoration: inherit; text-transform: inherit; font-size: 1.5rem; font-weight: 400; letter-spacing: normal;")
 
-// Import JQuery
-import $ from "jquery/src/core" // Core
-import "jquery/src/core/init" // Element init
-import "jquery/src/event/alias" // Events and aliases
-import "jquery/src/manipulation" // Manipulation
-import "jquery/src/attributes/classes" // Classes
-import "jquery/src/css" // Modify CSS
-import "jquery/src/css/showHide" // Show and hide
-
 // Hide Gravatar image if it fails to load
-$(".gravatar__icon").on("error", () => $(".gravatar").hide())
+document.querySelector(".gravatar__icon").addEventListener("error", () => {
+    document.querySelector(".gravatar").style.display = "none"
+})
 
 // Import MDC Drawer
 import {
@@ -19,7 +12,7 @@ import {
 } from "@material/drawer"
 
 // Initialise the drawer
-const drawer = MDCDrawer.attachTo($(".app__drawer").get(0))
+const drawer = MDCDrawer.attachTo(document.querySelector(".app__drawer"))
 
 // Import MDC Top App Bar
 import {
@@ -27,7 +20,7 @@ import {
 } from "@material/top-app-bar"
 
 // Initialise the top app bar
-const topAppBar = MDCTopAppBar.attachTo($(".app__bar").get(0))
+const topAppBar = MDCTopAppBar.attachTo(document.querySelector(".app__bar"))
 
 // When open menu button clicked invert the open state of the drawer
 topAppBar.listen("MDCTopAppBar:nav", () => drawer.open = !drawer.open)
@@ -38,10 +31,10 @@ import {
 } from "@material/dialog"
 
 // Setup dialog
-const supportDialog = new MDCDialog($(".support-dialog").get(0))
+const supportDialog = new MDCDialog(document.querySelector(".support-dialog"))
 
 // Listen for menu item click
-$(".support-dialog__button").click((e) => {
+document.querySelector(".support-dialog__button").addEventListener("click", (e) => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -66,50 +59,47 @@ if (!matchMedia("prefers-reduced-motion").matches) {
     mdcAutoInit()
 
     // Unbound each MDC icon button that is using MDCRipple
-    $(`.mdc-icon-button[data-mdc-auto-init="MDCRipple"]`).each(async (_, {
-        MDCRipple,
-    }) => MDCRipple.unbounded = true)
+    for (const {MDCRipple} of document.querySelectorAll(`.mdc-icon-button[data-mdc-auto-init="MDCRipple"]`)) {
+        MDCRipple.unbounded = true
+    }
 }
 
 // Custom array cycler
-Array.prototype.cycle = function(str) {
+function cycle(array, str) {
     // Get index of string in Array
-    const i = this.indexOf(str)
+    const i = array.indexOf(str)
 
     // If item not found return undefined
     if (i === -1) return undefined
 
     // If item found return next value
-    return this[(i + 1) % this.length]
+    return array[(i + 1) % array.length]
 }
 
 // Theme handler
-const handleTheme = () => {
+function handleTheme() {
     // Get current theme
     switch (localStorage.getItem("theme")) {
     case "light":
         // If theme is "light"
-        $(".theme-toggle__svg").html(`<path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx="12" cy="12" r="2.5"/>`)
-        $("body").removeClass("setting--dark")
+        document.querySelector(".theme-toggle__svg").innerHTML = `<path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx="12" cy="12" r="2.5"/>`
+        document.querySelector("body").classList.remove("setting--dark")
         break
 
     case "dark":
         // If theme is "dark"
-        $(".theme-toggle__svg").html(`<path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>`)
-        $("body").addClass("setting--dark")
+        document.querySelector(".theme-toggle__svg").innerHTML = `<path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>`
+        document.querySelector("body").classList.add("setting--dark")
         break
 
     default:
         // If theme is "auto"
-        $(".theme-toggle__svg").html(`<path fill="none" d="M0 0h24v24H0V0z"/><path d="M11 7l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L13 7h-2zm-.15 5.65L12 9l1.15 3.65h-2.3zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48z"/>`)
+        document.querySelector(".theme-toggle__svg").innerHTML = `<path fill="none" d="M0 0h24v24H0V0z"/><path d="M11 7l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L13 7h-2zm-.15 5.65L12 9l1.15 3.65h-2.3zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48z"/>`
         const hours = new Date().getHours()
-        $("body").toggleClass(
-            "setting--dark",
-            hours <= 6 ||
+        document.querySelector("body").classList.toggle("setting--dark", hours <= 6 ||
                 hours >= 20 ||
                 window.matchMedia("(prefers-color-scheme: dark)").matches ||
-                window.matchMedia("(-ms-high-contrast: white-on-black)").matches
-        )
+                window.matchMedia("(-ms-high-contrast: white-on-black)").matches)
     }
 }
 
@@ -120,12 +110,12 @@ if (["auto", "light", "dark"].indexOf(localStorage.getItem("theme")) === -1) loc
 handleTheme()
 
 // When theme toggle button clicked
-$(".theme-toggle").click((e) => {
+document.querySelector(".theme-toggle").addEventListener("click", (e) => {
     // Prevent hash changes
     e.preventDefault()
 
     // Get the next theme
-    localStorage.setItem("theme", ["auto", "light", "dark"].cycle(localStorage.getItem("theme")))
+    localStorage.setItem("theme", cycle(["auto", "light", "dark"], localStorage.getItem("theme")))
 
     // Handle the current theme
     handleTheme()
@@ -148,20 +138,19 @@ const lock = new Auth0Lock(
         languageDictionary: {
             title: "Richie Bendall's Website",
         },
-    }
+    },
 )
 
-// If authentication information exists
-if (JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token")) {
-    // Hide the login button
-    $(".sso__login").hide()
+function toggleLoginLogoutButton(isLoggedIn) {
+    // Login button
+    document.querySelector(".sso__login").style.display = isLoggedIn ? "none" : "block"
 
-    // Show the logout button
-    $(".sso__logout").show()
-} else {
-    // Hide the logout button
-    $(".sso__logout").hide()
+    // Logout button
+    document.querySelector(".sso__logout").style.display = isLoggedIn ? "block" : "none"
 }
+
+// If authentication information exists
+toggleLoginLogoutButton(JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token"))
 
 // Listen for the authenticated event
 lock.on("authenticated", ({
@@ -175,16 +164,12 @@ lock.on("authenticated", ({
         // Save the user profile
         localStorage.setItem("profile", JSON.stringify(profile))
 
-        // Hide the login button
-        $(".sso__login").hide()
-
-        // Show the logout button
-        $(".sso__logout").show()
+        toggleLoginLogoutButton(true)
     })
 })
 
 // When the login button is clicked
-$(".sso__login").click((e) => {
+document.querySelector(".sso__login").addEventListener("click", (e) => {
     // Prevent hash changes
     e.preventDefault()
 
@@ -193,19 +178,12 @@ $(".sso__login").click((e) => {
 })
 
 // When the logout button is clicked
-$(".sso__logout").click((e) => {
+document.querySelector(".sso__logout").addEventListener("click", (e) => {
     // Prevent hash changes
     e.preventDefault()
 
     // Remove the profile information
     localStorage.removeItem("profile")
 
-    // Hide the logout button
-    $(".sso__logout").hide()
-
-    // Show the login button
-    $(".sso__login").show()
+    toggleLoginLogoutButton(false)
 })
-
-// Import html5shiv printshiv
-import "html5shiv/dist/html5shiv-printshiv"
