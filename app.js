@@ -141,16 +141,31 @@ const lock = new Auth0Lock(
     },
 )
 
-function toggleLoginLogoutButton(isLoggedIn) {
-    // Login button
-    document.querySelector(".sso__login").style.display = isLoggedIn ? "none" : "block"
+const loginButton = document.querySelector(".sso__login")
+const logoutButton = document.querySelector(".sso__logout")
 
-    // Logout button
-    document.querySelector(".sso__logout").style.display = isLoggedIn ? "block" : "none"
+function toggleLoginLogoutButton(isLoggedIn) {
+    if (isLoggedIn) {
+        loginButton.style.display = "none"
+        logoutButton.style.removeProperty("display")
+    } else {
+        loginButton.style.removeProperty("display")
+        logoutButton.style.display = "none"
+    }
+}
+
+function checkIsLoggedIn() {
+    try {
+        JSON.parse(localStorage.getItem("profile"))
+
+        return true
+    } catch (_error) {
+        return false
+    }
 }
 
 // If authentication information exists
-toggleLoginLogoutButton(JSON.parse(localStorage.getItem("profile")) && localStorage.getItem("token"))
+toggleLoginLogoutButton(checkIsLoggedIn())
 
 // Listen for the authenticated event
 lock.on("authenticated", ({
